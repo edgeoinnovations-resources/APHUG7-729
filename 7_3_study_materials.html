@@ -121,11 +121,11 @@
   .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
   .thesis-card:hover { border-color: var(--gold); }
   .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
-  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; margin-bottom: 0.4rem; }
   .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
   .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
   .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
-  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-verdict { display: inline-block; }
   .thesis-card.revealed .thesis-explanation { display: block; }
   .thesis-click-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; }
 
@@ -589,25 +589,25 @@
         <strong>Essay Prompt:</strong> "Evaluate the extent to which new military technology was the primary cause of the stalemate on the Western Front during World War I."
       </div>
       <div class="thesis-cards">
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. It says technology caused the stalemate — which is just a paraphrase of the prompt. There is no line of reasoning, no \'to what extent\' argument, and no analytical categories. The reader cannot tell what the essay will actually argue or prove.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. It says technology caused the stalemate — which is just a paraphrase of the prompt. There is no line of reasoning, no \x27to what extent\x27 argument, and no analytical categories. The reader cannot tell what the essay will actually argue or prove.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"New military technology like the machine gun and poison gas was the primary cause of the stalemate on the Western Front during World War I."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This identifies two factors but doesn\'t weigh them against each other or establish a line of reasoning. \'Both contributed\' is not an argument — it\'s a non-answer. The prompt asks you to evaluate the EXTENT to which technology was the PRIMARY cause. You must take a position on how much it mattered relative to other factors.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This identifies two factors but doesn\x27t weigh them against each other or establish a line of reasoning. \x27Both contributed\x27 is not an argument — it\x27s a non-answer. The prompt asks you to evaluate the EXTENT to which technology was the PRIMARY cause. You must take a position on how much it mattered relative to other factors.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"Both new technology and the failure of military leadership contributed to the stalemate, making it difficult to say which was the primary cause."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It takes a clear position on \'to what extent\' (technology was necessary but not sufficient) and establishes a line of reasoning: technology created the conditions, but generalship determined how catastrophic the stalemate became. This gives the essay two analytical categories to develop with evidence.')">
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It takes a clear position on \x27to what extent\x27 (technology was necessary but not sufficient) and establishes a line of reasoning: technology created the conditions, but generalship determined how catastrophic the stalemate became. This gives the essay two analytical categories to develop with evidence.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"While new military technology made trench warfare inevitable by rendering infantry charges suicidal, the stalemate's extraordinary human cost was primarily caused by generals who kept ordering 19th-century tactics against 20th-century weapons long after the failure was obvious."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point with a sophisticated \'to what extent\' argument. It acknowledges technology\'s role but argues for a more nuanced cause: the fundamental failure was a governance one — the inability of military and political leaders to adapt their thinking to new realities. This creates a rich analytical framework connecting 7.3 to the broader 7.2 theme of systemic governance failure.')">
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point with a sophisticated \x27to what extent\x27 argument. It acknowledges technology\x27s role but argues for a more nuanced cause: the fundamental failure was a governance one — the inability of military and political leaders to adapt their thinking to new realities. This creates a rich analytical framework connecting 7.3 to the broader 7.2 theme of systemic governance failure.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"New military technology created the conditions for stalemate, but the deeper cause was a governance failure: military commanders and political leaders lacked the institutional capacity to adapt strategy to new technological realities quickly enough to prevent catastrophic and repeated losses."</div>
           <div class="thesis-explanation"></div>

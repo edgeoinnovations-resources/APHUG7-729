@@ -242,11 +242,11 @@
   .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
   .thesis-card:hover { border-color: var(--gold); }
   .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
-  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; margin-bottom: 0.4rem; }
   .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
   .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
   .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
-  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-verdict { display: inline-block; }
   .thesis-card.revealed .thesis-explanation { display: block; }
   .thesis-click-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; }
   .causal-chain { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
@@ -724,25 +724,25 @@
         <strong>Essay Prompt:</strong> "Evaluate the extent to which the alliance system was the primary cause of World War I."
       </div>
       <div class="thesis-cards">
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This restates the prompt without establishing a line of reasoning. Saying alliances caused WWI doesn\'t tell us \'to what extent\' or \'why\' — it\'s just a restatement of the question. There are no analytical categories and no argument for the reader to follow.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This restates the prompt without establishing a line of reasoning. Saying alliances caused WWI doesn\x27t tell us \x27to what extent\x27 or \x27why\x27 — it\x27s just a restatement of the question. There are no analytical categories and no argument for the reader to follow.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"The alliance system was a major cause of World War I, as shown by the fact that it pulled all the major powers into the conflict starting in 1914."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\'t earn the point. Listing all four MAIN causes isn\'t a thesis — it\'s a topic sentence for a textbook chapter. There\'s no \'to what extent\' argument, no weighting of causes against each other, and no line of reasoning for the essay to develop.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\x27t earn the point. Listing all four MAIN causes isn\x27t a thesis — it\x27s a topic sentence for a textbook chapter. There\x27s no \x27to what extent\x27 argument, no weighting of causes against each other, and no line of reasoning for the essay to develop.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"World War I was caused by militarism, alliances, imperialism, and nationalism, all of which contributed to the conflict in different ways."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \'to what extent\' claim (alliances were the proximate mechanism, not the root cause) and establishes a line of reasoning with two analytical categories: alliances were the triggering mechanism, but imperial rivalry was the deeper structural cause. This gives the essay a clear direction.')">
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \x27to what extent\x27 claim (alliances were the proximate mechanism, not the root cause) and establishes a line of reasoning with two analytical categories: alliances were the triggering mechanism, but imperial rivalry was the deeper structural cause. This gives the essay a clear direction.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"Although the alliance system served as the immediate mechanism that escalated a regional dispute into a world war, the deeper cause was the imperial rivalry and arms race that made European governments build those alliances in the first place."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It directly answers \'to what extent\' (alliances were necessary but not sufficient) and establishes a sophisticated analytical framework: alliances were the proximate cause, but nationalism provided the spark, and imperialism provided the underlying motive. This creates a three-part argument structure the essay can develop.')">
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It directly answers \x27to what extent\x27 (alliances were necessary but not sufficient) and establishes a sophisticated analytical framework: alliances were the proximate cause, but nationalism provided the spark, and imperialism provided the underlying motive. This creates a three-part argument structure the essay can develop.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"The alliance system was a necessary but not sufficient cause of WWI: it guaranteed that any conflict would escalate globally, but without the nationalist assassination that triggered it and the imperial competition that made alliances necessary, the system would have remained dormant."</div>
           <div class="thesis-explanation"></div>

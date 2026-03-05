@@ -467,7 +467,6 @@
     text-transform: uppercase;
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
-    display: inline-block;
     margin-bottom: 0.4rem;
   }
   .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
@@ -479,7 +478,7 @@
     line-height: 1.5;
     margin-top: 0.4rem;
   }
-  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-verdict { display: inline-block; }
   .thesis-card.revealed .thesis-explanation { display: block; }
   .thesis-click-hint {
     font-family: 'JetBrains Mono', monospace;
@@ -1031,25 +1030,25 @@
       </div>
       <p style="font-size:0.82rem; color:#b8a888; margin-bottom:0.75rem;">Read each thesis below. Click it to see whether it earns the AP thesis point — and why.</p>
       <div class="thesis-cards">
-        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is a restatement, not a thesis. It simply says "internal weaknesses caused collapse" — which is just a paraphrase of the prompt. There is no line of reasoning, no categories of argument, and no \'to what extent\' claim. It earns zero points.')">
+        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is a restatement, not a thesis. It simply says \x22internal weaknesses caused collapse\x22 — which is just a paraphrase of the prompt. There is no line of reasoning, no categories of argument, and no \x27to what extent\x27 claim. It earns zero points.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"Internal weaknesses were a major cause of the collapse of land-based empires after 1900, as shown by the examples of Russia, China, and the Ottoman Empire."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is historically defensible but still does not earn the point. It makes a factual claim (external pressure contributed) without establishing a line of reasoning. It doesn\'t address \'to what extent\' and provides no categories of argument or analytical framework.')">
+        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is historically defensible but still does not earn the point. It makes a factual claim (external pressure contributed) without establishing a line of reasoning. It doesn\x27t address \x27to what extent\x27 and provides no categories of argument or analytical framework.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"While internal weaknesses weakened land-based empires, external pressure from World War I was also an important cause of their collapse."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It responds to \'to what extent\' (internal weaknesses were necessary but not sufficient) and establishes a line of reasoning with two clear categories: internal rot created vulnerability, AND external pressure was the triggering cause. This gives the essay a clear analytical framework to argue.')">
+        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It responds to \x27to what extent\x27 (internal weaknesses were necessary but not sufficient) and establishes a line of reasoning with two clear categories: internal rot created vulnerability, AND external pressure was the triggering cause. This gives the essay a clear analytical framework to argue.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"Although internal weaknesses such as ethnic tension and economic failure made land-based empires increasingly fragile, it was the external shock of World War I and military defeat that ultimately triggered their collapse by exposing those weaknesses to the world."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It makes a clear \'to what extent\' claim (internal weaknesses were the foundational cause but varied in type across empires) and establishes analytical categories: economic failure, ethnic divisions, political rigidity. This creates a comparative framework the essay can develop with evidence.')">
+        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It makes a clear \x27to what extent\x27 claim (internal weaknesses were the foundational cause but varied in type across empires) and establishes analytical categories: economic failure, ethnic divisions, political rigidity. This creates a comparative framework the essay can develop with evidence.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"Internal weaknesses were the foundational cause of imperial collapse after 1900, but these weaknesses took distinct forms — economic failure in the Ottomans, ethnic division in the Qing, and political rigidity in Russia — suggesting that no single explanation captures the full complexity of this global transformation."</div>
           <div class="thesis-explanation"></div>

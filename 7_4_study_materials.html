@@ -111,7 +111,7 @@
   .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
   .thesis-card:hover { border-color: var(--gold); }
   .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
-  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; margin-bottom: 0.4rem; }
   .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
   .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
   .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
@@ -591,19 +591,19 @@
         <strong>Essay Prompt:</strong> "Evaluate the extent to which the Great Depression caused governments to expand their role in economic life during the interwar period."
       </div>
       <div class="thesis-cards">
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. \'The Great Depression caused governments to expand their economic role\' just paraphrases the prompt. There is no \'to what extent\' argument, no analytical categories, and no line of reasoning the essay could develop. A reader cannot tell what this essay will actually argue.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. \x27The Great Depression caused governments to expand their economic role\x27 just paraphrases the prompt. There is no \x27to what extent\x27 argument, no analytical categories, and no line of reasoning the essay could develop. A reader cannot tell what this essay will actually argue.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"The Great Depression caused governments around the world to greatly expand their role in the economy, as seen in examples like the New Deal, fascist Italy, and the Soviet Union."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\'t earn the point. Acknowledging that governments responded differently is a factual observation, not an argument. It doesn\'t address \'to what extent\' state power expanded or establish a line of reasoning about WHY different paths were taken. It\'s a topic sentence, not a thesis.')">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\x27t earn the point. Acknowledging that governments responded differently is a factual observation, not an argument. It doesn\x27t address \x27to what extent\x27 state power expanded or establish a line of reasoning about WHY different paths were taken. It\x27s a topic sentence, not a thesis.')">
           <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
           <div class="thesis-text">"Different governments responded to the Great Depression in different ways — the United States chose the New Deal, while fascist and communist countries took more extreme approaches to state control."</div>
           <div class="thesis-explanation"></div>
           <span class="thesis-click-hint">Click to evaluate →</span>
         </div>
-        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \'to what extent\' argument (expansion was universal but varied in degree and ideology) and establishes a line of reasoning with two categories: the Depression created the conditions, but existing political ideology determined how far each government went. This framework creates a comparative essay structure.')">
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \x27to what extent\x27 argument (expansion was universal but varied in degree and ideology) and establishes a line of reasoning with two categories: the Depression created the conditions, but existing political ideology determined how far each government went. This framework creates a comparative essay structure.')">
           <div class="thesis-verdict pass">✓ Earns the point</div>
           <div class="thesis-text">"While the Great Depression universally expanded governments' economic roles, the degree of that expansion was determined less by the crisis itself than by the existing political ideology of each state — with democracies reforming capitalism, fascists redirecting it, and the Soviet Union abolishing it entirely."</div>
           <div class="thesis-explanation"></div>
