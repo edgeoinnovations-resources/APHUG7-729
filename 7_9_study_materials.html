@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.9 — Causation in Global Conflict | AP World History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --parchment: #f5f0e8;
+  --gold: #b8860b;
+  --gold-light: #d4a820;
+  --smoke: #6b6355;
+  --bg: #2a2016;
+  --bg-card: #32291a;
+  --dok1: #2d5a27;
+  --dok2: #1a3d6e;
+  --dok3: #6b2d2d;
+  --dok4: #4a2d6b;
+  --border: rgba(184,134,11,0.25);
+  --text-main: #f5f0e8;
+  --text-muted: #c4b89a;
+  --suspect-tech: #1a4a3a;
+  --suspect-pol: #3a1a4a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text-main); font-family: 'Source Serif 4', serif; font-size: 16px; line-height: 1.7; min-height: 100vh; }
+
+/* PROGRESS */
+#progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 10px 20px; display: flex; align-items: center; gap: 14px; }
+#progress-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 3px; transition: width 0.5s ease; }
+#progress-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold-light); min-width: 32px; text-align: right; }
+
+/* HEADER */
+.page-header { max-width: 900px; margin: 0 auto; padding: 56px 24px 40px; text-align: center; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 16px; }
+.page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; color: var(--parchment); margin-bottom: 16px; }
+.page-title em { color: var(--gold-light); font-style: italic; }
+.page-subtitle { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.05rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 28px; line-height: 1.7; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; padding: 5px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--text-muted); background: rgba(184,134,11,0.07); letter-spacing: 0.05em; }
+
+/* HOW-TO */
+.how-to-banner { max-width: 900px; margin: 0 auto 40px; padding: 0 24px; }
+.how-to-inner { border-left: 4px solid var(--gold); background: rgba(184,134,11,0.08); padding: 24px 28px; border-radius: 0 8px 8px 0; }
+.how-to-inner h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 12px; }
+.how-to-inner p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; }
+.how-to-inner p:last-child { margin-bottom: 0; }
+.how-to-inner strong { color: var(--parchment); }
+
+/* CONTENT */
+.content-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* DOK SECTIONS */
+.dok-section { margin-bottom: 56px; }
+.dok-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 5px 11px; border-radius: 4px; color: white; text-transform: uppercase; flex-shrink: 0; }
+.dok1 .dok-badge { background: var(--dok1); }
+.dok2 .dok-badge { background: var(--dok2); }
+.dok3 .dok-badge { background: var(--dok3); }
+.dok4 .dok-badge { background: var(--dok4); }
+.dok-section-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
+.dok1 .dok-section-title { color: #7dc774; }
+.dok2 .dok-section-title { color: #7baad6; }
+.dok3 .dok-section-title { color: #d47a7a; }
+.dok4 .dok-section-title { color: #a07ad4; }
+
+/* CALLOUTS */
+.callout { border-left: 3px solid; padding: 16px 20px; border-radius: 0 6px 6px 0; margin-bottom: 24px; font-size: 0.92rem; }
+.callout-blue { border-color: #4a90d9; background: rgba(74,144,217,0.08); }
+.callout-gold { border-color: var(--gold); background: rgba(184,134,11,0.08); }
+.callout-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.callout-blue .callout-title { color: #7baad6; }
+.callout-gold .callout-title { color: var(--gold-light); }
+.callout p { color: var(--text-muted); margin-bottom: 6px; }
+.callout p:last-child { margin-bottom: 0; }
+.callout a { color: #7baad6; }
+.callout strong { color: var(--parchment); }
+
+/* QUOTE */
+.quote-block { border-left: 3px solid var(--gold); padding: 20px 24px; margin: 0 0 28px; background: rgba(184,134,11,0.06); border-radius: 0 8px 8px 0; }
+.quote-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--parchment); line-height: 1.6; margin-bottom: 10px; }
+.quote-attr { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-muted); letter-spacing: 0.06em; }
+
+/* CARD */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+
+/* SUSPECT CARDS */
+.suspects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.suspect-card { border-radius: 8px; overflow: hidden; }
+.suspect-tech { border: 1px solid rgba(74,200,150,0.3); }
+.suspect-pol { border: 1px solid rgba(160,122,212,0.3); }
+.suspect-header { padding: 14px 18px; display: flex; align-items: center; gap: 12px; }
+.suspect-tech .suspect-header { background: rgba(26,74,58,0.5); }
+.suspect-pol .suspect-header { background: rgba(58,26,74,0.5); }
+.suspect-icon { font-size: 1.5rem; }
+.suspect-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+.suspect-tech .suspect-title { color: #6fcfa0; }
+.suspect-pol .suspect-title { color: #a07ad4; }
+.suspect-body { padding: 16px 18px; background: rgba(255,255,255,0.02); }
+.suspect-body ul { list-style: none; }
+.suspect-body li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 8px; align-items: flex-start; }
+.suspect-body li:last-child { border-bottom: none; }
+.suspect-tech li::before { content: '⚙'; font-size: 10px; margin-top: 4px; flex-shrink: 0; color: #6fcfa0; }
+.suspect-pol li::before { content: '⚑'; font-size: 10px; margin-top: 4px; flex-shrink: 0; color: #a07ad4; }
+.suspect-body li strong { color: var(--parchment); }
+
+/* EVIDENCE CLUES */
+.clue-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+.clue-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.clue-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.clue-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; flex-shrink: 0; }
+.clue-evidence { background: rgba(74,200,150,0.1); color: #6fcfa0; border: 1px solid rgba(74,200,150,0.25); }
+.clue-political { background: rgba(160,122,212,0.1); color: #a07ad4; border: 1px solid rgba(160,122,212,0.25); }
+.clue-title { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; color: var(--parchment); }
+.clue-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+.clue-card strong { color: var(--parchment); }
+
+/* WEIGHING CHECKLIST */
+.weight-checklist { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.3); border-radius: 8px; padding: 22px 24px; margin-bottom: 24px; }
+.weight-checklist h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 14px; }
+.weight-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.weight-item:last-child { border-bottom: none; }
+.weight-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold-light); font-weight: 700; padding-top: 2px; flex-shrink: 0; }
+.weight-text { font-size: 0.88rem; color: var(--text-muted); }
+.weight-text strong { color: var(--parchment); }
+
+/* FLIP CARDS */
+.flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+.flip-card { height: 160px; perspective: 1000px; cursor: pointer; }
+.flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; }
+.flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.flip-front { background: rgba(184,134,11,0.12); border: 1px solid rgba(184,134,11,0.4); }
+.flip-front .term { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; }
+.flip-front .hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.06em; font-style: italic; }
+.flip-front .tap-hint { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; color: rgba(212,168,32,0.35); margin-top: 10px; letter-spacing: 0.08em; }
+.flip-back { background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.25); transform: rotateY(180deg); }
+.flip-back .def { font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; }
+
+/* MCQ */
+.mcq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.mcq-q { font-family: 'Playfair Display', serif; font-size: 0.98rem; color: var(--parchment); margin-bottom: 14px; line-height: 1.55; }
+.mcq-q .q-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); display: block; margin-bottom: 6px; letter-spacing: 0.1em; }
+.mcq-options { display: flex; flex-direction: column; gap: 8px; }
+.mcq-option { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); transition: all 0.2s; font-size: 0.89rem; color: var(--text-muted); text-align: left; }
+.mcq-option:hover { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.mcq-option .opt-letter { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); min-width: 16px; padding-top: 2px; flex-shrink: 0; }
+.mcq-option.correct { border-color: #2d5a27; background: rgba(45,90,39,0.2); color: #7dc774; }
+.mcq-option.incorrect { border-color: #6b2d2d; background: rgba(107,45,45,0.2); color: #d47a7a; text-decoration: line-through; opacity: 0.7; }
+.mcq-option.disabled { pointer-events: none; }
+.mcq-feedback { display: none; margin-top: 12px; padding: 12px 16px; border-radius: 6px; font-size: 0.875rem; line-height: 1.6; color: var(--text-muted); }
+.mcq-feedback.show { display: block; }
+.mcq-feedback.fb-correct { background: rgba(45,90,39,0.15); border-left: 3px solid #2d5a27; }
+.mcq-feedback.fb-incorrect { background: rgba(107,45,45,0.15); border-left: 3px solid #6b2d2d; }
+
+/* SECTION HEADING */
+.section-h { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--parchment); margin: 28px 0 14px; }
+
+/* ACCORDION */
+.accordion { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+.accordion-header { padding: 14px 20px; background: var(--bg-card); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background 0.2s; }
+.accordion-header:hover { background: rgba(255,255,255,0.04); }
+.accordion-title { font-family: 'Source Serif 4', serif; font-size: 0.92rem; color: var(--text-muted); flex: 1; }
+.accordion-arrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); transition: transform 0.3s; flex-shrink: 0; }
+.accordion.open .accordion-arrow { transform: rotate(180deg); }
+.accordion-body { display: none; padding: 20px; background: rgba(255,255,255,0.015); border-top: 1px solid var(--border); }
+.accordion.open .accordion-body { display: block; }
+.accordion-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.7; }
+.accordion-body p:last-child { margin-bottom: 0; }
+.accordion-body strong { color: var(--parchment); }
+.sample-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
+
+/* PROMPT BOX */
+.prompt-box { background: rgba(184,134,11,0.06); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 20px 22px; margin-bottom: 16px; }
+.prompt-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
+.prompt-text { font-family: 'Playfair Display', serif; font-size: 1.0rem; font-style: italic; color: var(--parchment); line-height: 1.65; }
+.write-area { width: 100%; min-height: 120px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.9rem; line-height: 1.65; resize: vertical; outline: none; transition: border-color 0.2s; margin-bottom: 12px; }
+.write-area:focus { border-color: var(--gold); }
+.write-area::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* AP INSIGHT */
+.ap-insight { background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 16px 20px; margin: 20px 0 24px; }
+.ap-insight .insight-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 8px; }
+.ap-insight p { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 6px; }
+.ap-insight p:last-child { margin-bottom: 0; }
+
+/* MODEL ARGUMENT COMPARISON */
+.model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.model-card { background: var(--bg-card); border-radius: 8px; overflow: hidden; }
+.model-weak { border: 1px solid rgba(107,45,45,0.4); }
+.model-strong { border: 1px solid rgba(45,90,39,0.4); }
+.model-header { padding: 10px 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 8px; }
+.model-weak .model-header { background: rgba(107,45,45,0.2); color: #d47a7a; }
+.model-strong .model-header { background: rgba(45,90,39,0.2); color: #7dc774; }
+.model-body { padding: 14px 16px; }
+.model-body p { font-size: 0.87rem; color: var(--parchment); font-family: 'Playfair Display', serif; font-style: italic; line-height: 1.6; margin-bottom: 10px; }
+.model-verdict { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; margin-top: 4px; }
+.model-verdict strong { color: var(--parchment); }
+
+/* THESIS CARDS */
+.thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.thesis-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.thesis-card-body { padding: 16px 18px; font-size: 0.88rem; color: var(--parchment); font-family: 'Playfair Display', serif; font-style: italic; line-height: 1.6; min-height: 110px; }
+.thesis-reveal-btn { width: 100%; padding: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.07em; border: none; border-top: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
+.thesis-reveal-btn:hover { background: rgba(255,255,255,0.06); }
+.thesis-verdict { display: none; padding: 10px 18px; font-size: 0.82rem; line-height: 1.55; border-top: 1px solid var(--border); }
+.thesis-verdict.show { display: block; }
+.thesis-verdict.pass { background: rgba(45,90,39,0.12); color: #7dc774; }
+.thesis-verdict.fail { background: rgba(107,45,45,0.12); color: #d47a7a; }
+.verdict-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 3px; margin-right: 8px; }
+.verdict-badge.pass { background: rgba(45,90,39,0.4); color: #7dc774; }
+.verdict-badge.fail { background: rgba(107,45,45,0.4); color: #d47a7a; }
+
+/* SAQ */
+.saq-part { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+.saq-part-header { padding: 12px 18px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); background: rgba(107,45,45,0.08); }
+.saq-letter { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #d47a7a; padding: 3px 9px; border: 1px solid rgba(107,45,45,0.4); border-radius: 3px; flex-shrink: 0; }
+.saq-prompt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.saq-body { padding: 14px 18px; }
+
+/* RUBRIC TABLE */
+.rubric-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.855rem; }
+.rubric-table th { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); color: var(--gold-light); background: var(--bg-card); }
+.rubric-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); vertical-align: top; line-height: 1.55; }
+.rubric-table tr:hover td { background: rgba(255,255,255,0.02); }
+.rubric-table td:first-child { color: var(--parchment); font-weight: 600; font-size: 0.82rem; min-width: 120px; }
+.pts-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 2px 7px; border-radius: 3px; background: rgba(184,134,11,0.2); color: var(--gold-light); }
+
+/* DETECTIVE BUILDER — full LEQ */
+.leq-builder { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 24px; }
+.leq-builder-header { padding: 14px 20px; border-bottom: 1px solid var(--border); background: rgba(74,45,107,0.15); }
+.leq-builder-header h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #a07ad4; }
+.leq-builder-header p { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+.leq-section { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.leq-section:last-child { border-bottom: none; }
+.leq-section-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+.leq-section-label .pts { color: var(--text-muted); font-size: 8px; }
+.leq-section textarea { width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.9rem; line-height: 1.65; resize: none; outline: none; transition: border-color 0.2s; }
+.leq-section textarea:focus { border-color: var(--gold); }
+.leq-section textarea::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* SELF-ASSESSMENT */
+.self-assess { margin-bottom: 28px; }
+.skill-row { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.skill-row:last-child { border-bottom: none; }
+.skill-dots { display: flex; gap: 5px; flex-shrink: 0; padding-top: 3px; }
+.skill-dot { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); background: transparent; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+.skill-dot.level-1.active { background: #d47a7a; border-color: #d47a7a; }
+.skill-dot.level-2.active { background: var(--gold-light); border-color: var(--gold-light); }
+.skill-dot.level-3.active { background: #7dc774; border-color: #7dc774; }
+.skill-text { font-size: 0.9rem; color: var(--text-muted); flex: 1; }
+
+/* COMPLETE */
+.complete-wrap { text-align: right; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+.btn-complete { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 28px; border-radius: 6px; border: none; cursor: pointer; transition: all 0.3s; }
+.btn-complete:not(.done) { background: var(--gold); color: var(--bg); }
+.btn-complete:not(.done):hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(184,134,11,0.3); }
+.btn-complete.done { background: rgba(45,90,39,0.3); color: #7dc774; border: 1px solid rgba(45,90,39,0.5); cursor: default; }
+.dok1 .btn-complete:not(.done) { background: var(--dok1); color: white; }
+.dok1 .btn-complete:not(.done):hover { background: #3d7a35; }
+.dok2 .btn-complete:not(.done) { background: var(--dok2); color: white; }
+.dok2 .btn-complete:not(.done):hover { background: #244f8e; }
+.dok3 .btn-complete:not(.done) { background: var(--dok3); color: white; }
+.dok3 .btn-complete:not(.done):hover { background: #8b3d3d; }
+.dok4 .btn-complete:not(.done) { background: var(--dok4); color: white; }
+.dok4 .btn-complete:not(.done):hover { background: #5e3a87; }
+
+/* SYNTHESIS BOX */
+.synthesis-box { background: rgba(74,45,107,0.12); border: 1px solid rgba(74,45,107,0.35); border-radius: 8px; padding: 22px 24px; margin-bottom: 24px; }
+.synthesis-box .syn-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: #a07ad4; text-transform: uppercase; margin-bottom: 10px; }
+.synthesis-box .syn-q { font-family: 'Playfair Display', serif; font-size: 1.0rem; font-style: italic; color: var(--parchment); line-height: 1.65; margin-bottom: 14px; }
+.synthesis-box p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px; }
+
+/* CONTEXT OPTIONS */
+.context-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.context-option { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.context-option-header { padding: 14px 18px; cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s; }
+.context-option-header:hover { background: rgba(255,255,255,0.03); }
+.context-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.09em; color: #a07ad4; text-transform: uppercase; flex-shrink: 0; padding: 3px 8px; border: 1px solid rgba(160,122,212,0.3); border-radius: 3px; }
+.context-title { font-size: 0.92rem; color: var(--parchment); flex: 1; font-family: 'Playfair Display', serif; }
+.context-arrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a07ad4; transition: transform 0.3s; }
+.context-body { display: none; padding: 16px 20px; border-top: 1px solid var(--border); background: rgba(255,255,255,0.01); }
+.context-option.open .context-body { display: block; }
+.context-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 8px; line-height: 1.7; }
+.context-body strong { color: var(--parchment); }
+
+/* UNIT RECAP */
+.unit-recap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
+.recap-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.recap-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); letter-spacing: 0.1em; margin-bottom: 6px; }
+.recap-title { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--parchment); margin-bottom: 6px; }
+.recap-cause { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+@media (max-width: 640px) {
+  .suspects-grid { grid-template-columns: 1fr; }
+  .clue-grid { grid-template-columns: 1fr; }
+  .model-grid { grid-template-columns: 1fr; }
+  .thesis-grid { grid-template-columns: 1fr; }
+  .unit-recap { grid-template-columns: 1fr; }
+  .page-title { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar-wrap">
+  <div id="progress-track"><div id="progress-fill"></div></div>
+  <div id="progress-label">0%</div>
+</div>
+
+<header class="page-header">
+  <div class="eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="page-title">7.9 — <em>Causation</em> in Global Conflict</h1>
+  <p class="page-subtitle">"You can't just make a list of suspects. You have to put them on trial. Your job is to weigh them against each other and argue for their relative significance. Which one mattered more? Which one was the real tipping point? That is the heart of historical argumentation."</p>
+  <div class="chips">
+    <span class="chip">Unit 7 Capstone</span>
+    <span class="chip">Historical Argumentation · Causation · LEQ/DBQ</span>
+    <span class="chip">DOK 1 → 4</span>
+    <span class="chip">Synthesis · All AP Skills</span>
+  </div>
+</header>
+
+<div class="how-to-banner">
+  <div class="how-to-inner">
+    <h3>📋 How to Use These Materials</h3>
+    <p><strong>This is the capstone module.</strong> 7.9 isn't about learning new facts — it's about building the skill of historical argumentation using everything from 7.1–7.8. The video frames this as a detective investigation: you have suspects (technological change and political/social challenges), evidence (from every prior module), and a case to build.</p>
+    <p><strong>The two suspects:</strong> Technological change (weapons, propaganda, industrial economy) vs. Political and social challenges (imperial collapse, nationalism, institutional failure, extreme ideologies). Your job is to weigh their relative significance, not just list them.</p>
+    <p><strong>The AP skill being built:</strong> Causation — specifically, evaluating the relative significance of multiple causes, tracing chains of cause and effect, and distinguishing deep underlying causes from surface-level triggers.</p>
+    <p><strong>The capstone task:</strong> The video ends with a real LEQ prompt. By DOK 4, you will write a complete practice essay — thesis, contextualization, and body paragraphs — using evidence from across Unit 7.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<!-- DOK 1 -->
+<section class="dok-section dok1" id="dok1">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 1</span>
+    <span class="dok-section-title">Knowledge Acquisition</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🎬 NotebookLM Video</div>
+    <p>Watch the capstone explainer: <a href="https://youtu.be/acnONLSyWLg0" target="_blank">APWH 7.9 — Causation in Global Conflict</a></p>
+    <p>Listen for: (1) the two main "suspect" categories, (2) the evidence clues from Unit 7, (3) the three-question checklist for weighing significance, and (4) the model argument that demonstrates nuance. The video's key phrase: <strong>"You can't just list the suspects — you have to put them on trial."</strong></p>
+  </div>
+
+  <div id="videoEmbed"></div>
+
+  <div class="quote-block">
+    <p class="quote-text">"The release of atom power has changed everything except our way of thinking... and thus we are drifting toward catastrophe beyond conception. We shall require a substantially new manner of thinking if humanity is to survive."</p>
+    <p class="quote-attr">— Albert Einstein, 1945 | Opening quote from the 7.9 video — the century's destructive power demands a new way of thinking about causation, not just consequences</p>
+  </div>
+
+  <!-- The Two Suspects -->
+  <div class="section-h">🔍 The Two Suspects — Causes of 20th-Century Global Conflict</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">The video organizes the AP curriculum's causes into two main categories. Learn both deeply — the exam will ask you to weigh them, not just list them.</p>
+  <div class="suspects-grid">
+    <div class="suspect-card suspect-tech">
+      <div class="suspect-header"><span class="suspect-icon">⚙️</span><span class="suspect-title">Suspect 1 — Scientific & Technological Change</span></div>
+      <div class="suspect-body">
+        <ul>
+          <li><strong>Deadlier weapons:</strong> Machine guns, poison gas, tanks, aerial bombing, atomic bomb — technology transformed what a battlefield could do</li>
+          <li><strong>Mass propaganda enabled:</strong> Industrial printing, radio, film allowed governments to mobilize entire populations for war — technology is what made total war possible</li>
+          <li><strong>Global economy reshaped:</strong> Industrial technology fueled imperial rivalries as powers competed for resources, markets, and strategic position</li>
+          <li><strong>Escalation logic:</strong> Total mobilization of science produced ever-more-destructive weapons in a self-reinforcing cycle</li>
+          <li><strong>Civilian deaths:</strong> WWII sees 20 million civilians dead in USSR, 15 million in China — a direct result of technologies that erased the soldier/civilian line</li>
+        </ul>
+      </div>
+    </div>
+    <div class="suspect-card suspect-pol">
+      <div class="suspect-header"><span class="suspect-icon">⚑</span><span class="suspect-title">Suspect 2 — Political & Social Challenges</span></div>
+      <div class="suspect-body">
+        <ul>
+          <li><strong>Imperial collapse:</strong> Ottoman, Russian, Qing empires collapse → power vacuums, ethnic conflicts, new unstable states. 1.5M Indian soldiers in WWI — empires literally drag the world into war</li>
+          <li><strong>Explosive nationalism:</strong> New nation-states defined by ethnicity create minority problems; nationalism celebrates conflict as proof of national vitality</li>
+          <li><strong>Institutional failure:</strong> League of Nations proves toothless; appeasement fails; collective security collapses — no system to enforce peace</li>
+          <li><strong>Extreme ideologies:</strong> Fascism, Nazism, Stalinism don't just accept war — they celebrate or require it as the engine of national/class destiny</li>
+          <li><strong>Internal instability:</strong> Mexican Revolution, Russian Revolution — internal social pressures explode into violence, part of a global pattern of old-order breakdown</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Evidence Clues -->
+  <div class="section-h">🕵️ Evidence Clues from Unit 7</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">Each of these is a "clue" the video uses to build the case. Match each piece of evidence to your argument when writing AP essays.</p>
+  <div class="clue-grid">
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-political">Political/Social</span><span class="clue-title">Imperial Scale → World War</span></div>
+      <p>British Army in WWI included <strong>1.5M Indian soldiers, 400K+ Canadian, 300K+ Australian</strong>. When empires went to war, they literally dragged the entire world in. A European assassination became a world war because of imperial entanglement.</p>
+    </div>
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-evidence">Technology</span><span class="clue-title">Civilian Death Toll Escalation</span></div>
+      <p>WWI: massive civilian deaths in Ottoman and Russian empires — war reaching into cities for the first time. WWII: <strong>20M civilians dead in USSR, 15M in China</strong> — a direct product of aerial bombing, firebombing, and the atomic bomb.</p>
+    </div>
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-political">Political/Social</span><span class="clue-title">Imperial Collapse → Ideology Vacuum</span></div>
+      <p>Collapse of Ottoman, Russian, and Qing empires created enormous power vacuums. In Russia, this paved the way for <strong>communism</strong> — a radical new ideology that would define global conflict for the next 50 years.</p>
+    </div>
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-evidence">Technology</span><span class="clue-title">Technology + Propaganda = Total War</span></div>
+      <p>Industrial technology didn't just make weapons deadlier — it made <strong>mass propaganda possible</strong>. Radio, film, and print allowed governments to mobilize entire populations. Technology enabled the scale of 20th-century conflict, not just its lethality.</p>
+    </div>
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-political">Political/Social</span><span class="clue-title">Internal Instability — The Mexican Revolution</span></div>
+      <p>The <strong>Mexican Revolution</strong> shows that instability wasn't just between countries — internal social pressures (demand for political change, land reform) exploded into violence. Part of a global pattern of old-order breakdown that made the world more combustible.</p>
+    </div>
+    <div class="clue-card">
+      <div class="clue-header"><span class="clue-badge clue-political">Political/Social</span><span class="clue-title">Institutional Failure — League of Nations</span></div>
+      <p>The <strong>League of Nations</strong> failed to stop Japan in Manchuria (1931) or Italy in Ethiopia (1935), exposing collective security as a paper tiger. The failure to enforce international order sent a message: aggression would go unpunished. This was a political failure, not a technological one.</p>
+    </div>
+  </div>
+
+  <!-- Weighing Checklist -->
+  <div class="section-h">⚖️ The Three-Question Checklist for Weighing Significance</div>
+  <div class="weight-checklist">
+    <h4>From the Video — Use This on Every AP Essay</h4>
+    <div class="weight-item">
+      <span class="weight-num">1</span>
+      <div class="weight-text"><strong>Deep cause or surface trigger?</strong> Ask: was this a deep underlying cause that had been building for years (like imperialism, nationalism, or industrialization) — or a surface-level trigger that ignited an already-loaded situation (like the assassination of Franz Ferdinand)? Deep causes are more historically significant than triggers.</div>
+    </div>
+    <div class="weight-item">
+      <span class="weight-num">2</span>
+      <div class="weight-text"><strong>One of many, or the tipping point?</strong> Was this cause one of several factors with roughly equal impact — or was it the factor that, when added, made conflict unavoidable? The "tipping point" cause is more significant than background conditions.</div>
+    </div>
+    <div class="weight-item">
+      <span class="weight-num">3</span>
+      <div class="weight-text"><strong>First domino?</strong> Trace the chain of cause and effect. Was this the cause that set off all the others in sequence? A cause that generates other causes is more significant than one that stands alone. Ask: what would have been different if this cause had been removed?</div>
+    </div>
+  </div>
+
+  <!-- Vocab Cards -->
+  <div class="section-h">📇 Vocabulary — AP Argumentation Terms</div>
+  <div class="flip-grid" id="flip-grid"></div>
+
+  <!-- MCQ -->
+  <div class="section-h">✅ Multiple Choice — Instant Feedback</div>
+  <div id="mcq-container"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-1" onclick="markComplete(1)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 2 -->
+<section class="dok-section dok2" id="dok2">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 2</span>
+    <span class="dok-section-title">Knowledge Application</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🖼 NotebookLM Infographic</div>
+    <p>Pull up the 7.9 infographic. Look for the <strong>two-suspect comparison</strong> and the <strong>chain of cause and effect</strong> diagram. Use these visuals to anchor the Model Argument comparison and the Explain Drills below — pay attention to how the infographic connects specific evidence to broader categories of causation.</p>
+  </div>
+
+  <!-- Model Argument Comparison -->
+  <div class="section-h">📐 Model Argument Analysis — Weak vs. Strong</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">The video contrasts a weak argument with a strong one. Study both — then explain in your own words what makes the strong argument better.</p>
+  <div class="model-grid">
+    <div class="model-card model-weak">
+      <div class="model-header">✗ WEAK ARGUMENT</div>
+      <div class="model-body">
+        <p>"World War I was caused by many factors, including technology, nationalism, imperialism, and the alliance system. All of these played an important role in starting the conflict."</p>
+        <div class="model-verdict"><strong>What's wrong:</strong> This is a list, not an argument. It identifies multiple causes but makes no claim about their relative significance. It doesn't argue which mattered more, how they interacted, or what the chain of causation was. No line of reasoning, no analytical claim. This earns zero thesis/complexity points on the AP exam.</div>
+      </div>
+    </div>
+    <div class="model-card model-strong">
+      <div class="model-header">✓ STRONG ARGUMENT (from the video)</div>
+      <div class="model-body">
+        <p>"While new weapons made World War I more destructive, it was the political factors — the collapse of the old imperial order and the catastrophic failure of the alliance system — that made the war inevitable in the first place."</p>
+        <div class="model-verdict"><strong>Why it works:</strong> Acknowledges technology's role (nuance), then makes a stronger comparative claim (political factors made it <em>inevitable</em> vs. technology made it <em>more destructive</em>). These are different claims about different causal roles — more destructive ≠ more inevitable. That distinction is the argument. This earns thesis and potentially complexity points.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">In your own words, explain what makes the strong argument above better than the weak one. What specific technique is it using, and why does the AP exam reward that technique?</p>
+  </div>
+  <textarea class="write-area" placeholder="Explain the difference in your own words..."></textarea>
+  <div class="accordion" id="acc-model">
+    <div class="accordion-header" onclick="toggleAccordion('acc-model')">
+      <span class="accordion-title">👁 Reveal Sample Explanation</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE — DOK 2</div>
+      <p>The strong argument uses a specific technique the video calls "nuance" — it doesn't simply pick one side and ignore the other. Instead, it <em>acknowledges</em> what the other side contributed ("new weapons made the war more destructive") while still making a stronger claim about relative significance ("it was the political factors that made it inevitable"). This is crucial because it shows the writer understands both causes while still making an argument about which mattered more.</p>
+      <p>The technique being used is distinguishing between <em>different types of causal roles</em>: "more destructive" (technology's contribution) versus "inevitable" (political factors' contribution) are not competing claims about the same thing — they are claims about different dimensions of causation. Technology escalated the war's destruction; political and institutional failures made the war impossible to avoid. By making this distinction explicit, the argument demonstrates the kind of analytical precision the AP exam rewards with complexity points.</p>
+      <p>The AP exam rewards this because historical causation is rarely a matter of one cause versus another — it's usually a question of which cause did what kind of work. The complexity point specifically asks students to "explain multiple causes or effects" and to demonstrate "nuanced understanding." An argument that distinguishes between causes' different roles (necessary vs. sufficient, underlying vs. triggering, escalating vs. inevitable) earns that complexity credit in a way that a list never can.</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="section-h" style="margin-top:28px;">✍️ Explain Drill 1 — The Role of Imperial Collapse</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">The video describes imperial collapse as one of the most significant political causes of 20th-century global conflict. Using at least two specific examples from Unit 7, explain how the collapse of land-based and maritime empires created the conditions that made large-scale conflict more likely.</p>
+  </div>
+  <textarea class="write-area" style="min-height:130px;" placeholder="Use two specific examples — trace the connection from imperial collapse to conflict..."></textarea>
+  <div class="accordion" id="acc-drill1">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill1')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p>Imperial collapse contributed to 20th-century global conflict through two distinct mechanisms. First, the collapse of the great land-based empires created dangerous power vacuums that destabilized entire regions. The fall of the Russian Empire in 1917 — directly caused by the strains of WWI — paved the way for the Bolshevik Revolution and the rise of Soviet communism, an ideology that would define global conflict for the next 50 years. The collapse of the Ottoman Empire left behind contested territories with mixed ethnic populations and competing nationalist movements, creating the unstable conditions that enabled the Armenian genocide and contributed to decades of Middle Eastern conflict. When empires disappeared from the map, the governance structures that had managed ethnic and political diversity disappeared with them.</p>
+      <p>Second, the maritime empires connected distant regions in ways that turned European conflicts into world wars. The British Empire alone contributed 1.5 million Indian soldiers, over 400,000 Canadians, and over 300,000 Australians to WWI. These soldiers didn't choose to fight in a conflict that began in the Balkans — they were mobilized by imperial obligation. This is the video's key insight about imperial scale: empires didn't just create conflicts, they globalized them. What might have remained a European war became a world war precisely because imperial networks stretched across the globe. The collapse of that system didn't make conflict less likely; it made it more chaotic and more far-reaching.</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="section-h" style="margin-top:28px;">✍️ Explain Drill 2 — Technology as Cause, Not Just Effect</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">The video argues that technology was "way more complex than just a neutral tool" — it didn't just shape how wars were fought, it contributed to making them happen. Explain two ways that technological change acted as a <em>cause</em> of 20th-century conflict, not merely a consequence of it.</p>
+  </div>
+  <textarea class="write-area" style="min-height:120px;" placeholder="Explain how technology caused conflict, not just changed how wars were fought..."></textarea>
+  <div class="accordion" id="acc-drill2">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill2')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p>Technology's causal role in 20th-century conflict goes well beyond making weapons deadlier. First, industrial technology fundamentally reshaped the global economy in ways that intensified imperial competition. By the late 19th and early 20th centuries, industrial powers needed raw materials, markets, and strategic resources at global scale. This economic logic drove the "Scramble for Africa," the competition for Asian markets, and the naval arms race — all of which built up the tensions that made WWI's outbreak more likely. Technology didn't just determine how wars were fought; it determined why great powers wanted to control the territories that eventually became flashpoints.</p>
+      <p>Second, technology made mass propaganda possible for the first time in history. Industrial printing, photography, radio, and film allowed governments to reach and mobilize entire populations — creating the cultural and psychological conditions for total war. Without this technology, governments could not have sustained the public support needed to fight wars lasting years. Propaganda technology also enabled the spread of extremist ideologies at mass scale — Nazi radio broadcasts, Soviet state media, and wartime censorship all used industrial communication technology to shape what entire populations believed about their enemies. In this sense, technology was a cause of the war's scale and duration, not merely a tool that made it more destructive.</p>
+    </div>
+  </div>
+
+  <!-- Unit 7 Evidence Recap -->
+  <div class="section-h" style="margin-top:28px;">📋 Unit 7 Evidence Bank — Know Your Examples</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">These are the key pieces of evidence from Units 7.1–7.8 that you can deploy in AP essays on causation. Build fluency with each — know what it proves and which suspect category it supports.</p>
+  <div class="unit-recap">
+    <div class="recap-card"><div class="recap-num">7.1 / 7.2</div><div class="recap-title">Alliance System + Assassination</div><div class="recap-cause">Gavrilo Princip's assassination of Franz Ferdinand (1914) triggered a cascade because of interlocking alliances — surface trigger amplified by political structure. Proves: political systems convert local crises into global ones.</div></div>
+    <div class="recap-card"><div class="recap-num">7.2 / 7.3</div><div class="recap-title">Machine Guns + Trench Warfare</div><div class="recap-cause">Technology made offensive tactics suicidal, creating 4 years of industrial stalemate. Poison gas (1915) = technology enabling atrocity at scale. Proves: technology dramatically escalated the war's destructiveness.</div></div>
+    <div class="recap-card"><div class="recap-num">7.4</div><div class="recap-title">Great Depression + Governance Crisis</div><div class="recap-cause">Global economic collapse (1929) destroyed democratic legitimacy, creating the governance vacuum that enabled fascism. Proves: economic conditions (tech-enabled global integration) created the political crisis that caused WWII.</div></div>
+    <div class="recap-card"><div class="recap-num">7.5</div><div class="recap-title">Treaty of Versailles</div><div class="recap-cause">Punitive peace treaty (1919) planted seeds of WWII by humiliating Germany, creating political instability, and providing Hitler's core grievance narrative. Proves: political decisions at war's end caused the next war.</div></div>
+    <div class="recap-card"><div class="recap-num">7.6</div><div class="recap-title">Rise of Totalitarianism + Appeasement</div><div class="recap-cause">Hitler's legal seizure of power + democratic governments' appeasement = political failures at national and international levels. Nuremberg Laws = state turning against citizens. Proves: governance failures, not just technology, caused WWII.</div></div>
+    <div class="recap-card"><div class="recap-num">7.7</div><div class="recap-title">Total War Mobilization</div><div class="recap-cause">Democratic vs. totalitarian mobilization models. Manhattan Project = total mobilization of science. Atomic bomb = ultimate expression of state power via technology. Proves: technology and political systems interacted to produce total war.</div></div>
+    <div class="recap-card"><div class="recap-num">7.8</div><div class="recap-title">Mass Atrocities / Holocaust</div><div class="recap-cause">Industrial technology + totalitarian state power + extremist ideology = genocide. Holocaust required both technological capacity AND political decision to deploy it. Proves: neither technology alone nor politics alone explains the worst outcomes.</div></div>
+    <div class="recap-card"><div class="recap-num">Cross-Unit</div><div class="recap-title">League of Nations Failure</div><div class="recap-cause">Failed to stop Japan (1931) or Italy (1935). Paper tiger exposed. Proves: institutional/political failure to enforce collective security was a direct cause of WWII — technology played no role in this failure.</div></div>
+    <div class="recap-card"><div class="recap-num">Cross-Unit</div><div class="recap-title">Mexican + Russian Revolutions</div><div class="recap-cause">Internal social pressures exploding into violence — part of global old-order breakdown. Russian Revolution = WWI strain → imperial collapse → new radical ideology. Proves: imperial collapse created ideological transformations with global consequences.</div></div>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-2" onclick="markComplete(2)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 3 -->
+<section class="dok-section dok3" id="dok3">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 3</span>
+    <span class="dok-section-title">Knowledge Analysis</span>
+  </div>
+
+  <!-- SAQ -->
+  <div class="section-h">📝 Short Answer Question (SAQ)</div>
+  <div class="prompt-box">
+    <div class="prompt-label">SAQ Claim</div>
+    <p class="prompt-text">"The unprecedented scale of violence in the 20th century resulted from the interaction of technological change and political instability, neither of which alone was sufficient to cause global conflict."</p>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">A</span><span class="saq-prompt">Identify ONE specific example of how technological change contributed to the scale or outbreak of 20th-century global conflict.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:90px;" placeholder="Write your Part A response — be specific (name technology, event, connection to conflict)..."></textarea></div>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">B</span><span class="saq-prompt">Explain ONE way that political or social challenges — such as imperial collapse, nationalism, institutional failure, or extreme ideology — contributed to 20th-century global conflict in ways that technology alone cannot explain.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:100px;" placeholder="Write your Part B response — explain a political/social cause and why technology cannot explain it..."></textarea></div>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">C</span><span class="saq-prompt">Explain how ONE development from Unit 7 demonstrates the interaction between technological change and political/social challenges — showing that both were necessary to produce the outcome.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:100px;" placeholder="Write your Part C response — show how technology AND politics worked together in one specific case..."></textarea></div>
+  </div>
+  <div class="accordion" id="acc-saq">
+    <div class="accordion-header" onclick="toggleAccordion('acc-saq')">
+      <span class="accordion-title">👁 Reveal Full SAQ Sample Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SAQ — DOK 3</div>
+      <p><strong>Part A:</strong> The development and use of the atomic bomb represents the clearest example of how technological change contributed to the scale of 20th-century conflict. The Manhattan Project (1942–1945) mobilized 130,000+ workers and $2 billion to create a weapon capable of destroying an entire city in a single strike. When deployed at Hiroshima (August 6, 1945), it killed approximately 140,000 people — a scale of destruction no previous weapon could achieve in a single act. Technology directly enabled a qualitative escalation in the capacity for violence that reshaped not only WWII's end but the entire subsequent logic of Cold War deterrence.</p>
+      <p><strong>Part B:</strong> The failure of the League of Nations to prevent Japanese aggression in Manchuria (1931) or Italian aggression in Ethiopia (1935) demonstrates a form of causation that technology cannot explain. The League failed not because of any technological limitation but because of a political design flaw: great powers retained national sovereignty over their foreign policy, and the League lacked enforcement mechanisms with real teeth. The US never even joined. When Japan faced no serious consequences for its Manchurian conquest, it sent a message that aggressive powers could act without punishment — a direct political cause of the escalating aggression that led to WWII. No weapon or industrial capacity made this failure inevitable; it was a failure of political will and institutional design.</p>
+      <p><strong>Part C:</strong> The Holocaust demonstrates most powerfully that technology and political factors were both necessary and neither alone sufficient. The Holocaust required Nazi racial ideology (political) to identify the target group and provide ideological justification; it required the full apparatus of state power (political) to organize and enforce the genocide; and it required modern industrial technology — rail networks, census data systems, industrial gas chambers — to execute murder at the scale of six million people. Remove the ideology: no Holocaust, just prejudice. Remove the state power: no Holocaust, just persecution. Remove the industrial technology: no Holocaust at anything approaching that scale. The worst outcome of the 20th century required the terrible synergy of all three — which is precisely why the video insists that you cannot just list the suspects. You have to show how they worked together.</p>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="section-h" style="margin-top:32px;">🏆 Thesis Evaluator — Causation LEQ</div>
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <div class="prompt-label">LEQ Prompt (from the video)</div>
+    <p class="prompt-text">"Evaluate the extent to which scientific and technological change was the most significant cause of global conflict in the period from c. 1900 to c. 1945."</p>
+  </div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click <strong>"Evaluate"</strong> on each thesis to reveal whether it earns the AP thesis point and why.</p>
+  <div class="thesis-grid" id="thesis-grid"></div>
+
+  <div class="ap-insight">
+    <div class="insight-label">🎓 AP Exam Insight — Causation Arguments</div>
+    <p>For AP causation essays, the most common mistake is treating the prompt as a true/false question: "Was technology the most significant cause? Yes/No." The strongest arguments treat it as a weighing question: "In what ways was technology significant, and how does that compare to political/social factors?" Arguments that acknowledge complexity — "while technology X, it was political factor Y that made Z possible" — earn both the thesis point and potentially complexity points. The video's model argument shows exactly this structure.</p>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-3" onclick="markComplete(3)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 4 -->
+<section class="dok-section dok4" id="dok4">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 4</span>
+    <span class="dok-section-title">Knowledge Augmentation</span>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">🔭 Capstone Task</div>
+    <p>The video ends with a challenge: <strong>"Now it's your turn to be the historian detective."</strong> DOK 4 for 7.9 is the culminating task for all of Unit 7. You will practice writing a complete AP-style LEQ — not just a thesis, but contextualization and body paragraph development — using evidence from across Units 7.1–7.8.</p>
+    <p>There is no single right answer. There is a right <em>way to argue</em>: use evidence, weigh causes, acknowledge complexity, and build a case.</p>
+  </div>
+
+  <!-- AP Rubric Reference -->
+  <div class="section-h">📋 AP LEQ Rubric — Know the Points</div>
+  <div style="overflow-x:auto;margin-bottom:24px;">
+    <table class="rubric-table">
+      <thead><tr><th>Row</th><th>What It Rewards</th><th>Points</th><th>Key Requirement</th></tr></thead>
+      <tbody>
+        <tr><td>Thesis/Claim</td><td>A defensible historical argument with a line of reasoning</td><td><span class="pts-badge">0–1</span></td><td>Must go beyond restating the prompt; must have a "because" — a reason for the claim. Located in intro or conclusion.</td></tr>
+        <tr><td>Contextualization</td><td>Broader historical context that relates to the argument</td><td><span class="pts-badge">0–1</span></td><td>Must describe context AND explain how it connects to the argument. 3–5 sentences minimum. Cannot be the same as your thesis.</td></tr>
+        <tr><td>Evidence</td><td>Specific, relevant historical evidence</td><td><span class="pts-badge">0–2</span></td><td>1 pt: two pieces of specific evidence named. 2 pts: evidence used to support an argument (not just listed).</td></tr>
+        <tr><td>Analysis & Reasoning</td><td>Historical reasoning + complexity</td><td><span class="pts-badge">0–2</span></td><td>1 pt: historical reasoning (causation, comparison, CCOT) structures the argument. 2 pts: sophisticated/nuanced argument addressing complexity, multiple perspectives, or cross-period connections.</td></tr>
+        <tr><td colspan="3" style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold-light);"><strong>TOTAL</strong></td><td><span class="pts-badge">6 pts max</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Full LEQ Builder -->
+  <div class="section-h">✍️ Full Practice LEQ — Build Your Essay</div>
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <div class="prompt-label">LEQ Prompt</div>
+    <p class="prompt-text">"Evaluate the extent to which scientific and technological change was the most significant cause of global conflict in the period from c. 1900 to c. 1945."</p>
+  </div>
+
+  <div class="leq-builder">
+    <div class="leq-builder-header">
+      <h4>🕵️ LEQ Workshop — Write Each Section</h4>
+      <p>Work through each section in order. Use your evidence bank from DOK 2 and your thesis practice from DOK 3.</p>
+    </div>
+    <div class="leq-section">
+      <div class="leq-section-label">Contextualization Paragraph <span class="pts">(0–1 pts) — Broader historical context that precedes or frames the argument</span></div>
+      <textarea rows="5" placeholder="Write your contextualization here (3–5 sentences). Describe the broader historical context that set the stage for 20th-century global conflict — then explain how it connects to the prompt. Good options: the Industrial Revolution and imperial competition; WWI as establishing the conditions for WWII; the late 19th-century transformation of warfare technology..."></textarea>
+    </div>
+    <div class="leq-section">
+      <div class="leq-section-label">Thesis Statement <span class="pts">(0–1 pts) — Defensible claim + line of reasoning</span></div>
+      <textarea rows="3" placeholder="Write your thesis here. Make a specific, arguable claim about the extent to which technology was the most significant cause. Use the model from the video: acknowledge what technology contributed, then make a stronger/more nuanced claim about relative significance. Avoid just restating the prompt."></textarea>
+    </div>
+    <div class="leq-section">
+      <div class="leq-section-label">Body Paragraph 1 <span class="pts">(0–2 pts evidence + 0–2 pts analysis) — First line of argument with specific evidence</span></div>
+      <textarea rows="7" placeholder="Write your first body paragraph. Start with a clear topic sentence that connects to your thesis. Then use specific evidence (name events, dates, leaders, technologies). Show how your evidence supports your argument — don't just list facts. For causation prompts: consider whether to argue that technology was significant here, or to present the counterargument (political/social causes) that you will weigh against technology."></textarea>
+    </div>
+    <div class="leq-section">
+      <div class="leq-section-label">Body Paragraph 2 <span class="pts">Second line of argument — where complexity and weighing happen</span></div>
+      <textarea rows="7" placeholder="Write your second body paragraph. This is where your strongest causation argument goes. If paragraph 1 established technology's role, this paragraph should establish political/social factors AND make an explicit comparison — showing which type of cause did what kind of work. Use the checklist: deep cause vs. trigger, first domino, tipping point. Mention how the two suspects interacted."></textarea>
+    </div>
+    <div class="leq-section">
+      <div class="leq-section-label">Complexity Statement <span class="pts">(optional but earns the 2nd analysis/reasoning point)</span></div>
+      <textarea rows="4" placeholder="Write your complexity move here. Options: (1) acknowledge a counterargument to your thesis and explain why your argument still holds; (2) make a cross-period connection (how does this causation logic apply to post-1945 Cold War conflict?); (3) explore how different groups experienced the causes differently (colonized peoples, women, civilians vs. soldiers). Even one well-executed complexity sentence can earn this point."></textarea>
+    </div>
+  </div>
+
+  <div class="accordion" id="acc-leq">
+    <div class="accordion-header" onclick="toggleAccordion('acc-leq')">
+      <span class="accordion-title">👁 Reveal Full Sample LEQ Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE FULL LEQ — DOK 4</div>
+      <p><strong>Contextualization:</strong> The Industrial Revolution (c. 1750–1900) fundamentally transformed both the scale of military power and the intensity of imperial competition among European states. By the late 19th century, industrial technology had enabled the mass production of weapons, the construction of global naval empires, and the extraction of resources from colonies across Africa and Asia at unprecedented scale. This industrial competition created a system of overlapping imperial rivalries, arms races, and alliance networks — a powder keg that by 1914 required only a spark to ignite. The technological transformations of the Industrial Revolution thus created the structural preconditions for 20th-century global conflict, even as the specific triggers of those conflicts were overwhelmingly political in character.</p>
+      <p><strong>Thesis:</strong> While scientific and technological change dramatically escalated the scale of destruction in 20th-century global conflict, the political and social challenges of the era — particularly the collapse of empires, the failure of international institutions, and the rise of extreme ideologies — were ultimately more significant causes, because they determined not just how destructively wars were fought but whether they occurred at all.</p>
+      <p><strong>Body Paragraph 1 — Technology's Real Role:</strong> Technology shaped 20th-century conflict in ways that go beyond simply making weapons more lethal. Industrial technology enabled mass propaganda — radio, film, and print allowed governments to mobilize entire populations for total war in ways impossible in previous centuries. Without this technology, democratic governments could not have sustained the public support needed for years-long conflicts, and totalitarian states could not have built the ideological consensus required for genocide. Most dramatically, the atomic bomb — the product of the Manhattan Project's 130,000+ workers — demonstrated that total mobilization of science could produce weapons capable of destroying entire cities in a single strike. By the end of WWII, technological development had killed approximately 20 million Soviet civilians and 15 million Chinese civilians, numbers that reflect the direct lethal impact of aerial bombing, firebombing, and nuclear weapons. Technology thus deserves significant credit as a cause of the wars' scale.</p>
+      <p><strong>Body Paragraph 2 — Political Causes as More Fundamental:</strong> However, technology cannot explain why these conflicts began in the first place. The failure of the League of Nations to stop Japanese aggression in Manchuria (1931) or Italian aggression in Ethiopia (1935) was a purely political failure — a matter of institutional design and political will, not technological capacity. The appeasement of Hitler at Munich (1938) reflected political miscalculation, not technological limitation. Most fundamentally, the Versailles Treaty's punitive terms (1919) planted the seeds of WWII by humiliating Germany and creating the political instability that Hitler's movement exploited — no amount of technological change can explain why democratic governments made these political choices. The video's three-question checklist clarifies the distinction: technology was a deep cause that amplified destruction, but the political cascade — imperial collapse creating power vacuums, nationalism defining enemies, institutional failures enabling aggression — was the sequence of first dominoes that made global conflict inevitable. Technology made WWI more destructive; political and institutional failures made WWII inevitable.</p>
+      <p><strong>Complexity — Interaction and Cross-Period Connection:</strong> The most honest assessment recognizes that technology and political factors were deeply intertwined: the Holocaust required both Nazi racial ideology (political) and industrial technology to operate death camps at scale (technological). Neither alone was sufficient. This interaction is also visible in the Cold War that followed: the atomic bomb — a technological development — directly shaped the political doctrine of Mutually Assured Destruction, creating a new political framework entirely structured around technological capacity. The causation argument from 7.9 thus extends into Unit 8: the political consequences of 20th-century technology continued to generate global conflict for decades after 1945, in a pattern where technology and political structures kept reshaping each other.</p>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="section-h" style="margin-top:32px;">🌐 Unit 7 → Unit 8: Does the Pattern Continue?</div>
+  <div class="synthesis-box">
+    <div class="syn-label">Synthesis Prompt — Capstone</div>
+    <p class="syn-q">The video asks: "Was it technology, the collapse of empires, nationalism, maybe some extreme ideology?" — and argues that the answer requires a sophisticated weighing of multiple factors. Apply that same analytical framework to Unit 8. How do the same two categories of causes (technological change vs. political/social challenges) help explain Cold War global conflict after 1945? Did the relative balance between the two shift in the Cold War era?</p>
+    <p>This is the final DOK 4 task: using the analytical tools built in 7.9 to connect Unit 7's framework to Unit 8's content.</p>
+  </div>
+  <textarea class="write-area" style="min-height:160px;" placeholder="Apply the two-suspect framework to the Cold War era..."></textarea>
+  <div class="accordion" id="acc-synthesis">
+    <div class="accordion-header" onclick="toggleAccordion('acc-synthesis')">
+      <span class="accordion-title">👁 Reveal Sample Synthesis Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SYNTHESIS — DOK 4</div>
+      <p>Applying the 7.9 framework to the Cold War reveals both continuity and a significant shift in the balance between the two suspects. Technology — specifically nuclear weapons — played an even more central role in Cold War conflict than in the world wars, because the very existence of atomic arsenals created a new political logic: Mutually Assured Destruction. The nuclear balance of terror structured every aspect of Cold War geopolitics. In this sense, technology was a deeper and more autonomous cause in the Cold War than it was in the world wars, where technology amplified political conflicts but didn't determine their fundamental structure.</p>
+      <p>However, the political/social suspect remained equally important — it just operated differently. Cold War conflict was driven by ideological competition between capitalism and communism (political/social), not by imperial territorial rivalries. Proxy wars in Korea, Vietnam, Angola, and Afghanistan were fought for political and ideological stakes, with technology providing the weapons but ideology providing the stakes. Decolonization — the political consequence of imperial collapse that Unit 7 began analyzing — created the unstable new states where Cold War competition played out.</p>
+      <p>The key shift: in the world wars, technology enabled political conflicts to escalate to catastrophic scale. In the Cold War, technology (nuclear weapons) simultaneously prevented direct great-power conflict (deterrence) while the political/ideological struggle continued through proxy wars. The two suspects didn't just continue — they entered a new kind of interaction, where technological capacity both enabled and constrained political conflict in ways that would have been unrecognizable in 1914. The 7.9 framework holds, but the relationship between the suspects changed fundamentally after Hiroshima.</p>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="section-h" style="margin-top:32px;">🎯 Unit 7 Capstone Self-Assessment</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click each dot to rate yourself: <span style="color:#d47a7a">●</span> Not yet / <span style="color:var(--gold-light)">●</span> Getting there / <span style="color:#7dc774">●</span> Got it</p>
+  <div class="self-assess" id="self-assess"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-4" onclick="markComplete(4)">Mark Unit 7 Complete ✓</button>
+  </div>
+</section>
+
+</div>
+
+<script src="shared.js"></script>
+<script>
+// PROGRESS
+const sectionProgress = {1:false,2:false,3:false,4:false};
+function markComplete(n) {
+  sectionProgress[n] = true;
+  const btn = document.getElementById('complete-' + n);
+  btn.textContent = n === 4 ? '✓ Unit 7 Complete!' : '✓ Section Complete';
+  btn.classList.add('done');
+  const done = Object.values(sectionProgress).filter(Boolean).length;
+  const pct = done * 25;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = pct + '%';
+}
+
+function toggleAccordion(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// VOCAB
+const vocabData = [
+  {term:'Causation', hint:'The AP skill at the heart of 7.9', def:'The historical thinking skill of identifying and explaining causes and effects of historical developments. For AP essays, causation requires more than listing causes — it requires evaluating the relative significance of multiple causes, tracing chains of cause and effect, and distinguishing deep structural causes from surface-level triggers.'},
+  {term:'Relative Significance', hint:'Weighing, not listing', def:'The analytical judgment about which of multiple causes (or effects) was most important, most fundamental, or most consequential. The heart of historical argumentation in causation prompts. Not asking "what caused X?" but "which cause of X mattered most, and why?" This is what the video means by "putting the suspects on trial."'},
+  {term:'Deep Cause', hint:'Underlying vs. triggering', def:'A cause that has been building over time and creates the conditions that make an event possible or likely — as opposed to a surface-level trigger that ignites an already-loaded situation. Example: imperial rivalries and alliance systems were deep causes of WWI; the assassination of Franz Ferdinand was a trigger. Deep causes are more historically significant than triggers for AP essays.'},
+  {term:'Historical Argumentation', hint:'The core AP skill', def:'The ability to develop a defensible historical claim and support it with specific evidence and logical reasoning. Distinguished from description (what happened) and explanation (how it happened) by the requirement to argue — to make a judgment about significance, causation, comparison, or change that is arguable and supported by evidence.'},
+  {term:'Complexity Point', hint:'The hardest AP point to earn', def:'The second point in the AP LEQ\'s Analysis and Reasoning row, awarded for demonstrating sophisticated historical understanding. Earned by explaining multiple causes or effects, addressing counterarguments, making cross-period or cross-regional connections, or showing how different groups experienced the same development differently. Requires more than just mentioning complexity.'},
+  {term:'Line of Reasoning', hint:'The "because" in your thesis', def:'The logical structure that explains why your thesis claim is true — the categories, factors, or reasoning that support your argument. A thesis without a line of reasoning is just a claim; with one, it becomes an argument. Example: "Technology caused WWI [claim] because industrial weapons enabled states to sustain longer conflicts while mass communication mobilized populations for total war [line of reasoning]."'},
+  {term:'Contextualization', hint:'Setting the historical stage', def:'The AP skill of describing a broader historical context that precedes or frames the historical development being discussed. For the LEQ, requires (1) describing context AND (2) explaining how it connects to the argument. Must be genuine historical context — not just restating the prompt\'s time period. Usually 3–5 sentences placed before the thesis.'},
+  {term:'Total War', hint:'When everyone becomes a soldier', def:'A mode of warfare mobilizing an entire society — economy, population, science, culture — toward the single goal of victory. Enabled by both technological change (industrial production, propaganda technology, mass weapons) and political decisions (government mobilization of the home front). A key example of technology and politics working together to escalate conflict.'},
+  {term:'Power Vacuum', hint:'What empires leave behind', def:'The dangerous instability created when a major political authority collapses, leaving a territory without effective governance and multiple competing claimants for control. The collapse of the Ottoman, Russian, and Qing empires created massive power vacuums that generated conflict for decades. A central example of political/social causes of 20th-century conflict.'},
+  {term:'Nuance', hint:'The "secret sauce" of great arguments', def:'The ability to hold multiple, sometimes contradictory, perspectives simultaneously and to show how they interact. In historical argumentation, nuance means acknowledging what your argument does NOT fully explain (the counterargument) while still maintaining a clear position. The video\'s model argument is nuanced: it acknowledges technology\'s role while arguing political factors were more fundamental. Nuance earns complexity points.'}
+];
+
+const flipGrid = document.getElementById('flip-grid');
+vocabData.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'flip-card';
+  card.innerHTML = `<div class="flip-inner"><div class="flip-front"><div class="term">${v.term}</div><div class="hint">${v.hint}</div><div class="tap-hint">CLICK TO FLIP</div></div><div class="flip-back"><div class="def">${v.def}</div></div></div>`;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  flipGrid.appendChild(card);
+});
+
+// MCQ
+const mcqData = [
+  {
+    num:'Q1',
+    q:'The video describes the central skill of 7.9 as putting the "suspects" on trial. What does this mean for AP essay writing?',
+    opts:['Students must argue that one cause was entirely responsible for 20th-century conflict and that other causes did not matter','Students must list all possible causes of conflict and provide one piece of evidence for each','Students must weigh the relative significance of multiple causes and argue which mattered more and why — not just identify what the causes were','Students must argue that technological causes were always more significant than political causes because technology is more measurable'],
+    correct:2,
+    fb:'The video is explicit: "You can\'t just make a list of these suspects. That\'s not enough. You have to put them on trial. Your job is to weigh them against each other and argue for their relative significance." This means the goal is not to identify causes (DOK 1) or explain them (DOK 2) but to argue for their comparative importance (DOK 3–4). This is the core skill of AP historical argumentation.'
+  },
+  {
+    num:'Q2',
+    q:'According to the video\'s three-question checklist, which of the following best describes a "deep underlying cause" as opposed to a "surface-level trigger"?',
+    opts:['The assassination of Archduke Franz Ferdinand in Sarajevo, 1914','Germany\'s invasion of Poland in September 1939','Japan\'s attack on Pearl Harbor in December 1941','Decades of imperial competition among European powers over colonial territories and trade routes'],
+    correct:3,
+    fb:'The video contrasts deep underlying causes — those that "bubble for years" — with surface-level triggers that ignite already-loaded situations. The assassination of Franz Ferdinand, Germany\'s invasion of Poland, and Pearl Harbor are all triggers: specific events that set off wars that were already made likely by structural conditions. Decades of imperial competition is a deep cause: it built the tensions, rivalries, and alliance systems that made these triggers explosive. For AP essays, deep causes are more analytically significant than triggers.'
+  },
+  {
+    num:'Q3',
+    q:'The video describes its "model argument" as particularly strong because it does what that a simple list of causes does not?',
+    opts:['It names more specific evidence, including exact dates and statistics that a list would omit','It argues for the relative significance of causes and assigns them different causal roles — technology made the war more destructive, while political collapse made it inevitable','It argues that only one cause mattered and eliminates the others as irrelevant to the outcome','It demonstrates that historians have debated this question for centuries without reaching a consensus'],
+    correct:1,
+    fb:'The video\'s model argument says: "While new weapons made WWI more destructive, it was the political factors — the collapse of empires and the broken alliance system — that made the war inevitable." The key is assigning different roles to different causes: "more destructive" versus "inevitable" are not competing claims but complementary ones about different causal dimensions. This is what distinguishes historical argumentation from a list — it makes a claim about how causes worked differently, not just that multiple causes existed.'
+  },
+  {
+    num:'Q4',
+    q:'The video uses the example of WWI\'s British Army — 1.5 million Indian soldiers, 400,000+ Canadians, 300,000+ Australians — to make what point about the causes of global conflict?',
+    opts:['It shows that Britain\'s military technology was superior to other great powers, which is why it could recruit such large forces from its empire','It demonstrates that the political structure of empire was what converted a European conflict into a world war — imperial networks literally dragged the rest of the world into the fighting','It proves that industrialization had reached its peak by 1914, with multiple countries capable of producing industrial armies simultaneously','It shows that nationalism was the primary cause of WWI, since soldiers from India and Canada were motivated by nationalist loyalty to Britain'],
+    correct:1,
+    fb:'The video uses these numbers specifically to illustrate the causal role of imperial political structure: "When these empires went to war, they literally dragged the rest of the world in with them. This is exactly how a fight in Europe turned into a world war." The point is that technology didn\'t make this a world war — the political system of empire did. Without the imperial political structures, the war would have been a European conflict. This supports the political/social suspect as a significant cause.'
+  },
+  {
+    num:'Q5',
+    q:'Which of the following best represents the complexity point in the context of a 7.9 causation argument?',
+    opts:['Noting that historians still disagree about the causes of WWI and that the debate continues today','Listing four or more specific pieces of evidence to demonstrate thorough knowledge of the content','Acknowledging that while political factors were more fundamental causes, the interaction between technology and political structures produced outcomes neither could have achieved alone — and that this interaction continued to shape Cold War conflict after 1945','Arguing that both technology and political factors were equally important and that no single cause can be identified as most significant'],
+    correct:2,
+    fb:'The complexity point requires sophisticated reasoning that goes beyond a clean thesis. Option C demonstrates complexity in two ways: (1) it acknowledges the interaction between the two suspects — showing how they worked together rather than treating them as competing — and (2) it makes a cross-period connection to Unit 8, showing how the causal relationship continued to evolve after 1945. This is exactly the kind of move the AP rubric rewards. Simply saying "both were equally important" (D) is not complexity — it\'s a failure to argue.'
+  }
+];
+
+const mcqContainer = document.getElementById('mcq-container');
+mcqData.forEach((q, qi) => {
+  const div = document.createElement('div');
+  div.className = 'mcq-item';
+  const opts = q.opts.map((o, oi) => `<button class="mcq-option" data-qi="${qi}" data-oi="${oi}" onclick="selectMCQ(this,${qi},${oi})"><span class="opt-letter">${'ABCD'[oi]}</span>${o}</button>`).join('');
+  div.innerHTML = `<div class="mcq-q"><span class="q-num">${q.num} OF ${mcqData.length}</span>${q.q}</div><div class="mcq-options">${opts}</div><div class="mcq-feedback" id="fb-${qi}"></div>`;
+  mcqContainer.appendChild(div);
+});
+
+function selectMCQ(btn, qi, oi) {
+  const allOpts = document.querySelectorAll(`[data-qi="${qi}"]`);
+  allOpts.forEach(b => b.classList.add('disabled'));
+  const q = mcqData[qi];
+  const fb = document.getElementById('fb-' + qi);
+  if (oi === q.correct) {
+    btn.classList.add('correct');
+    fb.className = 'mcq-feedback show fb-correct';
+    fb.innerHTML = '✓ Correct! ' + q.fb;
+  } else {
+    btn.classList.add('incorrect');
+    allOpts[q.correct].classList.add('correct');
+    fb.className = 'mcq-feedback show fb-incorrect';
+    fb.innerHTML = '✗ Not quite. ' + q.fb;
+  }
+}
+
+// THESIS CARDS
+const thesisData = [
+  {
+    text:'"World War I and World War II were both caused by a combination of technological advances and political problems, including new weapons, nationalism, and the failure of international institutions like the League of Nations."',
+    verdict:'fail',
+    why:'Classic "list thesis" with no line of reasoning and no claim about relative significance. It accurately identifies causes but makes no argument about the extent to which technology was most significant — which is exactly what the prompt asks. No "because," no comparative claim, no arguable position. This would not earn the thesis point.'
+  },
+  {
+    text:'"While scientific and technological change made 20th-century warfare dramatically more destructive, it was the political and social challenges of the era — particularly the collapse of empires, the rise of extreme ideologies, and the failure of international institutions — that were more significant causes of global conflict, because they determined whether wars occurred, not merely how destructively they were fought."',
+    verdict:'pass',
+    why:'Strong thesis with a clear line of reasoning. Acknowledges technology\'s role (nuance) then makes a stronger comparative claim with a specific because: technology affected destruction; political/social factors determined whether wars happened at all. The distinction between "how destructively" and "whether" is exactly the kind of analytical precision the AP rubric rewards. This earns the thesis point.'
+  },
+  {
+    text:'"Scientific and technological change was the most significant cause of global conflict from 1900 to 1945 because without new weapons like machine guns, poison gas, and the atomic bomb, the wars of this period could not have been as deadly."',
+    verdict:'fail',
+    why:'Defensible position but the line of reasoning is circular and doesn\'t address relative significance properly. "Without new weapons, wars couldn\'t have been as deadly" proves that technology shaped the wars\' lethality, not that it caused the wars to happen. More importantly, it doesn\'t address the comparison to political/social causes, which is what "most significant" requires. A stronger version would argue why technology was more fundamental than political causes — not just that technology mattered.'
+  },
+  {
+    text:'"Although political and social challenges — empire collapse, nationalism, institutional failures — created the conditions that made global conflict possible, scientific and technological change was ultimately more significant because it converted those political tensions into conflicts of unprecedented scale, and because the atomic bomb created an entirely new political reality that political factors alone could never have generated."',
+    verdict:'pass',
+    why:'Sophisticated, defensible thesis with a complex line of reasoning. It takes the opposite position from the second thesis (technology > politics) and does it with nuance: acknowledges political factors\' role, then argues technology was more significant because of (1) its amplifying effect on political tensions and (2) the atomic bomb creating a qualitatively new political reality. Both reasoning threads are specific and arguable. This earns thesis and could earn complexity points. Two strong, opposite positions are both AP-worthy — that\'s what "evaluate the extent" means.'
+  }
+];
+
+const thesisGrid = document.getElementById('thesis-grid');
+thesisData.forEach((t, i) => {
+  const card = document.createElement('div');
+  card.className = 'thesis-card';
+  card.innerHTML = `<div class="thesis-card-body">${t.text}</div><button class="thesis-reveal-btn" onclick="revealThesis(${i})">EVALUATE THIS THESIS ↓</button><div class="thesis-verdict ${t.verdict}" id="tv-${i}"><span class="verdict-badge ${t.verdict}">${t.verdict==='pass'?'✓ PASS':'✗ FAIL'}</span>${t.why}</div>`;
+  thesisGrid.appendChild(card);
+});
+
+function revealThesis(i) {
+  document.getElementById('tv-' + i).classList.toggle('show');
+}
+
+// SELF-ASSESSMENT
+const skillData = [
+  'I can identify the two main "suspect" categories from the video (technological change vs. political/social challenges) and list at least two examples for each',
+  'I can explain the difference between a deep underlying cause and a surface-level trigger, with specific examples from Unit 7',
+  'I can use the three-question checklist (deep/trigger, one of many/tipping point, first domino) to evaluate the relative significance of causes',
+  'I can explain what makes the video\'s model argument strong — and apply the same technique of assigning different causal roles to different factors',
+  'I can write a thesis that makes a defensible claim with a line of reasoning for a causation LEQ prompt',
+  'I can write an LEQ that uses specific evidence from at least four different modules in Units 7.1–7.8 to support a causation argument',
+  'I can write a complexity move that either addresses the interaction between technology and political factors, or makes a cross-period connection to Unit 8'
+];
+
+const assessEl = document.getElementById('self-assess');
+skillData.forEach((skill, i) => {
+  const row = document.createElement('div');
+  row.className = 'skill-row';
+  row.innerHTML = `
+    <div class="skill-dots">
+      <div class="skill-dot level-1" id="dot-${i}-0" onclick="setSkill(${i},0)" title="Not yet"></div>
+      <div class="skill-dot level-2" id="dot-${i}-1" onclick="setSkill(${i},1)" title="Getting there"></div>
+      <div class="skill-dot level-3" id="dot-${i}-2" onclick="setSkill(${i},2)" title="Got it"></div>
+    </div>
+    <div class="skill-text">${skill}</div>`;
+  assessEl.appendChild(row);
+});
+
+function setSkill(skill, level) {
+  for (let l = 0; l < 3; l++) document.getElementById(`dot-${skill}-${l}`).classList.remove('active');
+  for (let l = 0; l <= level; l++) document.getElementById(`dot-${skill}-${l}`).classList.add('active');
+}
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'acnONLSyWLg');
+initAutoSave('7_9');
+buildCompletionSection('7_9', '7.9 Causation in Global Conflict');
+
+const _origMarkComplete79 = markComplete;
+markComplete = function(n) {
+  _origMarkComplete79(n);
+  markDoneShared('7_9', 'complete-' + n, n * 25);
+};
+</script>
+</body>
+</html>

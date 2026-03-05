@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.3 Study Materials — Conducting World War I</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --parchment: #f5f0e8;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --steel: #3a4a5c;
+    --smoke: #6b6355;
+    --red: #8b1a1a;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+    --dok1: #2d5a27;
+    --dok2: #1a3d6e;
+    --dok3: #6b2d2d;
+    --dok4: #4a2d6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--parchment); min-height: 100vh; font-size: 16px; line-height: 1.7; }
+
+  /* HEADER */
+  .page-header { background: linear-gradient(135deg, #1a1208 0%, #2a1e0e 50%, #1e160a 100%); border-bottom: 2px solid var(--gold); padding: 2.5rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  .page-header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,134,11,0.03) 40px, rgba(184,134,11,0.03) 41px); }
+  .header-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .header-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--parchment); line-height: 1.2; margin-bottom: 0.5rem; }
+  .header-sub { color: #b8a88a; font-size: 0.95rem; font-style: italic; max-width: 640px; margin: 0 auto 1.25rem; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .chip { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 0.25rem 0.75rem; border: 1px solid var(--gold); border-radius: 100px; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* LAYOUT */
+  .how-to { background: rgba(184,134,11,0.08); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; margin: 1.5rem auto; max-width: 860px; padding: 1rem 1.5rem; }
+  .how-to-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .how-to p { font-size: 0.9rem; color: #c8b898; }
+  .main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .dok-section { margin-bottom: 2.5rem; }
+  .dok-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(184,134,11,0.25); }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+  .dok-badge.dok1 { background: var(--dok1); color: #c8e8c4; }
+  .dok-badge.dok2 { background: var(--dok2); color: #c4d4f0; }
+  .dok-badge.dok3 { background: var(--dok3); color: #f0c4c4; }
+  .dok-badge.dok4 { background: var(--dok4); color: #dcc4f0; }
+  .dok-header-text h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--parchment); line-height: 1.2; }
+  .dok-header-text p { font-size: 0.8rem; color: var(--smoke); margin-top: 0.1rem; }
+
+  /* CARDS */
+  .card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .card-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .card p, .card li { font-size: 0.92rem; color: #c8b898; }
+  .card ul { padding-left: 1.25rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* VOCAB */
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
+  .vocab-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.25); border-radius: 8px; min-height: 90px; padding: 1rem; cursor: pointer; transition: border-color 0.2s, transform 0.15s; }
+  .vocab-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .vocab-card.flipped { border-color: var(--gold); background: #3a2f1a; }
+  .vocab-card.flipped .vocab-front { display: none; }
+  .vocab-card:not(.flipped) .vocab-back { display: none; }
+  .vocab-term { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.25rem; }
+  .vocab-hint { font-size: 0.75rem; color: var(--smoke); font-style: italic; }
+  .vocab-def { font-size: 0.82rem; color: #c8b898; line-height: 1.5; }
+  .flip-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; display: block; }
+
+  /* MCQ */
+  .mcq-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; }
+  .mcq-q { font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.75rem; }
+  .mcq-choices { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .mcq-choice { background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.15); border-radius: 5px; padding: 0.55rem 0.9rem; font-size: 0.85rem; color: #c8b898; cursor: pointer; transition: all 0.15s; text-align: left; }
+  .mcq-choice:hover:not(:disabled) { border-color: var(--gold); color: var(--parchment); }
+  .mcq-choice.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; }
+  .mcq-choice.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.12); color: #e0a0a0; }
+  .mcq-choice:disabled { cursor: default; }
+  .mcq-feedback { display: none; font-size: 0.82rem; color: #b8a888; padding: 0.6rem 0.9rem; background: rgba(255,255,255,0.03); border-left: 2px solid var(--gold); border-radius: 0 4px 4px 0; margin-top: 0.25rem; line-height: 1.55; }
+  .mcq-feedback.visible { display: block; }
+
+  /* MATCHING */
+  .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+  @media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+  .match-col-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--smoke); margin-bottom: 0.4rem; }
+  .match-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; padding: 0.6rem 0.9rem; font-size: 0.85rem; color: #c8b898; cursor: pointer; transition: all 0.15s; user-select: none; margin-bottom: 0.4rem; }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.15); color: var(--parchment); }
+  .match-item.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; pointer-events: none; }
+  .match-item.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.15); color: #e0a0a0; }
+  .match-check-btn { margin-top: 0.5rem; padding: 0.5rem 1.25rem; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+  .match-check-btn:hover { background: rgba(184,134,11,0.15); }
+
+  /* SHORT ANSWER */
+  .sa-prompt { font-size: 0.9rem; color: #c8b898; margin-bottom: 0.75rem; padding: 0.75rem 1rem; background: rgba(184,134,11,0.06); border-left: 2px solid var(--gold); border-radius: 0 6px 6px 0; }
+  .sa-textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; line-height: 1.6; padding: 0.75rem 1rem; resize: vertical; min-height: 90px; transition: border-color 0.2s; }
+  .sa-textarea:focus { outline: none; border-color: var(--gold); }
+  .sa-textarea::placeholder { color: var(--smoke); }
+
+  /* ACCORDION */
+  .accordion-btn { width: 100%; text-align: left; background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; transition: all 0.15s; }
+  .accordion-btn:hover { background: rgba(184,134,11,0.13); }
+  .accordion-arrow { transition: transform 0.2s; font-size: 0.8rem; }
+  .accordion-btn.open .accordion-arrow { transform: rotate(90deg); }
+  .accordion-body { display: none; padding: 0.9rem 1rem; background: rgba(184,134,11,0.04); border: 1px solid rgba(184,134,11,0.15); border-top: none; border-radius: 0 0 6px 6px; font-size: 0.85rem; color: #b8a888; line-height: 1.6; }
+  .accordion-body.open { display: block; }
+  .accordion-body strong { color: var(--parchment); }
+
+  /* COMPARE TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin-bottom: 0.75rem; }
+  .compare-table th { background: rgba(184,134,11,0.15); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(184,134,11,0.3); }
+  .compare-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c8b898; vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .compare-table td:first-child { color: var(--parchment); font-weight: 600; }
+
+  /* THESIS */
+  .thesis-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .thesis-cards { grid-template-columns: 1fr; } }
+  .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
+  .thesis-card:hover { border-color: var(--gold); }
+  .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
+  .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
+  .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
+  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-click-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* CAUSAL CHAIN */
+  .causal-chain { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
+  .causal-node { background: rgba(184,134,11,0.1); border: 1px solid rgba(184,134,11,0.3); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #c8b898; text-align: center; flex: 1; min-width: 90px; }
+  .causal-node.blank { background: rgba(255,255,255,0.04); border-style: dashed; }
+  .causal-input { width: 100%; background: transparent; border: none; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.78rem; text-align: center; outline: none; }
+  .causal-input::placeholder { color: var(--smoke); font-size: 0.72rem; }
+  .causal-arrow { color: var(--gold); font-size: 1rem; flex-shrink: 0; }
+
+  /* SELF ASSESS */
+  .skill-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(184,134,11,0.3); cursor: pointer; transition: all 0.15s; display: inline-block; }
+  .skill-dot.filled { background: var(--gold); border-color: var(--gold-light); }
+  .skill-row { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem; }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label { font-size: 0.85rem; color: #c8b898; flex: 1; }
+  .skill-scale { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-align: right; min-width: 80px; }
+
+  /* PROGRESS */
+  .progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: rgba(26,16,6,0.95); backdrop-filter: blur(8px); padding: 0.5rem 1rem; border-bottom: 1px solid rgba(184,134,11,0.15); }
+  .progress-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+  .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+  .progress-track { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.4s ease; width: 0%; }
+  .progress-pct { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--gold); min-width: 2.5rem; text-align: right; }
+  .section-complete-btn { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 1.1rem; background: transparent; border: 1px solid rgba(184,134,11,0.3); border-radius: 4px; color: var(--smoke); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 1rem; }
+  .section-complete-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .section-complete-btn.done { border-color: #4a9e3f; color: #a8e0a0; background: rgba(74,158,63,0.1); }
+
+  /* NLM TIP */
+  .nlm-tip { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(26,61,110,0.2); border: 1px solid rgba(100,150,220,0.3); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; }
+  .nlm-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .nlm-tip p { font-size: 0.83rem; color: #a0b8d8; line-height: 1.55; }
+  .nlm-tip strong { color: #c8d8f0; }
+  .divider { border: none; border-top: 1px solid rgba(184,134,11,0.15); margin: 2rem 0; }
+
+  /* TECH GRID */
+  .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.65rem; margin-bottom: 0.75rem; }
+  .tech-item { background: rgba(139,26,26,0.1); border: 1px solid rgba(139,26,26,0.3); border-radius: 7px; padding: 0.75rem 0.9rem; }
+  .tech-name { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: #e8b0b0; margin-bottom: 0.25rem; }
+  .tech-effect { font-size: 0.78rem; color: #c8b898; line-height: 1.45; }
+
+  /* TWO-COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* QUOTE BLOCK */
+  .quote-block { border-left: 3px solid var(--red); padding: 0.8rem 1.2rem; background: rgba(139,26,26,0.08); border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+  .quote-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: #e8c8c8; line-height: 1.6; margin-bottom: 0.4rem; }
+  .quote-attr { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--smoke); letter-spacing: 0.1em; }
+
+  /* PROPAGANDA VS REALITY */
+  .contrast-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .contrast-grid { grid-template-columns: 1fr; } }
+  .contrast-card { border-radius: 8px; padding: 1rem 1.1rem; border: 1px solid; }
+  .contrast-card.propaganda { border-color: rgba(45,90,39,0.5); background: rgba(45,90,39,0.08); }
+  .contrast-card.reality { border-color: rgba(139,26,26,0.5); background: rgba(139,26,26,0.08); }
+  .contrast-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .contrast-card.propaganda .contrast-label { color: #90c890; }
+  .contrast-card.reality .contrast-label { color: #e09090; }
+  .contrast-card p { font-size: 0.83rem; color: #c8b898; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="header-title">7.3 Conducting World War I</h1>
+  <p class="header-sub">How industrial technology collided with old-school battlefield tactics — and rewrote the meaning of war, sacrifice, and the relationship between governments and their people</p>
+  <div class="chips">
+    <span class="chip">c. 1914–1918</span>
+    <span class="chip">Total War</span>
+    <span class="chip">Technology &amp; Society</span>
+    <span class="chip">DOK 1 → DOK 4</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</div>
+
+<div class="main" style="padding-top:1.25rem; padding-bottom:0;">
+  <div class="how-to">
+    <div class="how-to-title">📋 How to Use These Materials</div>
+    <p>Work through each section <strong>in order</strong>. Watch the NotebookLM video before starting. The video's central argument: WWI was the brutal collision of <strong>old tactics and new technology</strong> — and the gap between the glorious <em>idea</em> of war and its horrifying <em>reality</em> defines everything about how it was fought and sold to the public.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ════ DOK 1 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok1">DOK 1 · Knowledge Acquisition</div>
+      <div class="dok-header-text">
+        <h2>Watch, Recall &amp; Define</h2>
+        <p>Answer correctly — identify, name, and locate key facts from the video and infographic</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🎬</div>
+      <p><strong>Before you begin:</strong> Watch the 7.3 video. As you watch, listen for the video's opening quote from poet Wilfred Owen — he calls the idea of glorious sacrifice "the old lie." That gap between <em>the story of war</em> and the <em>reality of war</em> is the central theme of everything in 7.3.</p>
+    </div>
+    <div id="videoEmbed"></div>
+
+    <!-- Opening Quote -->
+    <div class="card">
+      <div class="card-label">Anchor Text · The Video's Central Tension</div>
+      <div class="quote-block">
+        <div class="quote-text">"Dulce et decorum est pro patria mori."</div>
+        <div class="quote-attr">— Latin phrase meaning "It is sweet and noble to die for your country" · Called "the old lie" by WWI poet Wilfred Owen, who fought in the trenches</div>
+      </div>
+      <p style="font-size:0.85rem; color:#b8a888; line-height:1.6;">For centuries this phrase captured the <em>idea</em> of war: glorious, heroic, worth dying for. WWI's industrial killing machine made that idea grotesque. The video's entire argument about how the war was <em>conducted</em> turns on this gap — the technology of propaganda was used to sell the old story, while the technology of industrial warfare made the reality something entirely different.</p>
+    </div>
+
+    <!-- Propaganda vs. Reality -->
+    <div class="card">
+      <div class="card-label">Reference · The Two Faces of Total War</div>
+      <div class="contrast-grid">
+        <div class="contrast-card propaganda">
+          <div class="contrast-label">📢 The Story Being Sold (Propaganda)</div>
+          <p>Governments used mass printing, photography, and early film — technologies impossible a generation earlier — to portray war as a glorious adventure. Recruitment posters showed heroic soldiers and patriotic duty. The goal: keep a never-ending supply of young men willing to fight and civilians willing to sacrifice.</p>
+        </div>
+        <div class="contrast-card reality">
+          <div class="contrast-label">☠ The Reality in the Trenches</div>
+          <p>Miles of mud-filled, rat-infested ditches. Constant threat of artillery, snipers, and disease. Machine guns firing 500 rounds per minute made charging across open ground suicidal. Photos of the actual carnage were so horrific governments suppressed them until after the war ended.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Technologies Reference -->
+    <div class="card">
+      <div class="card-label">Reference · New Technologies of Industrial Warfare</div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-name">⚙ Machine Gun</div>
+          <div class="tech-effect">500 rounds/minute — made cavalry charges and infantry assaults across open ground suicidal. Created No Man's Land.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">💣 Artillery</div>
+          <div class="tech-effect">Massive barrages could obliterate entire forests. Generated the constant background threat of death in the trenches.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">☁ Poison Gas</div>
+          <div class="tech-effect">Crept into trenches and attacked from within. New dimension of psychological terror — no visible enemy.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">🚜 Tank</div>
+          <div class="tech-effect">First deployed in WWI — an attempt to break the trench stalemate. New dimension of land warfare.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">✈ Aircraft</div>
+          <div class="tech-effect">Opened a new aerial dimension to warfare. Used for reconnaissance, then bombing and dogfighting.</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">📰 Propaganda</div>
+          <div class="tech-effect">Mass printing, photography, and film — used by governments as a weapon to shape public opinion at industrial scale.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vocab Flip Cards -->
+    <div class="card">
+      <div class="card-label">Activity 1A · Vocabulary · Click each card to reveal the definition</div>
+      <div class="vocab-grid" id="vocabGrid"></div>
+    </div>
+
+    <!-- Fact Recall MCQs -->
+    <div class="card">
+      <div class="card-label">Activity 1B · Fact Recall · Choose the best answer</div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">1. What does "total war" mean in the context of WWI?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. A war fought with every available military weapon, including nuclear and chemical arms</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. The mobilization of an entire nation — factories, farms, civilians, and governments — all directed toward winning the war, erasing the line between soldiers and society</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. A war fought on all continents simultaneously without any neutral nations</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. A strategy in which one side seeks to completely destroy the other's military rather than negotiate</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video emphasizes that total war meant every factory, farm, and person became part of the war effort. This created a new challenge for governments: how do you keep millions of ordinary people supporting a war that grows more horrific by the day? The answer was propaganda.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">2. How did the machine gun specifically change battlefield tactics?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. It allowed infantry to advance faster across open terrain</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. It replaced artillery as the primary weapon of the Western Front</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. Firing 500 rounds per minute, it made traditional infantry charges across open ground suicidal — creating No Man's Land and forcing soldiers into trenches</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. It gave defending armies such a massive advantage that all offensive operations were abandoned</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video uses this statistic — 500 bullets per minute from a single weapon — to explain why WWI became a trench war. The machine gun made the old tactics (brave charges across open fields) not just outdated but instantly fatal. Generals who kept ordering those charges were sending men with 19th-century strategy into 20th-century killing machines.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">3. What was the role of propaganda in WWI, according to the video?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. An unofficial civilian effort to boost morale, largely ignored by governments</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. A tool used only to deceive enemy nations about military plans</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. A state-funded weapon deployed to portray war as glorious, demonize the enemy, and maintain a supply of willing recruits — only possible because of new mass media technologies</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. A form of censorship used to hide battlefield defeats from the public</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video is explicit: propaganda "wasn't just posters people made — it was a weapon funded and deployed by the state." Three goals: (1) make war seem glorious, (2) make the enemy seem monstrous, (3) keep recruiting. Crucially, mass printing, photography, and film made this possible at a scale a generation earlier couldn't have imagined.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">4. What was the experience of trench warfare like for ordinary soldiers?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Soldiers rotated frequently, so most only spent weeks in the trenches before returning home</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Months stuck in cold, muddy, rat-infested ditches with constant threat of artillery, snipers, gas, and disease — a grinding stalemate far from any "glorious adventure"</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. Mostly inactive waiting punctuated by decisive battles that quickly ended sections of the front</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Soldiers had relative safety in the trenches since artillery fire was too inaccurate to target them</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video contrasts the propaganda image of heroic adventure with the actual trench reality: "a miserable endless existence" of cold, mud, rats, and constant random death. This is what the recruitment posters never showed — and what Wilfred Owen's poetry directly attacked.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">5. Why does the video describe the war's generals as dangerously "slow to figure it out"?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. They refused to use new technologies like tanks and aircraft even after they became available</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. They communicated too slowly with the front lines, leading to tactical delays</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. They kept ordering 19th-century infantry charge tactics against 20th-century machine guns and artillery — sending waves of men to their deaths without adapting</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. They failed to produce enough propaganda to maintain civilian support for the war</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video's most damning critique is that generals recognized the stalemate but kept trying the same failed solution: send more men "over the top" in frontal assaults. The result was battles like the Somme (60,000 British casualties on the first day alone) — "19th-century strategy sent into 20th-century killing machines." The technology had outrun the strategic thinking.</div>
+      </div>
+    </div>
+
+    <!-- Matching -->
+    <div class="card">
+      <div class="card-label">Activity 1C · Matching · Click a term, then click its match</div>
+      <div class="match-grid">
+        <div><div class="match-col-label">Terms</div><div id="matchTerms"></div></div>
+        <div><div class="match-col-label">Definitions / Effects</div><div id="matchDefs"></div></div>
+      </div>
+      <div id="matchResult" style="font-size:0.82rem; margin-top:0.5rem; display:none;"></div>
+      <button class="match-check-btn" onclick="checkMatches()">Check Answers</button>
+    </div>
+
+    <button class="section-complete-btn" id="dok1Btn" onclick="markDone('dok1Btn',25)">
+      <span class="check-icon">○</span> Mark DOK 1 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 2 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok2">DOK 2 · Knowledge Application</div>
+      <div class="dok-header-text">
+        <h2>Explain &amp; Apply</h2>
+        <p>Establish and explain with examples — apply concepts to demonstrate understanding</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🗺️</div>
+      <p><strong>Use the infographic now.</strong> The infographic likely shows the two "fronts" of total war — the home front (propaganda, mobilization) and the battlefront (technology, trenches). Keep it open as you work through the explain drills below.</p>
+    </div>
+
+    <!-- Explain Drill A: Total War -->
+    <div class="card">
+      <div class="card-label">Activity 2A · Explain Drill · Total War on the Home Front</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Explain how governments used propaganda to manage the "home front" during WWI. Your answer should identify <em>at least two specific propaganda goals</em> and explain why new technology made this possible on an unprecedented scale.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Governments used propaganda to... The first goal was... A second goal was... This was only possible because of new technology such as..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> To sustain a total war, governments faced a governance challenge unique to the modern era: how to keep millions of ordinary citizens supporting, sacrificing, and sending their children to fight in a war that grew more horrific by the day. The answer was state-funded propaganda deployed through new mass media technologies. Governments had three explicit goals: first, to portray the war as a glorious patriotic adventure worth dying for; second, to dehumanize the enemy as a monster, making killing feel righteous; and third, to maintain a constant flow of young recruits. Mass printing made recruitment posters possible at scale; photography allowed governments to control visual narratives of the war; early film created newsreels that shaped what civilians saw. A generation earlier, governments lacked these tools — Napoleon could not reach every village with a film projector. WWI propaganda was a new form of state power, made possible by the same industrial revolution that made the weapons so deadly.
+      </div>
+    </div>
+
+    <!-- Explain Drill B: Technology Gap -->
+    <div class="card">
+      <div class="card-label">Activity 2B · Explain Drill · The Technology-Strategy Gap</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Explain the "technology-strategy gap" that the video identifies as the core reason for WWI's horrific stalemate. Why did old tactics fail so catastrophically against new weapons?
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="The technology-strategy gap refers to... Old tactics like [example] failed because... The result was..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> The technology-strategy gap describes the catastrophic mismatch between the weapons available in 1914 and the tactical thinking of the generals using them. Military commanders had been trained in 19th-century warfare — cavalry charges, infantry advances across open fields, the assumption that offensive momentum would overwhelm defenders. But the machine gun, firing 500 rounds per minute, made those tactics instantly suicidal. A soldier charging across 200 yards of open ground would face a weapon that could fire 150 bullets at him before he covered half the distance. The only rational response was to dig in — creating the trench systems that defined the Western Front. But generals, slow to adapt, kept ordering the same charges, resulting in catastrophic losses: tens of thousands of casualties in single days at the Somme and Verdun. The video argues this is one of history's clearest examples of what happens when "our technology for killing gets way ahead of our strategies and our wisdom to control it."
+      </div>
+    </div>
+
+    <!-- Comparison Table: Home Front vs. Battle Front -->
+    <div class="card">
+      <div class="card-label">Activity 2C · Comparison Table · The Two Fronts of Total War</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Study the table, then answer the reflection question below.</p>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>🏠 The Home Front</th>
+              <th>⚔ The Battlefront</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Key Technology</td>
+              <td>Mass printing, photography, early film — tools of propaganda and mass mobilization</td>
+              <td>Machine guns, artillery, poison gas, early tanks and aircraft — tools of industrial killing</td>
+            </tr>
+            <tr>
+              <td>Government's Goal</td>
+              <td>Maintain public support; recruit soldiers; direct civilian labor toward war production</td>
+              <td>Break the enemy's military power; hold/advance the front line; protect supply lines</td>
+            </tr>
+            <tr>
+              <td>Civilian's Role</td>
+              <td>Factory workers, nurses, farmers — everyone part of the war machine; women entering workforce in large numbers</td>
+              <td>Colonial subjects from India, Africa, Asia forced or recruited to fight in a European war</td>
+            </tr>
+            <tr>
+              <td>The "Story" Told</td>
+              <td>Glorious adventure; patriotic duty; the enemy is a monster who must be stopped</td>
+              <td>Months of mud, rats, disease, random death; the reality censored from home-front audiences</td>
+            </tr>
+            <tr>
+              <td>Long-term Consequence</td>
+              <td>Governments permanently expanded their capacity to shape public opinion; set a precedent for state propaganda</td>
+              <td>A generation of men killed or traumatized; massive disillusionment with the idea of "glorious war"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sa-prompt" style="margin-top:0.75rem;">
+        <strong>Reflection question:</strong> The video says propaganda technology and killing technology were "two sides of the same modern coin." What does this mean? Write 2–3 sentences.
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="Both technologies were products of the Industrial Revolution... The propaganda made the killing possible by..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Response
+      </button>
+      <div class="accordion-body">
+        The video means that both propaganda and industrial weaponry were products of the same technological revolution, and each made the other possible and more powerful. Without propaganda, the scale of popular mobilization needed to sustain four years of industrial warfare would have collapsed — people would have refused to fight once the reality became clear. Without industrial weapons, governments wouldn't have needed mass propaganda, because wars would have been shorter and fought by smaller armies. The "coin" metaphor captures how these two technologies were inseparable: the killing required the selling, and the selling enabled the killing to continue.
+      </div>
+    </div>
+
+    <!-- Colonial Soldiers Activity -->
+    <div class="card">
+      <div class="card-label">Activity 2D · Apply · Colonial Soldiers and Broken Promises</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Over 1.3 million Indian soldiers fought for the British Empire in WWI. Many colonial soldiers were told they would receive greater rights or even independence in exchange for their service. Explain <em>why</em> colonial powers needed these troops, and what the long-term consequences were when those promises were broken.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Colonial powers needed troops from their empires because... The promises made were... When these promises were broken, the consequence was..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> Britain and France needed colonial troops because total war demanded manpower at a scale impossible to sustain from the home population alone. With millions of casualties on the Western Front and a war that showed no signs of ending quickly, colonial empires provided a vast reserve of soldiers. Over 1.3 million Indians, hundreds of thousands of Africans, Australians, Canadians, and soldiers from across the Pacific served empires whose conflicts had little to do with their own interests. To recruit them, colonial governments made promises — greater political rights, more autonomy, sometimes the suggestion of independence after the war. When the war ended and these promises were broken or ignored, the consequences were profound: colonial subjects who had risked their lives for empire returned home with firsthand experience of European weakness and a new political vocabulary of rights and self-determination. The disillusionment of WWI veteran communities across Asia and Africa directly fueled the decolonization movements of the mid-20th century.
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok2Btn" onclick="markDone('dok2Btn',50)">
+      <span class="check-icon">○</span> Mark DOK 2 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 3 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok3">DOK 3 · Knowledge Analysis</div>
+      <div class="dok-header-text">
+        <h2>Argue &amp; Analyze</h2>
+        <p>Examine and explain with evidence — construct arguments, evaluate theses, build causal chains</p>
+      </div>
+    </div>
+
+    <!-- Causal Chain -->
+    <div class="card">
+      <div class="card-label">Activity 3A · Causal Chain · Fill in the blanks</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Two nodes are blank. Fill them in, then write 2 sentences in the textarea explaining why the chain ends in "disillusionment."</p>
+      <div class="causal-chain">
+        <div class="causal-node">Industrial Revolution<br><small style="color:var(--smoke);">new killing tech</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What tactic did new weapons make obsolete?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Trench Warfare<br><small style="color:var(--smoke);">grinding stalemate</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What did governments use to hide the reality?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Mass Mobilization<br><small style="color:var(--smoke);">total war society</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Disillusionment<br><small style="color:var(--smoke);">"the old lie" exposed</small></div>
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="The chain ends in disillusionment because... Specifically, when soldiers returned home..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> Reveal Answers + Insight
+      </button>
+      <div class="accordion-body">
+        <strong>Blank 1:</strong> Infantry Charges / Old Tactics (the frontal assault, the cavalry charge — rendered suicidal by machine guns and artillery)<br>
+        <strong>Blank 2:</strong> Propaganda (state-funded mass media campaigns that portrayed war as glorious to maintain recruitment and civilian support)<br><br>
+        <strong>Why disillusionment?</strong> The war ended in 1918 with 20 million dead, economies shattered, and a generation of survivors who had seen the reality of industrial warfare up close — nothing like the heroic narrative the propaganda had promised. Wilfred Owen's poetry is the literary expression of this: men who had been sold a lie about glory came home (those who came home at all) profoundly skeptical of the governments and ideals that had sent them. This disillusionment would feed into the political instability of the interwar period and the rise of radical ideologies.
+      </div>
+    </div>
+
+    <!-- SAQ -->
+    <div class="card">
+      <div class="card-label">Activity 3B · SAQ Practice · AP-Style Short Answer</div>
+      <div class="sa-prompt">
+        <strong>AP Prompt:</strong> "Describe one way in which new military technology changed the nature of warfare during World War I."<br><br>
+        <em>Write 2–3 sentences. Name the technology, explain its specific effect on how the war was fought, and connect it to a broader consequence (stalemate, civilian impact, new tactics, etc.).</em>
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="[Technology] changed warfare by... This led to... As a result, [broader consequence]..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample SAQ Response (Poison Gas)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Response — Poison Gas:</strong><br><br>
+        Poison gas fundamentally altered the psychological and physical experience of trench warfare by introducing a form of attack with no visible enemy — clouds of toxic chemicals that could seep silently into trenches and kill or permanently injure soldiers from the inside out. Unlike a bullet or artillery shell, gas required soldiers to carry cumbersome masks at all times and created a constant ambient terror even during periods of relative quiet, degrading morale and battlefield effectiveness beyond just the direct casualties it caused. The use of poison gas also marked a significant moral threshold: the deliberate deployment of a weapon designed to cause prolonged suffering rather than quick death contributed to the widespread post-war sense that the old rules of "honorable" warfare had been permanently destroyed, reinforcing the disillusionment that defined the interwar era.<br><br>
+        <strong>AP note:</strong> The prompt asks for "one way" — focus and depth on a single technology scores better than listing three technologies briefly. Show you understand <em>mechanism</em> (how it changed warfare) AND <em>consequence</em> (what it led to).
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <div class="card-label">Activity 3C · CCOT Analysis · Warfare Before and After WWI</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> What <em>changed</em> and what <em>continued</em> in the nature of warfare between pre-industrial wars (c. 1800s) and World War I? Give one specific example of each.
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="match-col-label">What CHANGED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Something fundamentally new about how WWI was fought..."></textarea>
+        </div>
+        <div>
+          <div class="match-col-label">What CONTINUED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Something about war that remained the same despite new technology..."></textarea>
+        </div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample CCOT Response
+      </button>
+      <div class="accordion-body">
+        <strong>CHANGE:</strong> The most significant change was the complete erasure of the line between soldier and civilian — the defining feature of total war. In pre-industrial wars, fighting was largely confined to professional armies on defined battlefields (even Napoleonic wars maintained this basic distinction). In WWI, entire national economies, workforces, and populations were conscripted into the war effort. Factories produced weapons around the clock; women entered the industrial workforce in unprecedented numbers; governments controlled food production and distribution. War was no longer something soldiers did while civilians watched — it was something entire societies <em>became</em>.<br><br>
+        <strong>CONTINUITY:</strong> Despite the new technologies, the fundamental <em>political logic</em> of war continued unchanged: states used military force to pursue territorial, economic, and strategic goals. The great powers of WWI were doing exactly what European powers had done for centuries — competing for dominance, territory, and prestige. The industrial revolution changed the <em>tools</em> of that competition catastrophically, but not the underlying ambitions that drove it.
+      </div>
+    </div>
+
+    <!-- Thesis Evaluator -->
+    <div class="card">
+      <div class="card-label">Activity 3D · Thesis Evaluator · Click each thesis to reveal the verdict</div>
+      <div class="sa-prompt" style="margin-bottom:0.75rem;">
+        <strong>Essay Prompt:</strong> "Evaluate the extent to which new military technology was the primary cause of the stalemate on the Western Front during World War I."
+      </div>
+      <div class="thesis-cards">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. It says technology caused the stalemate — which is just a paraphrase of the prompt. There is no line of reasoning, no \'to what extent\' argument, and no analytical categories. The reader cannot tell what the essay will actually argue or prove.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"New military technology like the machine gun and poison gas was the primary cause of the stalemate on the Western Front during World War I."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This identifies two factors but doesn\'t weigh them against each other or establish a line of reasoning. \'Both contributed\' is not an argument — it\'s a non-answer. The prompt asks you to evaluate the EXTENT to which technology was the PRIMARY cause. You must take a position on how much it mattered relative to other factors.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"Both new technology and the failure of military leadership contributed to the stalemate, making it difficult to say which was the primary cause."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It takes a clear position on \'to what extent\' (technology was necessary but not sufficient) and establishes a line of reasoning: technology created the conditions, but generalship determined how catastrophic the stalemate became. This gives the essay two analytical categories to develop with evidence.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"While new military technology made trench warfare inevitable by rendering infantry charges suicidal, the stalemate's extraordinary human cost was primarily caused by generals who kept ordering 19th-century tactics against 20th-century weapons long after the failure was obvious."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point with a sophisticated \'to what extent\' argument. It acknowledges technology\'s role but argues for a more nuanced cause: the fundamental failure was a governance one — the inability of military and political leaders to adapt their thinking to new realities. This creates a rich analytical framework connecting 7.3 to the broader 7.2 theme of systemic governance failure.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"New military technology created the conditions for stalemate, but the deeper cause was a governance failure: military commanders and political leaders lacked the institutional capacity to adapt strategy to new technological realities quickly enough to prevent catastrophic and repeated losses."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok3Btn" onclick="markDone('dok3Btn',75)">
+      <span class="check-icon">○</span> Mark DOK 3 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 4 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok4">DOK 4 · Knowledge Augmentation</div>
+      <div class="dok-header-text">
+        <h2>Synthesize &amp; Transfer</h2>
+        <p>Explore and explain with examples and evidence — connect across time periods and construct original arguments</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🔗</div>
+      <p><strong>The video's closing question:</strong> <em>"What happens when our technology for killing people gets way ahead of our strategies and maybe even our wisdom to control it? WWI gives us a pretty terrifying answer."</em> DOK 4 asks you to carry that question into other historical periods and into your own analysis.</p>
+    </div>
+
+    <!-- Contextualization Builder -->
+    <div class="card">
+      <div class="card-label">Activity 4A · Contextualization Builder · AP Essay Skill</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Choose one option and write a 3–4 sentence contextualization paragraph connecting a broader development to how WWI was conducted.</p>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.75rem;">
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option A:</strong> How did the Industrial Revolution (c. 1750–1900) create both the weapons technology that made WWI so deadly AND the mass communication technology that made propaganda possible?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option B:</strong> How did 19th-century warfare (the Crimean War, the American Civil War, the Franco-Prussian War) provide early warnings of what industrial weapons could do — warnings that European military planners largely ignored by 1914?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option C:</strong> How did the expansion of imperial empires in the 19th century create the global networks that turned a European war into a world war fought with colonial soldiers?
+        </div>
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="In the decades before WWI, [your chosen context] created conditions that shaped how the war was fought by..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Contextualization (Option B)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Contextualization — 19th-Century Warfare Warnings:</strong><br><br>
+        The technology-strategy gap that made WWI so catastrophic was not entirely unforeseeable — earlier 19th-century conflicts had demonstrated what industrial weapons could do to armies using traditional tactics. The American Civil War (1861–1865) showed that rifles and fortifications could render frontal assaults catastrophically costly, producing staggering casualties at battles like Antietam and Cold Harbor. The Franco-Prussian War of 1870–71 demonstrated the devastating effectiveness of artillery against massed infantry. Even the Russo-Japanese War of 1904–05 showed that machine guns and barbed wire could stop massive infantry attacks in their tracks. European military planners were aware of these lessons, yet by 1914 most European armies retained an offensive doctrine that assumed aggressive infantry charges would overwhelm defenses — a belief rooted more in cultural assumptions about masculine courage than in tactical evidence. When those charges met machine guns on the Western Front, the predictable disaster of the American Civil War's worst days was repeated on an industrial scale.
+      </div>
+    </div>
+
+    <!-- Synthesis: Connect Forward -->
+    <div class="card">
+      <div class="card-label">Activity 4B · Cross-Unit Synthesis · Connecting Forward</div>
+      <div class="sa-prompt">
+        <strong>Synthesis Prompt:</strong> The video asks: <em>"Have we really learned the lesson?"</em> — that technology for killing has outrun our wisdom to control it. In 3–5 sentences, connect the theme of <strong>technology outrunning strategy/ethics</strong> from 7.3 to a specific development in a later section of Unit 7 (7.4–7.9). Be explicit about the connection.
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="The theme from 7.3 — that killing technology outruns strategic and ethical wisdom — reappears in [later section] when..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Synthesis Response
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Synthesis — Connecting 7.3 to 7.7 (Conducting WWII):</strong><br><br>
+        The 7.3 theme of technology outrunning ethical wisdom reaches its logical endpoint in WWII, particularly in the firebombing of civilian cities and the use of atomic weapons. WWI had erased the line between soldier and civilian on the home front through total war mobilization; WWII erased it on the battlefront itself. The firebombing of Dresden and Tokyo, and ultimately the atomic bombings of Hiroshima and Nagasaki, were the direct application of the same logic that sent machine-gun fire across No Man's Land — use whatever technology is available to break the enemy's will, regardless of civilian casualties. Each escalation made the next one more thinkable. WWI's poison gas, controversial at the time, normalized the idea of weapons designed to kill indiscriminately; by 1945, a weapon capable of killing 70,000 people in a single moment was deployed twice in four days. The video's haunting question — "have we really learned the lesson?" — finds its answer in the mushroom cloud over Hiroshima.
+      </div>
+    </div>
+
+    <!-- Self Assessment -->
+    <div class="card">
+      <div class="card-label">Activity 4C · Self-Assessment · Rate your confidence (click the dots)</div>
+      <div id="selfAssess"></div>
+    </div>
+
+    <button class="section-complete-btn" id="dok4Btn" onclick="markDone('dok4Btn',100)">
+      <span class="check-icon">○</span> Mark DOK 4 Complete — Unit 7.3 Done!
+    </button>
+  </div>
+
+</div><!-- /main -->
+
+<script src="shared.js"></script>
+<script>
+// ── VOCAB ──
+const vocab = [
+  { term: "Total War", hint: "Entire society mobilized…", def: "A form of warfare in which the entire nation — factories, farms, civilians, governments — is mobilized toward winning the war, erasing the distinction between soldiers and society." },
+  { term: "Trench Warfare", hint: "Miles of muddy ditches…", def: "The dominant form of combat on the Western Front — soldiers dug miles of defensive trenches to survive the firepower of machine guns and artillery, creating a grinding stalemate." },
+  { term: "No Man's Land", hint: "The killing ground between trenches…", def: "The deadly open ground between opposing trench lines — anyone crossing it faced machine gun fire, artillery, and barbed wire. Named for the impossibility of survival." },
+  { term: "Machine Gun", hint: "500 rounds per minute…", def: "The weapon that most defined WWI's stalemate: firing 500 rounds per minute, it made traditional infantry charges suicidal and forced armies into trenches." },
+  { term: "Poison Gas", hint: "The invisible killer…", def: "A new form of chemical warfare — clouds of toxic gas that crept into trenches. Created psychological terror beyond direct casualties; widely condemned as inhumane." },
+  { term: "Propaganda", hint: "The state's media weapon…", def: "Government-funded campaigns using mass printing, photography, and film to portray war as glorious, demonize the enemy, and maintain public support and recruitment." },
+  { term: "Stalemate", hint: "Four years of no progress…", def: "The grinding military deadlock on the Western Front — when neither side could advance, both sides sustained massive casualties attacking positions neither could hold." },
+  { term: "Wilfred Owen", hint: "\"The old lie\"…", def: "British WWI poet who fought in the trenches and wrote powerfully about the gap between the propaganda vision of glorious war and its horrifying industrial reality. Called the Latin phrase 'dulce et decorum' \"the old lie.\"" },
+  { term: "The Home Front", hint: "War comes to civilians…", def: "The civilian side of total war — factories retooled for weapons production, women entering the workforce, food rationing, and government propaganda campaigns all became part of the war effort." },
+  { term: "Colonial Troops", hint: "1.3 million from India alone…", def: "Soldiers from European colonies (India, Africa, Australia, the Pacific) conscripted or recruited to fight in a European war — promised greater rights or autonomy that were often not delivered after the war ended." },
+];
+
+function buildVocab() {
+  const g = document.getElementById('vocabGrid');
+  vocab.forEach(v => {
+    const c = document.createElement('div');
+    c.className = 'vocab-card';
+    c.innerHTML = `<div class="vocab-front"><div class="vocab-term">${v.term}</div><div class="vocab-hint">${v.hint}</div><span class="flip-hint">↕ tap to reveal</span></div><div class="vocab-back"><div class="vocab-def">${v.def}</div><span class="flip-hint" style="color:var(--smoke);">↕ flip back</span></div>`;
+    c.addEventListener('click', () => c.classList.toggle('flipped'));
+    g.appendChild(c);
+  });
+}
+
+// ── MATCHING ──
+const matchPairs = [
+  { term: "Total War",       def: "Entire society — factories, farms, civilians — mobilized for war" },
+  { term: "Machine Gun",     def: "500 rounds/minute — made infantry charges across open ground suicidal" },
+  { term: "Propaganda",      def: "State-funded media weapon to portray war as glorious and recruit soldiers" },
+  { term: "Wilfred Owen",    def: "Poet who called the idea of glorious war sacrifice \"the old lie\"" },
+  { term: "Colonial Troops", def: "Soldiers from India, Africa, Asia promised rights that were often broken" },
+];
+let selTerm = null, selDef = null;
+
+function buildMatching() {
+  const tDiv = document.getElementById('matchTerms');
+  const dDiv = document.getElementById('matchDefs');
+  const shuffled = [...matchPairs].sort(() => Math.random() - 0.5);
+  matchPairs.forEach(p => {
+    const t = document.createElement('div');
+    t.className = 'match-item'; t.textContent = p.term; t.dataset.term = p.term;
+    t.addEventListener('click', () => selectMatch(t, 'term'));
+    tDiv.appendChild(t);
+  });
+  shuffled.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item'; d.textContent = p.def; d.dataset.def = p.term;
+    d.addEventListener('click', () => selectMatch(d, 'def'));
+    dDiv.appendChild(d);
+  });
+}
+
+function selectMatch(el, type) {
+  if (el.classList.contains('correct')) return;
+  if (type === 'term') {
+    document.querySelectorAll('#matchTerms .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selTerm = el.classList.contains('selected') ? el : null;
+  } else {
+    document.querySelectorAll('#matchDefs .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selDef = el.classList.contains('selected') ? el : null;
+  }
+  if (selTerm && selDef) {
+    if (selTerm.dataset.term === selDef.dataset.def) {
+      [selTerm, selDef].forEach(e => { e.classList.remove('selected'); e.classList.add('correct'); });
+    } else {
+      [selTerm, selDef].forEach(e => e.classList.add('incorrect'));
+      const st = selTerm, sd = selDef;
+      setTimeout(() => { st.classList.remove('selected','incorrect'); sd.classList.remove('selected','incorrect'); }, 700);
+    }
+    selTerm = null; selDef = null;
+  }
+}
+
+function checkMatches() {
+  const correct = document.querySelectorAll('.match-item.correct').length / 2;
+  const res = document.getElementById('matchResult');
+  res.style.display = 'block';
+  res.style.color = correct === matchPairs.length ? '#a8e0a0' : '#e0c0a0';
+  res.textContent = correct === matchPairs.length ? `✓ All ${matchPairs.length} matched correctly!` : `${correct} of ${matchPairs.length} matched. Keep going!`;
+}
+
+// ── MCQ ──
+function handleMCQ(btn) {
+  const c = btn.closest('.mcq-item');
+  if (c.querySelector('.correct, .incorrect')) return;
+  const ok = btn.dataset.correct === 'true';
+  btn.classList.add(ok ? 'correct' : 'incorrect');
+  c.querySelectorAll('.mcq-choice').forEach(b => { b.disabled = true; if (b !== btn && b.dataset.correct === 'true') b.classList.add('correct'); });
+  if (ok) { const fb = c.querySelector('.mcq-feedback'); if (fb) fb.classList.add('visible'); }
+}
+
+// ── ACCORDION ──
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// ── THESIS ──
+function revealThesis(card, verdict, explanation) {
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+  card.querySelector('.thesis-verdict').className = `thesis-verdict ${verdict}`;
+  card.querySelector('.thesis-explanation').textContent = explanation;
+}
+
+// ── SELF ASSESS ──
+const skills = [
+  "I can define total war and explain how it changed the relationship between governments and civilians",
+  "I can identify at least three new technologies and explain each one's specific effect on how WWI was fought",
+  "I can explain why propaganda was a new form of state power made possible by industrial technology",
+  "I can analyze the technology-strategy gap and explain why generals kept using failed tactics",
+  "I can construct a thesis that evaluates the role of technology in causing WWI's stalemate",
+  "I can write a SAQ response describing how one technology changed the nature of warfare with specific evidence",
+];
+function buildSelfAssess() {
+  const wrap = document.getElementById('selfAssess');
+  skills.forEach((skill, si) => {
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML = `<div class="skill-label">${skill}</div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.25rem;"><div style="display:flex;gap:0.3rem;">${[1,2,3].map(l=>`<div class="skill-dot" onclick="setDot(${si},${l})" data-skill="${si}" data-level="${l}"></div>`).join('')}</div><div class="skill-scale">1 = learning · 3 = confident</div></div>`;
+    wrap.appendChild(row);
+  });
+}
+function setDot(si, level) {
+  document.querySelectorAll(`[data-skill="${si}"].skill-dot`).forEach((d,i) => d.classList.toggle('filled', i < level));
+}
+
+// ── PROGRESS ──
+let currentProgress = 0;
+function markDone(btnId, pct) {
+  const btn = document.getElementById(btnId);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.querySelector('.check-icon').textContent = '✓';
+  btn.childNodes[1].textContent = ' Section Complete';
+  currentProgress = Math.max(currentProgress, pct);
+  document.getElementById('progressFill').style.width = currentProgress + '%';
+  document.getElementById('progressPct').textContent = currentProgress + '%';
+}
+
+// ── INIT ──
+buildVocab();
+buildMatching();
+buildSelfAssess();
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'q60q8z5qEeM');
+initAutoSave('7_3');
+buildCompletionSection('7_3', '7.3 Conducting World War I');
+
+const _origMarkDone = markDone;
+markDone = function(btnId, pct) {
+  _origMarkDone(btnId, pct);
+  markDoneShared('7_3', btnId, pct);
+};
+</script>
+</body>
+</html>

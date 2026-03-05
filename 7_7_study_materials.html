@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.7 — Conducting World War II | AP World History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --parchment: #f5f0e8;
+  --gold: #b8860b;
+  --gold-light: #d4a820;
+  --smoke: #6b6355;
+  --bg: #2a2016;
+  --bg-card: #32291a;
+  --dok1: #2d5a27;
+  --dok2: #1a3d6e;
+  --dok3: #6b2d2d;
+  --dok4: #4a2d6b;
+  --border: rgba(184,134,11,0.25);
+  --text-main: #f5f0e8;
+  --text-muted: #c4b89a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── PROGRESS BAR ── */
+#progress-bar-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+#progress-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+#progress-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold-light);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* ── HEADER ── */
+.page-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  text-align: center;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--parchment);
+  margin-bottom: 16px;
+}
+.page-title em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+.page-subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-muted);
+  background: rgba(184,134,11,0.07);
+  letter-spacing: 0.05em;
+}
+
+/* ── HOW-TO BANNER ── */
+.how-to-banner {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.how-to-inner {
+  border-left: 4px solid var(--gold);
+  background: rgba(184,134,11,0.08);
+  padding: 24px 28px;
+  border-radius: 0 8px 8px 0;
+}
+.how-to-inner h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+.how-to-inner p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.how-to-inner p:last-child { margin-bottom: 0; }
+.how-to-inner strong { color: var(--parchment); }
+
+/* ── MAIN CONTENT ── */
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ── DOK SECTION ── */
+.dok-section {
+  margin-bottom: 56px;
+}
+.dok-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.dok-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 11px;
+  border-radius: 4px;
+  color: white;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.dok1 .dok-badge { background: var(--dok1); }
+.dok2 .dok-badge { background: var(--dok2); }
+.dok3 .dok-badge { background: var(--dok3); }
+.dok4 .dok-badge { background: var(--dok4); }
+.dok-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--parchment);
+}
+.dok1 .dok-section-title { color: #7dc774; }
+.dok2 .dok-section-title { color: #7baad6; }
+.dok3 .dok-section-title { color: #d47a7a; }
+.dok4 .dok-section-title { color: #a07ad4; }
+
+/* ── CALLOUT BOX ── */
+.callout {
+  border-left: 3px solid;
+  padding: 16px 20px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 24px;
+  font-size: 0.92rem;
+}
+.callout-blue {
+  border-color: #4a90d9;
+  background: rgba(74,144,217,0.08);
+}
+.callout-gold {
+  border-color: var(--gold);
+  background: rgba(184,134,11,0.08);
+}
+.callout-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--gold-light);
+}
+.callout-blue .callout-title { color: #7baad6; }
+.callout p { color: var(--text-muted); margin-bottom: 6px; }
+.callout p:last-child { margin-bottom: 0; }
+.callout a { color: #7baad6; }
+.callout strong { color: var(--parchment); }
+
+/* ── QUOTE BLOCK ── */
+.quote-block {
+  border-left: 3px solid var(--gold);
+  padding: 20px 24px;
+  margin: 0 0 28px;
+  background: rgba(184,134,11,0.06);
+  border-radius: 0 8px 8px 0;
+}
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--parchment);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.quote-attr {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── COMPARISON GRID ── */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.compare-col {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.compare-col-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.demo-header { background: rgba(26,61,110,0.4); color: #7baad6; border: 1px solid rgba(74,144,217,0.3); }
+.total-header { background: rgba(107,45,45,0.4); color: #d47a7a; border: 1px solid rgba(180,60,60,0.3); }
+.compare-col ul { list-style: none; }
+.compare-col li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  gap: 8px;
+}
+.compare-col li:last-child { border-bottom: none; }
+.compare-col li::before { content: '›'; color: var(--gold); flex-shrink: 0; }
+
+/* ── TIMELINE ── */
+.timeline { margin-bottom: 28px; }
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  align-items: flex-start;
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-light);
+  min-width: 90px;
+  padding-top: 3px;
+  letter-spacing: 0.05em;
+}
+.timeline-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.timeline-text strong { color: var(--parchment); }
+
+/* ── FLIP CARDS ── */
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.flip-card {
+  height: 160px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+.flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flip-front {
+  background: rgba(45,90,39,0.2);
+  border: 1px solid rgba(45,90,39,0.5);
+}
+.flip-front .term {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #7dc774;
+  margin-bottom: 8px;
+}
+.flip-front .hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+.flip-front .tap-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  color: rgba(125,199,116,0.4);
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+.flip-back {
+  background: rgba(45,90,39,0.15);
+  border: 1px solid rgba(45,90,39,0.35);
+  transform: rotateY(180deg);
+}
+.flip-back .def {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ── MCQ ── */
+.mcq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.mcq-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  color: var(--parchment);
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+.mcq-q .q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.1em;
+}
+.mcq-options { display: flex; flex-direction: column; gap: 8px; }
+.mcq-option {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.03);
+  transition: all 0.2s;
+  font-size: 0.89rem;
+  color: var(--text-muted);
+  text-align: left;
+}
+.mcq-option:hover { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.mcq-option .opt-letter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-light);
+  min-width: 16px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.mcq-option.correct { border-color: #2d5a27; background: rgba(45,90,39,0.2); color: #7dc774; }
+.mcq-option.incorrect { border-color: #6b2d2d; background: rgba(107,45,45,0.2); color: #d47a7a; text-decoration: line-through; opacity: 0.7; }
+.mcq-option.disabled { pointer-events: none; }
+.mcq-feedback {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.mcq-feedback.show { display: block; }
+.mcq-feedback.fb-correct { background: rgba(45,90,39,0.15); border-left: 3px solid #2d5a27; }
+.mcq-feedback.fb-incorrect { background: rgba(107,45,45,0.15); border-left: 3px solid #6b2d2d; }
+
+/* ── MATCHING ── */
+.matching-wrap { margin-bottom: 28px; }
+.matching-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.match-term {
+  background: rgba(26,61,110,0.2);
+  border: 1px solid rgba(74,144,217,0.2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: #7baad6;
+  font-family: 'Source Serif 4', serif;
+  display: flex;
+  align-items: center;
+}
+.match-def {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: grab;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+.match-def .drag-handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+.match-def:hover { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.match-def.dragging { opacity: 0.5; cursor: grabbing; }
+.match-def.matched-correct { border-color: #2d5a27; background: rgba(45,90,39,0.15); color: #7dc774; }
+.match-def.matched-incorrect { border-color: #6b2d2d; background: rgba(107,45,45,0.15); color: #d47a7a; }
+.match-drop {
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.2);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+}
+.match-drop.drag-over { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.match-drop.filled { font-family: 'Source Serif 4', serif; font-size: 0.85rem; color: var(--text-muted); }
+.matching-controls { display: flex; gap: 10px; margin-top: 14px; }
+.btn-sm {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 7px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: rgba(184,134,11,0.1);
+  color: var(--gold-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-sm:hover { background: rgba(184,134,11,0.2); border-color: var(--gold-light); }
+.btn-sm.btn-check { background: rgba(45,90,39,0.2); border-color: rgba(45,90,39,0.5); color: #7dc774; }
+.btn-sm.btn-check:hover { background: rgba(45,90,39,0.35); }
+#match-score { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); display: flex; align-items: center; }
+
+/* ── ACCORDION ── */
+.accordion {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.accordion-header {
+  padding: 14px 20px;
+  background: var(--bg-card);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.accordion-header:hover { background: rgba(255,255,255,0.04); }
+.accordion-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+.accordion-arrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold-light);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.accordion.open .accordion-arrow { transform: rotate(180deg); }
+.accordion-body {
+  display: none;
+  padding: 20px;
+  background: rgba(255,255,255,0.015);
+  border-top: 1px solid var(--border);
+}
+.accordion.open .accordion-body { display: block; }
+.accordion-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.accordion-body p:last-child { margin-bottom: 0; }
+.accordion-body strong { color: var(--parchment); }
+.sample-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ── SECTION HEADING ── */
+.section-h {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--parchment);
+  margin: 28px 0 14px;
+}
+
+/* ── COMPARISON TABLE ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 0.855rem;
+}
+.compare-table th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  color: var(--gold-light);
+  background: var(--bg-card);
+}
+.compare-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+.compare-table td:first-child {
+  color: var(--parchment);
+  font-weight: 600;
+  font-size: 0.82rem;
+  min-width: 130px;
+}
+
+/* ── CAUSAL CHAIN ── */
+.causal-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 24px;
+}
+.causal-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  position: relative;
+}
+.causal-node.blank {
+  background: rgba(107,45,45,0.1);
+  border: 1px dashed rgba(107,45,45,0.4);
+}
+.causal-node.blank textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--parchment);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.875rem;
+  resize: none;
+  outline: none;
+  min-height: 60px;
+  line-height: 1.6;
+}
+.causal-node.blank textarea::placeholder { color: rgba(212,168,32,0.3); font-style: italic; }
+.causal-node .node-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.causal-node.blank .node-label { color: #d47a7a; }
+.causal-arrow {
+  text-align: center;
+  padding: 6px 0;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.reveal-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border: 1px solid rgba(107,45,45,0.4);
+  border-radius: 4px;
+  background: rgba(107,45,45,0.1);
+  color: #d47a7a;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+.reveal-btn:hover { background: rgba(107,45,45,0.2); }
+.answer-reveal {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: rgba(45,90,39,0.15);
+  border-left: 3px solid #2d5a27;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.875rem;
+  color: #7dc774;
+  line-height: 1.6;
+}
+.answer-reveal.show { display: block; }
+.ap-insight {
+  background: rgba(184,134,11,0.07);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 20px 0 24px;
+}
+.ap-insight .insight-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ap-insight p { font-size: 0.875rem; color: var(--text-muted); }
+
+/* ── THESIS CARDS ── */
+.thesis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.thesis-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.thesis-card-body {
+  padding: 16px 18px;
+  font-size: 0.88rem;
+  color: var(--parchment);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  line-height: 1.6;
+  min-height: 110px;
+}
+.thesis-reveal-btn {
+  width: 100%;
+  padding: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  border: none;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.thesis-reveal-btn:hover { background: rgba(255,255,255,0.06); }
+.thesis-verdict {
+  display: none;
+  padding: 10px 18px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  border-top: 1px solid var(--border);
+}
+.thesis-verdict.show { display: block; }
+.thesis-verdict.pass { background: rgba(45,90,39,0.12); color: #7dc774; }
+.thesis-verdict.fail { background: rgba(107,45,45,0.12); color: #d47a7a; }
+.verdict-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+.verdict-badge.pass { background: rgba(45,90,39,0.4); color: #7dc774; }
+.verdict-badge.fail { background: rgba(107,45,45,0.4); color: #d47a7a; }
+
+/* ── SELF-ASSESSMENT ── */
+.self-assess { margin-bottom: 28px; }
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.skill-row:last-child { border-bottom: none; }
+.skill-dots { display: flex; gap: 5px; flex-shrink: 0; padding-top: 3px; }
+.skill-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.skill-dot.level-1.active { background: #d47a7a; border-color: #d47a7a; }
+.skill-dot.level-2.active { background: var(--gold-light); border-color: var(--gold-light); }
+.skill-dot.level-3.active { background: #7dc774; border-color: #7dc774; }
+.skill-text { font-size: 0.9rem; color: var(--text-muted); flex: 1; }
+
+/* ── MARK COMPLETE BUTTON ── */
+.complete-wrap {
+  text-align: right;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.btn-complete {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-complete:not(.done) { background: var(--gold); color: var(--bg); }
+.btn-complete:not(.done):hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(184,134,11,0.3); }
+.btn-complete.done { background: rgba(45,90,39,0.3); color: #7dc774; border: 1px solid rgba(45,90,39,0.5); cursor: default; }
+.dok1 .btn-complete:not(.done) { background: var(--dok1); color: white; }
+.dok1 .btn-complete:not(.done):hover { background: #3d7a35; }
+.dok2 .btn-complete:not(.done) { background: var(--dok2); color: white; }
+.dok2 .btn-complete:not(.done):hover { background: #244f8e; }
+.dok3 .btn-complete:not(.done) { background: var(--dok3); color: white; }
+.dok3 .btn-complete:not(.done):hover { background: #8b3d3d; }
+.dok4 .btn-complete:not(.done) { background: var(--dok4); color: white; }
+.dok4 .btn-complete:not(.done):hover { background: #5e3a87; }
+
+/* ── CONTEXTUALIZATION OPTIONS ── */
+.context-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.context-option {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.context-option-header {
+  padding: 14px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.context-option-header:hover { background: rgba(255,255,255,0.03); }
+.context-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.09em;
+  color: #a07ad4;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border: 1px solid rgba(160,122,212,0.3);
+  border-radius: 3px;
+}
+.context-title { font-size: 0.92rem; color: var(--parchment); flex: 1; font-family: 'Playfair Display', serif; }
+.context-arrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a07ad4; transition: transform 0.3s; }
+.context-option.open .context-arrow { transform: rotate(180deg); }
+.context-body {
+  display: none;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.01);
+}
+.context-option.open .context-body { display: block; }
+.context-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 8px; line-height: 1.7; }
+.context-body strong { color: var(--parchment); }
+
+/* ── PROMPT BOX ── */
+.prompt-box {
+  background: rgba(184,134,11,0.06);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+.prompt-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.prompt-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--parchment);
+  line-height: 1.65;
+}
+.write-area {
+  width: 100%;
+  min-height: 120px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: var(--parchment);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 12px;
+}
+.write-area:focus { border-color: var(--gold); }
+.write-area::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* ── CCOT TABLE ── */
+.ccot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.ccot-col {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ccot-col-header {
+  padding: 10px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.change-header { background: rgba(107,45,45,0.25); color: #d47a7a; }
+.continue-header { background: rgba(26,61,110,0.25); color: #7baad6; }
+.ccot-col textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--parchment);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  padding: 14px 16px;
+  resize: none;
+  outline: none;
+  min-height: 130px;
+}
+.ccot-col textarea::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* ── SAQ PART ── */
+.saq-part {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.saq-part-header {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(107,45,45,0.08);
+}
+.saq-letter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d47a7a;
+  padding: 3px 9px;
+  border: 1px solid rgba(107,45,45,0.4);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.saq-prompt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.saq-body { padding: 14px 18px; }
+
+/* ── SYNTHESIS PROMPT ── */
+.synthesis-box {
+  background: rgba(74,45,107,0.12);
+  border: 1px solid rgba(74,45,107,0.35);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+}
+.synthesis-box .syn-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #a07ad4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.synthesis-box .syn-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0rem;
+  font-style: italic;
+  color: var(--parchment);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.synthesis-box p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px; }
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .thesis-grid { grid-template-columns: 1fr; }
+  .ccot-grid { grid-template-columns: 1fr; }
+  .matching-row { grid-template-columns: 1fr; }
+  .flip-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .page-title { font-size: 1.8rem; }
+  .compare-table { font-size: 0.78rem; }
+  .compare-table td:first-child { min-width: 90px; }
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-wrap">
+  <div id="progress-track"><div id="progress-fill"></div></div>
+  <div id="progress-label">0%</div>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="page-title">7.7 — Conducting <em>World War II</em></h1>
+  <p class="page-subtitle">"The way a government fights a war tells you everything about how it governs its own people — whether through inspiration or terror, every WWII power mobilized total war, but the tools they used and the limits they accepted could not have been more different."</p>
+  <div class="chips">
+    <span class="chip">c. 1939–1945</span>
+    <span class="chip">Total War · Governance · Atomic Age</span>
+    <span class="chip">DOK 1 → 4</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</header>
+
+<!-- HOW-TO BANNER -->
+<div class="how-to-banner">
+  <div class="how-to-inner">
+    <h3>📋 How to Use These Materials</h3>
+    <p><strong>The governance lens:</strong> This module asks <em>how</em> governments mobilized for total war, not just <em>what</em> happened militarily. The central question running through all four DOK levels is: what does the way a nation fights reveal about how it governs?</p>
+    <p><strong>The central contrast:</strong> Democratic governance (inspiration, buy-in, consent) vs. totalitarian governance (control, terror, forced labor). Same goal — total war mobilization — radically different methods.</p>
+    <p><strong>The escalation arc:</strong> Blitzkrieg → strategic bombing → firebombing of cities → atomic bomb. Each step erased the soldier/civilian line further, until the bomb made entire cities into military targets.</p>
+    <p><strong>The closing question:</strong> The video ends with this — <em>"When a nation believes its very survival is on the line, are there any limits to that power at all?"</em> — and every DOK 3–4 activity builds toward your own answer.</p>
+    <p><strong>Work through DOK 1 → 4 in order.</strong> Click "Mark Section Complete" at the end of each section to track your progress.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DOK 1 — KNOWLEDGE ACQUISITION              -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="dok-section dok1" id="dok1">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 1</span>
+    <span class="dok-section-title">Knowledge Acquisition</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🎬 NotebookLM Video</div>
+    <p>Watch the explainer before diving in: <a href="https://youtu.be/cBE9ZsYO5k4" target="_blank">APWH 7.7 — Conducting World War II</a></p>
+    <p>Listen for four sections: <strong>(1)</strong> total war defined → <strong>(2)</strong> democratic vs. totalitarian mobilization → <strong>(3)</strong> technology escalation → <strong>(4)</strong> atomic bomb decision. Key contrast to listen for: <strong>"governance through inspiration"</strong> vs. <strong>"governance through terror."</strong></p>
+  </div>
+
+  <div id="videoEmbed"></div>
+
+  <div class="quote-block">
+    <p class="quote-text">"We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender."</p>
+    <p class="quote-attr">— Winston Churchill, June 1940 | The video describes this as weaving "a story of heroic defiance" — governance through inspiration at its most powerful</p>
+  </div>
+
+  <!-- Visual Framework -->
+  <div class="card">
+    <div class="card-title">🗂 Visual Framework — Two Models of Total War Mobilization</div>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <div class="compare-col-header demo-header">Democratic States (Britain, US)</div>
+        <ul>
+          <li>Governance through <strong>inspiration</strong></li>
+          <li>Churchill's radio speeches: "finest hour" framing</li>
+          <li>Rosie the Riveter — cultural persuasion to recruit women</li>
+          <li>Buy-in through shared belief and patriotic duty</li>
+          <li>Women entered workforce <strong>voluntarily</strong></li>
+          <li>Civil liberties constrained but not eliminated</li>
+          <li>Government had to <em>sell</em> sacrifice, not mandate it</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <div class="compare-col-header total-header">Totalitarian States (Nazi Germany, USSR)</div>
+        <ul>
+          <li>Governance through <strong>control and terror</strong></li>
+          <li>Forced labor at massive scale</li>
+          <li><strong>20%</strong> of Nazi Germany's workforce: conscripted foreigners + POWs</li>
+          <li>Stalin: communist ideology + raw terror</li>
+          <li>Basic freedoms crushed</li>
+          <li>State dominated <em>every</em> corner of life</li>
+          <li>Compliance enforced, not earned</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section-h">📅 Key Events Timeline</div>
+  <div class="card timeline">
+    <div class="timeline-item"><span class="timeline-date">Sept. 1939</span><span class="timeline-text"><strong>Germany invades Poland</strong> — WWII begins in Europe; Blitzkrieg demonstrated for the first time at scale</span></div>
+    <div class="timeline-item"><span class="timeline-date">June 1940</span><span class="timeline-text"><strong>Fall of France</strong> — Churchill's "finest hour" speech; Battle of Britain begins; democratic governance tested under fire</span></div>
+    <div class="timeline-item"><span class="timeline-date">June 1941</span><span class="timeline-text"><strong>Operation Barbarossa</strong> — Germany invades Soviet Union; opens the Eastern Front and the war's most brutal theater</span></div>
+    <div class="timeline-item"><span class="timeline-date">Dec. 1941</span><span class="timeline-text"><strong>Pearl Harbor</strong> — Japan attacks; US enters WWII; war becomes truly global; US becomes "Arsenal of Democracy"</span></div>
+    <div class="timeline-item"><span class="timeline-date">1942–1943</span><span class="timeline-text"><strong>Peak forced labor program</strong> — Nazi Germany's foreign/POW workforce reaches ~20% of total; US war production transforms</span></div>
+    <div class="timeline-item"><span class="timeline-date">June 6, 1944</span><span class="timeline-text"><strong>D-Day</strong> — Allied invasion of Normandy; largest amphibious operation in history; democratic mobilization at full power</span></div>
+    <div class="timeline-item"><span class="timeline-date">Feb.–Mar. 1945</span><span class="timeline-text"><strong>Firebombing of Dresden &amp; Tokyo</strong> — Civilian targeting normalized; ~100,000 killed in Tokyo alone; soldier/civilian line erased</span></div>
+    <div class="timeline-item"><span class="timeline-date">Aug. 6, 1945</span><span class="timeline-text"><strong>Hiroshima</strong> — Atomic bomb dropped (~140,000 killed); Aug. 9: Nagasaki. The video calls this "the single biggest governance decision of the entire conflict."</span></div>
+    <div class="timeline-item"><span class="timeline-date">Sept. 2, 1945</span><span class="timeline-text"><strong>Japan surrenders</strong> — WWII ends; atomic age and Cold War era begin</span></div>
+  </div>
+
+  <!-- Vocab Cards -->
+  <div class="section-h">📇 Vocabulary — Click to Flip</div>
+  <div class="flip-grid" id="flip-grid">
+    <!-- generated by JS -->
+  </div>
+
+  <!-- MCQ -->
+  <div class="section-h">✅ Multiple Choice — Instant Feedback</div>
+  <div id="mcq-container"></div>
+
+  <!-- Matching -->
+  <div class="section-h">🔗 Matching Activity</div>
+  <div class="matching-wrap">
+    <div id="matching-area"></div>
+    <div class="matching-controls">
+      <button class="btn-sm btn-check" onclick="checkMatching()">CHECK ANSWERS</button>
+      <button class="btn-sm" onclick="resetMatching()">RESET</button>
+      <span id="match-score"></span>
+    </div>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-1" onclick="markComplete(1)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DOK 2 — KNOWLEDGE APPLICATION              -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="dok-section dok2" id="dok2">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 2</span>
+    <span class="dok-section-title">Knowledge Application</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🖼 NotebookLM Infographic</div>
+    <p>Pull up the 7.7 infographic from NotebookLM. Look for the <strong>side-by-side visual comparing democratic vs. totalitarian mobilization</strong> and the <strong>escalation timeline</strong> from Blitzkrieg to atomic bomb. Use those visuals to anchor your thinking as you work through the Explain Drills and Comparison Table below.</p>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="section-h">✍️ Explain Drill 1 — Democratic Mobilization</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">Explain how Britain or the United States used the tools of total war mobilization — propaganda, cultural icons, and appeals to shared values — to govern through inspiration rather than coercion. Use at least two specific examples in your answer.</p>
+  </div>
+  <textarea class="write-area" placeholder="Write your explanation here (aim for 5–8 sentences)..."></textarea>
+  <div class="accordion" id="acc-drill1">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill1')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p>Democratic governments faced a fundamental constraint that totalitarian states did not: they had to earn public cooperation, not compel it. In Britain, Churchill understood this intuitively. His radio speeches after Dunkirk and during the Blitz weren't just war updates — they were governance acts, transforming catastrophe into narrative. By framing the Blitz as Britain's "finest hour," he gave ordinary civilians suffering through bombing raids a story that made their sacrifice feel purposeful and even heroic. This is governance through inspiration: the state manages meaning, not just logistics.</p>
+      <p>The United States used a different but equally deliberate approach. Rather than simply drafting women into wartime industrial production, the government created Rosie the Riveter — a cultural icon deployed through posters, films, and media. The message was not "you are required to work in this factory." It was "building bombers is your patriotic identity." Women entered factories by the millions, not because they were ordered to, but because the government made voluntary participation feel inevitable and admirable.</p>
+      <p>Both examples reveal the same underlying logic: democratic governance <em>needs</em> consent. It cannot simply decree behavior — it must construct a cultural environment where the desired behavior feels natural and right. This is both a constraint (you can't just force people) and a strength (motivated, willing workers outperform coerced ones). The propaganda, art, and film weren't decoration — they were the mechanism of governance.</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="section-h" style="margin-top:28px;">✍️ Explain Drill 2 — The Escalation to Atomic Warfare</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">Explain how the logic of total war — targeting enemy willpower and production, not just armies — created an escalating cycle that ultimately led to the development and use of the atomic bomb. Trace at least three steps in this escalation.</p>
+  </div>
+  <textarea class="write-area" placeholder="Write your explanation here — trace at least 3 steps in the escalation..."></textarea>
+  <div class="accordion" id="acc-drill2">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill2')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p>The escalation from Blitzkrieg to the atomic bomb was not a series of disconnected technological leaps — it was a single logic playing out to its conclusion. It began with Blitzkrieg, Germany's lightning war of fast tanks and coordinated air power. Blitzkrieg was still army-vs.-army warfare: shock, breakthrough, encirclement. But it established something crucial — airpower could now carry violence deep behind front lines.</p>
+      <p>The next step was strategic bombing of industrial centers. Once both sides accepted that destroying the enemy's production capacity was a legitimate war aim, factories became targets — even when those factories were surrounded by residential neighborhoods. This made civilian proximity to military targets a problem of acceptable collateral damage rather than a moral absolute.</p>
+      <p>The third step — firebombing — made civilians the target, not just the unfortunate neighbors of targets. The firebombing of Tokyo in March 1945 killed roughly 100,000 people in a single night, deliberately targeting densely packed civilian neighborhoods to maximize fire spread. Dresden in February 1945 similarly targeted a city with massive civilian casualties. By this point, the principle was clear: breaking the enemy population's will to fight was a legitimate military objective.</p>
+      <p>The atomic bomb was the endpoint, not a break, from this trajectory. A weapon designed to destroy an entire city in a single strike was the logical culmination of a process that had already concluded: civilians <em>are</em> targets when the goal is breaking national will. Total mobilization of science produced total weapons.</p>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="section-h" style="margin-top:28px;">📊 Comparison Table — Democratic vs. Totalitarian Mobilization</div>
+  <div style="overflow-x:auto; margin-bottom:16px;">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Democratic States (Britain, US)</th>
+          <th>Totalitarian States (Nazi Germany, USSR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Core method</td><td>Inspiration, persuasion, appeals to shared values and patriotic duty</td><td>Top-down control, ideology, terror, and where needed, brute force</td></tr>
+        <tr><td>Labor recruitment</td><td>Voluntary enlistment + draft; women recruited via cultural persuasion (Rosie the Riveter)</td><td>Forced labor at massive scale; 20% of Nazi Germany's workforce = conscripted foreigners and POWs</td></tr>
+        <tr><td>Propaganda approach</td><td>Build national unity around shared enemy and heroic narrative ("finest hour"); maintain morale through inspiring leadership</td><td>State controls all information; ideology defines reality; dissent punished; propaganda inseparable from terror</td></tr>
+        <tr><td>Civil liberties</td><td>Constrained but not eliminated; Japanese American internment is a notable exception and violation</td><td>Basic freedoms crushed; government dominates every aspect of life; political opposition eliminated</td></tr>
+        <tr><td>Economic control</td><td>War production boards, rationing, industrial conversion — but private ownership largely preserved</td><td>State direction of entire economy; private and public resources subordinated entirely to war aims</td></tr>
+        <tr><td>Defining example</td><td>Churchill's "finest hour" speeches / Rosie the Riveter</td><td>Nazi forced labor system / Stalin's terror apparatus</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prompt-box" style="margin-bottom:12px;">
+    <div class="prompt-label">Reflection Prompt</div>
+    <p class="prompt-text">The video argues: "The way a government fights a war tells you everything about how it governs its own people." Looking at this table, do you agree? Are there examples in either column that complicate or challenge this claim?</p>
+  </div>
+  <textarea class="write-area" placeholder="Write your reflection here..."></textarea>
+  <div class="accordion" id="acc-table-reflect">
+    <div class="accordion-header" onclick="toggleAccordion('acc-table-reflect')">
+      <span class="accordion-title">👁 Reveal Sample Reflection</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE REFLECTION — DOK 2/3</div>
+      <p>The contrast is real and illuminating, but the cleanest version of it breaks down under scrutiny. The U.S. interned approximately 120,000 Japanese Americans without trial — a form of state coercion against civilians based purely on ethnicity. Britain rationed food and conscripted labor under strict government direction. Both democracies used censorship. These examples show that even democratic governments, when mobilizing for total war, reached for tools of coercion that don't fit neatly into the "governance through inspiration" model.</p>
+      <p>At the same time, Nazi Germany used massive propaganda campaigns and cultural spectacle — the Nuremberg rallies were designed to inspire genuine emotional commitment, not just terror. The distinction between inspiration and terror was real, but the line in practice was blurry.</p>
+      <p>The most honest assessment: the video's contrast is a useful analytical framework, not a perfect description of reality. Democracies governed <em>primarily</em> through inspiration and consent in ways totalitarian states did not — and this produced different outcomes (motivated workers, broader coalition-building, eventual postwar reconstruction). But total war conditions pushed both types of governments toward forms of state power that challenged their own principles. This is exactly the complexity the video wants you to sit with.</p>
+    </div>
+  </div>
+
+  <!-- Apply Activity -->
+  <div class="section-h" style="margin-top:28px;">🔬 Apply Activity — The Atomic Bomb Decision</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Apply Prompt</div>
+    <p class="prompt-text">The video presents the decision to drop atomic bombs on Hiroshima and Nagasaki as "the single biggest governance decision of the entire conflict." Apply the video's governance framework — democratic governance through inspiration vs. totalitarian governance through terror — to analyze this decision. Does it fit neatly into the "democratic" model? What does it reveal about the limits of that model?</p>
+  </div>
+  <textarea class="write-area" style="min-height:140px;" placeholder="Apply the governance framework to this decision..."></textarea>
+  <div class="accordion" id="acc-apply">
+    <div class="accordion-header" onclick="toggleAccordion('acc-apply')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2/3</div>
+      <p>On the surface, the atomic bomb decision fits the democratic model. President Truman made the call through civilian chains of command, with deliberation among advisors, in a constitutional system with accountability to the public. In that procedural sense, it was "governance through inspiration's" opposite of a military coup.</p>
+      <p>But the decision's actual content was to deliberately target civilian cities with weapons that killed approximately 140,000 people in Hiroshima alone. The goal — breaking Japan's will to resist — was identical to the logic the video associates with totalitarian terror: use overwhelming force against civilians to compel political submission. This was not persuasion; it was annihilation.</p>
+      <p>The video deliberately raises this tension without resolving it. The fact that a democratic government made this decision reveals that "governance through inspiration" has limits that total war conditions can breach — that the line between democratic and totalitarian uses of state power blurs when national survival feels absolute. The live historical debate (was Japan already surrendering? did the Soviet entry into the Pacific War matter more?) only sharpens this question: even if the decision was strategically defensible, does it fit within the ethical framework of democratic governance? The bomb doesn't end the video's argument — it complicates it.</p>
+    </div>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-2" onclick="markComplete(2)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DOK 3 — KNOWLEDGE ANALYSIS                 -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="dok-section dok3" id="dok3">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 3</span>
+    <span class="dok-section-title">Knowledge Analysis</span>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="section-h">⛓ Causal Chain — The Escalation of Total War</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Two nodes are blank. Fill in your best analysis for each, then click "Reveal Answer" to check your thinking.</p>
+  <div class="causal-chain">
+    <div class="causal-node">
+      <div class="node-label">Step 1 — Given</div>
+      WWII begins with Blitzkrieg warfare (1939) — fast-moving tanks and coordinated airpower shatter static defensive lines. Still army vs. army.
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node blank">
+      <div class="node-label">Step 2 — Your Analysis</div>
+      <textarea placeholder="What shift in war aims and targets does Blitzkrieg's success lead to? Why do industrial centers and civilian infrastructure become targets?..."></textarea>
+      <button class="reveal-btn" onclick="revealAnswer('node2')">Reveal Answer</button>
+      <div class="answer-reveal" id="node2">Both sides recognize that breaking enemy will and production capacity — not just defeating armies — is the path to victory. Industrial centers, supply chains, and civilian infrastructure that supports the war machine become legitimate military targets. This is the moment the soldier/civilian line first begins to blur.</div>
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node">
+      <div class="node-label">Step 3 — Given</div>
+      Strategic bombing campaigns target industrial centers behind enemy lines — factories, railways, oil refineries — with massive collateral civilian casualties.
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node blank">
+      <div class="node-label">Step 4 — Your Analysis</div>
+      <textarea placeholder="How does strategic bombing escalate into firebombing? What threshold gets crossed, and what does that mean for the next step?..."></textarea>
+      <button class="reveal-btn" onclick="revealAnswer('node4')">Reveal Answer</button>
+      <div class="answer-reveal" id="node4">Firebombing of Tokyo (March 1945, ~100,000 killed) and Dresden (Feb. 1945) normalizes mass civilian casualties as an <em>explicit</em> war strategy — not collateral damage but the goal itself. Breaking civilian morale becomes a defined military objective. Once you accept this, the question becomes only: how do you do it more efficiently?</div>
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node">
+      <div class="node-label">Step 5 — Given</div>
+      The Manhattan Project (1942–1945) mobilizes 130,000+ workers and $2 billion to build the atomic bomb — the total mobilization of science itself.
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node">
+      <div class="node-label">Step 6 — Given</div>
+      Atomic bombs dropped on Hiroshima (Aug. 6, ~140,000 killed) and Nagasaki (Aug. 9). Japan surrenders. WWII ends.
+    </div>
+  </div>
+  <div class="ap-insight">
+    <div class="insight-label">🎓 AP Exam Insight — Escalation Logic</div>
+    <p>This causal chain demonstrates <strong>escalation logic</strong> — each step made the next one more conceivable, not just more technologically feasible. Once you accept that destroying enemy production is a war aim, you accept targeting factories near cities. Once you accept factories, you accept civilian casualties. Once you accept civilian casualties, firebombing becomes a logical extension. The atomic bomb was not a sudden moral break — it was the <em>culmination</em> of a trajectory the major powers had been following for years. For the AP exam, this kind of analytical framing earns complexity points.</p>
+  </div>
+
+  <!-- SAQ -->
+  <div class="section-h" style="margin-top:32px;">📝 Short Answer Question (SAQ)</div>
+  <div class="prompt-box">
+    <div class="prompt-label">SAQ Claim</div>
+    <p class="prompt-text">"Total war in World War II required governments to mobilize their entire societies — but the methods they used to do so revealed fundamental differences in how they governed their own people."</p>
+  </div>
+
+  <div class="saq-part">
+    <div class="saq-part-header">
+      <span class="saq-letter">A</span>
+      <span class="saq-prompt">Identify ONE specific example of how a democratic government mobilized its civilian population for WWII.</span>
+    </div>
+    <div class="saq-body">
+      <textarea class="write-area" style="min-height:90px;" placeholder="Write your Part A response here..."></textarea>
+    </div>
+  </div>
+
+  <div class="saq-part">
+    <div class="saq-part-header">
+      <span class="saq-letter">B</span>
+      <span class="saq-prompt">Explain ONE way totalitarian states used coercion or terror to achieve wartime mobilization that democratic states did not.</span>
+    </div>
+    <div class="saq-body">
+      <textarea class="write-area" style="min-height:90px;" placeholder="Write your Part B response here..."></textarea>
+    </div>
+  </div>
+
+  <div class="saq-part">
+    <div class="saq-part-header">
+      <span class="saq-letter">C</span>
+      <span class="saq-prompt">Explain how the development and use of the atomic bomb raises questions about the limits of democratic governance under total war conditions.</span>
+    </div>
+    <div class="saq-body">
+      <textarea class="write-area" style="min-height:90px;" placeholder="Write your Part C response here..."></textarea>
+    </div>
+  </div>
+
+  <div class="accordion" id="acc-saq">
+    <div class="accordion-header" onclick="toggleAccordion('acc-saq')">
+      <span class="accordion-title">👁 Reveal Full SAQ Sample Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SAQ — DOK 3</div>
+      <p><strong>Part A:</strong> The U.S. government created "Rosie the Riveter," a cultural icon deployed through propaganda campaigns to persuade women to enter wartime industrial production. Rather than conscripting women or issuing mandates, the government framed factory work as an act of patriotic duty, using posters, films, and media to make voluntary participation feel inevitable. This is governance through inspiration: building buy-in through cultural persuasion rather than compulsion.</p>
+      <p><strong>Part B:</strong> Nazi Germany's forced labor system represents a form of wartime mobilization that no democratic state matched in scale or coercion. At peak, approximately 20% of Germany's entire wartime workforce consisted of conscripted foreigners, prisoners of war, and concentration camp prisoners — people with no choice about their participation. This was not persuasion or even coercive conscription of one's own citizens; it was the literal enslavement of foreign nationals and political prisoners to fuel the war machine. In the Soviet Union, Stalin maintained wartime discipline through a terror apparatus that executed soldiers who retreated without orders and subjected civilians to collective punishment. Neither tool — mass forced foreign labor or terror-as-management — was available to democratic governments constrained by even wartime versions of civil liberties.</p>
+      <p><strong>Part C:</strong> The atomic bomb decision creates a profound tension within the video's framework. Truman's decision was made through civilian channels with deliberation — fitting the democratic model. But the decision's actual content was to deliberately target civilian cities, killing ~140,000 in Hiroshima. The goal — breaking Japan's will to resist — was identical to the logic of totalitarian terror: use overwhelming force against civilians to compel political submission. This reveals that total war conditions push even democratic governments toward using state power in ways that blur the line between their governance model and their opponent's. The ongoing historical debate over the bombs' necessity reflects this moral complexity — it cannot be fully reconciled with a simple "democracies govern through inspiration" framework.</p>
+    </div>
+  </div>
+
+  <!-- CCOT -->
+  <div class="section-h" style="margin-top:32px;">🔄 CCOT Analysis — WWI to WWII</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">In the two-column grid below, analyze what <strong>changed</strong> and what <strong>continued</strong> about the nature of warfare and its impact on civilian populations from WWI (c. 1914–1918) to WWII (c. 1939–1945).</p>
+  <div class="ccot-grid">
+    <div class="ccot-col">
+      <div class="ccot-col-header change-header">CHANGED (WWI → WWII)</div>
+      <textarea placeholder="What changed about civilian targeting, scale of mobilization, or government power?..."></textarea>
+    </div>
+    <div class="ccot-col">
+      <div class="ccot-col-header continue-header">CONTINUED (WWI → WWII)</div>
+      <textarea placeholder="What patterns, logic, or methods from WWI persisted into WWII?..."></textarea>
+    </div>
+  </div>
+  <div class="accordion" id="acc-ccot">
+    <div class="accordion-header" onclick="toggleAccordion('acc-ccot')">
+      <span class="accordion-title">👁 Reveal Sample CCOT Analysis</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE CCOT — DOK 3</div>
+      <p><strong>Changed:</strong> WWII saw a qualitative escalation in both the scale and deliberateness of civilian targeting. In WWI, civilians suffered primarily through economic blockades, occasional aerial bombardment, and the indirect effects of prolonged industrial war. By WWII, the strategic bombing campaign made civilian populations a primary rather than incidental target — firebombing was designed to kill civilians and break morale, not just destroy industrial assets. The atomic bomb represented a further threshold: a weapon designed specifically to destroy entire cities in a single strike. The Nazi forced labor system also had no real WWI precedent at that scale — 20% of the German workforce being conscripted foreigners and prisoners was a qualitatively different use of state power over occupied peoples.</p>
+      <p><strong>Continued:</strong> The basic logic of total war — mobilizing entire societies and erasing the soldier/civilian distinction — was first established in WWI and continued into WWII. Propaganda as a state tool, industrial conversion for wartime production, and conscription were all continuities. The use of new technology to create escalating lethality (machine guns → poison gas → tanks → airplanes in WWI; tanks → strategic bombing → atomic weapons in WWII) also continued the pattern of industrial warfare producing unforeseen horrors. Government expansion of power during wartime and the difficult question of restoring civil liberties afterward persisted as themes across both conflicts. In this sense, WWII was not a break from WWI's pattern — it was its terrifying escalation.</p>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="section-h" style="margin-top:32px;">🏆 Thesis Evaluator</div>
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <div class="prompt-label">LEQ Prompt</div>
+    <p class="prompt-text">"Evaluate the extent to which total war in WWII demonstrated that democratic and totalitarian governments were fundamentally different in how they exercised state power."</p>
+  </div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click <strong>"Evaluate"</strong> on each thesis to reveal whether it would earn the AP thesis point and why.</p>
+  <div class="thesis-grid" id="thesis-grid"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-3" onclick="markComplete(3)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- DOK 4 — KNOWLEDGE AUGMENTATION             -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="dok-section dok4" id="dok4">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 4</span>
+    <span class="dok-section-title">Knowledge Augmentation</span>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">🔭 NotebookLM Synthesis Tip</div>
+    <p>The video closes with: <strong>"When a nation believes its very survival is on the line, are there any limits to that power at all?"</strong></p>
+    <p>Use this as your anchor for DOK 4. You are being asked to contextualize 7.7's argument in broader historical patterns and synthesize across units. Think about what the atomic bomb decision meant for the post-WWII world — and how the governance question raised by Hiroshima and Nagasaki connects to both what came before (7.6's cascade of governance failures) and what came after (Unit 8's Cold War nuclear standoff).</p>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="section-h">🗺 Contextualization Builder — Choose Your Pathway</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">For AP LEQ or DBQ contextualization, you need to connect 7.7 to a <em>broader historical context</em> that precedes it. Choose one option below, write your contextualization in the text box, then reveal the sample to compare.</p>
+
+  <div class="context-options" id="context-options"></div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="section-h" style="margin-top:32px;">🌐 Cross-Unit Synthesis — 7.7 → Unit 8 (Cold War)</div>
+  <div class="synthesis-box">
+    <div class="syn-label">Synthesis Prompt</div>
+    <p class="syn-q">The atomic bomb ended WWII but began a new era. Connect the video's closing question — "Are there any limits to state power when survival is at stake?" — to the Cold War's nuclear arms race. How did the governance questions raised by Hiroshima and Nagasaki shape the Cold War's logic of deterrence, the arms race, and the ongoing debate about the ethics of nuclear weapons?</p>
+    <p>This is a DOK 4 task: you are exploring connections <em>across</em> units and time periods, not just analyzing content within 7.7.</p>
+  </div>
+  <textarea class="write-area" style="min-height:160px;" placeholder="Write your cross-unit synthesis here..."></textarea>
+  <div class="accordion" id="acc-synthesis">
+    <div class="accordion-header" onclick="toggleAccordion('acc-synthesis')">
+      <span class="accordion-title">👁 Reveal Sample Synthesis Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SYNTHESIS — DOK 4</div>
+      <p>The atomic bomb did not answer the video's closing question — it institutionalized it. When the U.S. dropped bombs on Hiroshima and Nagasaki, it established that total war's logic of targeting civilian populations to break national will could be executed by a single aircraft in a single moment. The Soviet Union drew the obvious conclusion: they needed this capability too. By 1949, they had tested their own atomic weapon.</p>
+      <p>The Cold War's defining doctrine — Mutually Assured Destruction (MAD) — is the direct descendant of total war's erasure of the soldier/civilian line. MAD extends that logic globally and permanently: both superpowers maintained the explicit threat to destroy the other's entire civilian population as the mechanism of deterrence. This was not a limitation on state power — it was the maximum expression of it, scaled to planetary consequence.</p>
+      <p>The video's question — "when survival is on the line, are there any limits?" — becomes the organizing question of the Cold War. Every nuclear-armed state answered: no, not when existence itself is threatened. The proxy wars in Korea, Vietnam, and elsewhere were fought precisely because direct nuclear confrontation would have had no limits either superpower could accept. The bomb didn't end the governance questions 7.7 raises — it exported them into every corner of international relations for the next 45 years.</p>
+      <p>The AP connection: to earn a synthesis point on the LEQ, you would trace this specific thread — the governance logic of total war → atomic bomb decision → Cold War doctrine of deterrence — as a genuine historical continuity, not just a thematic parallel.</p>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="section-h" style="margin-top:32px;">🎯 Self-Assessment — Where Are You?</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click each dot to rate yourself: <span style="color:#d47a7a">●</span> Not yet / <span style="color:var(--gold-light)">●</span> Getting there / <span style="color:#7dc774">●</span> Got it</p>
+  <div class="self-assess" id="self-assess"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-4" onclick="markComplete(4)">Mark Section Complete →</button>
+  </div>
+</section>
+
+</div><!-- /content-wrap -->
+
+<script src="shared.js"></script>
+<script>
+// ── PROGRESS ──
+const sectionProgress = {1:false,2:false,3:false,4:false};
+function markComplete(n) {
+  sectionProgress[n] = true;
+  const btn = document.getElementById('complete-' + n);
+  btn.textContent = '✓ Section Complete';
+  btn.classList.add('done');
+  const done = Object.values(sectionProgress).filter(Boolean).length;
+  const pct = done * 25;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = pct + '%';
+}
+
+// ── ACCORDION ──
+function toggleAccordion(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// ── REVEAL CAUSAL CHAIN ──
+function revealAnswer(id) {
+  document.getElementById(id).classList.add('show');
+}
+
+// ── VOCAB FLIP CARDS ──
+const vocabData = [
+  {term:'Total War', hint:'When everyone becomes a soldier', def:'A mode of warfare in which a government mobilizes the entirety of its society — every factory, farm, person, and resource — toward the single goal of victory. The distinction between soldier and civilian largely disappears; the enemy\'s home front becomes a legitimate military target.'},
+  {term:'Blitzkrieg', hint:'Lightning War', def:'Germany\'s revolutionary military tactic combining fast-moving tanks, motorized infantry, and close air support to punch through enemy lines and prevent organized resistance. Used devastatingly in Poland (1939) and France (1940), making traditional static defensive warfare obsolete.'},
+  {term:'Mobilization', hint:'Converting a society into a war machine', def:'The process by which a government converts its civilian economy, population, and institutions for wartime purposes. Includes industrial conversion, rationing, conscription, propaganda campaigns, and the reorganization of labor — including, in totalitarian states, forced labor.'},
+  {term:'Rosie the Riveter', hint:'Governance through cultural persuasion', def:'A U.S. cultural icon created by the government to recruit women into industrial wartime production. Her "We Can Do It!" image represents the democratic approach to mobilization: using cultural persuasion and appeals to patriotic duty rather than coercion to expand the workforce.'},
+  {term:'Forced Labor', hint:'Totalitarian mobilization\'s dark engine', def:'The Nazi system of conscripting foreign nationals, prisoners of war, and concentration camp prisoners as workers in German industry. At its peak, approximately 20% of the entire German workforce consisted of forced laborers — a defining example of governance through terror rather than inspiration.'},
+  {term:'Strategic Bombing', hint:'Making civilian populations military targets', def:'The deliberate aerial bombing of enemy cities, infrastructure, and industrial centers — including civilian areas — with the goal of destroying production capacity and breaking the will of the enemy population. A fundamental shift: the civilian home front was now a primary battleground.'},
+  {term:'Firebombing', hint:'When cities became targets', def:'The use of incendiary bombs to create massive fires in densely populated urban areas. The firebombing of Tokyo (March 1945) and Dresden (February 1945) killed tens of thousands of civilians and demonstrated that total war had fully erased the distinction between combatant and non-combatant.'},
+  {term:'Manhattan Project', hint:'The ultimate mobilization of science', def:'The top-secret U.S. government program (1942–1945) to develop atomic weapons, involving over 130,000 workers and costing approximately $2 billion. The ultimate expression of total war mobilization: an entire industrial-scientific enterprise directed by the state toward a single, world-altering weapon.'},
+  {term:'Atomic Bomb', hint:'The ultimate governance decision', def:'A weapon using nuclear fission to produce a destructive blast of unprecedented power. The U.S. dropped atomic bombs on Hiroshima (Aug. 6, 1945, ~140,000 killed) and Nagasaki (Aug. 9, 1945) to force Japanese surrender — the video calls this "the single biggest governance decision of the entire conflict."'},
+  {term:'Home Front', hint:'Where total war was fought at home', def:'The civilian dimension of total war — the factories, farms, households, and communities that sustained the military effort. In WWII, the home front was both a resource to be mobilized (production, labor, rationing) and a target to be destroyed (strategic bombing), reflecting the total collapse of the soldier/civilian distinction.'}
+];
+
+const flipGrid = document.getElementById('flip-grid');
+vocabData.forEach((v, i) => {
+  const card = document.createElement('div');
+  card.className = 'flip-card';
+  card.innerHTML = `<div class="flip-inner"><div class="flip-front"><div class="term">${v.term}</div><div class="hint">${v.hint}</div><div class="tap-hint">CLICK TO FLIP</div></div><div class="flip-back"><div class="def">${v.def}</div></div></div>`;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  flipGrid.appendChild(card);
+});
+
+// ── MCQ ──
+const mcqData = [
+  {
+    num:'Q1',
+    q:'According to the video, what is the central difference between how democracies and totalitarian states mobilized for total war?',
+    opts:['Democracies relied on military conscription while totalitarian states used only volunteers','Democracies governed through inspiration and buy-in while totalitarian states governed through control, terror, and forced labor','Democracies outspent totalitarian states on weapons production, giving them a decisive industrial advantage','Totalitarian states developed superior military technology because they could eliminate political opposition to weapons programs'],
+    correct:1,
+    fb:'The video\'s central contrast is explicit: "governance through inspiration" (democracies) vs. "governance through terror" (totalitarian states). Both achieved total war mobilization, but through fundamentally different methods that revealed their underlying systems of governance.'
+  },
+  {
+    num:'Q2',
+    q:'What does the video mean when it says the line between soldier and civilian was "basically erased" in WWII?',
+    opts:['Soldiers and civilians wore identical uniforms, making identification impossible on the battlefield','Most soldiers in WWII were civilians who had been drafted and received no formal military training','Entire cities and civilian populations became legitimate military targets as governments sought to break enemy willpower, not just defeat armies','International law formally eliminated legal distinctions between soldiers and civilians during WWII'],
+    correct:2,
+    fb:'The video traces an escalation arc: Blitzkrieg → strategic bombing → firebombing of cities → atomic bomb. At each stage, the goal shifted further from defeating armies toward destroying the enemy\'s will and capacity to resist — which meant targeting civilian populations, cities, and infrastructure as primary military objectives.'
+  },
+  {
+    num:'Q3',
+    q:'The video describes the decision to drop atomic bombs on Hiroshima and Nagasaki as "the single biggest governance decision made during the entire conflict." What makes the video\'s framing of this decision particularly significant?',
+    opts:['It was significant because it was the first time a democracy had ever used military force against a civilian population','It was made by a democratic government, raising profound questions about whether inspiration-based governance also has no limits when national survival is at stake','The decision was significant primarily because it ended WWII three months earlier than military analysts had predicted','It was significant because President Truman made the decision alone without consulting any military or civilian advisors'],
+    correct:1,
+    fb:'The video specifically notes that "the choice to unleash it was made by a democratic government" — creating a deliberate tension with the earlier portrait of democracies as governing through inspiration and consent. It raises the video\'s closing question: when survival is at stake, are there limits to state power even in democracies?'
+  },
+  {
+    num:'Q4',
+    q:'At its peak, approximately what percentage of Nazi Germany\'s workforce consisted of forced laborers — conscripted foreigners and prisoners of war?',
+    opts:['5%','10%','15%','20%'],
+    correct:3,
+    fb:'The video states this statistic explicitly to illustrate the scale of totalitarian mobilization through coercion. At peak, one in five German workers was there by force — a stark illustration of the difference between governance through inspiration (Rosie the Riveter) and governance through terror.'
+  },
+  {
+    num:'Q5',
+    q:'What role did Rosie the Riveter play in the American war effort, according to the video\'s governance framework?',
+    opts:['She was a real factory worker whose photograph went viral and inspired the government to recruit women','She was used by labor unions to advocate for equal pay for women entering industrial jobs','She was a government-created cultural icon that used persuasion and appeals to patriotic duty to recruit women into industrial wartime production — a classic example of democratic governance through inspiration','She was a propaganda figure created by private corporations to justify replacing male workers with cheaper female labor'],
+    correct:2,
+    fb:'The video uses Rosie the Riveter as the clearest example of democratic mobilization: "the government didn\'t just draft women into factories... they created Rosie the Riveter, this cultural icon to persuade millions that building bombers was their patriotic duty." This is governance by consent and persuasion — fundamentally different from forced labor.'
+  }
+];
+
+const mcqContainer = document.getElementById('mcq-container');
+mcqData.forEach((q, qi) => {
+  const div = document.createElement('div');
+  div.className = 'mcq-item';
+  const opts = q.opts.map((o, oi) => `<button class="mcq-option" data-qi="${qi}" data-oi="${oi}" onclick="selectMCQ(this,${qi},${oi})">${'<span class="opt-letter">'+'ABCD'[oi]+'</span>'}${o}</button>`).join('');
+  div.innerHTML = `<div class="mcq-q"><span class="q-num">${q.num} OF ${mcqData.length}</span>${q.q}</div><div class="mcq-options">${opts}</div><div class="mcq-feedback" id="fb-${qi}"></div>`;
+  mcqContainer.appendChild(div);
+});
+
+function selectMCQ(btn, qi, oi) {
+  const allOpts = document.querySelectorAll(`[data-qi="${qi}"]`);
+  allOpts.forEach(b => b.classList.add('disabled'));
+  const q = mcqData[qi];
+  const fb = document.getElementById('fb-' + qi);
+  if (oi === q.correct) {
+    btn.classList.add('correct');
+    fb.className = 'mcq-feedback show fb-correct';
+    fb.innerHTML = '✓ Correct! ' + q.fb;
+  } else {
+    btn.classList.add('incorrect');
+    allOpts[q.correct].classList.add('correct');
+    fb.className = 'mcq-feedback show fb-incorrect';
+    fb.innerHTML = '✗ Not quite. ' + q.fb;
+  }
+}
+
+// ── MATCHING ──
+const matchData = [
+  {term:'Total War', def:'When the line between soldier and home front completely evaporates; government directs all of society toward one goal: victory'},
+  {term:'Blitzkrieg', def:'Germany\'s fast tank-and-air assault tactic that shattered static defensive lines in Poland and France'},
+  {term:'Forced Labor', def:'20% of Germany\'s wartime workforce — conscripted foreigners and prisoners compelled to work'},
+  {term:'Strategic Bombing', def:'Deliberate targeting of enemy cities and civilian infrastructure to break national will'},
+  {term:'Manhattan Project', def:'Secret U.S. program mobilizing 130,000+ workers to build the atomic bomb'}
+];
+
+let shuffledDefs = [...matchData.map(d => d.def)].sort(() => Math.random() - 0.5);
+let droppedAnswers = {};
+
+function buildMatching() {
+  const area = document.getElementById('matching-area');
+  area.innerHTML = '';
+
+  const defsPanel = document.createElement('div');
+  defsPanel.id = 'defs-pool';
+  defsPanel.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;';
+  shuffledDefs.forEach((def, i) => {
+    const el = document.createElement('div');
+    el.className = 'match-def';
+    el.id = 'def-' + i;
+    el.draggable = true;
+    el.innerHTML = `<span class="drag-handle">⠿</span><span>${def}</span>`;
+    el.setAttribute('data-def', def);
+    el.addEventListener('dragstart', e => { e.dataTransfer.setData('text/plain', def); el.classList.add('dragging'); });
+    el.addEventListener('dragend', () => el.classList.remove('dragging'));
+    defsPanel.appendChild(el);
+  });
+  area.appendChild(defsPanel);
+
+  matchData.forEach((pair, i) => {
+    const row = document.createElement('div');
+    row.className = 'matching-row';
+    const termEl = document.createElement('div');
+    termEl.className = 'match-term';
+    termEl.textContent = pair.term;
+    const dropEl = document.createElement('div');
+    dropEl.className = 'match-drop';
+    dropEl.id = 'drop-' + i;
+    dropEl.textContent = 'DROP ANSWER HERE';
+    dropEl.setAttribute('data-term', pair.term);
+    dropEl.addEventListener('dragover', e => { e.preventDefault(); dropEl.classList.add('drag-over'); });
+    dropEl.addEventListener('dragleave', () => dropEl.classList.remove('drag-over'));
+    dropEl.addEventListener('drop', e => {
+      e.preventDefault();
+      const def = e.dataTransfer.getData('text/plain');
+      dropEl.classList.remove('drag-over');
+      if (dropEl.getAttribute('data-filled')) {
+        const prevDef = dropEl.getAttribute('data-filled');
+        returnDefToPool(prevDef);
+      }
+      dropEl.textContent = def;
+      dropEl.classList.add('filled');
+      dropEl.setAttribute('data-filled', def);
+      droppedAnswers[pair.term] = def;
+      hideDefFromPool(def);
+    });
+    row.appendChild(termEl);
+    row.appendChild(dropEl);
+    area.appendChild(row);
+  });
+}
+
+function hideDefFromPool(def) {
+  document.querySelectorAll('.match-def').forEach(el => {
+    if (el.getAttribute('data-def') === def) el.style.display = 'none';
+  });
+}
+function returnDefToPool(def) {
+  document.querySelectorAll('.match-def').forEach(el => {
+    if (el.getAttribute('data-def') === def) el.style.display = 'flex';
+  });
+}
+
+function checkMatching() {
+  let correct = 0;
+  matchData.forEach((pair, i) => {
+    const drop = document.getElementById('drop-' + i);
+    if (drop.getAttribute('data-filled') === pair.def) {
+      drop.style.borderColor = '#2d5a27';
+      drop.style.background = 'rgba(45,90,39,0.2)';
+      drop.style.color = '#7dc774';
+      correct++;
+    } else if (drop.getAttribute('data-filled')) {
+      drop.style.borderColor = '#6b2d2d';
+      drop.style.background = 'rgba(107,45,45,0.2)';
+      drop.style.color = '#d47a7a';
+    }
+  });
+  document.getElementById('match-score').textContent = correct + ' / ' + matchData.length + ' correct';
+}
+
+function resetMatching() {
+  shuffledDefs = [...matchData.map(d => d.def)].sort(() => Math.random() - 0.5);
+  droppedAnswers = {};
+  document.getElementById('match-score').textContent = '';
+  buildMatching();
+}
+
+buildMatching();
+
+// ── THESIS CARDS ──
+const thesisData = [
+  {
+    text:'"In World War II, both democratic and totalitarian governments used propaganda, rationing, and industrial mobilization to fight total war."',
+    verdict:'fail',
+    why:'List of similarities with no argument about their significance. Makes no claim about the <em>extent</em> to which they were different or similar, and provides no line of reasoning. This is a descriptive observation, not a historical argument.'
+  },
+  {
+    text:'"While both democratic and totalitarian governments mobilized their entire societies for total war in WWII, the fundamental difference lay not in <em>what</em> they did but in <em>how</em>: democracies governed primarily through persuasion and manufactured consent, while totalitarian states governed through coercion, terror, and forced labor — a distinction that reflected the deeper character of each system of governance."',
+    verdict:'pass',
+    why:'Defensible claim with a specific, arguable line of reasoning (the how vs. the what). Addresses complexity by acknowledging similarity in what they did. Ready for evidentiary support across multiple paragraphs. This earns the thesis point.'
+  },
+  {
+    text:'"WWII showed that totalitarian governments were better at mobilizing for total war because they could force their people to work without worrying about elections or civil rights."',
+    verdict:'fail',
+    why:'Takes a side without nuanced reasoning; ignores that democratic mobilization was enormously successful (the US became the "Arsenal of Democracy") and that forced labor was economically inefficient compared to motivated workers. Also makes a causal claim ("better") without historical evidence.'
+  },
+  {
+    text:'"The atomic bomb decision reveals the fundamental tension in the video\'s framework: while democratic governments mobilized for WWII primarily through inspiration and consent, the decision to destroy two Japanese cities with nuclear weapons demonstrates that total war conditions push even democratic states toward exercising state power in ways that approach — without becoming — the coercive logic of their totalitarian adversaries."',
+    verdict:'pass',
+    why:'Sophisticated, arguable thesis that uses the atomic bomb as a lens for the extent question. Acknowledges the difference while noting the complication — exactly the kind of nuanced claim that earns complexity points on the AP exam. This earns both the thesis and potentially complexity points.'
+  }
+];
+
+const thesisGrid = document.getElementById('thesis-grid');
+thesisData.forEach((t, i) => {
+  const card = document.createElement('div');
+  card.className = 'thesis-card';
+  card.innerHTML = `
+    <div class="thesis-card-body">${t.text}</div>
+    <button class="thesis-reveal-btn" onclick="revealThesis(${i})">EVALUATE THIS THESIS ↓</button>
+    <div class="thesis-verdict ${t.verdict}" id="tv-${i}">
+      <span class="verdict-badge ${t.verdict}">${t.verdict === 'pass' ? '✓ PASS' : '✗ FAIL'}</span>${t.why}
+    </div>`;
+  thesisGrid.appendChild(card);
+});
+
+function revealThesis(i) {
+  const el = document.getElementById('tv-' + i);
+  el.classList.toggle('show');
+}
+
+// ── CONTEXTUALIZATION ──
+const contextData = [
+  {
+    label:'Option A',
+    title:'The WWI Origins of Total War',
+    prompt:'Connect: WWI first established the logic of total war — mobilizing entire societies, erasing the soldier/civilian line, using propaganda as a state weapon. How did WWII build on, escalate, and complete this process? What changed between the two conflicts\' approaches to civilian targeting and state power?',
+    sample:'WWI (1914–1918) first demonstrated both the potential and the horror of total war. Governments mobilized entire industrial economies — converting factories, rationing food, conscripting millions — and deployed propaganda on a mass scale for the first time using modern printing, photography, and film. The introduction of aerial bombardment of cities in WWI (German Zeppelin and Gotha bomber raids on London) established the contested precedent that civilian populations could be legitimate military targets when they supported industrial war production. By the time WWII began, this logic had been normalized, and the technological means for acting on it had been exponentially amplified. WWII\'s firebombing campaigns and ultimately the atomic bomb were not a sudden departure from WWI\'s logic — they were its terrifying fulfillment, enabled by two additional decades of industrial and scientific development and emboldened by governments that had already learned, in the previous war, that total mobilization of society was both possible and devastatingly effective.'
+  },
+  {
+    label:'Option B',
+    title:'The Manhattan Project and the Industrialization of Science',
+    prompt:'Connect: The Industrial Revolution (c. 1750–1900) established the pattern of applying science and technology to production at mass scale. How did the Manhattan Project represent the culmination of this pattern — the full industrialization of science itself, now directed by a democratic state toward a weapon of mass destruction?',
+    sample:'The Industrial Revolution established a pattern of systematically applying scientific knowledge to production at ever-larger scales — textile machinery, steam engines, steel production, and eventually assembly-line manufacturing. By the late 19th and early 20th centuries, this pattern had been extended to warfare itself: industrial-scale production of weapons, ammunition, and military hardware. The Manhattan Project represents the logical endpoint of this industrialization trajectory: the full weaponization of cutting-edge theoretical physics, mobilized by a democratic state with the resources of the world\'s largest economy. For the first time, fundamental discoveries in nuclear physics — made by scientists working across multiple countries and decades — were converted in just three years into a deployable weapon of mass destruction by 130,000+ workers across dozens of facilities. The bomb was not the product of a lone genius or a military laboratory — it was the product of total war applied to science itself: every resource, every expert, every dollar pointed at one obsessive purpose. This is the Industrial Revolution\'s pattern taken to its ultimate, terrible conclusion.'
+  },
+  {
+    label:'Option C',
+    title:'7.6 → 7.7: From Governance Failure to Governance Test',
+    prompt:'Connect: 7.6 argued WWII resulted from a cascade of governance failures at every level. 7.7 asks how those same governments fought once war began. Explain how the governance failures that caused WWII (totalitarian states, appeasement, collapsed international order) shaped the conditions under which 7.7\'s mobilization story unfolded.',
+    sample:'Module 7.6 established that WWII resulted from a cascade of governance failures: the rise of totalitarian states that rejected international norms, democratic governments that chose appeasement over confrontation, and a collapsed international order incapable of enforcing collective security. These failures created the specific conditions under which 7.7\'s mobilization story unfolded. The totalitarian states\' rejection of democratic norms was not just a prewar political choice — it was a structural feature of how they would fight: governance through terror and forced labor was already built into Nazi Germany and the Soviet Union before the first shot was fired. Meanwhile, democratic governments\' prewar weakness meant they entered WWII behind in rearmament and industrial preparation, forcing them to accelerate mobilization at extraordinary speed — which is part of why American war production, once fully engaged, was so extraordinary. The appeasement failure had one further consequence: it meant the war would be fought as a zero-sum existential conflict, not a limited war of adjustment. Total war mobilization, with all its erasure of civilian/soldier distinctions and escalation toward the atomic bomb, was in part a consequence of the prewar failure to prevent the conflict from becoming total in the first place.'
+  }
+];
+
+const ctxOptions = document.getElementById('context-options');
+contextData.forEach((c, i) => {
+  const div = document.createElement('div');
+  div.className = 'context-option';
+  div.innerHTML = `
+    <div class="context-option-header" onclick="toggleCtx(${i})">
+      <span class="context-label">${c.label}</span>
+      <span class="context-title">${c.title}</span>
+      <span class="context-arrow" id="ctx-arrow-${i}">▼</span>
+    </div>
+    <div class="context-body" id="ctx-body-${i}">
+      <div class="prompt-box" style="margin-bottom:14px;"><div class="prompt-label">Connection Prompt</div><p class="prompt-text">${c.prompt}</p></div>
+      <textarea class="write-area" style="min-height:120px;" placeholder="Write your contextualization paragraph here..."></textarea>
+      <div class="accordion" id="ctx-acc-${i}">
+        <div class="accordion-header" onclick="toggleAccordion('ctx-acc-${i}')"><span class="accordion-title">👁 Reveal Sample Contextualization</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body"><div class="sample-label">SAMPLE — DOK 4</div><p>${c.sample}</p></div>
+      </div>
+    </div>`;
+  ctxOptions.appendChild(div);
+});
+
+function toggleCtx(i) {
+  const body = document.getElementById('ctx-body-' + i);
+  const arrow = document.getElementById('ctx-arrow-' + i);
+  const isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+// Open first by default
+document.getElementById('ctx-body-0').style.display = 'block';
+document.getElementById('ctx-arrow-0').style.transform = 'rotate(180deg)';
+
+// ── SELF-ASSESSMENT ──
+const skillData = [
+  'I can define total war and explain how it erased the distinction between soldier and civilian in WWII',
+  'I can explain the difference between democratic mobilization (governance through inspiration) and totalitarian mobilization (governance through control and terror) with specific examples',
+  'I can describe the escalation from Blitzkrieg to strategic bombing to firebombing to the atomic bomb as a logical progression',
+  'I can explain the historical debate about the atomic bomb decision and its significance as a governance decision made by a democratic state',
+  'I can compare and contrast how Britain/US and Nazi Germany/Soviet Union approached wartime labor mobilization with specific evidence',
+  'I can construct an AP-quality argument connecting 7.7\'s governance framework to either 7.6\'s causes of WWII or Unit 8\'s Cold War'
+];
+
+const assessEl = document.getElementById('self-assess');
+skillData.forEach((skill, i) => {
+  const row = document.createElement('div');
+  row.className = 'skill-row';
+  row.innerHTML = `
+    <div class="skill-dots">
+      <div class="skill-dot level-1" id="dot-${i}-0" onclick="setSkill(${i},0)" title="Not yet"></div>
+      <div class="skill-dot level-2" id="dot-${i}-1" onclick="setSkill(${i},1)" title="Getting there"></div>
+      <div class="skill-dot level-3" id="dot-${i}-2" onclick="setSkill(${i},2)" title="Got it"></div>
+    </div>
+    <div class="skill-text">${skill}</div>`;
+  assessEl.appendChild(row);
+});
+
+function setSkill(skill, level) {
+  for (let l = 0; l < 3; l++) {
+    const dot = document.getElementById(`dot-${skill}-${l}`);
+    dot.classList.remove('active');
+  }
+  for (let l = 0; l <= level; l++) {
+    document.getElementById(`dot-${skill}-${l}`).classList.add('active');
+  }
+}
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'cBE9ZsYO5k4');
+initAutoSave('7_7');
+buildCompletionSection('7_7', '7.7 Conducting World War II');
+
+const _origMarkComplete77 = markComplete;
+markComplete = function(n) {
+  _origMarkComplete77(n);
+  markDoneShared('7_7', 'complete-' + n, n * 25);
+};
+</script>
+</body>
+</html>

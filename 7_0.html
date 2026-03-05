@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.0 Global Conflict Intro | AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ─── DESIGN TOKENS ─────────────────────────────── */
+:root {
+  --ink:        #1a1108;
+  --parchment:  #f5f0e8;
+  --parch-dark: #e8e0ce;
+  --parch-mid:  #ede6d6;
+  --gold:       #b8860b;
+  --gold-lt:    #d4a017;
+  --steel:      #3a4a5c;
+  --steel-lt:   #5a7a9c;
+  --smoke:      #6b6355;
+  --red:        #8b1a1a;
+  --dok1:       #2d5a27;
+  --dok2:       #1a3d6e;
+  --dok3:       #6b2d2d;
+  --dok4:       #4a2d6b;
+  --nav-bg:     #111008;
+  --page-max:   900px;
+}
+
+/* ─── RESET ─────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+img{display:block;max-width:100%}
+button{cursor:pointer;font-family:inherit}
+
+/* ─── BASE ───────────────────────────────────────── */
+body {
+  font-family:'Source Serif 4',Georgia,serif;
+  background:#2a2016;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(184,134,11,.05) 39px,rgba(184,134,11,.05) 40px),
+    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(184,134,11,.03) 39px,rgba(184,134,11,.03) 40px);
+  color:var(--ink);
+  min-height:100vh;
+}
+
+/* ─── TOP NAV ─────────────────────────────────────── */
+.top-nav {
+  background:var(--nav-bg);
+  border-bottom:2px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-inner {
+  max-width:var(--page-max);
+  margin:0 auto;
+  padding:.45rem 1.5rem;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  flex-wrap:wrap;
+}
+.nav-home {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.62rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  text-decoration:none;
+  white-space:nowrap;
+  padding:.3rem .6rem;
+  border:1px solid rgba(184,134,11,.3);
+  border-radius:2px;
+  transition:background .2s;
+}
+.nav-home:hover{background:rgba(184,134,11,.15)}
+.nav-divider{color:#3a3020;font-size:.8rem}
+.nav-links{display:flex;gap:.25rem;flex-wrap:wrap}
+.nav-link {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.58rem;
+  letter-spacing:.1em;
+  color:#6b6050;
+  text-decoration:none;
+  padding:.28rem .55rem;
+  border-radius:2px;
+  transition:all .2s;
+  border:1px solid transparent;
+}
+.nav-link:hover{color:var(--gold-lt);border-color:rgba(184,134,11,.2)}
+.nav-link.current{color:var(--gold);border-color:rgba(184,134,11,.4);background:rgba(184,134,11,.08)}
+
+/* ─── PAGE WRAPPER ────────────────────────────────── */
+.page-wrap{max-width:var(--page-max);margin:0 auto}
+
+/* ─── PAGE HEADER ─────────────────────────────────── */
+.page-header {
+  background:var(--ink);
+  color:var(--parchment);
+  padding:2.25rem 2.5rem 1.75rem;
+  border-bottom:4px solid var(--gold);
+  position:relative;
+  overflow:hidden;
+}
+.page-header::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--steel-lt),var(--gold),var(--red));
+}
+.unit-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;
+}
+.page-header h1{
+  font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;
+  line-height:1.1;margin-bottom:.4rem;
+}
+.page-header h1 span{color:var(--gold)}
+.header-sub{font-size:.92rem;color:#a89e8a;font-style:italic;margin-bottom:1.25rem}
+.header-chips{display:flex;gap:1rem;flex-wrap:wrap}
+.chip{
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;background:rgba(184,134,11,.12);
+  border:1px solid rgba(184,134,11,.28);color:var(--gold-lt);
+  padding:.28rem .65rem;border-radius:2px;
+}
+
+/* ─── PROGRESS BAR ────────────────────────────────── */
+.prog-bar-wrap{
+  background:var(--ink);padding:.85rem 2.5rem;
+  border-bottom:2px solid #2a2016;
+  display:flex;align-items:center;gap:1rem;
+}
+.prog-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.prog-track{flex:1;height:4px;background:#2a2016;border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));width:0%;transition:width .6s ease;border-radius:2px}
+.prog-pct{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:#7a7060;min-width:2.5rem;text-align:right}
+
+/* ─── STAGE TABS ──────────────────────────────────── */
+.stage-nav{
+  background:var(--ink);padding:0 1.5rem;
+  display:flex;gap:0;overflow-x:auto;
+  border-bottom:1px solid #2a2016;
+  scrollbar-width:none;
+}
+.stage-nav::-webkit-scrollbar{display:none}
+.stage-tab{
+  font-family:'JetBrains Mono',monospace;font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;color:#5a5040;
+  padding:.8rem 1rem;background:none;border:none;
+  border-bottom:3px solid transparent;white-space:nowrap;
+  transition:all .2s;
+}
+.stage-tab:hover{color:var(--gold-lt)}
+.stage-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.stage-tab.done{color:#6a7a5a}
+.stage-tab.done.active{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ─── MAIN CONTENT AREA ───────────────────────────── */
+.main-content{background:var(--parchment);min-height:520px}
+.stage-panel{display:none;animation:fadeUp .3s ease}
+.stage-panel.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── VIDEO SECTION ───────────────────────────────── */
+.video-section{
+  background:var(--ink);
+  padding:1.5rem 2.5rem 1.25rem;
+  border-bottom:3px solid var(--gold);
+}
+.video-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:3px;border:1px solid #3a3020}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-instruction{
+  margin-top:.85rem;font-size:.83rem;color:#a89e8a;font-style:italic;
+  padding:.6rem .9rem;background:rgba(184,134,11,.08);
+  border-left:2px solid var(--gold);border-radius:0 2px 2px 0;
+}
+
+/* ─── STAGE HEADER ────────────────────────────────── */
+.stage-header{padding:1.75rem 2.5rem 1.25rem;border-bottom:1px solid var(--parch-dark)}
+.dok-badge{
+  display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.58rem;
+  letter-spacing:.14em;text-transform:uppercase;padding:.22rem .55rem;border-radius:2px;
+  margin-bottom:.6rem;font-weight:700;
+}
+.dok1{background:rgba(45,90,39,.1);color:var(--dok1);border:1px solid rgba(45,90,39,.22)}
+.dok2{background:rgba(26,61,110,.1);color:var(--dok2);border:1px solid rgba(26,61,110,.22)}
+.dok3{background:rgba(107,45,45,.1);color:var(--dok3);border:1px solid rgba(107,45,45,.22)}
+.dok4{background:rgba(74,45,107,.1);color:var(--dok4);border:1px solid rgba(74,45,107,.22)}
+.stage-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--ink);margin-bottom:.3rem}
+.stage-header p{font-size:.88rem;color:var(--smoke);font-style:italic;line-height:1.55}
+
+/* ─── STAGE BODY ──────────────────────────────────── */
+.stage-body{padding:1.75rem 2.5rem}
+
+/* ─── CARDS ───────────────────────────────────────── */
+.card{
+  background:white;border:1px solid var(--parch-dark);border-radius:3px;
+  padding:1.4rem;margin-bottom:1.4rem;box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.card-title{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--smoke);margin-bottom:.75rem;
+  padding-bottom:.45rem;border-bottom:1px solid var(--parch-dark);
+}
+.card-title span{color:var(--gold);font-weight:700}
+
+/* ─── CALLOUTS ────────────────────────────────────── */
+.callout{padding:.9rem 1.1rem;border-radius:2px;margin:.75rem 0;font-size:.85rem;line-height:1.55}
+.callout-tip{background:#fdf8e8;border:1px solid #d4b840;color:#5a4808}
+.callout-info{background:#eef4fb;border:1px solid #7aa8d8;color:#1a3860}
+.callout-title{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:.28rem;display:block}
+
+/* ─── VOCAB GRID ──────────────────────────────────── */
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.7rem;margin-top:.5rem}
+.vocab-item{
+  background:var(--parchment);border:1px solid var(--parch-dark);border-radius:2px;
+  padding:.7rem .9rem;cursor:pointer;transition:border-color .2s;
+}
+.vocab-item:hover{border-color:var(--gold)}
+.vocab-item.revealed{background:#f0f5f0;border-color:var(--dok1)}
+.vocab-term{font-weight:600;font-size:.9rem;color:var(--steel);margin-bottom:.3rem}
+.vocab-hint{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+.vocab-def{font-size:.8rem;color:var(--smoke);line-height:1.45;font-style:italic;display:none}
+.vocab-item.revealed .vocab-hint{display:none}
+.vocab-item.revealed .vocab-def{display:block}
+
+/* ─── MCQ ─────────────────────────────────────────── */
+.mcq-block{margin-bottom:1.75rem}
+.mcq-stem{
+  font-size:.92rem;line-height:1.6;color:var(--ink);margin-bottom:.85rem;
+  padding:.9rem 1.1rem;background:var(--parchment);
+  border-left:3px solid var(--steel);border-radius:0 2px 2px 0;
+}
+.mcq-stem strong{font-weight:700}
+.mcq-choices{display:flex;flex-direction:column;gap:.45rem}
+.mcq-choice{
+  display:flex;align-items:flex-start;gap:.7rem;padding:.7rem .95rem;
+  background:var(--parchment);border:1px solid var(--parch-dark);border-radius:2px;
+  transition:all .2s;font-size:.88rem;line-height:1.45;text-align:left;width:100%;
+  color:var(--ink);
+}
+.mcq-choice:hover:not([disabled]){border-color:var(--steel-lt);background:#eef2f7}
+.mcq-choice.correct{background:#eaf4ea;border-color:var(--dok1);color:var(--dok1)}
+.mcq-choice.wrong{background:#f9eaea;border-color:var(--dok3);color:var(--dok3)}
+.mcq-choice-letter{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;min-width:1.1rem;padding-top:.1rem}
+
+/* ─── ACCORDION ANSWER ────────────────────────────── */
+.acc-btn{
+  display:flex;align-items:center;gap:.5rem;
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--smoke);background:none;border:1px solid var(--parch-dark);
+  border-radius:2px;padding:.38rem .8rem;margin-top:.6rem;transition:all .2s;
+}
+.acc-btn:hover{border-color:var(--gold);color:var(--gold)}
+.acc-btn .arrow{transition:transform .25s;display:inline-block;font-size:.7rem}
+.acc-btn.open .arrow{transform:rotate(90deg)}
+.acc-body{
+  margin-top:.5rem;padding:.85rem 1rem;background:#f0f5f0;
+  border:1px solid #c5d8c5;border-radius:2px;font-size:.85rem;line-height:1.6;
+  display:none;
+}
+.acc-body.show{display:block;animation:fadeUp .2s ease}
+.acc-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dok1);font-weight:700;margin-bottom:.4rem}
+.rubric-note{margin-top:.45rem;padding-top:.45rem;border-top:1px solid #c5d8c5;font-size:.78rem;color:var(--smoke);font-style:italic}
+
+/* ─── TEXTAREA PROMPTS ────────────────────────────── */
+.prompt-box{
+  background:var(--parchment);border-left:3px solid var(--gold);
+  padding:.9rem 1.1rem;margin-bottom:.85rem;font-size:.9rem;line-height:1.6;
+  border-radius:0 2px 2px 0;
+}
+.verb-tag{
+  display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:white;
+  padding:.12rem .45rem;border-radius:2px;margin-right:.35rem;vertical-align:middle;
+}
+.ap-note{font-size:.78rem;color:var(--smoke);font-style:italic;margin-top:.3rem}
+textarea{
+  width:100%;min-height:95px;padding:.8rem .95rem;
+  border:1px solid var(--parch-dark);border-radius:2px;
+  font-family:'Source Serif 4',serif;font-size:.88rem;line-height:1.6;
+  color:var(--ink);background:white;resize:vertical;transition:border-color .2s;
+}
+textarea:focus{outline:none;border-color:var(--steel-lt)}
+textarea::placeholder{color:#b0a898;font-style:italic}
+
+/* ─── BUTTONS ─────────────────────────────────────── */
+.btn-row{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:.65rem}
+.btn{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.55rem 1.1rem;border:none;border-radius:2px;
+  transition:all .2s;font-weight:500;
+}
+.btn-steel{background:var(--steel);color:white}
+.btn-steel:hover{background:var(--steel-lt)}
+.btn-gold{background:var(--gold);color:white}
+.btn-gold:hover{background:var(--gold-lt)}
+
+/* ─── THESIS EVALUATOR ────────────────────────────── */
+.thesis-item{
+  background:var(--parchment);border:2px solid var(--parch-dark);border-radius:3px;
+  padding:.95rem 1.1rem;margin-bottom:.9rem;cursor:pointer;transition:all .2s;
+}
+.thesis-item:hover{border-color:var(--steel-lt)}
+.thesis-item.pass{border-color:var(--dok1);background:#eaf4ea}
+.thesis-item.fail{border-color:var(--dok3);background:#f9eaea}
+.thesis-text{font-size:.88rem;line-height:1.55;font-style:italic;color:var(--ink)}
+.thesis-verdict{
+  margin-top:.65rem;font-size:.8rem;line-height:1.5;
+  padding-top:.65rem;border-top:1px solid currentColor;display:none;
+}
+.thesis-item.pass .thesis-verdict{display:block;color:var(--dok1)}
+.thesis-item.fail .thesis-verdict{display:block;color:var(--dok3)}
+.verdict-lbl{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;display:block;margin-bottom:.25rem}
+
+/* ─── SKILL SELF-ASSESSMENT ───────────────────────── */
+.skill-row{display:flex;align-items:center;gap:.9rem;padding:.65rem 0;border-bottom:1px solid var(--parch-dark)}
+.skill-row:last-child{border-bottom:none}
+.skill-name{font-size:.86rem;font-weight:600;color:var(--ink);min-width:150px}
+.skill-desc{flex:1;font-size:.78rem;color:var(--smoke);font-style:italic;line-height:1.4}
+.skill-dots{display:flex;gap:.28rem}
+.skill-dot{
+  width:20px;height:20px;border-radius:50%;border:2px solid var(--parch-dark);
+  background:white;cursor:pointer;transition:all .2s;
+  font-family:'JetBrains Mono',monospace;font-size:.5rem;
+  display:flex;align-items:center;justify-content:center;color:transparent;
+}
+.skill-dot.lit{border-color:var(--gold);background:var(--gold);color:white}
+
+/* ─── CAUSAL CHAIN ────────────────────────────────── */
+.chain-event{
+  background:var(--steel);color:white;padding:.55rem .95rem;
+  border-radius:2px;font-size:.87rem;font-weight:600;
+}
+.chain-connector{
+  font-family:'JetBrains Mono',monospace;font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
+  padding:.18rem 0 .18rem .5rem;margin:.2rem 0;
+}
+.chain-link textarea{min-height:68px;font-size:.83rem;background:#fdfaf3;border-color:#d4c9a8;margin:.2rem 0}
+
+/* ─── STAGE FOOTER ────────────────────────────────── */
+.stage-footer{
+  padding:1.25rem 2.5rem;background:var(--parch-dark);
+  border-top:1px solid #d8d0be;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.stage-counter{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--smoke);letter-spacing:.1em}
+
+/* ─── COMPARE TABLE ───────────────────────────────── */
+.compare-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.5rem}
+.compare-table th{background:var(--steel);color:white;padding:.55rem .8rem;text-align:left;font-weight:700}
+.compare-table td{padding:.45rem .8rem;border-bottom:1px solid var(--parch-dark);vertical-align:top}
+.compare-table tr:nth-child(even) td{background:var(--parchment)}
+.compare-table td textarea{min-height:58px;font-size:.8rem;background:white}
+
+/* ─── MCQ SECTION (Stage 5) ───────────────────────── */
+.mcq-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;color:var(--smoke);margin-bottom:.3rem}
+
+/* ─── RESPONSIVE ──────────────────────────────────── */
+@media(max-width:640px){
+  .page-header,.stage-body,.stage-footer,.stage-header,.video-section,.prog-bar-wrap{padding-left:1.1rem;padding-right:1.1rem}
+  .stage-nav{padding:0 .25rem}
+  .stage-tab{padding:.75rem .55rem;font-size:.54rem}
+  .page-header h1{font-size:1.55rem}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .nav-inner{padding:.4rem .75rem}
+  .skill-name{min-width:110px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     TOP NAVIGATION
+════════════════════════════════════════════════ -->
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-home">⌂ Unit 7</a>
+    <span class="nav-divider">›</span>
+    <div class="nav-links">
+      <a href="7_0.html" class="nav-link current">7.0 Intro</a>
+      <a href="7_1.html" class="nav-link">7.1</a>
+      <a href="7_2.html" class="nav-link">7.2</a>
+      <a href="7_3.html" class="nav-link">7.3</a>
+      <a href="7_4.html" class="nav-link">7.4</a>
+      <a href="7_5.html" class="nav-link">7.5</a>
+      <a href="7_6.html" class="nav-link">7.6</a>
+      <a href="7_7.html" class="nav-link">7.7</a>
+      <a href="7_8.html" class="nav-link">7.8</a>
+      <a href="7_9.html" class="nav-link">7.9</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════════
+     PAGE HEADER
+════════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="unit-eyebrow">AP World History: Modern · Unit 7 · Section 7.0</div>
+  <h1>Global <span>Conflict</span> — Introduction</h1>
+  <div class="header-sub">How the modern world was forged in fire: c. 1900–1945 and beyond</div>
+  <div class="header-chips">
+    <span class="chip">c. 1900–present</span>
+    <span class="chip">5 Stages</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+    <span class="chip">Skills Orientation</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PROGRESS BAR
+════════════════════════════════════════════════ -->
+<div class="prog-bar-wrap">
+  <span class="prog-label">Progress</span>
+  <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+  <span class="prog-pct" id="progPct">0%</span>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     STAGE TABS
+════════════════════════════════════════════════ -->
+<nav class="stage-nav" id="stageTabs">
+  <button class="stage-tab active" onclick="goStage(0)">① Watch</button>
+  <button class="stage-tab" onclick="goStage(1)">② Recall</button>
+  <button class="stage-tab" onclick="goStage(2)">③ Apply</button>
+  <button class="stage-tab" onclick="goStage(3)">④ Argue</button>
+  <button class="stage-tab" onclick="goStage(4)">⑤ MCQ &amp; Reflect</button>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     STAGE 1 — WATCH (DOK 1)
+════════════════════════════════════════════════ -->
+<div class="stage-panel active" id="stage-0">
+
+  <div class="video-section">
+    <div class="video-label">🎬 Start Here — Watch the Explainer Video</div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/qdZRlmwaqy4" title="APWH 7.0 Global Conflict Introduction" allowfullscreen></iframe>
+    </div>
+    <div class="video-instruction">Watch the full video before moving to Stage 2. This video introduces the central question of Unit 7 and the AP historical thinking skills you'll practice throughout the unit.</div>
+  </div>
+
+  <div class="stage-header">
+    <div class="dok-badge dok1">DOK 1 · Knowledge Acquisition</div>
+    <h2>Stage 1 — Watch &amp; Vocabulary</h2>
+    <p>After watching the video, build your foundation of key terms. Click each card to reveal its definition. These terms will appear throughout every section of Unit 7.</p>
+  </div>
+
+  <div class="stage-body">
+
+    <div class="callout callout-tip">
+      <span class="callout-title">🎯 Your Goal for Stage 1</span>
+      Watch the video, then click through the vocabulary cards below. Your only job right now is <strong>recognition and recall</strong> — no analysis yet. That comes in Stage 2.
+    </div>
+
+    <div id="videoEmbed"></div>
+
+    <div class="card">
+      <div class="card-title"><span>1A</span> · Core Vocabulary — Click each term to reveal its definition</div>
+      <div class="vocab-grid">
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">MAIN</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The four underlying causes of World War I: <strong>M</strong>ilitarism, <strong>A</strong>lliances, <strong>I</strong>mperialism, <strong>N</strong>ationalism. Together these forces created a powder keg where a single spark could ignite a global war.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Total War</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">A conflict in which entire societies — factories, civilians, and economies — are mobilized for the war effort. The line between soldier and civilian disappears. WWI and WWII were both fought as total wars.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Causation</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The AP historical thinking skill of explaining <em>why</em> events happened and what resulted from them — tracing cause-and-effect chains across time. The video's "domino effect" timeline is causation in action.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Continuity &amp; Change (CCOT)</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The AP skill of tracking what stayed the same and what changed across a time period — and explaining why. The video contrasts the continuity of imperial rivalries with the dramatic change of new ideologies like communism.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Treaty of Versailles</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The 1919 peace settlement ending WWI. Rather than solving underlying tensions, it punished Germany harshly (war guilt, reparations, territorial losses), planting the seeds for the instability that led to WWII.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Mass Atrocities</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">Deliberate, state-sponsored policies of extermination targeting specific populations. Examples include the Armenian Genocide (WWI), the Holocaust (WWII), Stalin's purges, and the Rwandan Genocide. These are not accidents of war — they are intentional acts.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Fascism</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">An ultranationalist authoritarian ideology that emerged in the interwar period. Fascist regimes (Nazi Germany, Mussolini's Italy) glorified state power, racial superiority, and military expansion. They rose by exploiting the instability created by WWI and the Great Depression.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Interwar Period</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The years between WWI and WWII (1919–1939). Characterized by unresolved Versailles tensions, the Great Depression, the rise of fascism and communism, and the failure of international institutions to prevent another war.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Historical Argumentation</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">The AP skill of building a sophisticated argument that weighs multiple causes, acknowledges complexity, and argues for the relative significance of different factors. This is what separates a 3 from a 5 on the AP exam.</div>
+        </div>
+
+        <div class="vocab-item" onclick="this.classList.toggle('revealed')">
+          <div class="vocab-term">Contextualization</div>
+          <div class="vocab-hint">Click to reveal →</div>
+          <div class="vocab-def">Describing a broader historical context (before, during, or after the period) and connecting it to the topic. On the AP exam, this earns its own point on LEQ and DBQ — and requires 3–5 sentences, not just a phrase.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="stage-footer">
+    <span class="stage-counter">Stage 1 of 5</span>
+    <button class="btn btn-gold" onclick="advance(0)">Move to Stage 2 →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     STAGE 2 — RECALL (DOK 1→2)
+════════════════════════════════════════════════ -->
+<div class="stage-panel" id="stage-1">
+  <div class="stage-header">
+    <div class="dok-badge dok1">DOK 1–2 · Recall &amp; Comprehension</div>
+    <h2>Stage 2 — Recall &amp; Comprehension</h2>
+    <p>Test your recall of the video's key content. Select the best answer — then read the explanation to understand <em>why</em> it's correct. This is the foundation for analysis.</p>
+  </div>
+  <div class="stage-body">
+
+    <div class="card">
+      <div class="card-title"><span>2A</span> · Video Recall — Select the best answer, then expand the explanation</div>
+
+      <!-- Q1 -->
+      <div class="mcq-block">
+        <div class="mcq-num">Question 1</div>
+        <div class="mcq-stem"><strong>According to the video, what four forces combined to create a "powder keg" before World War I?</strong></div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Reparations came after WWI as a result of Versailles — they were a consequence, not a cause. Religion was not a primary driver of WWI.')"><span class="mcq-choice-letter">A</span>Reparations, alliances, religion, nationalism</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! MAIN = Militarism, Alliances, Imperialism, Nationalism. The video explains how each fed into the others — imperial rivalry fueled an arms race (militarism), nationalism made diplomacy nearly impossible, and alliances ensured that a single spark would trigger a continent-wide war.')"><span class="mcq-choice-letter">B</span>Militarism, alliances, imperialism, nationalism</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Technology and socialism are not part of the MAIN framework. Technology was a characteristic of total war, not an underlying cause of WWI.')"><span class="mcq-choice-letter">C</span>Militarism, technology, socialism, nationalism</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Industrialization contributed to the broader context but is not one of the four specific \"powder keg\" factors the video names.')"><span class="mcq-choice-letter">D</span>Imperialism, nationalism, industrialization, democracy</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="mcq-block">
+        <div class="mcq-num">Question 2</div>
+        <div class="mcq-stem"><strong>The video describes WWI as "total war." What does this specifically mean?</strong></div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Decisive victory is the goal of most wars — this does not define \"total war\" as a concept.')"><span class="mcq-choice-letter">A</span>A war fought until one side achieves complete military victory</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Global scope describes a world war by geography, not the specific concept of total war.')"><span class="mcq-choice-letter">B</span>A war that spans every continent on the globe</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Total war means the entire society — factories, families, economies — is mobilized for the war effort. The line between combatant and civilian evaporates. New technologies like machine guns, poison gas, and airplanes made this industrialized destruction horrifically efficient.')"><span class="mcq-choice-letter">C</span>A war in which entire societies, including civilians and economies, are mobilized for the war effort</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Surprise attack is a military tactic, not the definition of total war.')"><span class="mcq-choice-letter">D</span>A war that begins with a surprise attack on civilian infrastructure</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="mcq-block">
+        <div class="mcq-num">Question 3</div>
+        <div class="mcq-stem"><strong>The video's timeline shows a "domino effect" from 1914 to 1929. Which sequence is correct?</strong></div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This reverses the sequence. The Great Depression (1929) came after the Treaty of Versailles (1919), not before.')"><span class="mcq-choice-letter">A</span>Great Depression → Treaty of Versailles → Russian Revolution → Assassination</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The video traces this exact domino chain: the 1914 assassination lit the fuse → WWI\'s strain caused the 1917 Russian Revolution → the 1919 Versailles Treaty created a fragile peace → the 1929 Depression shattered that peace and enabled fascism. This is causation in action.')"><span class="mcq-choice-letter">B</span>1914 Assassination → Russian Revolution (1917) → Treaty of Versailles (1919) → Great Depression (1929)</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The Russian Revolution happened during WWI (1917), not as a response to the Versailles Treaty.')"><span class="mcq-choice-letter">C</span>Assassination → Treaty of Versailles → Russian Revolution → Great Depression</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The Great Depression was a consequence of the Versailles instability, not a direct cause of the Russian Revolution.')"><span class="mcq-choice-letter">D</span>Assassination → Great Depression → Russian Revolution → Treaty of Versailles</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="mcq-block">
+        <div class="mcq-num">Question 4</div>
+        <div class="mcq-stem"><strong>The video says the Treaty of Versailles was like "hitting the pause button." What does this metaphor mean?</strong></div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The League of Nations was created but is described by the video as failing to prevent the next war — so this contradicts the video\'s argument.')"><span class="mcq-choice-letter">A</span>The Treaty successfully halted conflict by creating the League of Nations</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Germany was not immediately disarmed effectively — this misreads the treaty\'s actual outcome.')"><span class="mcq-choice-letter">B</span>The Treaty completely disarmed Germany, preventing any future conflict</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The metaphor means the treaty stopped the fighting without solving the underlying tensions of nationalism, imperialism, and economic rivalry. By punishing Germany so harshly, it actually planted seeds for the next conflict. The "pause" ended when the Great Depression hit and those unresolved tensions exploded again.')"><span class="mcq-choice-letter">C</span>The Treaty stopped the fighting but did not resolve the underlying tensions, making another war nearly inevitable</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The peace settlement was not a temporary ceasefire — it was intended to be permanent, but failed because it did not address root causes.')"><span class="mcq-choice-letter">D</span>The Treaty was only intended as a temporary ceasefire while nations rebuilt</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="mcq-block">
+        <div class="mcq-num">Question 5</div>
+        <div class="mcq-stem"><strong>According to the video, what distinguishes mass atrocities from ordinary battlefield casualties?</strong></div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Scale alone does not define mass atrocities — many battles produced enormous casualties. The video emphasizes intent and targeting, not just numbers.')"><span class="mcq-choice-letter">A</span>Mass atrocities involve more deaths than conventional battlefield combat</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Chemical weapons were used in WWI battle contexts — the video does not define atrocities by weapon type.')"><span class="mcq-choice-letter">B</span>Mass atrocities always involve the use of chemical weapons</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The video explicitly states that mass atrocities are "deliberate, state-sponsored policies of extermination" — not collateral damage or accidents of war. They target specific populations based on identity for ideological or political reasons. This is what makes the Holocaust, the Armenian Genocide, and Stalin\'s purges categorically different from battlefield deaths.')"><span class="mcq-choice-letter">C</span>Mass atrocities are deliberate, state-sponsored policies targeting specific populations — not accidents of war</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Mass atrocities can occur during peacetime as well (Stalin\'s purges) and are defined by intent, not by whether a war is being fought.')"><span class="mcq-choice-letter">D</span>Mass atrocities only occur during wartime as unintended consequences of combat</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="stage-footer">
+    <span class="stage-counter">Stage 2 of 5</span>
+    <button class="btn btn-gold" onclick="advance(1)">Move to Stage 3 →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     STAGE 3 — APPLY (DOK 2)
+════════════════════════════════════════════════ -->
+<div class="stage-panel" id="stage-2">
+  <div class="stage-header">
+    <div class="dok-badge dok2">DOK 2 · Knowledge Application</div>
+    <h2>Stage 3 — Apply: Describe, Explain, Compare</h2>
+    <p>Now use AP command verbs to process the content. These are the same operations tested on SAQs. Write your answers, then expand the sample response to compare.</p>
+  </div>
+  <div class="stage-body">
+
+    <div class="callout callout-info">
+      <span class="callout-title">📌 AP Verb Reminder</span>
+      <strong>Describe</strong> = relevant characteristics — more than just naming a term.<br>
+      <strong>Explain</strong> = show <em>how</em> or <em>why</em> — connect cause to effect. Don't just state what happened.
+    </div>
+
+    <!-- DESCRIBE -->
+    <div class="card">
+      <div class="card-title"><span>3A</span> · Describe Drill</div>
+      <div class="prompt-box">
+        <span class="verb-tag">Describe</span>
+        How did the four MAIN factors interact to make a major European war almost inevitable once a single incident occurred?
+        <div class="ap-note">Write 2–3 sentences. Don't just list the four terms — describe how they were connected to each other.</div>
+      </div>
+      <textarea placeholder="The rivalry for overseas empires (imperialism) fueled a massive arms race (militarism) because..."></textarea>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Answer</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Answer</div>
+        The rivalry for overseas empires (imperialism) fueled a dangerous arms race (militarism), as European powers poured resources into building massive armies and navies to defend and expand their colonial holdings. Intense nationalism made compromise nearly impossible, as governments faced enormous public pressure to protect national honor at all costs. The interconnected alliance system meant that once a single conflict began, treaty obligations automatically drew every major power in — so the assassination of one archduke in 1914 became the spark that ignited an entire continent.
+        <div class="rubric-note"><strong>What earns this:</strong> It goes beyond listing — it explains the <em>connections</em> between factors (how one drove another) and shows the chain reaction effect. That's what "describe" requires.</div>
+      </div>
+    </div>
+
+    <!-- EXPLAIN -->
+    <div class="card">
+      <div class="card-title"><span>3B</span> · Explain Drill</div>
+      <div class="prompt-box">
+        <span class="verb-tag">Explain</span>
+        Why did the Treaty of Versailles fail to produce lasting peace after World War I?
+        <div class="ap-note">Write 2–3 sentences. Include a cause-and-effect connection — not just "the terms were harsh."</div>
+      </div>
+      <textarea placeholder="The Treaty of Versailles failed to produce lasting peace because..."></textarea>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Answer</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Answer</div>
+        The Treaty of Versailles failed to produce lasting peace because it punished Germany so severely — through the war guilt clause, massive reparations, and territorial losses — that it created both economic ruin and deep nationalist resentment. This destabilized Germany's fragile new democratic government, making it appear weak and incompetent to its own citizens. When the global economy then collapsed in 1929, those unresolved tensions erupted, allowing fascist movements like the Nazi Party to rise to power by exploiting public anger and promising to reverse the humiliations of Versailles.
+        <div class="rubric-note"><strong>What earns this:</strong> Shows the mechanism — not just <em>what</em> happened, but <em>why</em> one thing led to the next. This causal chain is exactly what AP graders look for in an "explain" response.</div>
+      </div>
+    </div>
+
+    <!-- COMPARE -->
+    <div class="card">
+      <div class="card-title"><span>3C</span> · Historical Comparison</div>
+      <div class="prompt-box">
+        <span class="verb-tag">Compare</span>
+        The video notes that Western democracies and the Soviet Union responded to the same crisis (the Great Depression) in very different ways. Complete the comparison table, then write one sentence explaining <em>why</em> the difference existed.
+      </div>
+      <table class="compare-table">
+        <thead>
+          <tr><th style="width:28%">Category</th><th>Western Democracies</th><th>Soviet Union</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Economic response</strong></td>
+            <td><textarea placeholder="How did they manage the economic crisis?"></textarea></td>
+            <td><textarea placeholder="Five-Year Plans..."></textarea></td>
+          </tr>
+          <tr>
+            <td><strong>Political outcome</strong></td>
+            <td><textarea placeholder="What happened to democratic governments?"></textarea></td>
+            <td><textarea placeholder="What happened to Soviet political power?"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:.85rem">
+        <div class="prompt-box" style="margin-bottom:.5rem">
+          <span class="verb-tag">Explain</span>
+          In one sentence: <em>why</em> did these two systems choose such different responses?
+        </div>
+        <textarea style="min-height:60px" placeholder="The core reason for this difference was..."></textarea>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Answers</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Answers</div>
+        <strong>Western Democracies — Economic:</strong> Largely paralyzed initially; market economies collapsed and governments were slow to intervene. Some (like the US) eventually adopted state programs (New Deal) but recovery was slow and incomplete by the late 1930s.<br><br>
+        <strong>Soviet Union — Economic:</strong> Rapid state-controlled industrialization through Five-Year Plans — forced collectivization of agriculture, crash industrialization of heavy industry, no tolerance for market forces.<br><br>
+        <strong>Western Democracies — Political:</strong> Democratic institutions survived in Britain and the US but were severely strained; in some countries (Germany, Italy) economic desperation opened the door for fascist movements.<br><br>
+        <strong>Soviet Union — Political:</strong> Stalin consolidated totalitarian control; the purges (1936–38) eliminated rivals and millions of perceived enemies, making Soviet power more absolute but at enormous human cost.<br><br>
+        <strong>Why the difference:</strong> The core reason was ideological — capitalist market economies relied on private decisions and profit signals, while the Soviet command economy allowed the state to simply direct resources by decree, making rapid centralized action possible regardless of human cost.
+        <div class="rubric-note"><strong>AP Comparison Tip:</strong> A real comparison always explains the <em>reason</em> for the difference — here, the answer is fundamentally about ideology (capitalism vs. communism). Without that "why," you have a list, not an analysis.</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="stage-footer">
+    <span class="stage-counter">Stage 3 of 5</span>
+    <button class="btn btn-gold" onclick="advance(2)">Move to Stage 4 →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     STAGE 4 — ARGUE (DOK 3–4)
+════════════════════════════════════════════════ -->
+<div class="stage-panel" id="stage-3">
+  <div class="stage-header">
+    <div class="dok-badge dok3">DOK 3–4 · Analysis &amp; Argumentation</div>
+    <h2>Stage 4 — Think Like a Historian: Argue</h2>
+    <p>Now you analyze, evaluate theses, and practice the exact skills that earn points on SAQs, LEQs, and DBQs — causation, CCOT, thesis writing, and contextualization.</p>
+  </div>
+  <div class="stage-body">
+
+    <!-- CAUSAL CHAIN -->
+    <div class="card">
+      <div class="card-title"><span>4A</span> · Causal Chain — Fill in each connecting explanation</div>
+      <div class="callout callout-info" style="margin-bottom:1rem">
+        <span class="callout-title">📌 AP Skill: Causation</span>
+        For each arrow, write 1–2 sentences explaining <em>how and why</em> one event caused the next. Use specific evidence from the video.
+      </div>
+
+      <div class="chain-event">🔫 1914 — Assassination of Archduke Franz Ferdinand, Sarajevo</div>
+      <div class="chain-connector">↓ How did this trigger a world war?</div>
+      <div class="chain-link"><textarea placeholder="The assassination triggered the alliance system because..."></textarea></div>
+
+      <div class="chain-event">⚔️ World War I (1914–1918) — The "War to End All Wars"</div>
+      <div class="chain-connector">↓ How did WWI's strain cause revolution in Russia?</div>
+      <div class="chain-link"><textarea placeholder="The enormous military and economic strain of total war..."></textarea></div>
+
+      <div class="chain-event">🔴 1917 — Russian Revolution; Bolsheviks seize power</div>
+      <div class="chain-connector">↓ Why was the 1919 peace "fragile and flawed"?</div>
+      <div class="chain-link"><textarea placeholder="The Treaty of Versailles was flawed because..."></textarea></div>
+
+      <div class="chain-event">📜 1919 — Treaty of Versailles: Fragile, punishing peace</div>
+      <div class="chain-connector">↓ How did economic collapse enable a second war?</div>
+      <div class="chain-link"><textarea placeholder="When the global economy crashed in 1929, the unresolved Versailles tensions..."></textarea></div>
+
+      <div class="chain-event">💥 1929 → Rise of Fascism → World War II</div>
+
+      <div class="btn-row" style="margin-top:1rem">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Chain</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Causal Chain</div>
+        <strong>Assassination → WWI:</strong> The assassination of Franz Ferdinand triggered Austria-Hungary's ultimatum to Serbia. Because of the alliance system, Serbia's rejection pulled in Russia (Serbia's ally), which triggered Germany (Austria's ally) to declare war on Russia and France, and then Britain entered when Germany invaded Belgium. In six weeks, a Balkan crisis became a world war.<br><br>
+        <strong>WWI → Russian Revolution:</strong> Three years of devastating total war destroyed Russia's economy and military morale — food shortages at home, massive casualties at the front. The tsar's government lost all legitimacy, creating the perfect conditions for the Bolshevik takeover in October 1917.<br><br>
+        <strong>WWI → Fragile Peace:</strong> The Versailles Treaty assigned Germany sole "war guilt," imposed crushing reparations, stripped territory, and limited its military — but it failed to create genuine reconciliation or address the imperial and nationalist rivalries that had caused the war in the first place.<br><br>
+        <strong>Fragile Peace → WWII:</strong> The Great Depression (1929) destroyed Germany's already shattered economy, making millions desperate and resentful. This allowed the Nazi Party to exploit Versailles grievances, promising national revival. Without a strong response from Western democracies, Germany rearmed and expanded, and a second, even more devastating war became inevitable.
+      </div>
+    </div>
+
+    <!-- SAQ EXPLAIN DRILL -->
+    <div class="card">
+      <div class="card-title"><span>4B</span> · SAQ Targeted Drill — "Explain" (1 point)</div>
+      <div class="callout callout-tip" style="margin-bottom:.85rem">
+        <span class="callout-title">📌 SAQ Format</span>
+        This mirrors an SAQ Part B or C "explain" prompt. Write 2–3 sentences. Show <em>how or why</em> — not just <em>what</em>. Use specific evidence.
+      </div>
+      <div class="prompt-box">
+        <span class="verb-tag">Explain</span>
+        Explain how mass atrocities in the twentieth century represent a categorically different form of state violence compared to ordinary warfare.
+        <div class="ap-note">Use at least one specific historical example. 2–3 sentences. This is worth 1 SAQ point.</div>
+      </div>
+      <textarea placeholder="Mass atrocities in the twentieth century were categorically different from ordinary warfare because..."></textarea>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Answer + Scoring Notes</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Answer (earns the point)</div>
+        Mass atrocities were categorically different from ordinary warfare because they involved deliberate, state-sponsored policies targeting civilian populations based on identity — not military strategy or necessity. The Holocaust, for example, was not collateral damage from battle but a systematic government program of extermination designed and administered by the Nazi state, using industrial methods to murder six million Jews and millions of others. Similarly, the Armenian Genocide during WWI was a calculated campaign by the Ottoman government, demonstrating that these atrocities reflected ideological intent — the elimination of a perceived enemy within — rather than the tragic accidents of combat.
+        <div class="rubric-note"><strong>Why this earns the point:</strong> Directly explains <em>how and why</em> atrocities differ — through deliberate state policy targeting identity, not military opponents. Uses two specific examples (Holocaust, Armenian Genocide) and ties them to the core argument. This is far stronger than simply saying "more people died."</div>
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <div class="card-title"><span>4C</span> · Continuity &amp; Change Over Time (CCOT)</div>
+      <div class="prompt-box">
+        <span class="verb-tag">Explain</span>
+        Using evidence from the video, identify and explain one significant <strong>continuity</strong> AND one significant <strong>change</strong> in the nature of warfare between 1900 and 1945.
+        <div class="ap-note">Write 2–3 sentences for each. Include a brief explanation of <em>why</em> it continued or changed.</div>
+      </div>
+      <div style="margin-bottom:.85rem">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dok3);margin-bottom:.4rem;font-weight:700">ONE CONTINUITY:</div>
+        <textarea placeholder="One continuity in the nature of warfare between 1900–1945 was..."></textarea>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dok2);margin-bottom:.4rem;font-weight:700">ONE CHANGE:</div>
+        <textarea placeholder="One significant change in the nature of warfare between 1900–1945 was..."></textarea>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Answer</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Answer</div>
+        <strong>Continuity:</strong> Great power competition and imperial rivalry persisted throughout the period. The same nations that had competed for colonial empires before 1900 remained locked in conflict through 1945, suggesting that the underlying structure of international competition — multiple powerful states competing for dominance — remained fundamentally unchanged even as the specific ideologies and weapons evolved.<br><br>
+        <strong>Change:</strong> The targeting and scale of warfare changed dramatically. Before 1900, warfare primarily involved professional armies on defined battlefields with limited civilian impact. By WWII, total war had eliminated the distinction between soldier and civilian — industrial bombing campaigns targeted cities, and the atomic bomb demonstrated that a single weapon could destroy an entire urban population in seconds, fundamentally transforming the relationship between states and the use of violence.
+      </div>
+    </div>
+
+    <!-- THESIS EVALUATOR -->
+    <div class="card">
+      <div class="card-title"><span>4D</span> · Spot the Thesis — Click each statement to evaluate it</div>
+      <div class="callout callout-info" style="margin-bottom:.85rem">
+        <span class="callout-title">📌 Thesis Standard</span>
+        A thesis must: (1) make a historically defensible claim, (2) establish a <em>line of reasoning</em> — not just state a fact or restate the prompt.
+      </div>
+      <p style="font-size:.83rem;color:var(--smoke);margin-bottom:.85rem;font-style:italic"><strong>Prompt:</strong> "Evaluate the extent to which the consequences of World War I caused World War II."</p>
+
+      <div class="thesis-item" onclick="evalThesis(this,false)">
+        <div class="thesis-text">"The consequences of World War I caused World War II."</div>
+        <div class="thesis-verdict"><span class="verdict-lbl">✗ Does NOT earn the point</span>This is a direct restatement of the prompt. It makes no claim about degree or mechanism, offers no line of reasoning, and gives a reader no sense of what argument the essay will make.</div>
+      </div>
+
+      <div class="thesis-item" onclick="evalThesis(this,false)">
+        <div class="thesis-text">"World War I had many important consequences that eventually led to World War II in very significant ways."</div>
+        <div class="thesis-verdict"><span class="verdict-lbl">✗ Does NOT earn the point</span>Vague and circular — "important" and "very significant" carry no historical content. No line of reasoning is established. A reader still doesn't know what argument will follow.</div>
+      </div>
+
+      <div class="thesis-item" onclick="evalThesis(this,true)">
+        <div class="thesis-text">"Although economic instability and the rise of fascist ideology also contributed to the outbreak of World War II, the punitive terms of the Treaty of Versailles were the most significant cause because they simultaneously destroyed Germany's economy, delegitimized its democratic government, and fueled the nationalist resentment that fascist movements needed to seize power."</div>
+        <div class="thesis-verdict"><span class="verdict-lbl">✓ EARNS the point</span>This thesis acknowledges complexity (other causes existed), makes a specific claim about degree ("most significant"), and establishes a three-part line of reasoning (economic destruction, delegitimized democracy, nationalist resentment). A reader knows exactly what the essay will argue and why.</div>
+      </div>
+
+      <div class="thesis-item" onclick="evalThesis(this,true)">
+        <div class="thesis-text">"While WWI's aftermath laid the structural foundations for WWII, the ideological rise of fascism was equally important, as fascist movements actively exploited post-war grievances to build mass support that democratic institutions — already weakened by economic crisis — proved too fragile to contain."</div>
+        <div class="thesis-verdict"><span class="verdict-lbl">✓ EARNS the point</span>Takes a nuanced position (shared causation) rather than single-cause determinism. Establishes a clear line of reasoning: fascism exploited post-war structural weaknesses, and democracy failed to contain it. Historically defensible and analytically specific.</div>
+      </div>
+    </div>
+
+    <!-- CONTEXTUALIZATION -->
+    <div class="card">
+      <div class="card-title"><span>4E</span> · Contextualization Paragraph Builder</div>
+      <div class="callout callout-tip" style="margin-bottom:.85rem">
+        <span class="callout-title">📌 Contextualization — What earns the point</span>
+        Describe a broader historical context (before or surrounding the period) that is <em>meaningfully connected</em> to the prompt. Must be 3–5 sentences — not just a phrase. Must explicitly connect to the topic.
+      </div>
+      <p style="font-size:.86rem;color:var(--ink);margin-bottom:.75rem;line-height:1.6"><strong>Choose a context topic and write your paragraph below:</strong></p>
+      <div style="display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.9rem">
+        <button class="btn btn-steel" style="font-size:.58rem" onclick="setCtxHint('19th-century European imperial competition and the Congress of Vienna order')">19th-c. Imperialism</button>
+        <button class="btn btn-steel" style="font-size:.58rem" onclick="setCtxHint('the Industrial Revolution and its transformation of military technology and economic competition')">Industrial Revolution</button>
+        <button class="btn btn-steel" style="font-size:.58rem" onclick="setCtxHint('the decline of old empires (Ottoman, Austro-Hungarian, Qing) and the explosive rise of nationalism')">Declining Empires &amp; Nationalism</button>
+      </div>
+      <textarea id="ctxTA" style="min-height:140px" placeholder="By the late nineteenth century..."></textarea>
+      <div class="btn-row">
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Show Sample Paragraph</button>
+      </div>
+      <div class="acc-body">
+        <div class="acc-label">✓ Sample Contextualization Paragraph (earns the point)</div>
+        By the late nineteenth century, European great powers had transformed imperial competition into a defining feature of their national identities and economic systems. The scramble for colonies across Africa and Asia generated enormous wealth for colonial powers but also produced intense rivalry, as nations like Germany — arriving late to the imperial race — felt excluded from a global order dominated by Britain and France. This competition directly fueled an arms race, as governments invested in massive military buildups to project power and defend their overseas empires. The uneven distribution of colonial territory created festering resentments that made diplomatic solutions nearly impossible when crises arose. It was precisely this pre-existing structure of imperial rivalry and militarized competition that transformed a regional assassination in 1914 into a global catastrophe, and the failure to address these rivalries in the peace settlement only guaranteed that they would resurface.
+        <div class="rubric-note"><strong>Why this earns the point:</strong> Describes broader context (imperial competition) that precedes the period, uses 5 sentences, and explicitly connects to the prompt in the final sentence. It is clearly <em>about</em> something larger than the events of the prompt itself.</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="stage-footer">
+    <span class="stage-counter">Stage 4 of 5</span>
+    <button class="btn btn-gold" onclick="advance(3)">Move to Stage 5 →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     STAGE 5 — MCQ & REFLECT (DOK 4)
+════════════════════════════════════════════════ -->
+<div class="stage-panel" id="stage-4">
+  <div class="stage-header">
+    <div class="dok-badge dok4">DOK 4 · MCQ Practice &amp; Synthesis</div>
+    <h2>Stage 5 — MCQ Practice &amp; Reflection</h2>
+    <p>15 AP-style multiple choice questions. Select your answer, then expand the explanation. Finish with a synthesis reflection and a skill self-assessment.</p>
+  </div>
+  <div class="stage-body">
+
+    <div class="card">
+      <div class="card-title"><span>5A</span> · 15 AP-Style MCQ Questions</div>
+
+      <!-- MCQ 1 -->
+      <div class="mcq-block">
+        <div class="mcq-num">1 of 15</div>
+        <div class="mcq-stem">Which of the following best describes the <em>systemic</em> reason why the assassination of Archduke Franz Ferdinand escalated into a world war?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Austria-Hungary was indeed outraged, but outrage alone does not explain how a Balkan conflict became a world war. The systemic reason is the alliance structure.')"><span class="mcq-choice-letter">A</span>Austria-Hungary was so outraged by the assassination that it immediately declared war on all of Europe</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The alliance system was the systemic multiplier — it transformed a bilateral conflict into a world war by automatic treaty obligations. Each nation\'s declaration of war triggered another\'s, removing individual decision-making from the process. This is a structural/governance failure, not just an emotional response.')"><span class="mcq-choice-letter">B</span>The interlocking alliance system automatically pulled major powers into conflict once any two nations at war began fighting</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Germany did pursue aggressive war aims, but the question asks about the systemic reason for escalation, not just German decision-making.')"><span class="mcq-choice-letter">C</span>Germany had been planning to start a war for years and used the assassination as a pretext</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Colonial competition was a background condition (imperialism/MAIN) but not the specific mechanism that turned the assassination into a world war.')"><span class="mcq-choice-letter">D</span>European nations were competing for colonial territory and saw war as an opportunity to gain new lands</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. The alliance system meant that when Austria-Hungary declared war on Serbia, Russia mobilized to defend Serbia, which triggered Germany to declare war on Russia and France, which triggered Britain to enter when Germany invaded Belgium. The systemic (structural) cause was that no single government could de-escalate once the mechanism started.</div>
+      </div>
+
+      <!-- MCQ 2 -->
+      <div class="mcq-block">
+        <div class="mcq-num">2 of 15</div>
+        <div class="mcq-stem">A historian argues that "total war fundamentally transformed the relationship between governments and their citizens." Which of the following best supports this argument?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This addresses military tactics, not the government-citizen relationship.')"><span class="mcq-choice-letter">A</span>Governments developed new battlefield strategies such as trench warfare and flanking maneuvers</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Total war required governments to mobilize entire civilian populations — rationing food, drafting workers, controlling factories, using propaganda. This dramatically expanded state power into everyday life in ways that had no precedent, fundamentally changing the relationship between government authority and citizens.')"><span class="mcq-choice-letter">B</span>Governments mobilized entire civilian populations through rationing, propaganda, and directing industrial production toward the war effort</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'International treaties address relationships between states, not between governments and their own citizens.')"><span class="mcq-choice-letter">C</span>Governments signed international treaties establishing rules of warfare to protect civilians</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Hiring professional armies is the opposite of total war — total war means all civilians become part of the war effort.')"><span class="mcq-choice-letter">D</span>Governments hired professional soldiers to fight on behalf of their citizens</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. Total war required the state to penetrate domestic society in unprecedented ways — conscription, rationing, factory control, mass propaganda. This expanded government power fundamentally changed the nature of governance itself.</div>
+      </div>
+
+      <!-- MCQ 3 -->
+      <div class="mcq-block">
+        <div class="mcq-num">3 of 15</div>
+        <div class="mcq-stem">The Treaty of Versailles' "war guilt" clause (Article 231) is historically significant primarily because it:</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The League of Nations was established separately — the war guilt clause specifically assigned blame and justified reparations.')"><span class="mcq-choice-letter">A</span>Established the League of Nations as an international peacekeeping body</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Germany was not immediately prevented from rearming — the military limits proved unenforceable over time.')"><span class="mcq-choice-letter">B</span>Permanently prevented Germany from rebuilding its military forces</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The war guilt clause forced Germany to accept full responsibility for WWI, which (1) justified the enormous reparations imposed on Germany, (2) humiliated Germany\'s new democratic government by making its leaders appear to be traitors admitting defeat, and (3) fueled the nationalist resentment that the Nazi Party later exploited.')"><span class="mcq-choice-letter">C</span>Forced Germany to accept sole responsibility for the war, justifying reparations and fueling nationalist resentment</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Germany lost significant territory but was not fully partitioned — it remained a unified state.')"><span class="mcq-choice-letter">D</span>Required Germany to be divided into separate occupied zones controlled by the Allied powers</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. The war guilt clause was the legal foundation for reparations — Germany couldn't argue against paying if it had "admitted" causing the war. This double burden (moral humiliation + financial ruin) made the Weimar Republic deeply unpopular with its own citizens.</div>
+      </div>
+
+      <!-- MCQ 4 -->
+      <div class="mcq-block">
+        <div class="mcq-num">4 of 15</div>
+        <div class="mcq-stem">Which historical thinking skill is most directly demonstrated by the "domino effect" timeline in the video (1914 assassination → 1917 revolution → 1919 treaty → 1929 depression → WWII)?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Comparison involves identifying similarities and differences between two or more things — the domino timeline is sequential causation, not comparison.')"><span class="mcq-choice-letter">A</span>Comparison</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Contextualization involves placing events in a broader historical setting — the domino timeline is specifically about causal chains between events.')"><span class="mcq-choice-letter">B</span>Contextualization</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Causation is the skill of tracing how and why one event led to another. The domino timeline explicitly shows how each event was both a consequence of what preceded it AND a cause of what followed — this is causation in action.')"><span class="mcq-choice-letter">C</span>Causation</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'CCOT involves tracking what changed and what stayed the same over time — the domino timeline is specifically about sequential cause and effect.')"><span class="mcq-choice-letter">D</span>Continuity and Change Over Time</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. Causation is the skill of explaining why events happened (causes) and what resulted from them (effects). The domino timeline is a perfect illustration of multi-step causation — each event was caused by the previous one and caused the next.</div>
+      </div>
+
+      <!-- MCQ 5 -->
+      <div class="mcq-block">
+        <div class="mcq-num">5 of 15</div>
+        <div class="mcq-stem">The video's comparison between Western democracies and the Soviet Union's responses to the Great Depression is primarily an example of which AP historical thinking skill?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Causation would involve tracing how the Depression caused something — the video is asking why two systems responded differently, which is comparison.')"><span class="mcq-choice-letter">A</span>Causation</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Comparison involves identifying and explaining similarities and differences between historical developments. Contrasting the Western democratic response (paralysis, slow market adjustment) with the Soviet response (rapid state-directed industrialization) and explaining why they differed is a comparison exercise.')"><span class="mcq-choice-letter">B</span>Comparison</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'CCOT tracks change over time within a single context — comparing two different systems facing the same crisis is comparison, not CCOT.')"><span class="mcq-choice-letter">C</span>Continuity and Change Over Time</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Contextualization places events in a broader setting — the comparison is specifically between two different systems, not setting a backdrop.')"><span class="mcq-choice-letter">D</span>Contextualization</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. Any time a prompt asks you to explain why two things were similar or different, you are doing historical comparison. The key is always to explain the reason for the difference — here, the ideological difference between capitalism and communism.</div>
+      </div>
+
+      <!-- MCQ 6 -->
+      <div class="mcq-block">
+        <div class="mcq-num">6 of 15</div>
+        <div class="mcq-stem">Which of the following best explains why WWI is considered a turning point in the history of warfare?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'WWI was not the first war to involve professional armies — this has been the norm for centuries.')"><span class="mcq-choice-letter">A</span>It was the first war fought by professional standing armies rather than civilian militias</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'WWI involved multiple nations, but so did earlier conflicts (e.g., the Napoleonic Wars). Multi-nation conflict alone doesn\'t make it a turning point.')"><span class="mcq-choice-letter">B</span>It was the first conflict to involve more than two nations simultaneously</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! WWI represented a turning point because industrial technology (machine guns, artillery, poison gas, airplanes, tanks) combined with the mobilization of entire civilian economies to produce destruction on a scale never seen before. It changed the fundamental nature of what war meant — from battles between armies to total destruction of societies.')"><span class="mcq-choice-letter">C</span>Industrial technology combined with the mobilization of entire civilian societies produced mass destruction on an unprecedented scale, changing warfare fundamentally</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Nations had formed alliances before WWI — this is a cause of WWI, not what made it a turning point in the history of warfare itself.')"><span class="mcq-choice-letter">D</span>It was the first time nations formed alliances to fight a common enemy</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. The combination of industrial-scale weaponry and total war mobilization is what made WWI historically significant as a turning point. Previous wars had professional armies; WWI mobilized entire societies and used technology to kill at industrial scale.</div>
+      </div>
+
+      <!-- MCQ 7 -->
+      <div class="mcq-block">
+        <div class="mcq-num">7 of 15</div>
+        <div class="mcq-stem">A student writes: "The Armenian Genocide, the Holocaust, and Stalin's purges are all examples of mass atrocities because they involved very large numbers of deaths." What is the most significant problem with this analysis?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The examples themselves are accurate — the problem is in the reasoning, not the historical examples cited.')"><span class="mcq-choice-letter">A</span>The student used incorrect historical examples — these events were not actually mass atrocities</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Scale (number of deaths) is not the defining characteristic of mass atrocities — many battles produced enormous casualties too. The defining characteristic is that mass atrocities are deliberate, state-sponsored policies targeting specific populations based on identity. Without this distinction, the analysis mistakes correlation (large scale) for the actual defining cause (deliberate state intent).')"><span class="mcq-choice-letter">B</span>The analysis defines mass atrocities by scale rather than by their defining characteristic: deliberate, state-sponsored targeting of populations based on identity</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The number of deaths in each event is historically accurate — this is not the problem with the analysis.')"><span class="mcq-choice-letter">C</span>The student overstated the number of deaths in each event</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The time period is relevant — the video specifically focuses on 20th-century mass atrocities as part of the modern state\'s capacity for organized violence.')"><span class="mcq-choice-letter">D</span>The student included events from different time periods that cannot be compared</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. On the AP exam, strong analysis requires identifying the correct characteristic, not just a correlated one. Mass atrocities are defined by intent (deliberate state policy) and targeting (based on identity), not simply by body count. Many battles killed enormous numbers of people without being mass atrocities.</div>
+      </div>
+
+      <!-- MCQ 8 -->
+      <div class="mcq-block">
+        <div class="mcq-num">8 of 15</div>
+        <div class="mcq-stem">Which thesis statement would BEST earn the thesis point on an LEQ asking: "Evaluate the extent to which imperialism caused the outbreak of World War I"?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This is a restatement of the prompt with no line of reasoning. A reader has no idea what argument the essay will make.')"><span class="mcq-choice-letter">A</span>"Imperialism played an important role in causing World War I."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This acknowledges complexity but offers no line of reasoning — it simply says "many things" without explaining their relationship or relative importance.')"><span class="mcq-choice-letter">B</span>"World War I was caused by many factors including imperialism, nationalism, and alliances."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! This thesis makes a defensible claim about degree ("necessary precondition but not sufficient on its own"), establishes a line of reasoning (imperialism created the rivalry and arms race that nationalism and the alliance system then weaponized), and shows nuance by distinguishing between background causes and triggering mechanisms.')"><span class="mcq-choice-letter">C</span>"Although nationalism and the alliance system were the direct triggers of WWI, imperial competition was its essential precondition, as the scramble for colonies created the economic rivalries and arms race that made any diplomatic resolution nearly impossible once a crisis arose."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This makes a defensible claim but has no line of reasoning — it doesn\'t explain how or why nationalism mattered more, or what relationship it had to imperialism.')"><span class="mcq-choice-letter">D</span>"Nationalism was more important than imperialism in causing World War I."</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. The thesis point requires a defensible claim AND a line of reasoning. Option C does both: it takes a position on extent (essential precondition but not sufficient alone) and explains the mechanism (imperialism created conditions that nationalism and alliances then weaponized). This gives the reader a roadmap for the essay.</div>
+      </div>
+
+      <!-- MCQ 9 -->
+      <div class="mcq-block">
+        <div class="mcq-num">9 of 15</div>
+        <div class="mcq-stem">The video describes WWII as "the horrifying peak of industrial warfare." Which development most clearly supports this characterization?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Alliances characterized WWI as much as WWII — alliances alone do not represent the "peak of industrial warfare."')"><span class="mcq-choice-letter">A</span>The formation of military alliances between major powers</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Nationalist movements pre-dated industrial warfare and continued after it — nationalism alone is not the defining "peak" element.')"><span class="mcq-choice-letter">B</span>The spread of nationalist movements across Europe</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Colonial subjects had fought in WWI as well — this is not unique to WWII or to the concept of industrial warfare\'s peak.')"><span class="mcq-choice-letter">C</span>The use of colonial soldiers in European battles</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! The atomic bomb dropped on Hiroshima (1945) represents the apex of industrial warfare — a single industrial weapon capable of destroying an entire city in seconds. The video specifically notes that it "completely changed the relationship between humanity and war itself, forever." This is both the peak and the transformation point.')"><span class="mcq-choice-letter">D</span>The development and use of the atomic bomb, which demonstrated the capacity to destroy entire cities with a single weapon</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer D. The atomic bomb represents the logical endpoint of industrial warfare — the maximum application of industrial technology to destruction. The video explicitly says it changed the relationship between humanity and war "forever" — making it the defining marker of the "peak."</div>
+      </div>
+
+      <!-- MCQ 10 -->
+      <div class="mcq-block">
+        <div class="mcq-num">10 of 15</div>
+        <div class="mcq-stem">A contextualization paragraph for an essay on WWI begins: "The Industrial Revolution transformed European societies in the 19th century by creating new factory-based economies and urban working classes." To earn the contextualization point, what must the paragraph do next?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Listing more Industrial Revolution facts would keep the context in the 19th century without connecting it to WWI — this does not earn the point.')"><span class="mcq-choice-letter">A</span>Continue describing the Industrial Revolution with more specific details and dates</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Contextualization requires an explicit connection between the broader context and the topic of the prompt. Simply describing the Industrial Revolution is background — it only earns the point when it is meaningfully connected to WWI (e.g., "this industrialization fueled the arms race and imperial competition that made WWI both possible and catastrophically destructive").')"><span class="mcq-choice-letter">B</span>Explicitly connect the Industrial Revolution to WWI — explaining how it shaped the conditions that led to or characterized the conflict</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Immediately transitioning to a thesis cuts off the contextualization before the connection is made — the context must be developed AND connected.')"><span class="mcq-choice-letter">C</span>Transition immediately into the thesis statement</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Quoting a primary source is evidence, not contextualization. Contextualization is about establishing the broader historical setting, not analyzing a document.')"><span class="mcq-choice-letter">D</span>Quote a primary source from the Industrial Revolution period</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. The College Board rubric requires that contextualization must be <em>connected</em> to the prompt — not just described. A common student mistake is writing 5 excellent sentences of historical context that never explicitly link to the prompt. You must complete the connection.</div>
+      </div>
+
+      <!-- MCQ 11 -->
+      <div class="mcq-block">
+        <div class="mcq-num">11 of 15</div>
+        <div class="mcq-stem">Which of the following is a <em>continuity</em> (something that stayed the same) in the era of global conflict from 1900–1945?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The shift from dynastic empires to nation-states is a major CHANGE of the period, not a continuity.')"><span class="mcq-choice-letter">A</span>The dominance of dynastic empires in European political organization</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The atomic bomb represented a dramatic change in the nature of weapons technology — the opposite of continuity.')"><span class="mcq-choice-letter">B</span>The use of the atomic bomb as the primary means of warfare</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Despite all the dramatic changes (new weapons, new ideologies, new states), great power competition for dominance persisted throughout 1900–1945. The same nations that had competed for empires in the 1890s were still competing for dominance in 1939, now under different ideological banners. Competition itself — the structure of multiple powerful states vying for supremacy — is the continuity.')"><span class="mcq-choice-letter">C</span>Great power competition for territorial and political dominance among major states</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Communism as a governing ideology was a brand new development of the period (Russian Revolution, 1917) — it is a change, not a continuity.')"><span class="mcq-choice-letter">D</span>The spread of communist ideology as the dominant political system in Europe</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. On CCOT questions, always ask: what structural feature persisted even as the surface changed? Great power competition is the structural continuity — the specific empires, ideologies, and weapons changed dramatically, but the underlying competition for dominance between major states persisted throughout.</div>
+      </div>
+
+      <!-- MCQ 12 -->
+      <div class="mcq-block">
+        <div class="mcq-num">12 of 15</div>
+        <div class="mcq-stem">The video argues that the era of global conflict (1900–1945) was shaped by a tension between "what stayed the same and what was brand new." Which pairing best illustrates this tension?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Both trench warfare and poison gas were WWI innovations — this pairing is all "change," with no true continuity from a previous era.')"><span class="mcq-choice-letter">A</span>Trench warfare (change) vs. poison gas (change)</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Imperial rivalry (European powers competing for colonies and dominance) was a long-standing continuity going back centuries. The rise of communism was a dramatic break — a fundamentally new ideology challenging the entire existing order. This pairing captures the CCOT tension perfectly.')"><span class="mcq-choice-letter">B</span>Imperial rivalry between European powers (continuity) vs. the emergence of communist ideology (change)</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'The League of Nations and the UN are both post-war international institutions — this is a comparison between two changes, not a continuity vs. change tension.')"><span class="mcq-choice-letter">C</span>The League of Nations (continuity) vs. the United Nations (change)</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Both WWI and WWII are the "new" catastrophes of the era — this is a comparison within the period of change, not a continuity vs. change pairing.')"><span class="mcq-choice-letter">D</span>WWI (continuity) vs. WWII (change)</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer B. CCOT analysis requires identifying something old (continuity) alongside something genuinely new (change). Imperial rivalry had characterized European power politics for centuries — communism was a radical new ideology that challenged the entire established order. This is the core CCOT tension the video describes.</div>
+      </div>
+
+      <!-- MCQ 13 -->
+      <div class="mcq-block">
+        <div class="mcq-num">13 of 15</div>
+        <div class="mcq-stem">The video says that after WWI, Western democracies and the Soviet Union responded to "the same global problems" in "radically different ways." For an SAQ asking you to <em>describe</em> this difference, which response would most clearly earn the point?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This names two terms (New Deal, Five-Year Plans) without describing their relevant characteristics or the nature of the difference. Naming alone does not earn a "describe" point.')"><span class="mcq-choice-letter">A</span>"Western democracies used the New Deal while the Soviet Union used Five-Year Plans."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This is vague — "different economic systems" doesn\'t describe relevant characteristics. It restates the obvious without providing any detail.')"><span class="mcq-choice-letter">B</span>"Western democracies and the Soviet Union had different economic systems."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! This response describes the relevant characteristics of both approaches — it explains what each actually did and why they differed (market vs. command economy). This is exactly what "describe" requires: more than naming, providing the actual characteristics that distinguish the two.')"><span class="mcq-choice-letter">C</span>"Western democracies, constrained by market-based economies, were slow to respond to the Depression, while the Soviet Union used state-controlled Five-Year Plans to force rapid industrialization regardless of human cost — reflecting the fundamental difference between capitalist and command economic systems."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This describes an effect (political outcomes) rather than the economic responses to the Depression, which is what the prompt asks about.')"><span class="mcq-choice-letter">D</span>"Western democracies survived the Depression while the Soviet Union collapsed politically."</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer C. The AP "describe" standard requires relevant characteristics — not just naming something. Option C describes what each system actually did and why they differed. This is the standard that separates a 0 from a 1 on SAQ "describe" prompts.</div>
+      </div>
+
+      <!-- MCQ 14 -->
+      <div class="mcq-block">
+        <div class="mcq-num">14 of 15</div>
+        <div class="mcq-stem">Which of the following demonstrates the most sophisticated historical argumentation about the causes of WWII?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Single-cause arguments are rarely sophisticated — the AP exam rewards complexity and nuance, which means acknowledging that multiple factors interacted.')"><span class="mcq-choice-letter">A</span>"Hitler caused World War II by invading Poland."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This lists causes but makes no argument about their relative significance or how they interacted. A list is not sophisticated argumentation.')"><span class="mcq-choice-letter">B</span>"World War II was caused by the Treaty of Versailles, the Great Depression, and the rise of fascism."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'This is a defensible argument but lacks nuance — it doesn\'t engage with the complexity of multiple interacting causes or their relative significance.')"><span class="mcq-choice-letter">C</span>"The Treaty of Versailles was the single most important cause of World War II."</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! This is sophisticated because it: (1) acknowledges that Versailles created the conditions (acknowledging complexity), (2) explains the mechanism by which it enabled fascism (line of reasoning), (3) assigns relative significance — Versailles was necessary but not sufficient, fascist movements made it catastrophic. This is the kind of nuanced argumentation that earns complexity points.')"><span class="mcq-choice-letter">D</span>"While the Treaty of Versailles created the structural conditions for WWII by destroying Germany's economy and democratic institutions, it was the ideological radicalism of fascist movements that transformed those conditions into actual catastrophe — without the Nazis' deliberate choice to pursue war, Versailles grievances might have been resolved politically."</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer D. Sophisticated argumentation means: acknowledging multiple factors, explaining their interaction (how one enabled another), assigning relative significance (which mattered more, in what way), and using precise language ("structural conditions" vs. "ideological radicalism"). Option D does all of this; the others are simpler claims.</div>
+      </div>
+
+      <!-- MCQ 15 -->
+      <div class="mcq-block">
+        <div class="mcq-num">15 of 15</div>
+        <div class="mcq-stem">The video ends by saying the goal of Unit 7 is to "understand <em>why</em> it happened," not just <em>what</em> happened. In AP World History terms, this emphasis on "why" corresponds most directly to which skill?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Contextualization is about setting the historical stage — it\'s related to "why," but the specific "why did events happen" question is primarily causation.')"><span class="mcq-choice-letter">A</span>Contextualization</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'Comparison identifies similarities and differences — it answers "how were these things alike/different," not primarily "why did this happen."')"><span class="mcq-choice-letter">B</span>Comparison</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,false,'CCOT tracks what changed and persisted over time — it involves "why" but primarily focuses on the pattern of change/continuity rather than the mechanism of a single event.')"><span class="mcq-choice-letter">C</span>Continuity and Change Over Time</button>
+          <button class="mcq-choice" onclick="pickMCQ(this,true,'✓ Correct! Causation is precisely the skill of explaining why events happened — tracing the causes (what made something occur) and effects (what resulted). The video\'s insistence on "why it happened" rather than just "what happened" is a direct description of causal historical thinking. This is also the hardest skill for students to master because it requires going beyond narration to explanation.')"><span class="mcq-choice-letter">D</span>Causation</button>
+        </div>
+        <button class="btn btn-steel acc-btn" onclick="toggleAcc(this)"><span class="arrow">›</span>&nbsp;Explanation</button>
+        <div class="acc-body"><div class="acc-label">Explanation</div>Answer D. "Why did this happen?" is the causation question. Memorizing dates and events is the "what" — understanding the mechanisms, conditions, and forces that drove those events is the "why." Causation is the skill that separates narrative history from analytical history, and it is central to every AP free-response question.</div>
+      </div>
+
+    </div>
+
+    <!-- SYNTHESIS REFLECTION -->
+    <div class="card">
+      <div class="card-title"><span>5B</span> · Synthesis Reflection</div>
+      <div class="prompt-box">
+        <span class="verb-tag">Synthesize</span>
+        The Unit 7 Introduction poses a central question: how did this era of global conflict "just keep rolling"? Based on everything you've worked through in this module, write a 3–5 sentence response. What is your emerging argument about the most important forces driving the period?
+        <div class="ap-note">This is your own thinking — no sample answer provided. You'll develop and refine this argument throughout 7.1–7.9.</div>
+      </div>
+      <textarea style="min-height:130px" placeholder="The era of global conflict from 1900–1945 kept rolling primarily because..."></textarea>
+    </div>
+
+    <!-- SKILL SELF-ASSESSMENT -->
+    <div class="card">
+      <div class="card-title"><span>5C</span> · Skill Self-Assessment — Rate your confidence (click dots)</div>
+      <div class="callout callout-tip" style="margin-bottom:.85rem">
+        <span class="callout-title">How to use this</span>
+        ● = still shaky &nbsp;●● = understand but need practice &nbsp;●●● = could explain to someone else
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-name">Causation</div>
+        <div class="skill-desc">Explaining why events happened and tracing multi-step cause-and-effect chains</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name">CCOT</div>
+        <div class="skill-desc">Identifying what changed and what stayed the same — and why</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name">Comparison</div>
+        <div class="skill-desc">Explaining similarities and differences with historical reasoning</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name">SAQ "Explain"</div>
+        <div class="skill-desc">Writing 2–3 sentences that show how/why — not just what happened</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name">Thesis Writing</div>
+        <div class="skill-desc">Making a defensible claim with a clear line of reasoning</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-name">Contextualization</div>
+        <div class="skill-desc">Describing broader historical context and connecting it to the prompt</div>
+        <div class="skill-dots"><div class="skill-dot" onclick="rateDot(this,1)"></div><div class="skill-dot" onclick="rateDot(this,2)"></div><div class="skill-dot" onclick="rateDot(this,3)"></div></div>
+      </div>
+
+    </div>
+
+    <div class="callout callout-tip">
+      <span class="callout-title">🎯 Ready for 7.1</span>
+      Review any skill you rated 1 dot before moving on. Everything practiced here — causation, CCOT, SAQ explain, thesis, contextualization — is the scaffolding for every section ahead. Move to <a href="7_1.html" style="color:var(--gold);font-weight:600">7.1 Shifting Power After 1900 →</a>
+    </div>
+
+  </div>
+  <div class="stage-footer">
+    <span class="stage-counter">Stage 5 of 5 — Module Complete</span>
+    <a href="7_1.html" class="btn btn-gold">Next: 7.1 Shifting Power →</a>
+  </div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<script src="shared.js"></script>
+
+<!-- ══════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════ -->
+<script>
+// ── Progress tracking ──────────────────────────
+let stagesComplete = 0;
+const TOTAL = 5;
+
+function updateProgress() {
+  const pct = Math.round((stagesComplete / TOTAL) * 100);
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progPct').textContent = pct + '%';
+}
+
+// ── Stage navigation ───────────────────────────
+function goStage(idx) {
+  document.querySelectorAll('.stage-panel').forEach((p,i) => p.classList.toggle('active', i === idx));
+  document.querySelectorAll('.stage-tab').forEach((t,i) => t.classList.toggle('active', i === idx));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function advance(completedIdx) {
+  document.querySelectorAll('.stage-tab')[completedIdx].classList.add('done');
+  stagesComplete = Math.max(stagesComplete, completedIdx + 1);
+  updateProgress();
+  if (completedIdx + 1 < TOTAL) goStage(completedIdx + 1);
+}
+
+// ── MCQ handler ────────────────────────────────
+function pickMCQ(btn, correct, msg) {
+  const block = btn.closest('.mcq-block');
+  if (block.dataset.answered) return;
+  block.dataset.answered = '1';
+  block.querySelectorAll('.mcq-choice').forEach(b => { b.disabled = true; });
+  btn.classList.add(correct ? 'correct' : 'wrong');
+  // If there's an inline feedback div (Stage 2), use it
+  const fb = block.querySelector('.mcq-feedback');
+  if (fb) { fb.textContent = msg; fb.className = 'mcq-feedback show ' + (correct ? 'correct' : 'wrong'); }
+}
+
+// ── Accordion toggle ───────────────────────────
+function toggleAcc(btn) {
+  const body = btn.nextElementSibling;
+  const open = body.classList.toggle('show');
+  btn.classList.toggle('open', open);
+  btn.querySelector('.arrow').textContent = open ? '›' : '›';
+}
+
+// ── Thesis evaluator ───────────────────────────
+function evalThesis(el, passes) {
+  el.classList.remove('pass', 'fail');
+  el.classList.add(passes ? 'pass' : 'fail');
+}
+
+// ── Skill dots ─────────────────────────────────
+function rateDot(dot, level) {
+  const row = dot.closest('.skill-dots');
+  row.querySelectorAll('.skill-dot').forEach((d, i) => d.classList.toggle('lit', i < level));
+}
+
+// ── Context textarea hint ──────────────────────
+function setCtxHint(topic) {
+  const ta = document.getElementById('ctxTA');
+  ta.placeholder = 'By the early 20th century, ' + topic + ' had shaped the world in ways that would directly fuel the conflicts ahead...';
+  ta.focus();
+}
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'qdZRlmwaqy4');
+initAutoSave('7_0');
+buildCompletionSection('7_0', '7.0 Global Conflict Introduction');
+
+// Hook into advance to show completion section when all stages done
+const _origAdvance = advance;
+advance = function(completedIdx) {
+  _origAdvance(completedIdx);
+  const pct = Math.round(((completedIdx + 1) / 5) * 100);
+  localStorage.setItem('7_0_progress', pct);
+  if (completedIdx + 1 >= TOTAL) {
+    localStorage.setItem('7_0_progress', '100');
+    localStorage.setItem('7_0_submitted', 'false');
+    const cs = document.getElementById('completionSection');
+    if (cs) cs.style.display = 'block';
+  }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.2 Study Materials — Causes of World War I</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --parchment: #f5f0e8;
+    --parchment-dark: #ece5d4;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --steel: #3a4a5c;
+    --smoke: #6b6355;
+    --red: #8b1a1a;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+    --dok1: #2d5a27;
+    --dok2: #1a3d6e;
+    --dok3: #6b2d2d;
+    --dok4: #4a2d6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg);
+    color: var(--parchment);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .page-header {
+    background: linear-gradient(135deg, #1a1208 0%, #2a1e0e 50%, #1e160a 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,134,11,0.03) 40px, rgba(184,134,11,0.03) 41px);
+  }
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--parchment);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .header-sub {
+    color: #b8a88a;
+    font-size: 0.95rem;
+    font-style: italic;
+    max-width: 620px;
+    margin: 0 auto 1.25rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .how-to {
+    background: rgba(184,134,11,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem auto;
+    max-width: 860px;
+    padding: 1rem 1.5rem;
+  }
+  .how-to-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .how-to p { font-size: 0.9rem; color: #c8b898; }
+  .main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .dok-section { margin-bottom: 2.5rem; }
+  .dok-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(184,134,11,0.25);
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .dok-badge.dok1 { background: var(--dok1); color: #c8e8c4; }
+  .dok-badge.dok2 { background: var(--dok2); color: #c4d4f0; }
+  .dok-badge.dok3 { background: var(--dok3); color: #f0c4c4; }
+  .dok-badge.dok4 { background: var(--dok4); color: #dcc4f0; }
+  .dok-header-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--parchment);
+    line-height: 1.2;
+  }
+  .dok-header-text p { font-size: 0.8rem; color: var(--smoke); margin-top: 0.1rem; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .card p, .card li { font-size: 0.92rem; color: #c8b898; }
+  .card ul, .card ol { padding-left: 1.25rem; }
+  .card li { margin-bottom: 0.3rem; }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .vocab-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .vocab-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .vocab-card.flipped { border-color: var(--gold); background: #3a2f1a; }
+  .vocab-card.flipped .vocab-front { display: none; }
+  .vocab-card:not(.flipped) .vocab-back { display: none; }
+  .vocab-term { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.25rem; }
+  .vocab-hint { font-size: 0.75rem; color: var(--smoke); font-style: italic; }
+  .vocab-def { font-size: 0.82rem; color: #c8b898; line-height: 1.5; }
+  .flip-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; display: block; }
+  .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+  @media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+  .match-col-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--smoke); margin-bottom: 0.4rem; }
+  .match-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    color: #c8b898;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+    margin-bottom: 0.4rem;
+  }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.15); color: var(--parchment); }
+  .match-item.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; pointer-events: none; }
+  .match-item.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.15); color: #e0a0a0; }
+  .match-check-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .match-check-btn:hover { background: rgba(184,134,11,0.15); }
+  .mcq-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; }
+  .mcq-q { font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.75rem; }
+  .mcq-choices { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .mcq-choice {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.15);
+    border-radius: 5px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+    color: #c8b898;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+  }
+  .mcq-choice:hover:not(:disabled) { border-color: var(--gold); color: var(--parchment); }
+  .mcq-choice.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; }
+  .mcq-choice.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.12); color: #e0a0a0; }
+  .mcq-choice:disabled { cursor: default; }
+  .mcq-feedback { display: none; font-size: 0.82rem; color: #b8a888; padding: 0.6rem 0.9rem; background: rgba(255,255,255,0.03); border-left: 2px solid var(--gold); border-radius: 0 4px 4px 0; margin-top: 0.25rem; line-height: 1.55; }
+  .mcq-feedback.visible { display: block; }
+  .sa-prompt { font-size: 0.9rem; color: #c8b898; margin-bottom: 0.75rem; padding: 0.75rem 1rem; background: rgba(184,134,11,0.06); border-left: 2px solid var(--gold); border-radius: 0 6px 6px 0; }
+  .sa-textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; line-height: 1.6; padding: 0.75rem 1rem; resize: vertical; min-height: 90px; transition: border-color 0.2s; }
+  .sa-textarea:focus { outline: none; border-color: var(--gold); }
+  .sa-textarea::placeholder { color: var(--smoke); }
+  .accordion-btn { width: 100%; text-align: left; background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; transition: all 0.15s; }
+  .accordion-btn:hover { background: rgba(184,134,11,0.13); }
+  .accordion-arrow { transition: transform 0.2s; font-size: 0.8rem; }
+  .accordion-btn.open .accordion-arrow { transform: rotate(90deg); }
+  .accordion-body { display: none; padding: 0.9rem 1rem; background: rgba(184,134,11,0.04); border: 1px solid rgba(184,134,11,0.15); border-top: none; border-radius: 0 0 6px 6px; font-size: 0.85rem; color: #b8a888; line-height: 1.6; }
+  .accordion-body.open { display: block; }
+  .accordion-body strong { color: var(--parchment); }
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin-bottom: 0.75rem; }
+  .compare-table th { background: rgba(184,134,11,0.15); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(184,134,11,0.3); }
+  .compare-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c8b898; vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .compare-table td:first-child { color: var(--parchment); font-weight: 600; white-space: nowrap; }
+  .thesis-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .thesis-cards { grid-template-columns: 1fr; } }
+  .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
+  .thesis-card:hover { border-color: var(--gold); }
+  .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
+  .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
+  .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
+  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-click-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; }
+  .causal-chain { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
+  .causal-node { background: rgba(184,134,11,0.1); border: 1px solid rgba(184,134,11,0.3); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #c8b898; text-align: center; flex: 1; min-width: 90px; }
+  .causal-node.blank { background: rgba(255,255,255,0.04); border-style: dashed; }
+  .causal-input { width: 100%; background: transparent; border: none; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.78rem; text-align: center; outline: none; }
+  .causal-input::placeholder { color: var(--smoke); font-size: 0.72rem; }
+  .causal-arrow { color: var(--gold); font-size: 1rem; flex-shrink: 0; }
+  .skill-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(184,134,11,0.3); cursor: pointer; transition: all 0.15s; display: inline-block; }
+  .skill-dot.filled { background: var(--gold); border-color: var(--gold-light); }
+  .skill-row { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem; }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label { font-size: 0.85rem; color: #c8b898; flex: 1; }
+  .skill-scale { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-align: right; min-width: 80px; }
+  .progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: rgba(26,16,6,0.95); backdrop-filter: blur(8px); padding: 0.5rem 1rem; border-bottom: 1px solid rgba(184,134,11,0.15); }
+  .progress-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+  .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+  .progress-track { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.4s ease; width: 0%; }
+  .progress-pct { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--gold); min-width: 2.5rem; text-align: right; }
+  .section-complete-btn { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 1.1rem; background: transparent; border: 1px solid rgba(184,134,11,0.3); border-radius: 4px; color: var(--smoke); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 1rem; }
+  .section-complete-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .section-complete-btn.done { border-color: #4a9e3f; color: #a8e0a0; background: rgba(74,158,63,0.1); }
+  .nlm-tip { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(26,61,110,0.2); border: 1px solid rgba(100,150,220,0.3); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; }
+  .nlm-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .nlm-tip p { font-size: 0.83rem; color: #a0b8d8; line-height: 1.55; }
+  .nlm-tip strong { color: #c8d8f0; }
+  .divider { border: none; border-top: 1px solid rgba(184,134,11,0.15); margin: 2rem 0; }
+  /* MAIN CAUSE GRID */
+  .main-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+  @media (max-width: 560px) { .main-grid { grid-template-columns: 1fr; } }
+  .main-card {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+  .main-card.militarism { border-color: rgba(139,26,26,0.5); background: rgba(139,26,26,0.08); }
+  .main-card.alliances  { border-color: rgba(26,61,110,0.5); background: rgba(26,61,110,0.08); }
+  .main-card.imperialism{ border-color: rgba(184,134,11,0.4); background: rgba(184,134,11,0.06); }
+  .main-card.nationalism{ border-color: rgba(45,90,39,0.5); background: rgba(45,90,39,0.08); }
+  .main-card-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
+  .main-card.militarism .main-card-label { color: #e09090; }
+  .main-card.alliances  .main-card-label { color: #90b0e0; }
+  .main-card.imperialism .main-card-label { color: var(--gold); }
+  .main-card.nationalism .main-card-label { color: #90c890; }
+  .main-card p { font-size: 0.83rem; color: #c8b898; line-height: 1.5; }
+  /* TIMELINE */
+  .timeline { display: flex; flex-direction: column; gap: 0; margin-bottom: 0.75rem; }
+  .tl-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .tl-line { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+  .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid var(--gold-light); flex-shrink: 0; margin-top: 0.3rem; }
+  .tl-connector { width: 2px; flex: 1; background: rgba(184,134,11,0.3); min-height: 20px; }
+  .tl-item:last-child .tl-connector { display: none; }
+  .tl-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold); min-width: 70px; flex-shrink: 0; padding-top: 0.25rem; }
+  .tl-content { font-size: 0.85rem; color: #c8b898; padding-bottom: 1rem; line-height: 1.5; }
+  .tl-content strong { color: var(--parchment); }
+  /* DRAG SORT */
+  .sort-list { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .sort-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; padding: 0.6rem 1rem; font-size: 0.85rem; color: #c8b898; cursor: grab; display: flex; align-items: center; gap: 0.75rem; user-select: none; transition: border-color 0.15s; }
+  .sort-item:active { cursor: grabbing; opacity: 0.75; }
+  .sort-item.drag-over { border-color: var(--gold); background: rgba(184,134,11,0.1); }
+  .sort-handle { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--smoke); }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="header-title">7.2 Causes of World War I</h1>
+  <p class="header-sub">How the very systems built to prevent war became the gears of a machine that drove the world into catastrophe</p>
+  <div class="chips">
+    <span class="chip">c. 1900–1914</span>
+    <span class="chip">Governance Failure</span>
+    <span class="chip">MAIN</span>
+    <span class="chip">DOK 1 → DOK 4</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</div>
+
+<div class="main" style="padding-top:1.25rem; padding-bottom:0;">
+  <div class="how-to">
+    <div class="how-to-title">📋 How to Use These Materials</div>
+    <p>Work through each section <strong>in order</strong> — DOK 1 (recall) → DOK 4 (synthesis). Watch the NotebookLM video first and keep the infographic handy for DOK 2–3. The central theme: WWI was a <strong>systemic failure of governance</strong> — the very mechanisms meant to keep peace triggered a world war.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ════ DOK 1 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok1">DOK 1 · Knowledge Acquisition</div>
+      <div class="dok-header-text">
+        <h2>Watch, Recall &amp; Define</h2>
+        <p>Answer correctly — identify, name, and locate key facts from the video and infographic</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🎬</div>
+      <p><strong>Before you begin:</strong> Watch the NotebookLM video explainer for 7.2. As you watch, pay attention to how each of the four MAIN causes <em>connects to the others</em> — the video argues they formed an interlocking system, not a list of separate problems.</p>
+    </div>
+
+    <div id="videoEmbed"></div>
+
+    <!-- MAIN Overview Cards -->
+    <div class="card">
+      <div class="card-label">Reference · The MAIN Causes — Overview</div>
+      <div class="main-grid">
+        <div class="main-card militarism">
+          <div class="main-card-label">⚔ Militarism</div>
+          <p>Governments poured money into massive arms races — Britain and Germany especially competed to build bigger navies and armies. Military buildup became a way to project power and signal readiness for war.</p>
+        </div>
+        <div class="main-card alliances">
+          <div class="main-card-label">🤝 Alliances</div>
+          <p>Secret mutual-defense treaties created two armed camps: Allied Powers (France, Britain, Russia) vs. Central Powers (Germany, Austria-Hungary). A conflict between any two nations could drag in all the others automatically.</p>
+        </div>
+        <div class="main-card imperialism">
+          <div class="main-card-label">🌍 Imperialism</div>
+          <p>The "scramble" for colonies in Africa and Asia created intense rivalry and friction between European powers. Control of colonies meant access to raw materials, markets, and global prestige — all worth fighting over.</p>
+        </div>
+        <div class="main-card nationalism">
+          <div class="main-card-label">🏴 Nationalism</div>
+          <p>A double-edged sword: governments used nationalism to rally public support for military buildup, but in multi-ethnic empires (Austria-Hungary), ethnic nationalist movements threatened to tear the state apart from within.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vocab Flip Cards -->
+    <div class="card">
+      <div class="card-label">Activity 1A · Vocabulary · Click each card to reveal the definition</div>
+      <div class="vocab-grid" id="vocabGrid"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="card">
+      <div class="card-label">Activity 1B · Alliance Trap Timeline · Read the domino sequence</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+          <div class="tl-date">June 28, 1914</div>
+          <div class="tl-content"><strong>Assassination of Archduke Franz Ferdinand</strong> in Sarajevo by Gavrilo Princip, a Serbian nationalist. Austria-Hungary blames Serbia.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+          <div class="tl-date">July 28, 1914</div>
+          <div class="tl-content"><strong>Austria-Hungary declares war on Serbia</strong> — exactly one month after the assassination. Alliance obligations begin activating.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+          <div class="tl-date">Aug 1, 1914</div>
+          <div class="tl-content"><strong>Germany declares war on Russia</strong> (Serbia's ally) and three days later on France (Russia's ally). The alliance trap snaps shut.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+          <div class="tl-date">Aug 4, 1914</div>
+          <div class="tl-content"><strong>Britain declares war on Germany</strong> after Germany invades Belgium. In just 37 days, a regional crisis became a <em>world war</em>.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fact Recall MCQs -->
+    <div class="card">
+      <div class="card-label">Activity 1C · Fact Recall · Choose the best answer</div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">1. According to the video, what was the fundamental flaw in the alliance system?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Alliances were voluntary, so countries could easily opt out of defending each other</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. The alliance system was too weak — most countries had no military commitments at all</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. Once a conflict started between any two countries, automatic commitments locked in all other members — removing individual governments' ability to de-escalate</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Alliances were public, so all nations knew exactly who would fight whom, making surprise attacks impossible</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video describes alliances as a "tripwire" — a system designed to prevent war by creating mutual deterrence, but which actually guaranteed that any local conflict would automatically escalate into a continent-wide war. Individual governments lost the ability to choose de-escalation.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">2. How did imperialism directly contribute to the outbreak of WWI?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. European nations fought each other over who would colonize the Balkans</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Competition over colonies in Africa and Asia created intense rivalry and friction between European powers, raising tensions that made war more likely</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. Colonial subjects rebelled, forcing European governments to redirect military resources away from Europe</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Britain's naval empire directly threatened Germany's land-based army, making a confrontation inevitable</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The scramble for colonies created "massive friction and rivalry" between European governments who were competing for the same territories, resources, and global prestige. This heightened mutual suspicion and made diplomatic cooperation much harder by 1914.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">3. Why did the video describe nationalism as a "double-edged sword" for European governments?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Nationalism was useful for recruiting soldiers but made them harder to command</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Governments used nationalism to build public support for military expansion, but in multi-ethnic empires it also inspired subject peoples to demand independence — threatening the empire from within</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. Nationalist movements helped modernize economies but also destabilized traditional aristocracies</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Nationalism united citizens against foreign threats but divided them along class lines at home</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. Germany used nationalism to rally public support for its military buildup and imperial ambitions. But Austria-Hungary — which ruled over dozens of ethnic groups (Serbs, Croats, Czechs, and more) — found that nationalism was a direct existential threat, as each group wanted its own independent nation.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">4. Who was Gavrilo Princip, and what was the significance of his act?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. An Austrian general who ordered the invasion of Serbia, triggering the alliance system</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. The German chancellor who sent the "blank check" of military support to Austria-Hungary</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. A Serbian nationalist who assassinated Archduke Franz Ferdinand — not the deep cause of WWI, but the spark that ignited an already-pressurized system</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. A Russian military commander who mobilized troops along the Austrian border first</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video is explicit that the assassination was "not the deep cause" but "the spark that lit the fuse of a system that was just waiting to explode." Princip was a Serbian nationalist whose goal was to end Austro-Hungarian rule in the Balkans — which is why Austria-Hungary's response was so extreme.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">5. How did the war's scope become truly "global"?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. The Ottoman Empire's entry brought in the Middle East and North Africa independently</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. The United States entered the war in 1917, expanding the fighting to the Pacific</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. European empires called on their colonial subjects — soldiers from India, Canada, Australia, and Africa fought in a European conflict because of imperial reach</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. German submarines attacked ships in every ocean, forcing neutral nations into the war</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video emphasizes this point with a striking image: Indian soldiers fighting for Britain in a war that had nothing to do with them. Because European empires had colonized much of the globe, when those empires went to war, they "dragged the rest of the world in with them." Over 1.5 million soldiers from India alone fought for Britain.</div>
+      </div>
+    </div>
+
+    <!-- Matching -->
+    <div class="card">
+      <div class="card-label">Activity 1D · Matching · Click a term, then click its definition</div>
+      <div class="match-grid">
+        <div>
+          <div class="match-col-label">Terms</div>
+          <div id="matchTerms"></div>
+        </div>
+        <div>
+          <div class="match-col-label">Definitions</div>
+          <div id="matchDefs"></div>
+        </div>
+      </div>
+      <div id="matchResult" style="font-size:0.82rem; margin-top:0.5rem; display:none;"></div>
+      <button class="match-check-btn" onclick="checkMatches()">Check Answers</button>
+    </div>
+
+    <button class="section-complete-btn" id="dok1Btn" onclick="markDone('dok1Btn',25)">
+      <span class="check-icon">○</span> Mark DOK 1 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 2 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok2">DOK 2 · Knowledge Application</div>
+      <div class="dok-header-text">
+        <h2>Explain &amp; Apply</h2>
+        <p>Establish and explain with examples — apply concepts to demonstrate understanding</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🗺️</div>
+      <p><strong>Use the infographic now.</strong> The infographic shows how the MAIN causes interconnected. As you work through these activities, reference it to find specific examples for your explanations.</p>
+    </div>
+
+    <!-- Explain Drill A -->
+    <div class="card">
+      <div class="card-label">Activity 2A · Explain Drill · Systemic Failure</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> The video's central argument is that WWI was a "complete failure of the systems of international governance." Explain what this means using <em>two specific MAIN causes</em> as examples.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="The systems of governance that were supposed to prevent war actually caused it because... For example, [first cause]... Similarly, [second cause]..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> The phrase "systemic failure" means that the problem wasn't any one event or villain — it was that the <em>structures designed to manage international relations all broke down simultaneously</em>. The alliance system is the clearest example: it was built to prevent war through deterrence, but its fatal design meant that once any two nations started fighting, all others were automatically pulled in. Diplomacy — individual governments choosing peace — was effectively removed from the equation. Militarism reinforced this failure: governments had spent decades building up massive armies and navies, which meant they had enormous destructive capacity ready to deploy and military leaders who had been planning for war. When the crisis hit, the military machine was already running.
+      </div>
+    </div>
+
+    <!-- Explain Drill B -->
+    <div class="card">
+      <div class="card-label">Activity 2B · Explain Drill · Nationalism as Double-Edged Sword</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Explain why nationalism was useful for some governments but existentially threatening to others. Use Germany and Austria-Hungary as contrasting examples.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="For Germany, nationalism was useful because... However, for Austria-Hungary, nationalism was a threat because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> For Germany, nationalism was a powerful tool of governance — the government used it to build public enthusiasm for military expansion, colonial acquisitions, and the idea that Germany deserved a place among the great powers. Citizens were told that national strength was German strength. But Austria-Hungary faced the opposite problem: it was a multi-ethnic empire ruling over Serbs, Croats, Czechs, Poles, and dozens of other groups, none of whom considered themselves "Austro-Hungarian." For these peoples, nationalism meant the right to self-determination — to break away from Austria-Hungary and form their own nations. The assassination of Franz Ferdinand was a direct product of Serbian nationalism in action: the assassin Gavrilo Princip wanted to liberate Slavic peoples from Austrian rule. So nationalism simultaneously gave Germany a reason to build a war machine AND gave Austria-Hungary a reason to fear the Balkans as a permanent threat to its existence.
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="card">
+      <div class="card-label">Activity 2C · Comparison Table · The Two Alliance Blocs</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Study the table, then answer the reflection question below.</p>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Allied Powers (Entente)</th>
+              <th>Central Powers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core Members</td>
+              <td>France, Britain, Russia</td>
+              <td>Germany, Austria-Hungary</td>
+            </tr>
+            <tr>
+              <td>Later Additions</td>
+              <td>Italy (1915), USA (1917), Japan, many others</td>
+              <td>Ottoman Empire, Bulgaria</td>
+            </tr>
+            <tr>
+              <td>Geographic Position</td>
+              <td>France/Britain in west; Russia in east — Germany surrounded</td>
+              <td>Central Europe — vulnerable to two-front war</td>
+            </tr>
+            <tr>
+              <td>Colonial Reach</td>
+              <td>Enormous — Britain and France had vast global empires; drew in colonial troops</td>
+              <td>More limited — Germany had colonies but far fewer than Britain/France</td>
+            </tr>
+            <tr>
+              <td>Key Internal Tension</td>
+              <td>Russia's autocracy vs. France/Britain's democratic governments; strained coordination</td>
+              <td>Austria-Hungary's ethnic diversity made it vulnerable to nationalist uprisings</td>
+            </tr>
+            <tr>
+              <td>How the War Ended for Each</td>
+              <td>Victory — but at staggering human cost; empires weakened</td>
+              <td>Defeat — empires dissolved; German Republic forced to sign humiliating peace</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sa-prompt" style="margin-top:0.75rem;">
+        <strong>Reflection question:</strong> What structural advantage did the Allied Powers have over the Central Powers, and why did this matter in a long war?
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="The Allied Powers had an advantage because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Response
+      </button>
+      <div class="accordion-body">
+        The Allied Powers' most significant structural advantage was their <strong>colonial reach</strong>. Britain and France could draw on soldiers, supplies, and resources from massive global empires — over 1.5 million Indian soldiers alone fought for Britain. This meant the Allies could replenish human losses in a way Germany and Austria-Hungary could not. Germany faced the classic two-front war problem (fighting France in the west and Russia in the east simultaneously), but crucially, it had no equivalent global reserve of manpower to draw on. In a prolonged industrial war of attrition, this structural imbalance eventually proved decisive.
+      </div>
+    </div>
+
+    <!-- Cause Sorting -->
+    <div class="card">
+      <div class="card-label">Activity 2D · Sort &amp; Rank · Drag to rank the MAIN causes by importance</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Drag the four MAIN causes into your personal ranking from <em>most</em> to <em>least</em> important in causing WWI. Then write 2 sentences defending your #1 choice in the box below.</p>
+      <div class="sort-list" id="sortList">
+        <div class="sort-item" draggable="true"><span class="sort-handle">⠿</span> Militarism — the arms race and culture of military readiness</div>
+        <div class="sort-item" draggable="true"><span class="sort-handle">⠿</span> Alliances — the automatic mutual-defense tripwire</div>
+        <div class="sort-item" draggable="true"><span class="sort-handle">⠿</span> Imperialism — colonial rivalry and friction between powers</div>
+        <div class="sort-item" draggable="true"><span class="sort-handle">⠿</span> Nationalism — both a tool of governments and a destabilizing force</div>
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="I ranked [cause] as most important because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Historiographical Debate
+      </button>
+      <div class="accordion-body">
+        <strong>No single "right" answer — here's the debate:</strong><br><br>
+        <strong>Case for Alliances:</strong> The alliance system was the most direct mechanical cause — it transformed a regional dispute into a world war in 37 days. Without alliance obligations, the Austro-Serbian conflict might have remained local.<br><br>
+        <strong>Case for Nationalism:</strong> The assassination — the proximate trigger — was itself a product of Serbian nationalism. Without nationalist movements destabilizing Austria-Hungary, there would have been no crisis in the first place.<br><br>
+        <strong>Case for Imperialism:</strong> The underlying rivalry between the great powers was fundamentally about colonial competition. Without that friction, the alliance system might never have been necessary.<br><br>
+        <strong>AP tip:</strong> On the exam, arguments that acknowledge multiple causes and weigh their <em>relative significance</em> score higher than arguments that pick one cause in isolation. The video's central argument is that all four were <em>interconnected</em>.
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok2Btn" onclick="markDone('dok2Btn',50)">
+      <span class="check-icon">○</span> Mark DOK 2 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 3 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok3">DOK 3 · Knowledge Analysis</div>
+      <div class="dok-header-text">
+        <h2>Argue &amp; Analyze</h2>
+        <p>Examine and explain with evidence — construct arguments, evaluate theses, build causal chains</p>
+      </div>
+    </div>
+
+    <!-- Causal Chain -->
+    <div class="card">
+      <div class="card-label">Activity 3A · Causal Chain · Fill in the blanks, then explain one connection</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Two nodes in this chain are blank. Fill them in, then explain in the textarea how any two adjacent steps connect.</p>
+      <div class="causal-chain">
+        <div class="causal-node">Imperial Rivalry<br><small style="color:var(--smoke);">scramble for colonies</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What did rivalry fuel? (military buildup)" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Alliance System<br><small style="color:var(--smoke);">mutual-defense tripwire</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What activated the tripwire? (the spark)" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Automatic Escalation<br><small style="color:var(--smoke);">37-day domino</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">World War<br><small style="color:var(--smoke);">systemic collapse</small></div>
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="The connection I want to explain is between [Step A] and [Step B]: ..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> Reveal Answers + Key Insight
+      </button>
+      <div class="accordion-body">
+        <strong>Blank 1:</strong> Militarism (the arms race — imperial rivalry pushed governments to build bigger military forces to protect and expand their empires)<br>
+        <strong>Blank 2:</strong> Assassination / Proximate Trigger (Gavrilo Princip's assassination of Franz Ferdinand provided the spark that activated the alliance system's automatic escalation)<br><br>
+        <strong>Key insight for AP:</strong> Notice that this chain has <em>long-term causes</em> (imperialism, militarism) and a <em>proximate cause</em> (the assassination). The AP exam distinguishes between these — long-term causes created the conditions, while the proximate cause was the trigger. A strong essay acknowledges both and explains why the proximate cause was only possible <em>because</em> the long-term conditions existed.
+      </div>
+    </div>
+
+    <!-- SAQ -->
+    <div class="card">
+      <div class="card-label">Activity 3B · SAQ Practice · AP-Style Short Answer</div>
+      <div class="sa-prompt">
+        <strong>AP Prompt:</strong> "Explain how ONE of the following contributed to the outbreak of World War I: militarism, alliances, imperialism, or nationalism."<br><br>
+        <em>Choose ONE cause. Write 2–3 sentences: name the cause, explain its role, and provide at least one specific piece of evidence.</em>
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="[Your chosen cause] contributed to WWI because... Specifically, [evidence]... This caused/led to [connection to outbreak]..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample SAQ Response (Alliances)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Response — Alliances:</strong><br><br>
+        The alliance system contributed to the outbreak of WWI by transforming a regional dispute into an automatic continent-wide war. When Austria-Hungary declared war on Serbia on July 28, 1914, the system's mutual-defense obligations immediately activated: Russia mobilized to defend Serbia, Germany declared war on Russia to defend Austria-Hungary, and France and Britain entered because of their obligations to Russia — all within five weeks of the original assassination. The fatal flaw was that the system removed each government's ability to de-escalate individually; once the first domino fell, no single leader could stop the chain reaction. The video's argument is that this "tripwire" design turned a governance tool meant to prevent war into the primary mechanism of escalation.<br><br>
+        <strong>AP Skill note:</strong> This response names the cause, explains its mechanism (how it worked), gives specific chronological evidence (the 37-day timeline), and connects to the broader argument (systemic failure). All four elements strengthen a SAQ response.
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <div class="card-label">Activity 3C · CCOT Analysis · Continuity and Change in International Relations</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> What <em>continued</em> and what <em>changed</em> in how nations managed international relations from the Congress of Vienna (1815) to the outbreak of WWI (1914)? Give one specific example of each.
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+        <div>
+          <div class="match-col-label">What CHANGED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="What was new about how nations related to each other by 1914?"></textarea>
+        </div>
+        <div>
+          <div class="match-col-label">What CONTINUED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="What remained the same about great power competition and diplomacy?"></textarea>
+        </div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample CCOT Response
+      </button>
+      <div class="accordion-body">
+        <strong>CHANGE:</strong> The most significant change from the Congress of Vienna era to 1914 was the shift from <em>flexible concert diplomacy to rigid automatic alliances</em>. The Concert of Europe (post-1815) was designed to allow great powers to negotiate crises case-by-case through multilateral conferences — and it largely worked for nearly a century. By 1914, this flexibility had been replaced by secret bilateral alliances that locked nations into automatic obligations, making crisis management nearly impossible. The 1839 Treaty of London guaranteeing Belgian neutrality — which Britain used to enter the war — is a perfect example of how old diplomatic commitments now activated automatically.<br><br>
+        <strong>CONTINUITY:</strong> What continued was the fundamental assumption that <em>great power rivalry and competition were normal features of international relations</em>. The Congress of Vienna didn't end rivalry — it tried to manage it. By 1914, European powers were still competing for colonies, military dominance, and prestige, just as they had in the 18th and 19th centuries. The actors changed but the underlying logic of power competition persisted.
+      </div>
+    </div>
+
+    <!-- Thesis Evaluator -->
+    <div class="card">
+      <div class="card-label">Activity 3D · Thesis Evaluator · Click each thesis to reveal the verdict</div>
+      <div class="sa-prompt" style="margin-bottom:0.75rem;">
+        <strong>Essay Prompt:</strong> "Evaluate the extent to which the alliance system was the primary cause of World War I."
+      </div>
+      <div class="thesis-cards">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This restates the prompt without establishing a line of reasoning. Saying alliances caused WWI doesn\'t tell us \'to what extent\' or \'why\' — it\'s just a restatement of the question. There are no analytical categories and no argument for the reader to follow.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"The alliance system was a major cause of World War I, as shown by the fact that it pulled all the major powers into the conflict starting in 1914."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\'t earn the point. Listing all four MAIN causes isn\'t a thesis — it\'s a topic sentence for a textbook chapter. There\'s no \'to what extent\' argument, no weighting of causes against each other, and no line of reasoning for the essay to develop.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"World War I was caused by militarism, alliances, imperialism, and nationalism, all of which contributed to the conflict in different ways."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \'to what extent\' claim (alliances were the proximate mechanism, not the root cause) and establishes a line of reasoning with two analytical categories: alliances were the triggering mechanism, but imperial rivalry was the deeper structural cause. This gives the essay a clear direction.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"Although the alliance system served as the immediate mechanism that escalated a regional dispute into a world war, the deeper cause was the imperial rivalry and arms race that made European governments build those alliances in the first place."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It directly answers \'to what extent\' (alliances were necessary but not sufficient) and establishes a sophisticated analytical framework: alliances were the proximate cause, but nationalism provided the spark, and imperialism provided the underlying motive. This creates a three-part argument structure the essay can develop.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"The alliance system was a necessary but not sufficient cause of WWI: it guaranteed that any conflict would escalate globally, but without the nationalist assassination that triggered it and the imperial competition that made alliances necessary, the system would have remained dormant."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok3Btn" onclick="markDone('dok3Btn',75)">
+      <span class="check-icon">○</span> Mark DOK 3 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 4 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok4">DOK 4 · Knowledge Augmentation</div>
+      <div class="dok-header-text">
+        <h2>Synthesize &amp; Transfer</h2>
+        <p>Explore and explain with examples and evidence — connect across time periods and construct original arguments</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🔗</div>
+      <p><strong>Synthesis challenge:</strong> The video ends with a haunting question: <em>"Are the systems we rely on today to manage conflict any more reliable?"</em> DOK 4 asks you to carry that question forward — connecting WWI's causes to later events and to your own historical judgment.</p>
+    </div>
+
+    <!-- Contextualization Builder -->
+    <div class="card">
+      <div class="card-label">Activity 4A · Contextualization Builder · AP Essay Skill</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Choose one of the three prompts and write a 3–4 sentence contextualization paragraph that connects a broader historical development to the causes of WWI.</p>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.75rem;">
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option A:</strong> How did the Industrial Revolution (c. 1750–1900) create the military technologies and economic systems that made WWI so catastrophic?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option B:</strong> How did the "New Imperialism" of the late 19th century (the scramble for Africa and Asia) create the rivalries and tensions that made European cooperation impossible by 1914?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option C:</strong> How did the 19th-century spread of nationalist ideologies (from the French Revolution and Napoleonic Wars) plant the seeds that destabilized empires by 1914?
+        </div>
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="In the decades before WWI, [your chosen context] created conditions that made conflict more likely by..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Contextualization (Option A)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Contextualization — Industrial Revolution:</strong><br><br>
+        The Industrial Revolution fundamentally transformed the nature of warfare in the century before WWI. New manufacturing technologies allowed governments to produce weapons at industrial scale — rifles, artillery, battleships, and eventually machine guns and poison gas — at costs and speeds unimaginable in the pre-industrial era. The same economic logic that drove factory production drove military production: efficiency, scale, and continuous innovation. By 1914, European governments had spent decades in an arms race fueled by industrial capacity, building armies and navies that were not only much larger than before but qualitatively more destructive. This industrialization of military power meant that when the alliance system finally triggered a conflict, the war that followed was not a limited cabinet war of the 18th century but a total industrialized catastrophe that consumed entire economies and populations. The scale of WWI's destruction — ultimately 20 million dead — was only possible because industrial technology had made killing efficient.
+      </div>
+    </div>
+
+    <!-- Synthesis: Connect Forward -->
+    <div class="card">
+      <div class="card-label">Activity 4B · Cross-Unit Synthesis · Connecting Forward</div>
+      <div class="sa-prompt">
+        <strong>Synthesis Prompt:</strong> The video argues that "the entire 20th century was shaped by this one breakdown." In 3–5 sentences, connect the causes or consequences of WWI (from 7.2) to a specific development in a <em>later section of Unit 7</em> (7.3–7.9). Be explicit about the connection.
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="The [cause/consequence] of WWI helps explain [later development] because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Synthesis Response
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Synthesis — Connecting 7.2 to 7.6 (Causes of WWII):</strong><br><br>
+        The systemic failure that produced WWI directly created the conditions for WWII twenty years later. The alliance system's collapse left four empires destroyed and a humiliated Germany forced to sign the Treaty of Versailles, which the video describes as a "fragile, really flawed peace." This peace imposed crushing reparations and war guilt on Germany, generating the economic desperation and national resentment that Hitler exploited. The same governance failure pattern repeated: international institutions (the League of Nations) were designed to prevent conflict but lacked enforcement power, just as pre-WWI alliances lacked conflict-resolution mechanisms. When Japan invaded Manchuria and Italy attacked Ethiopia in the 1930s, the League's inability to respond sent the same message that pre-1914 diplomacy had sent — that aggressive nations would face no real consequences. In this sense, 7.2's central lesson — that governance systems designed to prevent war can actually cause it — applies just as directly to the causes of WWII.
+      </div>
+    </div>
+
+    <!-- Self Assessment -->
+    <div class="card">
+      <div class="card-label">Activity 4C · Self-Assessment · Rate your confidence (click the dots)</div>
+      <div id="selfAssess"></div>
+    </div>
+
+    <button class="section-complete-btn" id="dok4Btn" onclick="markDone('dok4Btn',100)">
+      <span class="check-icon">○</span> Mark DOK 4 Complete — Unit 7.2 Done!
+    </button>
+  </div>
+
+</div><!-- /main -->
+
+<script src="shared.js"></script>
+<script>
+// ── VOCAB ──
+const vocab = [
+  { term: "Militarism", hint: "The arms race logic…", def: "The policy and culture of maintaining large military forces and prioritizing military strength; the arms race between Britain and Germany was a key example, fueled by imperial competition." },
+  { term: "Alliances", hint: "The tripwire system…", def: "Secret mutual-defense treaties binding nations to defend each other automatically; created two armed camps (Allies vs. Central Powers) whose automatic obligations turned a regional crisis into a world war." },
+  { term: "Imperialism", hint: "The scramble for colonies…", def: "Government-led competition to control overseas territories for raw materials, markets, and power; the 'scramble' for Africa and Asia created intense friction between European powers." },
+  { term: "Nationalism", hint: "A double-edged sword…", def: "Powerful pride in shared cultural identity combined with the belief in self-determination; useful for governments rallying support, but existentially threatening to multi-ethnic empires like Austria-Hungary." },
+  { term: "Self-Determination", hint: "The right to one's own state…", def: "The belief that peoples sharing a culture and language have the right to their own independent nation; a profoundly destabilizing idea in empires ruling over diverse ethnic groups." },
+  { term: "Gavrilo Princip", hint: "The spark, not the cause…", def: "Serbian nationalist who assassinated Archduke Franz Ferdinand on June 28, 1914; the proximate trigger of WWI — not its deep cause, but the spark that ignited a system already under pressure." },
+  { term: "Archduke Franz Ferdinand", hint: "The target in Sarajevo…", def: "Heir to the Austro-Hungarian throne; his assassination by Serbian nationalists gave Austria-Hungary the pretext to declare war on Serbia, activating the alliance system." },
+  { term: "Alliance Trap", hint: "The domino mechanism…", def: "The way mutual-defense obligations automatically escalated the Austro-Serbian conflict into a world war in 37 days — removing individual governments' ability to choose de-escalation." },
+  { term: "Bismarck's Warning", hint: "Predicted decades earlier…", def: "German Chancellor Otto von Bismarck's prediction that the tangled politics of the Balkans would eventually cause a catastrophic war that European governance was not ready to handle." },
+  { term: "Systemic Failure", hint: "The video's central argument…", def: "The video's framework: WWI wasn't caused by any single villain or event, but by the complete breakdown of interconnected governance systems (alliances, imperialism, militarism, nationalism) all at once." },
+];
+
+function buildVocab() {
+  const grid = document.getElementById('vocabGrid');
+  vocab.forEach(v => {
+    const c = document.createElement('div');
+    c.className = 'vocab-card';
+    c.innerHTML = `<div class="vocab-front"><div class="vocab-term">${v.term}</div><div class="vocab-hint">${v.hint}</div><span class="flip-hint">↕ tap to reveal</span></div><div class="vocab-back"><div class="vocab-def">${v.def}</div><span class="flip-hint" style="color:var(--smoke);">↕ tap to flip back</span></div>`;
+    c.addEventListener('click', () => c.classList.toggle('flipped'));
+    grid.appendChild(c);
+  });
+}
+
+// ── MATCHING ──
+const matchPairs = [
+  { term: "Militarism", def: "Arms race between Britain and Germany to build bigger navies" },
+  { term: "Alliances", def: "Secret treaties that automatically pulled all nations into conflict" },
+  { term: "Nationalism", def: "Destabilizing force in multi-ethnic Austria-Hungary" },
+  { term: "Gavrilo Princip", def: "Serbian nationalist who assassinated Archduke Franz Ferdinand" },
+  { term: "Systemic Failure", def: "When governance tools meant to prevent war cause it instead" },
+];
+let selectedTerm = null, selectedDef = null;
+
+function buildMatching() {
+  const termsDiv = document.getElementById('matchTerms');
+  const defsDiv = document.getElementById('matchDefs');
+  const shuffled = [...matchPairs].sort(() => Math.random() - 0.5);
+  matchPairs.forEach(p => {
+    const t = document.createElement('div');
+    t.className = 'match-item'; t.textContent = p.term; t.dataset.term = p.term;
+    t.addEventListener('click', () => selectMatch(t, 'term'));
+    termsDiv.appendChild(t);
+  });
+  shuffled.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item'; d.textContent = p.def; d.dataset.def = p.term;
+    d.addEventListener('click', () => selectMatch(d, 'def'));
+    defsDiv.appendChild(d);
+  });
+}
+
+function selectMatch(el, type) {
+  if (el.classList.contains('correct')) return;
+  if (type === 'term') {
+    document.querySelectorAll('#matchTerms .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selectedTerm = el.classList.contains('selected') ? el : null;
+  } else {
+    document.querySelectorAll('#matchDefs .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selectedDef = el.classList.contains('selected') ? el : null;
+  }
+  if (selectedTerm && selectedDef) {
+    if (selectedTerm.dataset.term === selectedDef.dataset.def) {
+      [selectedTerm, selectedDef].forEach(e => { e.classList.remove('selected'); e.classList.add('correct'); });
+    } else {
+      [selectedTerm, selectedDef].forEach(e => e.classList.add('incorrect'));
+      const st = selectedTerm, sd = selectedDef;
+      setTimeout(() => { st.classList.remove('selected','incorrect'); sd.classList.remove('selected','incorrect'); }, 700);
+    }
+    selectedTerm = null; selectedDef = null;
+  }
+}
+
+function checkMatches() {
+  const correct = document.querySelectorAll('.match-item.correct').length / 2;
+  const res = document.getElementById('matchResult');
+  res.style.display = 'block';
+  res.style.color = correct === matchPairs.length ? '#a8e0a0' : '#e0c0a0';
+  res.textContent = correct === matchPairs.length ? `✓ All ${matchPairs.length} matched correctly!` : `${correct} of ${matchPairs.length} matched. Keep going!`;
+}
+
+// ── MCQ ──
+function handleMCQ(btn) {
+  const c = btn.closest('.mcq-item');
+  if (c.querySelector('.correct, .incorrect')) return;
+  const ok = btn.dataset.correct === 'true';
+  btn.classList.add(ok ? 'correct' : 'incorrect');
+  c.querySelectorAll('.mcq-choice').forEach(b => { b.disabled = true; if (b !== btn && b.dataset.correct === 'true') b.classList.add('correct'); });
+  if (ok) { const fb = c.querySelector('.mcq-feedback'); if (fb) fb.classList.add('visible'); }
+}
+
+// ── ACCORDION ──
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// ── THESIS ──
+function revealThesis(card, verdict, explanation) {
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+  card.querySelector('.thesis-verdict').className = `thesis-verdict ${verdict}`;
+  card.querySelector('.thesis-explanation').textContent = explanation;
+}
+
+// ── DRAG SORT ──
+(function() {
+  let dragging = null;
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.sort-item').forEach(item => {
+      item.addEventListener('dragstart', () => dragging = item);
+      item.addEventListener('dragend', () => { dragging = null; document.querySelectorAll('.sort-item').forEach(i => i.classList.remove('drag-over')); });
+      item.addEventListener('dragover', e => { e.preventDefault(); if (item !== dragging) item.classList.add('drag-over'); });
+      item.addEventListener('dragleave', () => item.classList.remove('drag-over'));
+      item.addEventListener('drop', e => {
+        e.preventDefault();
+        item.classList.remove('drag-over');
+        if (dragging && item !== dragging) {
+          const list = item.parentNode;
+          const items = [...list.children];
+          const di = items.indexOf(dragging), ii = items.indexOf(item);
+          if (di < ii) list.insertBefore(dragging, item.nextSibling);
+          else list.insertBefore(dragging, item);
+        }
+      });
+    });
+  });
+})();
+
+// ── SELF ASSESS ──
+const skills = [
+  "I can name and define all four MAIN causes of WWI with examples",
+  "I can explain how the alliance system turned a regional crisis into a world war in 37 days",
+  "I can explain why nationalism was a tool for some governments but a threat to others",
+  "I can compare the Allied Powers and Central Powers across at least 3 categories",
+  "I can construct a thesis that weighs the relative importance of WWI causes",
+  "I can write a SAQ response connecting one MAIN cause to the outbreak of war with evidence",
+];
+function buildSelfAssess() {
+  const wrap = document.getElementById('selfAssess');
+  skills.forEach((skill, si) => {
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML = `<div class="skill-label">${skill}</div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.25rem;"><div style="display:flex;gap:0.3rem;">${[1,2,3].map(l=>`<div class="skill-dot" onclick="setDot(${si},${l})" data-skill="${si}" data-level="${l}"></div>`).join('')}</div><div class="skill-scale">1 = learning · 3 = confident</div></div>`;
+    wrap.appendChild(row);
+  });
+}
+function setDot(si, level) {
+  document.querySelectorAll(`[data-skill="${si}"].skill-dot`).forEach((d,i) => d.classList.toggle('filled', i < level));
+}
+
+// ── PROGRESS ──
+let currentProgress = 0;
+function markDone(btnId, pct) {
+  const btn = document.getElementById(btnId);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.querySelector('.check-icon').textContent = '✓';
+  btn.childNodes[1].textContent = ' Section Complete';
+  currentProgress = Math.max(currentProgress, pct);
+  document.getElementById('progressFill').style.width = currentProgress + '%';
+  document.getElementById('progressPct').textContent = currentProgress + '%';
+}
+
+// ── INIT ──
+buildVocab();
+buildMatching();
+buildSelfAssess();
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', '1v5DcwsUFtM');
+initAutoSave('7_2');
+buildCompletionSection('7_2', '7.2 Causes of World War I');
+
+const _origMarkDone = markDone;
+markDone = function(btnId, pct) {
+  _origMarkDone(btnId, pct);
+  markDoneShared('7_2', btnId, pct);
+};
+</script>
+</body>
+</html>

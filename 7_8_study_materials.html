@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.8 — Mass Atrocities After 1900 | AP World History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --parchment: #f5f0e8;
+  --gold: #b8860b;
+  --gold-light: #d4a820;
+  --smoke: #6b6355;
+  --bg: #2a2016;
+  --bg-card: #32291a;
+  --dok1: #2d5a27;
+  --dok2: #1a3d6e;
+  --dok3: #6b2d2d;
+  --dok4: #4a2d6b;
+  --border: rgba(184,134,11,0.25);
+  --text-main: #f5f0e8;
+  --text-muted: #c4b89a;
+  --step1: #7b3f00;
+  --step2: #6b2d2d;
+  --step3: #1a3d6e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text-main); font-family: 'Source Serif 4', serif; font-size: 16px; line-height: 1.7; min-height: 100vh; }
+
+/* PROGRESS */
+#progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 10px 20px; display: flex; align-items: center; gap: 14px; }
+#progress-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 3px; transition: width 0.5s ease; }
+#progress-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold-light); min-width: 32px; text-align: right; }
+
+/* HEADER */
+.page-header { max-width: 900px; margin: 0 auto; padding: 56px 24px 40px; text-align: center; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 16px; }
+.page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; color: var(--parchment); margin-bottom: 16px; }
+.page-title em { color: #d47a7a; font-style: italic; }
+.page-subtitle { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.05rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 28px; line-height: 1.7; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; padding: 5px 12px; border: 1px solid var(--border); border-radius: 20px; color: var(--text-muted); background: rgba(184,134,11,0.07); letter-spacing: 0.05em; }
+
+/* HOW-TO */
+.how-to-banner { max-width: 900px; margin: 0 auto 40px; padding: 0 24px; }
+.how-to-inner { border-left: 4px solid var(--gold); background: rgba(184,134,11,0.08); padding: 24px 28px; border-radius: 0 8px 8px 0; }
+.how-to-inner h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 12px; letter-spacing: 0.04em; }
+.how-to-inner p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; }
+.how-to-inner p:last-child { margin-bottom: 0; }
+.how-to-inner strong { color: var(--parchment); }
+
+/* CONTENT */
+.content-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* DOK SECTION */
+.dok-section { margin-bottom: 56px; }
+.dok-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 5px 11px; border-radius: 4px; color: white; text-transform: uppercase; flex-shrink: 0; }
+.dok1 .dok-badge { background: var(--dok1); }
+.dok2 .dok-badge { background: var(--dok2); }
+.dok3 .dok-badge { background: var(--dok3); }
+.dok4 .dok-badge { background: var(--dok4); }
+.dok-section-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
+.dok1 .dok-section-title { color: #7dc774; }
+.dok2 .dok-section-title { color: #7baad6; }
+.dok3 .dok-section-title { color: #d47a7a; }
+.dok4 .dok-section-title { color: #a07ad4; }
+
+/* CALLOUT */
+.callout { border-left: 3px solid; padding: 16px 20px; border-radius: 0 6px 6px 0; margin-bottom: 24px; font-size: 0.92rem; }
+.callout-blue { border-color: #4a90d9; background: rgba(74,144,217,0.08); }
+.callout-gold { border-color: var(--gold); background: rgba(184,134,11,0.08); }
+.callout-red { border-color: #c0392b; background: rgba(192,57,43,0.08); }
+.callout-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; color: var(--gold-light); }
+.callout-blue .callout-title { color: #7baad6; }
+.callout-red .callout-title { color: #e07070; }
+.callout p { color: var(--text-muted); margin-bottom: 6px; }
+.callout p:last-child { margin-bottom: 0; }
+.callout a { color: #7baad6; }
+.callout strong { color: var(--parchment); }
+
+/* QUOTE */
+.quote-block { border-left: 3px solid #c0392b; padding: 20px 24px; margin: 0 0 28px; background: rgba(192,57,43,0.07); border-radius: 0 8px 8px 0; }
+.quote-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--parchment); line-height: 1.6; margin-bottom: 10px; }
+.quote-attr { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-muted); letter-spacing: 0.06em; }
+
+/* CARD */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+
+/* THREE-STEP BLUEPRINT */
+.blueprint { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.step-card { border-radius: 8px; overflow: hidden; }
+.step-header { padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+.step-num { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; opacity: 0.5; flex-shrink: 0; }
+.step-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; }
+.step-body { padding: 14px 16px; }
+.step-body p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 6px; }
+.step-body p:last-child { margin-bottom: 0; }
+.step-body strong { color: var(--parchment); }
+.step1 .step-header { background: rgba(123,63,0,0.4); border-bottom: 1px solid rgba(123,63,0,0.4); }
+.step1 .step-num { color: #d4880b; }
+.step1 .step-title { color: #f0a040; }
+.step1 { border: 1px solid rgba(123,63,0,0.4); }
+.step2 .step-header { background: rgba(107,45,45,0.4); border-bottom: 1px solid rgba(107,45,45,0.4); }
+.step2 .step-num { color: #c04444; }
+.step2 .step-title { color: #d47a7a; }
+.step2 { border: 1px solid rgba(107,45,45,0.4); }
+.step3 .step-header { background: rgba(26,61,110,0.4); border-bottom: 1px solid rgba(26,61,110,0.4); }
+.step3 .step-num { color: #4a90d9; }
+.step3 .step-title { color: #7baad6; }
+.step3 { border: 1px solid rgba(26,61,110,0.4); }
+
+/* CASE STUDY GRID */
+.case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 28px; }
+.case-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.case-header { padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+.case-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--parchment); }
+.case-date { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.08em; }
+.case-body { padding: 12px 16px; }
+.case-row { display: flex; gap: 8px; margin-bottom: 6px; font-size: 0.84rem; }
+.case-row:last-child { margin-bottom: 0; }
+.case-label { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-light); padding-top: 3px; min-width: 68px; flex-shrink: 0; }
+.case-val { color: var(--text-muted); line-height: 1.5; }
+.holo-card .case-header { background: rgba(107,45,45,0.2); }
+.armen-card .case-header { background: rgba(123,63,0,0.2); }
+.holodom-card .case-header { background: rgba(26,61,110,0.15); }
+.camb-card .case-header { background: rgba(74,45,107,0.2); }
+.rwanda-card .case-header { background: rgba(45,90,39,0.15); }
+.bosnia-card .case-header { background: rgba(50,50,80,0.3); }
+
+/* TIMELINE */
+.timeline { margin-bottom: 28px; }
+.timeline-item { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); align-items: flex-start; }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); min-width: 90px; padding-top: 3px; letter-spacing: 0.05em; }
+.timeline-text { font-size: 0.9rem; color: var(--text-muted); }
+.timeline-text strong { color: var(--parchment); }
+
+/* FLIP CARDS */
+.flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; }
+.flip-card { height: 160px; perspective: 1000px; cursor: pointer; }
+.flip-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; }
+.flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.flip-front { background: rgba(107,45,45,0.18); border: 1px solid rgba(107,45,45,0.45); }
+.flip-front .term { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #d47a7a; margin-bottom: 8px; }
+.flip-front .hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.06em; font-style: italic; }
+.flip-front .tap-hint { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; color: rgba(212,122,122,0.35); margin-top: 10px; letter-spacing: 0.08em; }
+.flip-back { background: rgba(107,45,45,0.12); border: 1px solid rgba(107,45,45,0.3); transform: rotateY(180deg); }
+.flip-back .def { font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; }
+
+/* MCQ */
+.mcq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.mcq-q { font-family: 'Playfair Display', serif; font-size: 0.98rem; color: var(--parchment); margin-bottom: 14px; line-height: 1.55; }
+.mcq-q .q-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); display: block; margin-bottom: 6px; letter-spacing: 0.1em; }
+.mcq-options { display: flex; flex-direction: column; gap: 8px; }
+.mcq-option { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); transition: all 0.2s; font-size: 0.89rem; color: var(--text-muted); text-align: left; }
+.mcq-option:hover { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.mcq-option .opt-letter { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); min-width: 16px; padding-top: 2px; flex-shrink: 0; }
+.mcq-option.correct { border-color: #2d5a27; background: rgba(45,90,39,0.2); color: #7dc774; }
+.mcq-option.incorrect { border-color: #6b2d2d; background: rgba(107,45,45,0.2); color: #d47a7a; text-decoration: line-through; opacity: 0.7; }
+.mcq-option.disabled { pointer-events: none; }
+.mcq-feedback { display: none; margin-top: 12px; padding: 12px 16px; border-radius: 6px; font-size: 0.875rem; line-height: 1.6; color: var(--text-muted); }
+.mcq-feedback.show { display: block; }
+.mcq-feedback.fb-correct { background: rgba(45,90,39,0.15); border-left: 3px solid #2d5a27; }
+.mcq-feedback.fb-incorrect { background: rgba(107,45,45,0.15); border-left: 3px solid #6b2d2d; }
+
+/* MATCHING */
+.matching-wrap { margin-bottom: 28px; }
+.matching-defs-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; min-height: 50px; }
+.match-term { background: rgba(107,45,45,0.2); border: 1px solid rgba(107,45,45,0.35); border-radius: 6px; padding: 10px 14px; font-size: 0.88rem; color: #d47a7a; display: flex; align-items: center; }
+.match-def { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; font-size: 0.85rem; color: var(--text-muted); cursor: grab; transition: all 0.2s; display: flex; align-items: flex-start; gap: 8px; user-select: none; }
+.match-def .drag-handle { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: rgba(255,255,255,0.2); flex-shrink: 0; padding-top: 2px; }
+.match-def:hover { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.match-def.dragging { opacity: 0.5; cursor: grabbing; }
+.match-drop { background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.1); border-radius: 6px; padding: 10px 14px; font-size: 9px; color: rgba(255,255,255,0.2); min-height: 44px; display: flex; align-items: center; transition: all 0.2s; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; }
+.match-drop.drag-over { border-color: var(--gold); background: rgba(184,134,11,0.06); }
+.match-drop.filled { font-family: 'Source Serif 4', serif; font-size: 0.85rem; color: var(--text-muted); }
+.matching-row { display: grid; grid-template-columns: 160px 1fr; gap: 10px; margin-bottom: 10px; }
+.matching-controls { display: flex; gap: 10px; margin-top: 14px; }
+.btn-sm { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; padding: 7px 16px; border-radius: 4px; border: 1px solid var(--border); background: rgba(184,134,11,0.1); color: var(--gold-light); cursor: pointer; transition: all 0.2s; }
+.btn-sm:hover { background: rgba(184,134,11,0.2); border-color: var(--gold-light); }
+.btn-sm.btn-check { background: rgba(45,90,39,0.2); border-color: rgba(45,90,39,0.5); color: #7dc774; }
+.btn-sm.btn-check:hover { background: rgba(45,90,39,0.35); }
+#match-score { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); display: flex; align-items: center; }
+
+/* ACCORDION */
+.accordion { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+.accordion-header { padding: 14px 20px; background: var(--bg-card); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background 0.2s; }
+.accordion-header:hover { background: rgba(255,255,255,0.04); }
+.accordion-title { font-family: 'Source Serif 4', serif; font-size: 0.92rem; color: var(--text-muted); flex: 1; }
+.accordion-arrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold-light); transition: transform 0.3s; flex-shrink: 0; }
+.accordion.open .accordion-arrow { transform: rotate(180deg); }
+.accordion-body { display: none; padding: 20px; background: rgba(255,255,255,0.015); border-top: 1px solid var(--border); }
+.accordion.open .accordion-body { display: block; }
+.accordion-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.7; }
+.accordion-body p:last-child { margin-bottom: 0; }
+.accordion-body strong { color: var(--parchment); }
+.sample-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
+
+/* SECTION HEADING */
+.section-h { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--parchment); margin: 28px 0 14px; }
+
+/* PROMPT BOX */
+.prompt-box { background: rgba(184,134,11,0.06); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 20px 22px; margin-bottom: 16px; }
+.prompt-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
+.prompt-text { font-family: 'Playfair Display', serif; font-size: 1.0rem; font-style: italic; color: var(--parchment); line-height: 1.65; }
+.write-area { width: 100%; min-height: 120px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.9rem; line-height: 1.65; resize: vertical; outline: none; transition: border-color 0.2s; margin-bottom: 12px; }
+.write-area:focus { border-color: var(--gold); }
+.write-area::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* COMPARE TABLE */
+.compare-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 0.855rem; overflow-x: auto; }
+.compare-table th { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); color: var(--gold-light); background: var(--bg-card); }
+.compare-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); vertical-align: top; line-height: 1.55; }
+.compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+.compare-table td:first-child { color: var(--parchment); font-weight: 600; font-size: 0.82rem; min-width: 130px; }
+
+/* CAUSAL CHAIN */
+.causal-chain { display: flex; flex-direction: column; gap: 0; margin-bottom: 24px; }
+.causal-node { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-size: 0.88rem; color: var(--text-muted); }
+.causal-node.blank { background: rgba(107,45,45,0.1); border: 1px dashed rgba(107,45,45,0.4); }
+.causal-node.blank textarea { width: 100%; background: transparent; border: none; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.875rem; resize: none; outline: none; min-height: 60px; line-height: 1.6; }
+.causal-node.blank textarea::placeholder { color: rgba(212,168,32,0.3); font-style: italic; }
+.causal-node .node-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 6px; }
+.causal-node.blank .node-label { color: #d47a7a; }
+.causal-arrow { text-align: center; padding: 6px 0; color: var(--gold); font-size: 1.1rem; }
+.reveal-btn { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.08em; padding: 5px 12px; border: 1px solid rgba(107,45,45,0.4); border-radius: 4px; background: rgba(107,45,45,0.1); color: #d47a7a; cursor: pointer; margin-top: 8px; transition: all 0.2s; }
+.reveal-btn:hover { background: rgba(107,45,45,0.2); }
+.answer-reveal { display: none; margin-top: 10px; padding: 10px 14px; background: rgba(45,90,39,0.15); border-left: 3px solid #2d5a27; border-radius: 0 6px 6px 0; font-size: 0.875rem; color: #7dc774; line-height: 1.6; }
+.answer-reveal.show { display: block; }
+.ap-insight { background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 16px 20px; margin: 20px 0 24px; }
+.ap-insight .insight-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 8px; }
+.ap-insight p { font-size: 0.875rem; color: var(--text-muted); }
+
+/* SAQ */
+.saq-part { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+.saq-part-header { padding: 12px 18px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); background: rgba(107,45,45,0.08); }
+.saq-letter { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #d47a7a; padding: 3px 9px; border: 1px solid rgba(107,45,45,0.4); border-radius: 3px; flex-shrink: 0; }
+.saq-prompt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.saq-body { padding: 14px 18px; }
+
+/* THESIS CARDS */
+.thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.thesis-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.thesis-card-body { padding: 16px 18px; font-size: 0.88rem; color: var(--parchment); font-family: 'Playfair Display', serif; font-style: italic; line-height: 1.6; min-height: 110px; }
+.thesis-reveal-btn { width: 100%; padding: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.07em; border: none; border-top: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
+.thesis-reveal-btn:hover { background: rgba(255,255,255,0.06); }
+.thesis-verdict { display: none; padding: 10px 18px; font-size: 0.82rem; line-height: 1.55; border-top: 1px solid var(--border); }
+.thesis-verdict.show { display: block; }
+.thesis-verdict.pass { background: rgba(45,90,39,0.12); color: #7dc774; }
+.thesis-verdict.fail { background: rgba(107,45,45,0.12); color: #d47a7a; }
+.verdict-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 3px; margin-right: 8px; }
+.verdict-badge.pass { background: rgba(45,90,39,0.4); color: #7dc774; }
+.verdict-badge.fail { background: rgba(107,45,45,0.4); color: #d47a7a; }
+
+/* CCOT */
+.ccot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.ccot-col { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.ccot-col-header { padding: 10px 16px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+.change-header { background: rgba(107,45,45,0.25); color: #d47a7a; }
+.continue-header { background: rgba(26,61,110,0.25); color: #7baad6; }
+.ccot-col textarea { width: 100%; background: transparent; border: none; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; line-height: 1.65; padding: 14px 16px; resize: none; outline: none; min-height: 130px; }
+.ccot-col textarea::placeholder { color: rgba(255,255,255,0.18); font-style: italic; }
+
+/* CONTEXT OPTIONS */
+.context-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.context-option { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.context-option-header { padding: 14px 18px; cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s; }
+.context-option-header:hover { background: rgba(255,255,255,0.03); }
+.context-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.09em; color: #a07ad4; text-transform: uppercase; flex-shrink: 0; padding: 3px 8px; border: 1px solid rgba(160,122,212,0.3); border-radius: 3px; }
+.context-title { font-size: 0.92rem; color: var(--parchment); flex: 1; font-family: 'Playfair Display', serif; }
+.context-arrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #a07ad4; transition: transform 0.3s; }
+.context-option.open .context-arrow { transform: rotate(180deg); }
+.context-body { display: none; padding: 16px 20px; border-top: 1px solid var(--border); background: rgba(255,255,255,0.01); }
+.context-option.open .context-body { display: block; }
+.context-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 8px; line-height: 1.7; }
+.context-body strong { color: var(--parchment); }
+
+/* SYNTHESIS BOX */
+.synthesis-box { background: rgba(74,45,107,0.12); border: 1px solid rgba(74,45,107,0.35); border-radius: 8px; padding: 22px 24px; margin-bottom: 24px; }
+.synthesis-box .syn-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: #a07ad4; text-transform: uppercase; margin-bottom: 10px; }
+.synthesis-box .syn-q { font-family: 'Playfair Display', serif; font-size: 1.0rem; font-style: italic; color: var(--parchment); line-height: 1.65; margin-bottom: 14px; }
+.synthesis-box p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px; }
+
+/* SELF-ASSESSMENT */
+.self-assess { margin-bottom: 28px; }
+.skill-row { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.skill-row:last-child { border-bottom: none; }
+.skill-dots { display: flex; gap: 5px; flex-shrink: 0; padding-top: 3px; }
+.skill-dot { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); background: transparent; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+.skill-dot.level-1.active { background: #d47a7a; border-color: #d47a7a; }
+.skill-dot.level-2.active { background: var(--gold-light); border-color: var(--gold-light); }
+.skill-dot.level-3.active { background: #7dc774; border-color: #7dc774; }
+.skill-text { font-size: 0.9rem; color: var(--text-muted); flex: 1; }
+
+/* COMPLETE */
+.complete-wrap { text-align: right; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+.btn-complete { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 28px; border-radius: 6px; border: none; cursor: pointer; transition: all 0.3s; }
+.btn-complete:not(.done) { background: var(--gold); color: var(--bg); }
+.btn-complete:not(.done):hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(184,134,11,0.3); }
+.btn-complete.done { background: rgba(45,90,39,0.3); color: #7dc774; border: 1px solid rgba(45,90,39,0.5); cursor: default; }
+.dok1 .btn-complete:not(.done) { background: var(--dok1); color: white; }
+.dok1 .btn-complete:not(.done):hover { background: #3d7a35; }
+.dok2 .btn-complete:not(.done) { background: var(--dok2); color: white; }
+.dok2 .btn-complete:not(.done):hover { background: #244f8e; }
+.dok3 .btn-complete:not(.done) { background: var(--dok3); color: white; }
+.dok3 .btn-complete:not(.done):hover { background: #8b3d3d; }
+.dok4 .btn-complete:not(.done) { background: var(--dok4); color: white; }
+.dok4 .btn-complete:not(.done):hover { background: #5e3a87; }
+
+/* NEVER AGAIN TRACKER */
+.never-again-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.na-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.na-card-header { padding: 8px 14px; display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+.na-card-title { color: var(--parchment); font-size: 0.88rem; font-family: 'Source Serif 4', serif; font-weight: 600; }
+.na-card-date { color: var(--text-muted); }
+.na-card-body { padding: 10px 14px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+.na-card-body strong { color: var(--parchment); }
+.na-card-stat { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #d47a7a; font-weight: 700; display: block; margin: 6px 0 4px; }
+
+@media (max-width: 640px) {
+  .blueprint { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .thesis-grid { grid-template-columns: 1fr; }
+  .ccot-grid { grid-template-columns: 1fr; }
+  .never-again-grid { grid-template-columns: 1fr; }
+  .matching-row { grid-template-columns: 1fr; }
+  .flip-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .page-title { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar-wrap">
+  <div id="progress-track"><div id="progress-fill"></div></div>
+  <div id="progress-label">0%</div>
+</div>
+
+<header class="page-header">
+  <div class="eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="page-title">7.8 — <em>Mass Atrocities</em> After 1900</h1>
+  <p class="page-subtitle">"The blueprint for these atrocities isn't found in some rare monstrous evil. It's found in the way we organize our societies, the way we draw lines between us and them, and the incredible power we give our governments to act on those lines."</p>
+  <div class="chips">
+    <span class="chip">c. 1900–present</span>
+    <span class="chip">Genocide · State Power · Social Organization</span>
+    <span class="chip">DOK 1 → 4</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</header>
+
+<div class="how-to-banner">
+  <div class="how-to-inner">
+    <h3>📋 How to Use These Materials</h3>
+    <p><strong>The lens:</strong> This module uses the AP framework of <em>Social Interactions and Organization</em> to ask: how do everyday social categories — ethnicity, religion, class — get weaponized into tools of mass murder?</p>
+    <p><strong>The three-step blueprint:</strong> The video's central argument is that mass atrocities follow a predictable, terrifying pattern: (1) Define the Other, (2) Wield State Power, (3) Justify the Violence. This blueprint appears across every case study.</p>
+    <p><strong>The central contrast:</strong> The Holocaust's industrial scale was unique — but the pattern behind it was not. The same blueprint appears in Armenia, Ukraine, Cambodia, Rwanda, and Bosnia.</p>
+    <p><strong>The closing question:</strong> After the Holocaust, the world promised "Never Again" — then broke that promise, over and over. This module asks: what does that tell us about the relationship between government, society, and violence?</p>
+    <p><strong>Content note:</strong> This module deals with mass murder, genocide, and systematic atrocity. The material is difficult by design — understanding these events is essential precisely because they were not accidents.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<!-- DOK 1 -->
+<section class="dok-section dok1" id="dok1">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 1</span>
+    <span class="dok-section-title">Knowledge Acquisition</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🎬 NotebookLM Video</div>
+    <p>Watch the explainer before diving in: <a href="https://youtu.be/gBEgzSO89yE" target="_blank">APWH 7.8 — Mass Atrocities After 1900</a></p>
+    <p>Listen for the <strong>three-step blueprint</strong> the video introduces: Define the Other → Wield State Power → Justify the Violence. This framework applies to every case study in the module. Also listen for the video's closing question about the promise of "Never Again" — and whether it was kept.</p>
+  </div>
+
+  <div id="videoEmbed"></div>
+
+  <div class="callout callout-red">
+    <div class="callout-title">⚠️ Opening Quote — Hitler, 1939</div>
+    <p>The video opens with a chilling quote from Adolf Hitler, spoken just weeks before the invasion of Poland. He argued he could "get away with" what he was about to do because the world had already forgotten the Armenian genocide. This is the video's entry point: mass atrocities are not random eruptions — they are planned, and perpetrators learn from each other.</p>
+    <p style="font-style:italic;color:var(--parchment);margin-top:8px;">"Who, after all, speaks today of the annihilation of the Armenians?" — Adolf Hitler, c. August 1939</p>
+  </div>
+
+  <!-- Three-Step Blueprint -->
+  <div class="section-h">🔴 The Three-Step Blueprint</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">The video's central framework: this pattern appears across every major mass atrocity of the 20th and 21st centuries. Learn to recognize it in every case study.</p>
+  <div class="blueprint">
+    <div class="step-card step1">
+      <div class="step-header"><span class="step-num">1</span><span class="step-title">Define the Other</span></div>
+      <div class="step-body">
+        <p>Use <strong>propaganda and law</strong> to single out a group of people — by ethnicity, religion, class, or political affiliation — and make them seem <strong>less than human</strong>.</p>
+        <p>This is the social poison. The state doesn't start with camps; it starts with <strong>words and ideas</strong>, then bakes them into law.</p>
+        <p><em>Example:</em> Nazi Germany strips Jews of citizenship through the Nuremberg Laws; forces them into ghettos; dehumanizes them as a "threat to the pure German race."</p>
+      </div>
+    </div>
+    <div class="step-card step2">
+      <div class="step-header"><span class="step-num">2</span><span class="step-title">Wield State Power</span></div>
+      <div class="step-body">
+        <p>Turn the machinery of government — the <strong>police, army, bureaucracy, census data, train schedules</strong> — into a weapon against the targeted group.</p>
+        <p>This is the "big one." The state itself becomes the instrument of persecution. Modern bureaucracy enables industrial-scale violence.</p>
+        <p><em>Example:</em> The Nazis use census data and rail networks for the systematic roundup and transport of Jewish people to death camps — murder organized like a logistics operation.</p>
+      </div>
+    </div>
+    <div class="step-card step3">
+      <div class="step-header"><span class="step-num">3</span><span class="step-title">Justify the Violence</span></div>
+      <div class="step-body">
+        <p>Deploy a <strong>unifying ideology</strong> to convince people the violence is not only acceptable but <strong>necessary and good</strong> — an act of national survival, purification, or progress.</p>
+        <p>Without this justification, ordinary people won't participate in or tolerate mass murder. The ideology makes it feel like the right thing to do.</p>
+        <p><em>Example:</em> Ottoman nationalism frames Armenian deportations as defensive necessity; Khmer Rouge ideology frames mass murder as revolutionary class purification.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Study Grid -->
+  <div class="section-h">📚 Case Studies — The Blueprint in Action</div>
+  <div class="case-grid">
+    <div class="case-card holo-card">
+      <div class="case-header"><span class="case-name">The Holocaust</span><span class="case-date">1941–1945</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">Jewish people, Roma, disabled people, political opponents — dehumanized as threats to the "pure German race"</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">Industrial-scale murder: Nuremberg Laws → ghettos → concentration camps → gas chambers. Census data + trains used with "chilling efficiency"</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Nazi ultranationalism and racial antisemitism — the "Final Solution" as state policy</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>~6 million Jews</strong> murdered; millions more from other targeted groups</span></div>
+      </div>
+    </div>
+    <div class="case-card armen-card">
+      <div class="case-header"><span class="case-name">Armenian Genocide</span><span class="case-date">1915–1923</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">Christian Armenians — seen as a threat by a fiery Ottoman nationalism that identified non-Turks as enemies of the state</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">Systematic deportations into the Syrian desert, mass executions, death marches — organized by the Ottoman military and government</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Ottoman nationalism — non-Turkish populations labeled as security threats to the empire in wartime</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>~1.5 million</strong> Armenians killed</span></div>
+      </div>
+    </div>
+    <div class="case-card holodom-card">
+      <div class="case-header"><span class="case-name">Holodomor (Ukraine)</span><span class="case-date">1932–1933</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">Ukrainian peasants who resisted Soviet collectivization — labeled "class enemies" (kulaks) by communist ideology</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">State-engineered famine: grain seizures, border blockades, internal passports preventing escape — starvation as a weapon of the state</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Stalinist communism — "class enemies" who resist collectivization must be eliminated for the revolution's survival</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>3–5 million</strong> Ukrainians starved to death</span></div>
+      </div>
+    </div>
+    <div class="case-card camb-card">
+      <div class="case-header"><span class="case-name">Cambodian Genocide</span><span class="case-date">1975–1979</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">The educated, ethnic minorities, anyone the Khmer Rouge deemed an "enemy" of radical agrarian revolution — including glasses-wearers as symbols of education</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">Forced evacuations of cities, mass executions, forced labor camps ("the Killing Fields") — the entire society restructured around mass murder</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Radical Maoist communism — Year Zero ideology aimed at total destruction of the old society and creation of a peasant utopia</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>1.5–2 million</strong> killed (~25% of Cambodia's population)</span></div>
+      </div>
+    </div>
+    <div class="case-card rwanda-card">
+      <div class="case-header"><span class="case-name">Rwandan Genocide</span><span class="case-date">1994</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">Tutsi people — dehumanized as "inyenzi" (cockroaches) through radio propaganda campaigns in the weeks before the killing began</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">Government-organized militias (Interahamwe) carried out killings with machetes; identity cards used to select victims at roadblocks</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Hutu Power extremism — framed the Tutsi as a foreign occupying class who had oppressed Hutu people and must be eliminated</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>~800,000</strong> Tutsi and moderate Hutu killed in <strong>100 days</strong></span></div>
+      </div>
+    </div>
+    <div class="case-card bosnia-card">
+      <div class="case-header"><span class="case-name">Bosnia (Ethnic Cleansing)</span><span class="case-date">1992–1995</span></div>
+      <div class="case-body">
+        <div class="case-row"><span class="case-label">The Other</span><span class="case-val">Bosnian Muslims and Croats — targeted by Bosnian Serb nationalist forces seeking an ethnically pure "Greater Serbia"</span></div>
+        <div class="case-row"><span class="case-label">State Action</span><span class="case-val">Systematic massacres (Srebrenica, 1995), mass rape, forced displacement, destruction of cultural heritage by Bosnian Serb military forces</span></div>
+        <div class="case-row"><span class="case-label">Ideology</span><span class="case-val">Serbian ethnic nationalism — "ethnic cleansing" framed as creating a racially/ethnically homogeneous state</span></div>
+        <div class="case-row"><span class="case-label">Scale</span><span class="case-val"><strong>~100,000</strong> killed; 2.2 million displaced</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section-h">📅 Key Events Timeline</div>
+  <div class="card timeline">
+    <div class="timeline-item"><span class="timeline-date">1915–1923</span><span class="timeline-text"><strong>Armenian Genocide</strong> — Ottoman Empire; ~1.5 million killed. Hitler later cites this as proof the world forgets atrocities</span></div>
+    <div class="timeline-item"><span class="timeline-date">1932–1933</span><span class="timeline-text"><strong>Holodomor</strong> — Soviet Union; 3–5 million Ukrainians deliberately starved to death by Stalin's collectivization policy</span></div>
+    <div class="timeline-item"><span class="timeline-date">1933–1935</span><span class="timeline-text"><strong>Nuremberg Laws</strong> — Nazi Germany strips Jewish people of citizenship, laying legal foundation for genocide</span></div>
+    <div class="timeline-item"><span class="timeline-date">1938</span><span class="timeline-text"><strong>Kristallnacht</strong> — State-orchestrated pogrom destroys Jewish property; signals shift from legal persecution to organized violence</span></div>
+    <div class="timeline-item"><span class="timeline-date">1941–1945</span><span class="timeline-text"><strong>The Holocaust</strong> — Nazi Germany; ~6 million Jews and millions of others systematically murdered</span></div>
+    <div class="timeline-item"><span class="timeline-date">1948</span><span class="timeline-text"><strong>UN Genocide Convention</strong> — "Genocide" defined in international law for the first time; "Never Again" becomes global promise</span></div>
+    <div class="timeline-item"><span class="timeline-date">1975–1979</span><span class="timeline-text"><strong>Cambodian Genocide</strong> — Khmer Rouge kills ~25% of Cambodia's entire population</span></div>
+    <div class="timeline-item"><span class="timeline-date">1992–1995</span><span class="timeline-text"><strong>Bosnian Ethnic Cleansing</strong> — Europe's worst atrocity since WWII; Srebrenica massacre (1995) recognized as genocide</span></div>
+    <div class="timeline-item"><span class="timeline-date">1994</span><span class="timeline-text"><strong>Rwandan Genocide</strong> — ~800,000 Tutsi and moderate Hutu killed in 100 days; international community fails to intervene</span></div>
+    <div class="timeline-item"><span class="timeline-date">2003–present</span><span class="timeline-text"><strong>Darfur, Sudan</strong> — Attacks on non-Arab Sudanese communities; recognized as genocide by multiple governments</span></div>
+  </div>
+
+  <!-- Vocab Cards -->
+  <div class="section-h">📇 Vocabulary — Click to Flip</div>
+  <div class="flip-grid" id="flip-grid"></div>
+
+  <!-- MCQ -->
+  <div class="section-h">✅ Multiple Choice — Instant Feedback</div>
+  <div id="mcq-container"></div>
+
+  <!-- Matching -->
+  <div class="section-h">🔗 Matching — Atrocities & Perpetrators</div>
+  <div class="matching-wrap">
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Drag each description to match the correct atrocity on the left.</p>
+    <div class="matching-defs-pool" id="defs-pool"></div>
+    <div id="matching-area"></div>
+    <div class="matching-controls">
+      <button class="btn-sm btn-check" onclick="checkMatching()">CHECK ANSWERS</button>
+      <button class="btn-sm" onclick="resetMatching()">RESET</button>
+      <span id="match-score"></span>
+    </div>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-1" onclick="markComplete(1)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 2 -->
+<section class="dok-section dok2" id="dok2">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 2</span>
+    <span class="dok-section-title">Knowledge Application</span>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">🖼 NotebookLM Infographic</div>
+    <p>Pull up the 7.8 infographic from NotebookLM. Look for the <strong>three-step blueprint visual</strong> and the <strong>comparison chart</strong> showing the blueprint applied across multiple case studies. Notice what stays constant across very different ideologies, time periods, and places — that consistency is the analytical key for AP essays.</p>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="section-h">✍️ Explain Drill 1 — The Three-Step Blueprint</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">Using the Holocaust as your primary example, explain how the three-step blueprint — Define the Other, Wield State Power, Justify the Violence — operated. For each step, provide at least one specific piece of evidence. Then identify which step you consider most important and explain why.</p>
+  </div>
+  <textarea class="write-area" style="min-height:140px;" placeholder="Explain all three steps with evidence, then argue which is most important..."></textarea>
+  <div class="accordion" id="acc-drill1">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill1')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p><strong>Step 1 — Define the Other:</strong> The Nazis didn't begin with concentration camps — they began with propaganda. They systematically hammered the message that Jewish people were a dangerous threat to the "pure German race." This ideology was then baked into law: the 1935 Nuremberg Laws stripped Jewish people of their citizenship and legal rights, while forced ghettoization physically isolated and concentrated the targeted population. By the time mass murder began, a legal and cultural infrastructure of dehumanization had been built over years.</p>
+      <p><strong>Step 2 — Wield State Power:</strong> The Nazi state turned the entire bureaucratic apparatus into a weapon — census data to identify, rail systems to transport, and purpose-built death camps to execute. This is what made the Holocaust distinct from ordinary mass violence: its industrial efficiency. One Holocaust survivor quote captures this: the bureaucratic normality of it was incomprehensible to victims — that a modern state could run murder like a logistics operation.</p>
+      <p><strong>Step 3 — Justify the Violence:</strong> Nazi ideology framed the genocide as national survival — the elimination of an existential threat to the German people. This ideological justification made ordinary people — bureaucrats, train conductors, soldiers — participants in or bystanders to mass murder, because the state had made it feel not just permitted but necessary.</p>
+      <p><strong>Most important step:</strong> Step 2 — Wield State Power — is arguably the critical hinge. Many societies have generated hatred and dehumanizing ideology without committing genocide. What converts dehumanization into mass murder is state capacity: the police, military, and bureaucratic systems that enable organized, systematic killing at scale. Without state power, prejudice remains social violence; with it, it becomes genocide.</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="section-h" style="margin-top:28px;">✍️ Explain Drill 2 — "Never Again" and Its Failures</div>
+  <div class="prompt-box">
+    <div class="prompt-label">Explain Prompt</div>
+    <p class="prompt-text">The video describes "Never Again" as a global promise that was broken, over and over again. Explain: (1) what structural change the post-Holocaust world made to try to prevent future genocides, (2) why that change proved insufficient, and (3) what the video's case studies of Rwanda and Bosnia reveal about the gap between legal frameworks and actual prevention.</p>
+  </div>
+  <textarea class="write-area" style="min-height:130px;" placeholder="Explain the structural change, its limits, and what Rwanda/Bosnia reveal..."></textarea>
+  <div class="accordion" id="acc-drill2">
+    <div class="accordion-header" onclick="toggleAccordion('acc-drill2')">
+      <span class="accordion-title">👁 Reveal Sample Answer</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE ANSWER — DOK 2</div>
+      <p><strong>Structural change:</strong> The 1948 UN Genocide Convention created the first legal definition of genocide in international law — the deliberate attempt to destroy a national, ethnic, racial, or religious group. For the first time, this specific crime had a name, a legal definition, and in theory, an international obligation to prevent and punish it. This was a genuine milestone: law now recognized what had previously been unnamed.</p>
+      <p><strong>Why it was insufficient:</strong> The video makes the bitter point that "just because you can name something doesn't mean you can stop it." The Genocide Convention created legal obligations but no enforcement mechanism with real teeth. States retained sovereignty over their own populations, the UN Security Council could be blocked by veto, and international political will to intervene in other countries' internal violence was consistently weak. Naming the crime proved far easier than preventing it.</p>
+      <p><strong>Rwanda and Bosnia:</strong> Both cases demonstrate the gap between legal frameworks and actual prevention in the starkest terms. In Rwanda (1994), the international community watched ~800,000 people be killed in 100 days — with the radio propaganda, the militia mobilization, and the identity-card checkpoints all visible in real time — and did not intervene fast enough to stop it. In Bosnia, the Srebrenica massacre of ~8,000 Bosniak Muslim men occurred in a UN-designated "safe area" under the eyes of Dutch UN peacekeepers. In both cases, the world knew what was happening and didn't do enough. This is the video's hardest conclusion: the gap between naming genocide and preventing it has remained enormous, because prevention requires political will that legal frameworks alone cannot generate.</p>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="section-h" style="margin-top:28px;">📊 Comparison Table — The Blueprint Across Case Studies</div>
+  <div style="overflow-x:auto;margin-bottom:16px;">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Case Study</th>
+          <th>The "Other" Defined</th>
+          <th>Ideology Used to Justify</th>
+          <th>Key State Mechanism</th>
+          <th>Approximate Scale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Armenian Genocide</td><td>Christian Armenians as non-Turkish threat</td><td>Ottoman nationalism</td><td>Military deportations + mass executions</td><td>~1.5 million killed</td></tr>
+        <tr><td>Holodomor</td><td>Ukrainian peasants as "class enemies"</td><td>Stalinist communism</td><td>State-engineered famine; grain seizures; border controls</td><td>3–5 million starved</td></tr>
+        <tr><td>Holocaust</td><td>Jews, Roma, disabled — "racial threat"</td><td>Nazi racial ideology</td><td>Industrial death camps + full bureaucratic apparatus</td><td>~6 million Jews + millions more</td></tr>
+        <tr><td>Cambodian Genocide</td><td>Educated, minorities, "old society"</td><td>Khmer Rouge radical Maoism</td><td>Forced evacuations + Killing Fields camps</td><td>1.5–2 million (~25% of population)</td></tr>
+        <tr><td>Rwandan Genocide</td><td>Tutsi as "cockroaches" (inyenzi)</td><td>Hutu Power ethnic nationalism</td><td>Radio propaganda + militia (Interahamwe) + ID cards at checkpoints</td><td>~800,000 in 100 days</td></tr>
+        <tr><td>Bosnia</td><td>Bosnian Muslims and Croats</td><td>Serbian ethnic nationalism</td><td>Military ethnic cleansing + Srebrenica massacre</td><td>~100,000 killed; 2.2M displaced</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prompt-box" style="margin-bottom:12px;">
+    <div class="prompt-label">Reflection Prompt</div>
+    <p class="prompt-text">The video argues these atrocities share a "deadly blueprint" despite occurring in different times, places, and under different ideologies. Looking at the table, what is the most consistent factor across all cases? What does that consistency tell us about what makes mass atrocity possible?</p>
+  </div>
+  <textarea class="write-area" placeholder="What is the most consistent factor across all cases?..."></textarea>
+  <div class="accordion" id="acc-reflect">
+    <div class="accordion-header" onclick="toggleAccordion('acc-reflect')">
+      <span class="accordion-title">👁 Reveal Sample Reflection</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE REFLECTION — DOK 2/3</div>
+      <p>The most consistent factor is <strong>state involvement</strong> — in every case, the violence is not spontaneous mob hatred but organized, state-directed persecution. Even where non-state actors appear (Hutu militias in Rwanda, Khmer Rouge cadres in Cambodia), they operate with state authorization, state resources, or state ideology providing direction and legitimacy.</p>
+      <p>This consistency reveals the crucial insight: mass atrocity is not primarily a social phenomenon — it is a governmental one. Ordinary societies contain prejudice, ethnic tension, and inter-group hostility without committing genocide. What converts social hatred into mass murder is the weaponization of state power: the police who carry out arrests, the trains that transport victims, the bureaucrats who process paperwork, the soldiers who shoot. This is why Step 2 — Wield State Power — is so critical. The state is not just an enabler; it is the mechanism.</p>
+      <p>The ideologies vary enormously: nationalism, communism, racial ideology, religious exclusivism. The targets vary: ethnic, religious, class-based. But the involvement of state power in organizing, directing, and enabling the violence is constant. This is the video's sobering conclusion: the blueprint isn't found in a rare monstrous evil — it's found in the structure of how modern states work and how governments can choose to use that structure.</p>
+    </div>
+  </div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-2" onclick="markComplete(2)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 3 -->
+<section class="dok-section dok3" id="dok3">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 3</span>
+    <span class="dok-section-title">Knowledge Analysis</span>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="section-h">⛓ Causal Chain — From Prejudice to Genocide</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">This chain traces how ordinary social categorization escalates into mass atrocity. Two nodes are blank — fill in your analysis, then reveal to compare.</p>
+  <div class="causal-chain">
+    <div class="causal-node">
+      <div class="node-label">Step 1 — Given</div>
+      Social division exists: a society uses categories like ethnicity, religion, or class to organize its members. These are normal features of all societies.
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node blank">
+      <div class="node-label">Step 2 — Your Analysis</div>
+      <textarea placeholder="What happens when an extremist group gains power? How do normal social categories become dangerous? What is Step 1 of the blueprint?..."></textarea>
+      <button class="reveal-btn" onclick="revealAnswer('node2')">Reveal Answer</button>
+      <div class="answer-reveal" id="node2">An extremist group in power uses <strong>propaganda and law to weaponize those social categories</strong> — the "Define the Other" step. Normal differences (ethnicity, religion) are reframed as existential threats. Propaganda dehumanizes the targeted group; laws strip their rights. The process is gradual: it begins with words and ideas, moves to legal discrimination, then to physical segregation. The group that was a neighbor becomes an "enemy within."</div>
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node">
+      <div class="node-label">Step 3 — Given</div>
+      The government deploys the full machinery of the modern state — police, military, bureaucracy, census records, transportation networks — to identify, isolate, and target the defined "Other."
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node blank">
+      <div class="node-label">Step 4 — Your Analysis</div>
+      <textarea placeholder="How does ideology (Step 3 of the blueprint) enable ordinary people to participate in or tolerate mass murder? What role does 'justification' play?..."></textarea>
+      <button class="reveal-btn" onclick="revealAnswer('node4')">Reveal Answer</button>
+      <div class="answer-reveal" id="node4">Ideology — the "Justify the Violence" step — performs the crucial function of <strong>making perpetrators and bystanders feel they are doing the right thing</strong>. Without it, ordinary people would resist or refuse. With it, bureaucrats process paperwork, soldiers follow orders, neighbors inform on neighbors. Ideology converts an act of mass murder into an act of national salvation, class liberation, or racial purification. It is the cognitive mechanism that bridges the gap between ordinary human psychology and participation in atrocity.</div>
+    </div>
+    <div class="causal-arrow">↓</div>
+    <div class="causal-node">
+      <div class="node-label">Step 5 — Given</div>
+      Mass atrocity: systematic persecution escalates to mass murder, ethnic cleansing, or genocide — the deliberate attempt to destroy a group.
+    </div>
+  </div>
+  <div class="ap-insight">
+    <div class="insight-label">🎓 AP Exam Insight — Social Interactions and Organization</div>
+    <p>The AP framework of <strong>Social Interactions and Organization</strong> is the analytical lens for this module. The key insight is that the same social structures that normally organize societies — ethnic groups, religious communities, class hierarchies — can be weaponized by states into instruments of mass destruction. For AP essays, this means: don't treat mass atrocities as aberrations. Analyze them as evidence of what modern state power can do when directed against its own people, using the social categories that already structure society as targeting tools.</p>
+  </div>
+
+  <!-- SAQ -->
+  <div class="section-h" style="margin-top:32px;">📝 Short Answer Question (SAQ)</div>
+  <div class="prompt-box">
+    <div class="prompt-label">SAQ Claim</div>
+    <p class="prompt-text">"Mass atrocities in the twentieth century shared a common pattern: the weaponization of social divisions by states wielding modern bureaucratic and technological power, justified by extremist ideologies that defined certain groups as existential threats."</p>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">A</span><span class="saq-prompt">Identify ONE specific example of how a state used legal or bureaucratic mechanisms to "define the other" as a precondition for mass violence.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:90px;" placeholder="Write your Part A response here..."></textarea></div>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">B</span><span class="saq-prompt">Explain how one case study from the module (other than the Holocaust) demonstrates the same three-step blueprint as the Holocaust.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:100px;" placeholder="Write your Part B response here — choose a different case study than the Holocaust..."></textarea></div>
+  </div>
+  <div class="saq-part">
+    <div class="saq-part-header"><span class="saq-letter">C</span><span class="saq-prompt">Explain why the international community's promise of "Never Again" after the Holocaust was repeatedly broken in the late 20th century.</span></div>
+    <div class="saq-body"><textarea class="write-area" style="min-height:100px;" placeholder="Write your Part C response here..."></textarea></div>
+  </div>
+  <div class="accordion" id="acc-saq">
+    <div class="accordion-header" onclick="toggleAccordion('acc-saq')">
+      <span class="accordion-title">👁 Reveal Full SAQ Sample Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SAQ — DOK 3</div>
+      <p><strong>Part A:</strong> The 1935 Nuremberg Laws in Nazi Germany represent a clear legal mechanism for "defining the other." These laws formally stripped Jewish people of German citizenship, prohibited marriage or sexual relations between Jews and non-Jews, and systematically removed Jews from professional, civic, and public life — all through official government legislation. This is the key feature of Step 1 of the blueprint: the state does not begin with violence. It begins with law, which makes discrimination appear legitimate and creates the legal foundation for subsequent persecution. By the time deportations and mass murder began, years of legal dehumanization had already redefined Jewish people as non-persons in the eyes of the state.</p>
+      <p><strong>Part B:</strong> The Rwandan genocide (1994) demonstrates the same three-step blueprint as the Holocaust with remarkable clarity. <em>Step 1 (Define the Other):</em> Rwandan Hutu Power extremists used radio broadcasts — particularly Radio Mille Collines — to systematically dehumanize Tutsi people as "inyenzi" (cockroaches) in the weeks before the killings began, and identity cards that classified citizens by ethnicity had existed since Belgian colonial rule. <em>Step 2 (Wield State Power):</em> Government-organized militias (the Interahamwe) carried out killings with state weapons; the same identity cards used at military checkpoints to identify and execute Tutsi civilians. <em>Step 3 (Justify the Violence):</em> Hutu Power ideology framed the genocide as a defensive necessity — the Tutsi were presented as a ruling-class oppressor group that had to be eliminated for Hutu survival. Different ideology, different continent, different decade — but the same blueprint operating with the same deadly efficiency.</p>
+      <p><strong>Part C:</strong> The video identifies two core reasons the "Never Again" promise was broken. First, the <em>structural gap</em>: the 1948 Genocide Convention created a legal definition but no enforcement mechanism with real power. The UN Security Council could be paralyzed by veto; states retained sovereignty over their internal affairs; the political will to intervene in other countries' violence was consistently weak. Second, the <em>recognition gap</em>: the video notes that "the world basically knew it was happening, but didn't do enough, fast enough to stop it" — specifically in Rwanda and Bosnia. Knowing a genocide is occurring and having the political will to stop it are completely different things. In Rwanda, the international community even debated whether to use the word "genocide" during the killings — in part because recognizing it legally would have triggered obligations to act. The gap between naming atrocity and preventing it has remained enormous, because prevention requires political will that legal frameworks alone cannot generate.</p>
+    </div>
+  </div>
+
+  <!-- CCOT -->
+  <div class="section-h" style="margin-top:32px;">🔄 CCOT Analysis — Mass Violence Before and After the Holocaust</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:14px;">Analyze what <strong>changed</strong> and what <strong>continued</strong> about mass violence and the international response to it from before the Holocaust (c. 1900–1945) to after it (c. 1945–present).</p>
+  <div class="ccot-grid">
+    <div class="ccot-col">
+      <div class="ccot-col-header change-header">CHANGED (Post-Holocaust)</div>
+      <textarea placeholder="What new legal frameworks, international institutions, or concepts emerged after 1945?..."></textarea>
+    </div>
+    <div class="ccot-col">
+      <div class="ccot-col-header continue-header">CONTINUED (The Pattern Persists)</div>
+      <textarea placeholder="What patterns from pre-Holocaust mass violence continued after 1945?..."></textarea>
+    </div>
+  </div>
+  <div class="accordion" id="acc-ccot">
+    <div class="accordion-header" onclick="toggleAccordion('acc-ccot')">
+      <span class="accordion-title">👁 Reveal Sample CCOT Analysis</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE CCOT — DOK 3</div>
+      <p><strong>Changed:</strong> The most significant post-Holocaust change was the creation of new international legal and institutional frameworks. The 1948 UN Genocide Convention was the first time international law defined genocide as a specific crime and created obligations to prevent and punish it. The Nuremberg Trials (1945–46) established the precedent that individuals — including heads of state and government officials — could be held criminally responsible for crimes against humanity and genocide. The UN itself (1945) created an international forum for collective security. The International Criminal Court (est. 1998) formalized permanent international jurisdiction over genocide and war crimes. These were genuine structural changes: after the Holocaust, the international community had legal tools and institutional frameworks for recognizing and responding to mass atrocity that had not existed before.</p>
+      <p><strong>Continued:</strong> Despite these legal changes, the underlying pattern — the three-step blueprint of defining the other, wielding state power, and justifying violence — continued unchanged. Cambodia (1975), Bosnia (1992), Rwanda (1994), and Darfur (2003) all demonstrate the same mechanics. The perpetrators used different ideologies, targeted different groups, and operated in different political contexts, but the structural process was identical to what the Armenians experienced in 1915 and what Jewish people experienced in the 1940s. More damning still: the international community's <em>response</em> — knowing about atrocities in real time, debating whether to call them genocide, and failing to intervene fast enough — also continued as a pattern. The gap between legal obligation and political action proved to be one of the most persistent continuities of the post-WWII world.</p>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="section-h" style="margin-top:32px;">🏆 Thesis Evaluator</div>
+  <div class="prompt-box" style="margin-bottom:20px;">
+    <div class="prompt-label">LEQ Prompt</div>
+    <p class="prompt-text">"Evaluate the extent to which mass atrocities in the twentieth century shared a common pattern of causation, despite occurring in different regions, under different ideologies, and targeting different groups."</p>
+  </div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click <strong>"Evaluate"</strong> on each thesis to reveal whether it earns the AP thesis point and why.</p>
+  <div class="thesis-grid" id="thesis-grid"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-3" onclick="markComplete(3)">Mark Section Complete →</button>
+  </div>
+</section>
+
+<!-- DOK 4 -->
+<section class="dok-section dok4" id="dok4">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 4</span>
+    <span class="dok-section-title">Knowledge Augmentation</span>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">🔭 NotebookLM Synthesis Tip</div>
+    <p>The video closes with this: <strong>"The blueprint for these atrocities isn't found in some rare monstrous evil. It's found in the way we organize our societies, the way we draw lines between us and them, and the incredible power we give our governments to act on those lines."</strong></p>
+    <p>For DOK 4, you are being asked to connect 7.8's analysis of mass atrocity to broader historical patterns — particularly the relationship between state power, nationalism, and social organization that has run through all of Unit 7. Think about how 7.8 connects to what came before (the world wars that created the conditions for genocide) and what came after (the Cold War context that shaped international inaction).</p>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="section-h">🗺 Contextualization Builder — Choose Your Pathway</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">For AP LEQ or DBQ contextualization, you need to connect 7.8 to a <em>broader historical context</em> that precedes or shapes it. Choose one option below, write your contextualization, then reveal the sample to compare.</p>
+  <div class="context-options" id="context-options"></div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="section-h" style="margin-top:32px;">🌐 Cross-Unit Synthesis — 7.8 → Unit 8 (Cold War)</div>
+  <div class="synthesis-box">
+    <div class="syn-label">Synthesis Prompt</div>
+    <p class="syn-q">The video notes that after the Holocaust, genocides continued in Cambodia (1975), Bosnia (1992), Rwanda (1994), and Darfur (2003). All of these occurred during or after the Cold War era. Connect the Cold War's political dynamics — superpower rivalry, proxy conflicts, non-intervention norms — to the international community's repeated failure to prevent post-Holocaust genocides. How did the Cold War political context shape the gap between the "Never Again" promise and the reality of international inaction?</p>
+    <p>This is a DOK 4 task: you are exploring connections <em>across units and time periods</em>, not just summarizing 7.8 content.</p>
+  </div>
+  <textarea class="write-area" style="min-height:160px;" placeholder="Write your cross-unit synthesis here..."></textarea>
+  <div class="accordion" id="acc-synthesis">
+    <div class="accordion-header" onclick="toggleAccordion('acc-synthesis')">
+      <span class="accordion-title">👁 Reveal Sample Synthesis Response</span>
+      <span class="accordion-arrow">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="sample-label">SAMPLE SYNTHESIS — DOK 4</div>
+      <p>The Cold War created specific political conditions that systematically undermined the post-Holocaust promise of collective intervention against genocide. The most direct mechanism was the UN Security Council's veto system: the US and Soviet Union each had the power to block any resolution they found strategically inconvenient, and they routinely did. During the Cambodian genocide (1975–79), the Soviet Union supported Vietnam's eventual intervention that ended Khmer Rouge rule — but this was driven by Soviet-Vietnamese strategic interests, not humanitarian concern. The US, meanwhile, had allied itself with anti-communist forces in Southeast Asia that included Khmer Rouge-adjacent factions.</p>
+      <p>In Rwanda (1994), the failure was more direct. After the US military's traumatic experience in Somalia (1993), the Clinton administration was politically unwilling to commit forces to another African intervention. Classified documents later revealed that US officials were actively instructed to avoid using the word "genocide" — because legal recognition would have triggered obligations under the 1948 Convention that the US did not want to fulfill. The Cold War had ended by 1994, but the political culture of non-intervention it had created persisted.</p>
+      <p>The deeper connection to Unit 8 is structural: the Cold War established a norm in which superpower strategic interests consistently trumped humanitarian obligations, and in which the UN was frequently paralyzed by Security Council dynamics. The "Never Again" promise was made in 1948 within a UN framework that was already being shaped by Cold War rivalry. The gap between the promise and reality was, in part, a direct consequence of the geopolitical structure Unit 8 examines. Understanding why post-Holocaust genocides were not prevented requires understanding the Cold War political context that made international intervention so difficult to organize.</p>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="section-h" style="margin-top:32px;">🎯 Self-Assessment — Where Are You?</div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Click each dot to rate yourself: <span style="color:#d47a7a">●</span> Not yet / <span style="color:var(--gold-light)">●</span> Getting there / <span style="color:#7dc774">●</span> Got it</p>
+  <div class="self-assess" id="self-assess"></div>
+
+  <div class="complete-wrap">
+    <button class="btn-complete" id="complete-4" onclick="markComplete(4)">Mark Section Complete →</button>
+  </div>
+</section>
+
+</div>
+
+<script src="shared.js"></script>
+<script>
+// PROGRESS
+const sectionProgress = {1:false,2:false,3:false,4:false};
+function markComplete(n) {
+  sectionProgress[n] = true;
+  const btn = document.getElementById('complete-' + n);
+  btn.textContent = '✓ Section Complete';
+  btn.classList.add('done');
+  const done = Object.values(sectionProgress).filter(Boolean).length;
+  const pct = done * 25;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = pct + '%';
+}
+
+// ACCORDION
+function toggleAccordion(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// REVEAL
+function revealAnswer(id) {
+  document.getElementById(id).classList.add('show');
+}
+
+// VOCAB
+const vocabData = [
+  {term:'Genocide', hint:'The crime that had no name', def:'The deliberate and systematic destruction of a national, ethnic, racial, or religious group. The word was coined in 1944 by Raphael Lemkin and first codified in international law through the 1948 UN Genocide Convention. From Greek "genos" (race, kind) + Latin "caedere" (to kill).'},
+  {term:'Define the Other', hint:'Step 1 of the blueprint', def:'The first stage of the three-step atrocity blueprint: using propaganda and law to single out a group — by ethnicity, religion, class, or politics — and dehumanize them as a threat. The state doesn\'t begin with violence; it begins with words, then bakes ideology into law. Dehumanization creates the psychological and legal preconditions for mass murder.'},
+  {term:'Wield State Power', hint:'Step 2 — the critical hinge', def:'The second stage of the blueprint: turning the machinery of government — police, army, bureaucracy, census data, transportation — into a weapon against the targeted group. This is what distinguishes genocide from ordinary violence. Modern bureaucratic and technological capacity enables organized, industrial-scale killing that no mob could achieve alone.'},
+  {term:'Justify the Violence', hint:'Step 3 — ideology at work', def:'The third stage: deploying a unifying ideology to convince perpetrators, bystanders, and the wider population that the violence is not only acceptable but necessary and good. Without ideological justification, ordinary people resist participation. With it, bureaucrats process paperwork, soldiers follow orders, and ordinary citizens become participants in or tolerators of mass murder.'},
+  {term:'Nuremberg Laws', hint:'Law as a weapon against citizens', def:'1935 Nazi legislation that stripped Jewish people of German citizenship and prohibited marriage or sexual relations between Jews and non-Jews. A landmark example of "Define the Other" baked into official law: legal discrimination created the foundation for subsequent persecution and genocide. Laws made dehumanization appear legitimate and state-sanctioned.'},
+  {term:'Final Solution', hint:'State policy as mass murder', def:'The Nazi regime\'s plan for the systematic genocide of European Jewish people, implemented from 1941 onward through concentration and extermination camps. The term captures the bureaucratic normality of the Holocaust\'s industrial machinery — census data, rail schedules, administrative paperwork — applied to mass murder on an unprecedented scale.'},
+  {term:'Holodomor', hint:'Famine as a weapon', def:'The Soviet-engineered famine of 1932–33 that deliberately starved 3–5 million Ukrainians to death. Stalin\'s government seized grain, blocked borders, and prevented escape to crush resistance to collectivization and suppress Ukrainian national identity. A case study in mass atrocity using famine — not bullets — as the state\'s weapon.'},
+  {term:'Ethnic Cleansing', hint:'Removal through terror', def:'The forced removal of an ethnic or religious group from a territory through violence, intimidation, deportation, and mass murder. Distinguished from genocide by intent (territorial removal vs. total elimination), though the two frequently overlap. Systematic use in the Bosnian War (1992–95) helped trigger international recognition of the concept in modern law.'},
+  {term:'UN Genocide Convention', hint:'"Never Again" in law', def:'The 1948 international treaty that defined genocide for the first time in international law and created legal obligations for member states to prevent and punish it. A direct response to the Holocaust. Despite representing a genuine structural change, the Convention proved insufficient to prevent subsequent genocides due to lack of enforcement mechanisms and weak political will.'},
+  {term:'Kristallnacht', hint:'State-organized violence disguised as spontaneous', def:'The "Night of Broken Glass" (November 9–10, 1938): a coordinated pogrom against Jewish communities throughout Nazi Germany, orchestrated by the state but designed to appear as spontaneous public anger. Synagogues burned, businesses destroyed, Jews arrested en masse. A turning point signaling the shift from legal persecution (Nuremberg Laws) to organized physical violence.'}
+];
+
+const flipGrid = document.getElementById('flip-grid');
+vocabData.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'flip-card';
+  card.innerHTML = `<div class="flip-inner"><div class="flip-front"><div class="term">${v.term}</div><div class="hint">${v.hint}</div><div class="tap-hint">CLICK TO FLIP</div></div><div class="flip-back"><div class="def">${v.def}</div></div></div>`;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  flipGrid.appendChild(card);
+});
+
+// MCQ
+const mcqData = [
+  {
+    num:'Q1',
+    q:'According to the video\'s framework, what is the "three-step blueprint" that most mass atrocities follow?',
+    opts:['Economic crisis → military mobilization → civilian targeting','Define the Other → Wield State Power → Justify the Violence','Propaganda → dehumanization → international condemnation','Nationalism → imperialism → war crimes'],
+    correct:1,
+    fb:'The video explicitly introduces this three-step framework as the central analytical lens for the module. Step 1: Define the Other (propaganda + law to dehumanize a target group). Step 2: Wield State Power (turn government machinery into a weapon). Step 3: Justify the Violence (ideology that makes the murder feel necessary and right). This pattern appears across every case study from Armenia to Rwanda.'
+  },
+  {
+    num:'Q2',
+    q:'The video opens with an Adolf Hitler quote from 1939 in which he asks "Who, after all, speaks today of the annihilation of the Armenians?" What is the video\'s purpose in using this quote as an opening?',
+    opts:['To suggest that the Armenian genocide was not as historically significant as the Holocaust','To show that Hitler was aware of previous genocides and used their obscurity as confidence that he could act without consequences','To argue that the international community in 1939 had deliberately chosen to forget the Armenian genocide','To illustrate the difference between WWI-era and WWII-era international law'],
+    correct:1,
+    fb:'The quote establishes a central theme of the module: mass atrocities are not random eruptions but planned acts, and perpetrators learn from precedents. Hitler\'s awareness that the Armenian genocide had largely been forgotten gave him confidence that the world would not hold him accountable. This also connects to the module\'s later argument about "Never Again" — the pattern of naming atrocity without preventing it has repeated itself.'
+  },
+  {
+    num:'Q3',
+    q:'The video describes the Holocaust as unique in some ways but argues that its three-step pattern was "tragically, not unique at all." What does it mean for the Holocaust to be unique in scale but not in pattern?',
+    opts:['The Holocaust was the only case of genocide where the perpetrators were eventually held legally responsible for their crimes','The Holocaust\'s industrial efficiency and bureaucratic organization were unmatched, but the underlying logic of defining, targeting, and justifying violence against a group appeared in other atrocities','The Holocaust is unique because it was the first time in history that a modern state systematically targeted its own citizens','The Holocaust was unique because it was motivated by racial ideology, while other atrocities were motivated by economic or political concerns'],
+    correct:1,
+    fb:'This distinction is crucial for AP essay writing. The Holocaust\'s scale and industrial methodology — gas chambers, death camps, the full mobilization of state bureaucracy including census data and train schedules — were historically unprecedented. But the pattern of defining a group as an existential threat, wielding state power against them, and justifying the violence with ideology appears in the Armenian genocide, Holodomor, Cambodian genocide, Rwanda, and Bosnia. This is the video\'s key comparative argument.'
+  },
+  {
+    num:'Q4',
+    q:'The AP lens for 7.8 is "Social Interactions and Organization." Based on the video\'s argument, why is this lens particularly appropriate for analyzing mass atrocities?',
+    opts:['Because mass atrocities primarily occur in societies with weak family structures and poor social cohesion','Because the ordinary ways societies group people — by ethnicity, religion, class — can be weaponized by states into tools of persecution and murder','Because studying social organization helps us understand why some groups are inherently more prone to committing violence than others','Because mass atrocities always target groups that occupy a specific economic class within the social hierarchy'],
+    correct:1,
+    fb:'The video explicitly uses this AP framework as its analytical entry point. Social Interactions and Organization is the right lens because it helps us see how normal social categories — ethnicity, religion, class — that exist in all societies become dangerous when an extremist group gains state power and weaponizes those categories. Genocide is not the product of unusual social pathology; it emerges from the structure of how societies already organize their members, then weaponized.'
+  },
+  {
+    num:'Q5',
+    q:'The video describes the post-Holocaust promise of "Never Again" and then argues it was broken. What specific evidence does the video use to support this conclusion?',
+    opts:['The failure of the Nuremberg Trials to punish all Nazi war criminals, allowing some perpetrators to escape justice','Ethnic cleansing in Bosnia, the Rwandan genocide (~800,000 killed in 100 days), and the attacks in Darfur — all cases where the world "basically knew it was happening but didn\'t do enough, fast enough to stop it"','The fact that the UN Genocide Convention was not ratified by enough countries to be effective as international law','The continuation of colonial violence in Africa and Asia in the decades after WWII'],
+    correct:1,
+    fb:'The video names specifically: Bosnia in the 1990s (ethnic cleansing), Rwanda in 1994 (~800,000 killed in 100 days), and Darfur in the 2000s. The key phrase is that "the world basically knew it was happening, but didn\'t do enough, fast enough to stop it." This is the video\'s bitter assessment of the gap between the legal framework created after the Holocaust and the actual international response when subsequent genocides occurred.'
+  }
+];
+
+const mcqContainer = document.getElementById('mcq-container');
+mcqData.forEach((q, qi) => {
+  const div = document.createElement('div');
+  div.className = 'mcq-item';
+  const opts = q.opts.map((o, oi) => `<button class="mcq-option" data-qi="${qi}" data-oi="${oi}" onclick="selectMCQ(this,${qi},${oi})"><span class="opt-letter">${'ABCD'[oi]}</span>${o}</button>`).join('');
+  div.innerHTML = `<div class="mcq-q"><span class="q-num">${q.num} OF ${mcqData.length}</span>${q.q}</div><div class="mcq-options">${opts}</div><div class="mcq-feedback" id="fb-${qi}"></div>`;
+  mcqContainer.appendChild(div);
+});
+
+function selectMCQ(btn, qi, oi) {
+  const allOpts = document.querySelectorAll(`[data-qi="${qi}"]`);
+  allOpts.forEach(b => b.classList.add('disabled'));
+  const q = mcqData[qi];
+  const fb = document.getElementById('fb-' + qi);
+  if (oi === q.correct) {
+    btn.classList.add('correct');
+    fb.className = 'mcq-feedback show fb-correct';
+    fb.innerHTML = '✓ Correct! ' + q.fb;
+  } else {
+    btn.classList.add('incorrect');
+    allOpts[q.correct].classList.add('correct');
+    fb.className = 'mcq-feedback show fb-incorrect';
+    fb.innerHTML = '✗ Not quite. ' + q.fb;
+  }
+}
+
+// MATCHING
+const matchData = [
+  {term:'Armenian Genocide', def:'State used military deportations into the desert + executions; 1.5 million killed under Ottoman nationalism'},
+  {term:'Holodomor', def:'Stalin\'s state-engineered famine deliberately starved 3–5 million Ukrainians labeled as "class enemies"'},
+  {term:'Cambodian Genocide', def:'Khmer Rouge\'s Year Zero ideology led to mass murder of ~25% of Cambodia\'s entire population'},
+  {term:'Rwandan Genocide', def:'~800,000 Tutsi and moderate Hutu killed in 100 days; radio propaganda and identity cards used to target victims'},
+  {term:'Bosnia', def:'Srebrenica massacre and ethnic cleansing by Bosnian Serb forces; Europe\'s worst atrocity since WWII'}
+];
+
+let shuffledDefs = [...matchData.map(d=>d.def)].sort(()=>Math.random()-0.5);
+let droppedAnswers = {};
+
+function buildMatching() {
+  const pool = document.getElementById('defs-pool');
+  const area = document.getElementById('matching-area');
+  pool.innerHTML = '';
+  area.innerHTML = '';
+  droppedAnswers = {};
+
+  shuffledDefs.forEach((def, i) => {
+    const el = document.createElement('div');
+    el.className = 'match-def';
+    el.id = 'def-' + i;
+    el.draggable = true;
+    el.setAttribute('data-def', def);
+    el.innerHTML = `<span class="drag-handle">⠿</span><span>${def}</span>`;
+    el.addEventListener('dragstart', e => { e.dataTransfer.setData('text/plain', def); el.classList.add('dragging'); });
+    el.addEventListener('dragend', () => el.classList.remove('dragging'));
+    pool.appendChild(el);
+  });
+
+  matchData.forEach((pair, i) => {
+    const row = document.createElement('div');
+    row.className = 'matching-row';
+    const termEl = document.createElement('div');
+    termEl.className = 'match-term';
+    termEl.textContent = pair.term;
+    const dropEl = document.createElement('div');
+    dropEl.className = 'match-drop';
+    dropEl.id = 'drop-' + i;
+    dropEl.textContent = 'DROP ANSWER HERE';
+    dropEl.setAttribute('data-term', pair.term);
+    dropEl.addEventListener('dragover', e => { e.preventDefault(); dropEl.classList.add('drag-over'); });
+    dropEl.addEventListener('dragleave', () => dropEl.classList.remove('drag-over'));
+    dropEl.addEventListener('drop', e => {
+      e.preventDefault();
+      const def = e.dataTransfer.getData('text/plain');
+      dropEl.classList.remove('drag-over');
+      if (dropEl.getAttribute('data-filled')) returnDefToPool(dropEl.getAttribute('data-filled'));
+      dropEl.textContent = def;
+      dropEl.classList.add('filled');
+      dropEl.setAttribute('data-filled', def);
+      droppedAnswers[pair.term] = def;
+      hideDefFromPool(def);
+    });
+    row.appendChild(termEl);
+    row.appendChild(dropEl);
+    area.appendChild(row);
+  });
+}
+
+function hideDefFromPool(def) {
+  document.querySelectorAll('.match-def').forEach(el => { if(el.getAttribute('data-def')===def) el.style.display='none'; });
+}
+function returnDefToPool(def) {
+  document.querySelectorAll('.match-def').forEach(el => { if(el.getAttribute('data-def')===def) el.style.display='flex'; });
+}
+function checkMatching() {
+  let correct = 0;
+  matchData.forEach((pair, i) => {
+    const drop = document.getElementById('drop-' + i);
+    if (drop.getAttribute('data-filled') === pair.def) {
+      drop.style.borderColor='#2d5a27'; drop.style.background='rgba(45,90,39,0.2)'; drop.style.color='#7dc774'; correct++;
+    } else if (drop.getAttribute('data-filled')) {
+      drop.style.borderColor='#6b2d2d'; drop.style.background='rgba(107,45,45,0.2)'; drop.style.color='#d47a7a';
+    }
+  });
+  document.getElementById('match-score').textContent = correct + ' / ' + matchData.length + ' correct';
+}
+function resetMatching() {
+  shuffledDefs = [...matchData.map(d=>d.def)].sort(()=>Math.random()-0.5);
+  droppedAnswers = {};
+  document.getElementById('match-score').textContent = '';
+  buildMatching();
+}
+buildMatching();
+
+// THESIS CARDS
+const thesisData = [
+  {
+    text:'"In the twentieth century, mass atrocities like the Holocaust, the Armenian genocide, and the Rwandan genocide all involved governments using violence against their own populations."',
+    verdict:'fail',
+    why:'This is a descriptive observation, not a historical argument. It lists cases and identifies a similarity (government violence) but makes no claim about the <em>extent</em> to which they share a pattern or what that pattern reveals. No line of reasoning, no arguable thesis.'
+  },
+  {
+    text:'"Despite occurring across different ideologies, regions, and time periods, twentieth-century mass atrocities shared a common pattern of causation: extremist groups seized state power and used modern bureaucratic mechanisms to target dehumanized groups, revealing that the capacity for genocide is embedded in the structure of the modern state itself rather than in any particular ideology."',
+    verdict:'pass',
+    why:'Strong, defensible thesis with a specific, arguable line of reasoning (the pattern is structural, not ideological). Uses the evidence (different ideologies, same pattern) to make a broader claim about state power and genocide. Addresses the "extent" question and provides a framework for evidence across multiple paragraphs. This earns the thesis point and sets up potential complexity.'
+  },
+  {
+    text:'"The Holocaust was fundamentally different from other mass atrocities because of its unique industrial scale, making it impossible to compare to events like the Rwandan genocide or the Armenian genocide."',
+    verdict:'fail',
+    why:'This thesis takes a defensible position (the Holocaust\'s industrial scale was unique) but then undermines its own usefulness by claiming comparison is impossible — which contradicts the entire analytical project the prompt asks for. It also misses the video\'s central argument: the pattern was shared even if the scale differed. A stronger thesis would acknowledge the Holocaust\'s uniqueness while arguing for the shared blueprint.'
+  },
+  {
+    text:'"While the ideologies that drove mass atrocities varied significantly — from Ottoman nationalism to Stalinist communism to Nazi racial ideology — the underlying mechanism was consistent: all three steps of the atrocity blueprint depended on a modern state willing to turn its administrative and coercive capacity against its own population, suggesting that the danger lies not in any specific ideology but in the combination of extremism and state power."',
+    verdict:'pass',
+    why:'Sophisticated thesis that acknowledges variation (different ideologies) to make a stronger comparative claim (consistent mechanism). The "not in any specific ideology but in the combination of extremism and state power" framing is exactly the kind of nuanced arguable claim that earns thesis and complexity points. Strong line of reasoning ready for evidentiary support.'
+  }
+];
+
+const thesisGrid = document.getElementById('thesis-grid');
+thesisData.forEach((t, i) => {
+  const card = document.createElement('div');
+  card.className = 'thesis-card';
+  card.innerHTML = `<div class="thesis-card-body">${t.text}</div><button class="thesis-reveal-btn" onclick="revealThesis(${i})">EVALUATE THIS THESIS ↓</button><div class="thesis-verdict ${t.verdict}" id="tv-${i}"><span class="verdict-badge ${t.verdict}">${t.verdict==='pass'?'✓ PASS':'✗ FAIL'}</span>${t.why}</div>`;
+  thesisGrid.appendChild(card);
+});
+function revealThesis(i) {
+  document.getElementById('tv-' + i).classList.toggle('show');
+}
+
+// CONTEXTUALIZATION
+const contextData = [
+  {
+    label:'Option A',
+    title:'WWI and the Collapse of Multiethnic Empires',
+    prompt:'Connect: WWI destroyed the Ottoman, Austro-Hungarian, and Russian empires, leaving behind ethnically mixed territories under new nationalist governments with unresolved minority questions. How did this imperial collapse create the conditions — political instability, ethnic conflict, extreme nationalism — that enabled multiple 20th-century mass atrocities?',
+    sample:'World War I (1914–1918) dissolved the multiethnic Ottoman, Austro-Hungarian, and Russian empires, which had governed dozens of ethnic and religious communities under centralized imperial rule. The post-WWI settlement replaced these empires with new nation-states organized around principles of ethnic nationalism — but the populations of these states were ethnically mixed in ways that made "pure" nation-states impossible without exclusion, displacement, or violence. The Armenian genocide occurred within this context: the Ottoman Empire, already in crisis, used wartime conditions and nationalist ideology to target a Christian minority population it identified as a potential fifth column. The broader pattern — extremist nationalism directed against ethnic or religious minorities within newly created or contested states — would repeat across the century. The Versailles settlement\'s failure to create stable, legitimate governance structures for post-imperial territories created a recurring condition: states where nationalist movements could identify internal "enemies" and governments with the power and motivation to act against them.'
+  },
+  {
+    label:'Option B',
+    title:'The Rise of Totalitarian States and Ideology',
+    prompt:'Connect: 7.6 established that WWII resulted partly from the rise of totalitarian regimes that rejected liberal democratic norms. How does the rise of totalitarianism in the 1920s–1930s (Nazi Germany, Soviet Union) provide context for 7.8\'s argument about how extremist ideologies, combined with state power, enable genocide?',
+    sample:'The rise of totalitarian states in the 1920s and 1930s created the specific political conditions under which the twentieth century\'s most devastating mass atrocities became possible. Totalitarianism, as the Nazi and Soviet models demonstrated, was distinguished by the state\'s claim to total authority over every aspect of social life — including the right to define which groups belonged to the nation and which were enemies. In Nazi Germany, the state\'s ideological claim to racial purity made the Jewish population not a minority to be managed but an existential threat to be eliminated. In the Soviet Union, Stalin\'s ideological claim that class enemies were enemies of history itself made Ukrainian peasants — and later Soviet ethnic minorities — targets of state terror and engineered famine. What distinguished these regimes was not simply their violence but their use of modern bureaucratic and technological capacity to make violence systematic, scalable, and deniable. This is the context 7.8 requires: mass atrocity in the 20th century was not a feature of primitive societies but of the most technologically advanced states in history, when those states were seized by extremist ideologies that identified human categories for elimination.'
+  },
+  {
+    label:'Option C',
+    title:'Social Darwinism and the Weaponization of Race and Class',
+    prompt:'Connect: Late 19th-century intellectual developments — Social Darwinism, scientific racism, the application of evolutionary metaphors to social competition — provided the ideological raw material for 20th-century genocide. How did these earlier intellectual currents shape the ideological justifications (Step 3 of the blueprint) that enabled mass atrocity?',
+    sample:'The ideological raw material for 20th-century genocide was largely assembled in the late 19th century. Social Darwinism — the application of evolutionary theory to human societies — provided a pseudoscientific framework for understanding inter-group competition as natural, necessary, and progressive. If societies competed for survival like species, then "inferior" groups threatened the vitality of the whole. Racial science, developed in European and American universities in the mid-to-late 19th century, gave this framework biological grounding: races were categorized, ranked, and their characteristics described as innate and immutable. By the early 20th century, these ideas had entered mainstream politics across Europe and North America, providing the intellectual scaffolding for nationalist movements that identified internal ethnic or racial minorities as biological threats. Nazi racial ideology was not invented in a vacuum — it drew on decades of European racial science and Social Darwinist thought. Similarly, the Khmer Rouge\'s ideology drew on Marxist class analysis taken to a genocidal extreme: class enemies were not simply political opponents but obstacles to the natural progress of history who had to be eliminated. Understanding these intellectual antecedents is essential for contextualizing 7.8: the ideological justifications for mass atrocity did not emerge suddenly — they were built over generations of political and intellectual development that normalized the idea of eliminating human groups for collective benefit.'
+  }
+];
+
+const ctxOptions = document.getElementById('context-options');
+contextData.forEach((c, i) => {
+  const div = document.createElement('div');
+  div.className = 'context-option';
+  div.innerHTML = `
+    <div class="context-option-header" onclick="toggleCtx(${i})">
+      <span class="context-label">${c.label}</span>
+      <span class="context-title">${c.title}</span>
+      <span class="context-arrow" id="ctx-arrow-${i}">▼</span>
+    </div>
+    <div class="context-body" id="ctx-body-${i}">
+      <div class="prompt-box" style="margin-bottom:14px;"><div class="prompt-label">Connection Prompt</div><p class="prompt-text">${c.prompt}</p></div>
+      <textarea class="write-area" style="min-height:120px;" placeholder="Write your contextualization paragraph here..."></textarea>
+      <div class="accordion" id="ctx-acc-${i}">
+        <div class="accordion-header" onclick="toggleAccordion('ctx-acc-${i}')"><span class="accordion-title">👁 Reveal Sample Contextualization</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body"><div class="sample-label">SAMPLE — DOK 4</div><p>${c.sample}</p></div>
+      </div>
+    </div>`;
+  ctxOptions.appendChild(div);
+});
+
+function toggleCtx(i) {
+  const body = document.getElementById('ctx-body-' + i);
+  const arrow = document.getElementById('ctx-arrow-' + i);
+  const isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+document.getElementById('ctx-body-0').style.display = 'block';
+document.getElementById('ctx-arrow-0').style.transform = 'rotate(180deg)';
+
+// SELF-ASSESSMENT
+const skillData = [
+  'I can explain the three-step blueprint (Define the Other → Wield State Power → Justify the Violence) and apply it to at least two case studies',
+  'I can identify the specific mechanisms each case study used for each step of the blueprint',
+  'I can explain what made the Holocaust\'s scale and methodology historically unique, while also explaining what pattern it shared with other atrocities',
+  'I can analyze why the post-Holocaust promise of "Never Again" was repeatedly broken, with specific evidence from Rwanda and Bosnia',
+  'I can use the AP lens of Social Interactions and Organization to explain how normal social categories become tools of mass murder',
+  'I can construct an AP-quality argument connecting 7.8\'s mass atrocity framework to either the conditions created by WWI/WWII (Unit 7) or the Cold War\'s political dynamics (Unit 8)'
+];
+
+const assessEl = document.getElementById('self-assess');
+skillData.forEach((skill, i) => {
+  const row = document.createElement('div');
+  row.className = 'skill-row';
+  row.innerHTML = `
+    <div class="skill-dots">
+      <div class="skill-dot level-1" id="dot-${i}-0" onclick="setSkill(${i},0)" title="Not yet"></div>
+      <div class="skill-dot level-2" id="dot-${i}-1" onclick="setSkill(${i},1)" title="Getting there"></div>
+      <div class="skill-dot level-3" id="dot-${i}-2" onclick="setSkill(${i},2)" title="Got it"></div>
+    </div>
+    <div class="skill-text">${skill}</div>`;
+  assessEl.appendChild(row);
+});
+
+function setSkill(skill, level) {
+  for (let l = 0; l < 3; l++) document.getElementById(`dot-${skill}-${l}`).classList.remove('active');
+  for (let l = 0; l <= level; l++) document.getElementById(`dot-${skill}-${l}`).classList.add('active');
+}
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'gBEgzSO89yE');
+initAutoSave('7_8');
+buildCompletionSection('7_8', '7.8 Mass Atrocities After 1900');
+
+const _origMarkComplete78 = markComplete;
+markComplete = function(n) {
+  _origMarkComplete78(n);
+  markDoneShared('7_8', 'complete-' + n, n * 25);
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.1 Study Materials — Shifting Power After 1900</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --parchment: #f5f0e8;
+    --parchment-dark: #ece5d4;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --steel: #3a4a5c;
+    --smoke: #6b6355;
+    --red: #8b1a1a;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+    --dok1: #2d5a27;
+    --dok2: #1a3d6e;
+    --dok3: #6b2d2d;
+    --dok4: #4a2d6b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg);
+    color: var(--parchment);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  .page-header {
+    background: linear-gradient(135deg, #1a1208 0%, #2a1e0e 50%, #1e160a 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,134,11,0.03) 40px, rgba(184,134,11,0.03) 41px);
+  }
+  .header-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--parchment);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .header-sub {
+    color: #b8a88a;
+    font-size: 0.95rem;
+    font-style: italic;
+    max-width: 620px;
+    margin: 0 auto 1.25rem;
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;
+  }
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── HOW TO USE ── */
+  .how-to {
+    background: rgba(184,134,11,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem auto;
+    max-width: 860px;
+    padding: 1rem 1.5rem;
+  }
+  .how-to-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .how-to p { font-size: 0.9rem; color: #c8b898; }
+
+  /* ── MAIN LAYOUT ── */
+  .main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+  /* ── DOK SECTION HEADERS ── */
+  .dok-section {
+    margin-bottom: 2.5rem;
+  }
+  .dok-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(184,134,11,0.25);
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .dok-badge.dok1 { background: var(--dok1); color: #c8e8c4; }
+  .dok-badge.dok2 { background: var(--dok2); color: #c4d4f0; }
+  .dok-badge.dok3 { background: var(--dok3); color: #f0c4c4; }
+  .dok-badge.dok4 { background: var(--dok4); color: #dcc4f0; }
+
+  .dok-header-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--parchment);
+    line-height: 1.2;
+  }
+  .dok-header-text p {
+    font-size: 0.8rem;
+    color: var(--smoke);
+    margin-top: 0.1rem;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--parchment);
+    margin-bottom: 0.5rem;
+  }
+  .card p, .card li { font-size: 0.92rem; color: #c8b898; }
+  .card ul, .card ol { padding-left: 1.25rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* ── VOCAB FLIP CARDS ── */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .vocab-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.25);
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .vocab-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .vocab-card.flipped { border-color: var(--gold); background: #3a2f1a; }
+  .vocab-front, .vocab-back { transition: opacity 0.2s; }
+  .vocab-card.flipped .vocab-front { display: none; }
+  .vocab-card:not(.flipped) .vocab-back { display: none; }
+  .vocab-term {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--parchment);
+    margin-bottom: 0.25rem;
+  }
+  .vocab-hint {
+    font-size: 0.75rem;
+    color: var(--smoke);
+    font-style: italic;
+  }
+  .vocab-def {
+    font-size: 0.82rem;
+    color: #c8b898;
+    line-height: 1.5;
+  }
+  .flip-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.4rem;
+    display: block;
+  }
+
+  /* ── MATCHING ACTIVITY ── */
+  .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+  .match-col-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    margin-bottom: 0.4rem;
+  }
+  .match-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    color: #c8b898;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.15); color: var(--parchment); }
+  .match-item.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; }
+  .match-item.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.15); color: #e0a0a0; }
+  .match-check-btn {
+    margin-top: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .match-check-btn:hover { background: rgba(184,134,11,0.15); }
+
+  /* ── MCQ ── */
+  .mcq-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .mcq-q {
+    font-size: 0.95rem;
+    color: var(--parchment);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+  .mcq-choices { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .mcq-choice {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.15);
+    border-radius: 5px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+    color: #c8b898;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+  }
+  .mcq-choice:hover:not(:disabled) { border-color: var(--gold); color: var(--parchment); }
+  .mcq-choice.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; }
+  .mcq-choice.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.12); color: #e0a0a0; }
+  .mcq-choice:disabled { cursor: default; }
+  .mcq-feedback {
+    display: none;
+    font-size: 0.82rem;
+    color: #b8a888;
+    padding: 0.6rem 0.9rem;
+    background: rgba(255,255,255,0.03);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    margin-top: 0.25rem;
+    line-height: 1.55;
+  }
+  .mcq-feedback.visible { display: block; }
+
+  /* ── SORTABLE CAUSE-EFFECT ── */
+  .sequence-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .seq-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 6px;
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+    color: #c8b898;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    user-select: none;
+  }
+  .seq-item:active { cursor: grabbing; opacity: 0.8; }
+  .seq-item.drag-over { border-color: var(--gold); background: rgba(184,134,11,0.1); }
+  .seq-handle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--smoke);
+    min-width: 1.5rem;
+  }
+
+  /* ── SHORT ANSWER ── */
+  .sa-prompt {
+    font-size: 0.9rem;
+    color: #c8b898;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(184,134,11,0.06);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+  }
+  .sa-textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 6px;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    padding: 0.75rem 1rem;
+    resize: vertical;
+    min-height: 90px;
+    transition: border-color 0.2s;
+  }
+  .sa-textarea:focus { outline: none; border-color: var(--gold); }
+  .sa-textarea::placeholder { color: var(--smoke); }
+
+  /* ── ACCORDION SAMPLE ANSWERS ── */
+  .accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: rgba(184,134,11,0.07);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 6px;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.55rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    transition: all 0.15s;
+  }
+  .accordion-btn:hover { background: rgba(184,134,11,0.13); }
+  .accordion-arrow { transition: transform 0.2s; font-size: 0.8rem; }
+  .accordion-btn.open .accordion-arrow { transform: rotate(90deg); }
+  .accordion-body {
+    display: none;
+    padding: 0.9rem 1rem;
+    background: rgba(184,134,11,0.04);
+    border: 1px solid rgba(184,134,11,0.15);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    font-size: 0.85rem;
+    color: #b8a888;
+    line-height: 1.6;
+  }
+  .accordion-body.open { display: block; }
+  .accordion-body strong { color: var(--parchment); }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    margin-bottom: 0.75rem;
+  }
+  .compare-table th {
+    background: rgba(184,134,11,0.15);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(184,134,11,0.3);
+  }
+  .compare-table td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: #c8b898;
+    vertical-align: top;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .compare-table td:first-child {
+    color: var(--parchment);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* ── THESIS EVALUATOR ── */
+  .thesis-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  @media (max-width: 560px) { .thesis-cards { grid-template-columns: 1fr; } }
+  .thesis-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(184,134,11,0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .thesis-card:hover { border-color: var(--gold); }
+  .thesis-text {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #c8b898;
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .thesis-verdict {
+    display: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  }
+  .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
+  .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
+  .thesis-explanation {
+    display: none;
+    font-size: 0.8rem;
+    color: #b8a888;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+  }
+  .thesis-card.revealed .thesis-verdict,
+  .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--smoke);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── CAUSAL CHAIN ── */
+  .causal-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .causal-node {
+    background: rgba(184,134,11,0.1);
+    border: 1px solid rgba(184,134,11,0.3);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+    color: #c8b898;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+  }
+  .causal-node.blank {
+    background: rgba(255,255,255,0.04);
+    border-style: dashed;
+  }
+  .causal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--parchment);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.82rem;
+    text-align: center;
+    outline: none;
+  }
+  .causal-input::placeholder { color: var(--smoke); font-size: 0.75rem; }
+  .causal-arrow {
+    color: var(--gold);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ── REFLECTION / SELF-ASSESS ── */
+  .skill-dots {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+  .skill-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(184,134,11,0.3);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .skill-dot.filled { background: var(--gold); border-color: var(--gold-light); }
+  .skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    gap: 1rem;
+  }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label { font-size: 0.85rem; color: #c8b898; flex: 1; }
+  .skill-scale {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--smoke);
+    text-align: right;
+    min-width: 80px;
+  }
+
+  /* ── BUTTON ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-top: 0.75rem;
+  }
+  .btn-primary:hover { background: rgba(184,134,11,0.15); color: var(--parchment); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(184,134,11,0.15);
+    margin: 2rem 0;
+  }
+
+  /* ── NOTEBOOKLM TIP ── */
+  .nlm-tip {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    background: rgba(26,61,110,0.2);
+    border: 1px solid rgba(100,150,220,0.3);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .nlm-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .nlm-tip p { font-size: 0.83rem; color: #a0b8d8; line-height: 1.55; }
+  .nlm-tip strong { color: #c8d8f0; }
+
+  /* ── PROGRESS TRACKER ── */
+  .progress-bar-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26,16,6,0.95);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(184,134,11,0.15);
+  }
+  .progress-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .progress-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--smoke);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .progress-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+  .progress-pct {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--gold);
+    min-width: 2.5rem;
+    text-align: right;
+  }
+
+  /* ── SECTION COMPLETE ── */
+  .section-complete-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.1rem;
+    background: transparent;
+    border: 1px solid rgba(184,134,11,0.3);
+    border-radius: 4px;
+    color: var(--smoke);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+  }
+  .section-complete-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .section-complete-btn.done { border-color: #4a9e3f; color: #a8e0a0; background: rgba(74,158,63,0.1); }
+  .check-icon { font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<!-- STICKY PROGRESS BAR -->
+<div class="progress-bar-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="header-title">7.1 Shifting Power After 1900</h1>
+  <p class="header-sub">Graduating activities from recall to argumentation — pair with the NotebookLM video, infographic, and audio overview</p>
+  <div class="chips">
+    <span class="chip">c. 1900–1920s</span>
+    <span class="chip">Governance</span>
+    <span class="chip">DOK 1 → DOK 4</span>
+    <span class="chip">Empire Collapse</span>
+    <span class="chip">SAQ · LEQ · DBQ</span>
+  </div>
+</div>
+
+<!-- HOW TO USE -->
+<div class="main" style="padding-top:1.25rem; padding-bottom:0;">
+  <div class="how-to">
+    <div class="how-to-title">📋 How to Use These Materials</div>
+    <p>Work through each section <strong>in order</strong>. Sections build on each other from basic recall (DOK 1) toward argumentation and synthesis (DOK 3–4). Complete the <strong>NotebookLM video</strong> before starting, and keep the <strong>infographic</strong> open alongside DOK 2–3 activities. Mark each section done to track your progress.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ════════════════════════════════════════
+       DOK 1: KNOWLEDGE ACQUISITION
+  ════════════════════════════════════════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok1">DOK 1 · Knowledge Acquisition</div>
+      <div class="dok-header-text">
+        <h2>Watch, Recall &amp; Define</h2>
+        <p>Answer correctly — identify, name, and locate key facts from the video and infographic</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🎬</div>
+      <p><strong>Before you begin:</strong> Watch the NotebookLM video explainer for 7.1 all the way through. As you watch, notice the central lens: <em>governance</em> — how states get power, use it, and lose it.</p>
+    </div>
+
+    <div id="videoEmbed"></div>
+
+    <!-- Vocab Flip Cards -->
+    <div class="card">
+      <div class="card-label">Activity 1A · Vocabulary · Click each card to reveal the definition</div>
+      <div class="vocab-grid" id="vocabGrid">
+        <!-- Generated by JS -->
+      </div>
+    </div>
+
+    <!-- Fact Recall MCQs -->
+    <div class="card">
+      <div class="card-label">Activity 1B · Fact Recall · Choose the best answer</div>
+
+      <!-- MCQ 1 -->
+      <div class="mcq-item">
+        <div class="mcq-q">1. What was the "central lens" through which the video analyzes the world after 1900?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Industrialization — how new technology changed production</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Governance — how states get power, use it, and lose it</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. Trade — how global commerce linked empires together</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Migration — how displaced populations reshaped borders</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video explicitly frames all events through the lens of <strong>governance</strong> — examining how authority was held, contested, and ultimately lost across three continents. This is also the AP skill of <em>causation</em> applied to political change.</div>
+      </div>
+
+      <!-- MCQ 2 -->
+      <div class="mcq-item">
+        <div class="mcq-q">2. Which of the following best describes the difference between maritime empires and land-based empires around 1900?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Maritime empires were older; land-based empires were industrializing</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. Land-based empires (Britain, France) controlled global trade routes</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. Maritime empires (Britain, France) had advanced technology and trade dominance; land-based empires (Ottomans, Russia, Qing) were showing serious internal cracks</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Land-based empires had larger navies; maritime empires relied on infantry</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video draws a clear contrast: seafaring maritime empires held technological and commercial advantages, while the ancient land-based empires were experiencing what the video calls "tense stability" — outwardly stable but rotting from within.</div>
+      </div>
+
+      <!-- MCQ 3 -->
+      <div class="mcq-item">
+        <div class="mcq-q">3. What was "Turkification," as practiced by the Young Turks?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. A policy of expanding Ottoman borders into Central Asia</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. A democratic reform movement that granted rights to all ethnic groups</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. An attempt to force a single Turkish Islamic identity on the Ottoman Empire's diverse population</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. A military alliance between the Ottomans and Germany before WWI</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. Turkification was the Young Turks' strategy to unify an empire fracturing along ethnic and religious lines — by erasing that diversity through forced assimilation. It backfired catastrophically, especially for Christian minorities like the Armenians.</div>
+      </div>
+
+      <!-- MCQ 4 -->
+      <div class="mcq-item">
+        <div class="mcq-q">4. What single statistic from Mexico best explains why revolution was inevitable?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Mexico had fought 12 wars with the United States over border disputes</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. 1% of the population controlled 97% of the land</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. The Catholic Church owned half of all farmable land in the country</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. U.S. companies employed over 3 million Mexican workers</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. This extreme concentration of land ownership under dictator Porfirio Díaz, combined with U.S. control of natural resources, created conditions where the majority had no path to economic improvement — making violent revolution almost inevitable.</div>
+      </div>
+
+      <!-- MCQ 5 -->
+      <div class="mcq-item">
+        <div class="mcq-q">5. Which sequence correctly traces Russia's path to revolution?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. WWI disaster → Bloody Sunday → Russo-Japanese War defeat → Bolshevik takeover</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Russo-Japanese War defeat → 1905 Revolution / Bloody Sunday → WWI disaster → Bolshevik takeover</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. 1905 Revolution → Russo-Japanese War → Bloody Sunday → WWI</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Bolshevik uprising → food shortages → WWI mobilization → Tsar's abdication</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video explicitly describes each crisis "stacking up" — the Russo-Japanese defeat humiliated the Tsar, the 1905 Revolution showed the public's anger, and WWI proved the final breaking point with hungry civilians and under-equipped soldiers.</div>
+      </div>
+    </div>
+
+    <!-- Matching -->
+    <div class="card">
+      <div class="card-label">Activity 1C · Matching · Click a term, then click its definition</div>
+      <div id="matchContainer">
+        <div class="match-grid">
+          <div>
+            <div class="match-col-label">Terms</div>
+            <div id="matchTerms"></div>
+          </div>
+          <div>
+            <div class="match-col-label">Definitions</div>
+            <div id="matchDefs"></div>
+          </div>
+        </div>
+        <div id="matchResult" style="font-size:0.82rem; color: #a8e0a0; margin-top:0.5rem; display:none;"></div>
+        <button class="match-check-btn" onclick="checkMatches()">Check Answers</button>
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok1Btn" onclick="markDone('dok1Btn', 25)">
+      <span class="check-icon">○</span> Mark DOK 1 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       DOK 2: KNOWLEDGE APPLICATION
+  ════════════════════════════════════════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok2">DOK 2 · Knowledge Application</div>
+      <div class="dok-header-text">
+        <h2>Explain &amp; Apply</h2>
+        <p>Establish and explain with examples — apply concepts to demonstrate understanding</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🗺️</div>
+      <p><strong>Use the infographic now.</strong> The infographic shows the internal pressures on each empire. As you work through these activities, reference it to add specific examples to your explanations.</p>
+    </div>
+
+    <!-- Describe Drill -->
+    <div class="card">
+      <div class="card-label">Activity 2A · Describe Drill · Internal Weaknesses</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Describe how internal weaknesses made land-based empires vulnerable to collapse after 1900. Your answer should identify <em>at least two specific examples</em> from two different empires.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Describe the internal weaknesses... (write 3–5 sentences with specific examples)"></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> Land-based empires faced overlapping internal crises that made reform nearly impossible. In Qing China, ethnic tension between the ruling Manchu minority and the Han Chinese majority created constant instability — the dynasty ruled a people who saw it as foreign. In the Ottoman Empire, a failing agrarian economy left the government without tax revenue to modernize its military or infrastructure. In Russia, Tsar Nicholas II refused to share political power even as industrialization created a new urban workforce demanding representation. These internal "cracks" meant that any external shock — like a military defeat or a world war — could bring the entire structure down. As the video notes, they were "sitting ducks" — too rigid to adapt.
+      </div>
+    </div>
+
+    <!-- Explain Drill -->
+    <div class="card">
+      <div class="card-label">Activity 2B · Explain Drill · Power Vacuum</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Explain why the collapse of empires after 1900 did <em>not</em> lead to peace. What rushed in to fill the power vacuum, and why did this cause conflict?
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Explain the concept of power vacuum and connect it to specific ideologies..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> When empires collapse, they do not simply disappear — they leave behind a dangerous void where no clear authority exists. After 1900, this "power vacuum" was filled not by one unified vision but by <em>competing and incompatible ideologies</em>: communism (Bolsheviks in Russia), republicanism (Sun Yat-sen in China), and aggressive nationalism (Young Turks, later fascism). These systems all claimed the right to organize society differently, making compromise extremely difficult. In Russia, the Bolsheviks didn't just want new leadership — they wanted to re-engineer society from its foundations. In the Ottoman Empire, Turkification tried to impose one identity on a diverse population. Each ideology was certain it was right, turning political disagreements into violent struggles that would define the rest of the 20th century.
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="card">
+      <div class="card-label">Activity 2C · Comparison Table · Russian vs. Chinese Revolution</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Study the completed comparison table below, then answer the reflection question underneath it.</p>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Russian Revolution (1917)</th>
+              <th>Chinese Revolution (1911)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Key Leader</td>
+              <td>Vladimir Lenin (Bolsheviks)</td>
+              <td>Sun Yat-sen (Nationalists)</td>
+            </tr>
+            <tr>
+              <td>Core Ideology</td>
+              <td>Communism — state controls all economy and property</td>
+              <td>Three People's Principles — democracy, nationalism, economic fairness</td>
+            </tr>
+            <tr>
+              <td>Model of Government</td>
+              <td>One-party communist state; no private ownership</td>
+              <td>Modern republic governed by educated experts</td>
+            </tr>
+            <tr>
+              <td>Trigger Factors</td>
+              <td>WWI losses, food shortages, Russo-Japanese War defeat</td>
+              <td>Ethnic tension (Manchu vs. Han), failed modernization, humiliating foreign concessions</td>
+            </tr>
+            <tr>
+              <td>Short-term Outcome</td>
+              <td>Romanov dynasty ended; civil war between Reds and Whites</td>
+              <td>Qing dynasty ended; Republic of China declared</td>
+            </tr>
+            <tr>
+              <td>Long-term Legacy</td>
+              <td>USSR established; communism spreads globally as an ideology</td>
+              <td>Fragile republic; eventual civil war between Nationalists and Communists</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sa-prompt" style="margin-top:0.75rem;">
+        <strong>Reflection question:</strong> What is the most significant similarity between these two revolutions? What is the most significant difference? Write 2–3 sentences.
+      </div>
+      <textarea class="sa-textarea" rows="4" placeholder="Both revolutions... However, they differed in..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Response
+      </button>
+      <div class="accordion-body">
+        <strong>Most significant similarity:</strong> Both revolutions were triggered by the failure of an ancient dynastic system to adapt to modern pressures — the Romanovs and the Qing both collapsed under the weight of internal contradictions and external shocks.<br><br>
+        <strong>Most significant difference:</strong> The ideologies that replaced those dynasties were fundamentally opposed — Lenin's communism sought to abolish private property and create a classless society run by the state, while Sun Yat-sen's vision preserved individual rights within a democratic republic. This difference would define Cold War conflict 30 years later.
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok2Btn" onclick="markDone('dok2Btn', 50)">
+      <span class="check-icon">○</span> Mark DOK 2 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       DOK 3: KNOWLEDGE ANALYSIS
+  ════════════════════════════════════════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok3">DOK 3 · Knowledge Analysis</div>
+      <div class="dok-header-text">
+        <h2>Argue &amp; Analyze</h2>
+        <p>Examine and explain with evidence — construct arguments, evaluate theses, build causal chains</p>
+      </div>
+    </div>
+
+    <!-- Causal Chain -->
+    <div class="card">
+      <div class="card-label">Activity 3A · Causal Chain · Drag to reorder, or fill in the blanks</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">The boxes below show the causal logic of 7.1. Two are blank — fill them in, then explain the connection between any two adjacent steps in the textarea below.</p>
+      <div class="causal-chain">
+        <div class="causal-node">Internal Crisis<br><small style="color:var(--smoke)">(ethnic tension, poor economy, autocracy)</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="Fill in: What external force hit weakened empires?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Revolution<br><small style="color:var(--smoke)">(Russia, China, Mexico, Ottoman)</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="Fill in: What dangerous gap did collapse create?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Competing Ideologies<br><small style="color:var(--smoke)">(communism, republicanism, nationalism)</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">20th-Century Conflict</div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> Reveal Answers
+      </button>
+      <div class="accordion-body">
+        <strong>Blank 1:</strong> External Pressure (WWI, foreign competition, imperial rivals — the external shocks that exposed internal rot)<br>
+        <strong>Blank 2:</strong> Power Vacuum (the dangerous empty space left when empires collapse, with no clear authority to replace them)<br><br>
+        <strong>Key connection to explain:</strong> Internal crisis alone rarely destroys empires — it takes a triggering external shock. Russia had internal problems for decades, but it was WWI that made them catastrophic. This is the difference between a <em>long-term cause</em> and a <em>proximate cause</em>.
+      </div>
+    </div>
+
+    <!-- SAQ -->
+    <div class="card">
+      <div class="card-label">Activity 3B · SAQ Practice · AP-Style Short Answer</div>
+      <div class="sa-prompt">
+        <strong>AP Prompt:</strong> "Explain how the collapse of ONE land-based empire after 1900 contributed to instability in the early twentieth century."<br><br>
+        <em>Write 2–3 sentences. Name the empire, identify a specific cause of collapse, and connect it to a form of instability that followed.</em>
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="The [empire] collapsed due to... This contributed to instability because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample SAQ Response (Russian Empire)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Response:</strong> The Russian Empire collapsed in 1917 after a cascade of internal and external pressures, including the humiliating defeat in the Russo-Japanese War, the Bloody Sunday massacre of 1905, and the catastrophic cost of World War I, which left troops under-armed and civilians starving. This collapse contributed to instability because it created a power vacuum that the Bolsheviks filled with a radical communist ideology — not just a new government, but a complete re-engineering of society that abolished private property and concentrated all power in the state. The establishment of a communist state in Russia subsequently inspired revolutionary movements globally and set up the ideological conflict between communism and capitalism that defined the rest of the twentieth century.<br><br>
+        <strong>AP Skill at work:</strong> Causation — this response identifies both a cause of collapse (WWI crisis) AND traces the effect to a broader development (global ideological conflict). Both are needed for full credit.
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <div class="card-label">Activity 3C · CCOT Analysis · Continuity and Change Over Time</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> What <em>continued</em> and what <em>changed</em> in the nature of political governance from 1900 to the 1920s? Give one specific example of each.
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+        <div>
+          <div class="match-col-label">What CHANGED in governance</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Example of change: a new type of government that emerged..."></textarea>
+        </div>
+        <div>
+          <div class="match-col-label">What CONTINUED in governance</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Example of continuity: something about political power that stayed the same..."></textarea>
+        </div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample CCOT Response
+      </button>
+      <div class="accordion-body">
+        <strong>CHANGE:</strong> The most dramatic change was the collapse of dynastic monarchy as the dominant form of government. By the 1920s, the Russian Romanov, Chinese Qing, and Ottoman dynasties — all of which had ruled for centuries — had been swept away and replaced by entirely new political systems (communism in Russia, a republic in China, and a nationalist Turkish state). The idea that a single emperor held absolute, divinely-sanctioned power was effectively destroyed in this period.<br><br>
+        <strong>CONTINUITY:</strong> Despite the rhetoric of liberation, the <em>concentration of political power in the hands of a small elite</em> continued. In Russia, the Tsar's autocracy was replaced not by democracy but by Bolshevik one-party rule. In Mexico, the PRI created a "stable but not always democratic" government that would control politics for 70 years. The faces changed; the concentration of power often did not.<br><br>
+        <strong>AP Tip:</strong> The best CCOT answers avoid oversimplified "everything changed" or "nothing changed" responses. The most sophisticated answers find the change <em>within</em> the continuity — in this case, the form of authoritarian governance changed, but its existence did not.
+      </div>
+    </div>
+
+    <!-- Thesis Evaluator -->
+    <div class="card">
+      <div class="card-label">Activity 3D · Thesis Evaluator · Click each thesis to reveal the verdict</div>
+      <div class="sa-prompt" style="margin-bottom:0.75rem;">
+        <strong>Essay Prompt:</strong> "Evaluate the extent to which internal weaknesses caused the collapse of land-based empires after 1900."
+      </div>
+      <p style="font-size:0.82rem; color:#b8a888; margin-bottom:0.75rem;">Read each thesis below. Click it to see whether it earns the AP thesis point — and why.</p>
+      <div class="thesis-cards">
+        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is a restatement, not a thesis. It simply says "internal weaknesses caused collapse" — which is just a paraphrase of the prompt. There is no line of reasoning, no categories of argument, and no \'to what extent\' claim. It earns zero points.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"Internal weaknesses were a major cause of the collapse of land-based empires after 1900, as shown by the examples of Russia, China, and the Ottoman Empire."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this, 'fail', 'This is historically defensible but still does not earn the point. It makes a factual claim (external pressure contributed) without establishing a line of reasoning. It doesn\'t address \'to what extent\' and provides no categories of argument or analytical framework.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"While internal weaknesses weakened land-based empires, external pressure from World War I was also an important cause of their collapse."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It responds to \'to what extent\' (internal weaknesses were necessary but not sufficient) and establishes a line of reasoning with two clear categories: internal rot created vulnerability, AND external pressure was the triggering cause. This gives the essay a clear analytical framework to argue.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"Although internal weaknesses such as ethnic tension and economic failure made land-based empires increasingly fragile, it was the external shock of World War I and military defeat that ultimately triggered their collapse by exposing those weaknesses to the world."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this, 'pass', 'This earns the thesis point. It makes a clear \'to what extent\' claim (internal weaknesses were the foundational cause but varied in type across empires) and establishes analytical categories: economic failure, ethnic divisions, political rigidity. This creates a comparative framework the essay can develop with evidence.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"Internal weaknesses were the foundational cause of imperial collapse after 1900, but these weaknesses took distinct forms — economic failure in the Ottomans, ethnic division in the Qing, and political rigidity in Russia — suggesting that no single explanation captures the full complexity of this global transformation."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok3Btn" onclick="markDone('dok3Btn', 75)">
+      <span class="check-icon">○</span> Mark DOK 3 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       DOK 4: KNOWLEDGE AUGMENTATION
+  ════════════════════════════════════════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok4">DOK 4 · Knowledge Augmentation</div>
+      <div class="dok-header-text">
+        <h2>Synthesize &amp; Transfer</h2>
+        <p>Explore and explain with examples and evidence — connect across time periods and construct original arguments</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🔗</div>
+      <p><strong>Synthesis challenge:</strong> DOK 4 asks you to connect 7.1 to ideas beyond this topic. Think about what you know from earlier units — 19th-century imperialism, the Industrial Revolution, or the Enlightenment — and use them to deepen your analysis below.</p>
+    </div>
+
+    <!-- Contextualization Builder -->
+    <div class="card">
+      <div class="card-label">Activity 4A · Contextualization Builder · AP Essay Skill</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Contextualization means connecting your essay topic to a broader historical development that <em>preceded or surrounded</em> it. Choose one of the prompts below and write a 3–4 sentence contextualization paragraph.</p>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.75rem;">
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option A:</strong> How did 19th-century European imperialism create the conditions that made these empires vulnerable by 1900?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option B:</strong> How did the Industrial Revolution create new pressures that traditional land-based empires were structurally unable to handle?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option C:</strong> How did Enlightenment ideas about self-determination and popular sovereignty create expectations that imperial subjects would eventually demand?
+        </div>
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="By the early 20th century, the pressures on land-based empires cannot be understood without first considering [your chosen context]..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Contextualization (Option C)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Contextualization — Enlightenment &amp; Self-Determination:</strong><br><br>
+        The Enlightenment of the 17th and 18th centuries fundamentally reshaped how people thought about political authority. Thinkers like John Locke and Jean-Jacques Rousseau argued that legitimate government derived not from God or hereditary right, but from the consent of the governed. These ideas spread through the Atlantic revolutions of the late 18th century — the American (1776) and French (1789) revolutions demonstrated that ordinary people could overthrow entrenched dynasties and build new systems based on popular sovereignty. By 1900, these ideals had circulated through educated classes in Russia, China, and the Ottoman Empire, creating populations who now had a <em>language of rights</em> to describe their dissatisfaction with autocratic rule. This made the internal crises of land-based empires especially combustible — the people suffering under these systems increasingly believed not just that things were bad, but that they had a <em>right</em> to demand change.<br><br>
+        <strong>AP Tip:</strong> A strong contextualization paragraph does three things: (1) describes the broader context, (2) explains how it relates to your essay topic, and (3) makes the connection specific — not just "the Enlightenment happened," but "the Enlightenment created the ideological conditions that made revolution seem legitimate."
+      </div>
+    </div>
+
+    <!-- Synthesis: Connect to Later Units -->
+    <div class="card">
+      <div class="card-label">Activity 4B · Cross-Unit Synthesis · Connecting Forward</div>
+      <div class="sa-prompt">
+        <strong>Synthesis Prompt:</strong> The video ends with this claim: <em>"The collapse of empires didn't bring peace — it unleashed a fierce battle of ideologies that defined the rest of the 20th century."</em><br><br>
+        In 3–5 sentences, explain how the developments of 7.1 (empire collapse, power vacuums, competing ideologies) help explain <em>at least one</em> event or development from a later period in this unit (7.2–7.9).
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="The power vacuum created by the collapse of the Russian Empire in 1917 helps explain..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Synthesis Response
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Synthesis — Connecting 7.1 to 7.6 (Causes of WWII):</strong><br><br>
+        The power vacuum created by WWI and the collapse of the Ottoman and Austro-Hungarian empires directly shaped the conditions that produced World War II. The Treaty of Versailles (1919) attempted to fill these vacuums by carving new nation-states from former imperial territories — but these borders often ignored ethnic and cultural realities, creating resentful, unstable states. In Germany, the war guilt clause and reparations humiliated a proud nation, providing fertile ground for an extreme nationalist ideology (fascism) to promise restoration of greatness. Mussolini in Italy and Hitler in Germany essentially exploited the same power-vacuum logic described in 7.1 — promising to fill the void of weak democratic governments with strong, ideologically unified states. The "fierce battle of ideologies" that began with competing visions of communism, republicanism, and nationalism after 1900 escalated into the fascism vs. democracy vs. communism triangle that made World War II inevitable.
+      </div>
+    </div>
+
+    <!-- Final Self-Assessment -->
+    <div class="card">
+      <div class="card-label">Activity 4C · Self-Assessment · Rate your confidence (click the dots)</div>
+      <div id="selfAssess">
+        <!-- Generated by JS -->
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok4Btn" onclick="markDone('dok4Btn', 100)">
+      <span class="check-icon">○</span> Mark DOK 4 Complete — Unit 7.1 Done!
+    </button>
+  </div>
+
+</div><!-- /main -->
+
+<script src="shared.js"></script>
+<script>
+// ── VOCAB DATA ──
+const vocab = [
+  { term: "Maritime Empire", hint: "Britain, France…", def: "Seafaring empires whose strength came from advanced technology and control of global trade routes; more adaptable to modern pressures than land-based rivals." },
+  { term: "Land-based Empire", hint: "Ottomans, Russia, Qing…", def: "Ancient sprawling empires that were showing serious internal cracks by 1900 — described as experiencing 'tense stability' that would soon shatter." },
+  { term: "Governance", hint: "The video's central lens…", def: "How states get power, use it, and lose it — the analytical framework through which the video interprets all events in this period." },
+  { term: "Bolsheviks", hint: "Lenin's party…", def: "Lenin's revolutionary movement that sought not just new leadership but a complete re-engineering of society — state control of the entire economy from factories to shops." },
+  { term: "Three People's Principles", hint: "Sun Yat-sen's vision…", def: "Sun Yat-sen's framework for China: a modern republic, democracy run by experts, national pride, and economic fairness for the people." },
+  { term: "Turkification", hint: "Young Turks' fatal policy…", def: "The attempt by the Young Turks to force a single Turkish Islamic identity on the Ottoman Empire's diverse population — a disastrous policy that worsened ethnic tensions." },
+  { term: "Power Vacuum", hint: "What collapse leaves behind…", def: "The dangerous empty space left when empires collapse, with no clear authority to fill it — in this period, filled by competing ideologies like communism and nationalism." },
+  { term: "Self-Determination", hint: "A destabilizing idea…", def: "The belief that peoples sharing a culture and language have the right to their own independent state — deeply threatening to multi-ethnic empires." },
+  { term: "Mexican Revolution", hint: "1910–1920…", def: "Triggered by extreme inequality (1% controlled 97% of land) under Díaz and U.S. exploitation; produced the 1917 Constitution and the PRI political party after 2 million deaths." },
+  { term: "Ideology", hint: "What fills the void…", def: "A system of ideas about how society should be organized; competing ideologies (communism, republicanism, aggressive nationalism) replaced collapsing dynastic systems after 1900." }
+];
+
+function buildVocab() {
+  const grid = document.getElementById('vocabGrid');
+  vocab.forEach((v, i) => {
+    const card = document.createElement('div');
+    card.className = 'vocab-card';
+    card.innerHTML = `
+      <div class="vocab-front">
+        <div class="vocab-term">${v.term}</div>
+        <div class="vocab-hint">${v.hint}</div>
+        <span class="flip-hint">↕ tap to reveal</span>
+      </div>
+      <div class="vocab-back">
+        <div class="vocab-def">${v.def}</div>
+        <span class="flip-hint" style="color:var(--smoke);">↕ tap to flip back</span>
+      </div>
+    `;
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+    grid.appendChild(card);
+  });
+}
+
+// ── MATCHING ──
+const matchPairs = [
+  { term: "Bolsheviks", def: "Sought state control of all economy, not just new leadership" },
+  { term: "Turkification", def: "Forcing a single Islamic identity on a diverse empire" },
+  { term: "Power Vacuum", def: "Dangerous empty space when empires collapse" },
+  { term: "Three People's Principles", def: "Sun Yat-sen's vision: republic, democracy, national pride" },
+  { term: "Self-Determination", def: "Right of peoples to govern themselves — threatens multi-ethnic empires" },
+];
+let selectedTerm = null, selectedDef = null;
+const matchState = {};
+
+function buildMatching() {
+  const termsDiv = document.getElementById('matchTerms');
+  const defsDiv = document.getElementById('matchDefs');
+  const shuffledDefs = [...matchPairs].sort(() => Math.random() - 0.5);
+  matchPairs.forEach(p => {
+    const t = document.createElement('div');
+    t.className = 'match-item'; t.textContent = p.term; t.dataset.term = p.term;
+    t.addEventListener('click', () => selectMatch(t, 'term'));
+    termsDiv.appendChild(t);
+  });
+  shuffledDefs.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item'; d.textContent = p.def; d.dataset.def = p.term;
+    d.addEventListener('click', () => selectMatch(d, 'def'));
+    defsDiv.appendChild(d);
+  });
+}
+
+function selectMatch(el, type) {
+  if (el.classList.contains('correct')) return;
+  if (type === 'term') {
+    document.querySelectorAll('#matchTerms .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selectedTerm = el.classList.contains('selected') ? el : null;
+  } else {
+    document.querySelectorAll('#matchDefs .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected');
+    selectedDef = el.classList.contains('selected') ? el : null;
+  }
+  if (selectedTerm && selectedDef) {
+    if (selectedTerm.dataset.term === selectedDef.dataset.def) {
+      selectedTerm.classList.remove('selected'); selectedTerm.classList.add('correct');
+      selectedDef.classList.remove('selected'); selectedDef.classList.add('correct');
+      selectedTerm.style.pointerEvents = 'none'; selectedDef.style.pointerEvents = 'none';
+    } else {
+      selectedTerm.classList.add('incorrect'); selectedDef.classList.add('incorrect');
+      setTimeout(() => {
+        selectedTerm.classList.remove('selected','incorrect');
+        selectedDef.classList.remove('selected','incorrect');
+        selectedTerm = null; selectedDef = null;
+      }, 700);
+      return;
+    }
+    selectedTerm = null; selectedDef = null;
+  }
+}
+
+function checkMatches() {
+  const correct = document.querySelectorAll('.match-item.correct').length / 2;
+  const total = matchPairs.length;
+  const res = document.getElementById('matchResult');
+  res.style.display = 'block';
+  res.style.color = correct === total ? '#a8e0a0' : '#e0c0a0';
+  res.textContent = correct === total ? `✓ All ${total} matched correctly!` : `${correct} of ${total} matched. Keep going!`;
+}
+
+// ── MCQ ──
+function handleMCQ(btn) {
+  const container = btn.closest('.mcq-item');
+  if (container.querySelector('.mcq-choice.correct, .mcq-choice.incorrect')) return;
+  const isCorrect = btn.dataset.correct === 'true';
+  btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+  container.querySelectorAll('.mcq-choice').forEach(b => { b.disabled = true; if (b !== btn && b.dataset.correct === 'true') b.classList.add('correct'); });
+  if (isCorrect) { const fb = container.querySelector('.mcq-feedback'); if (fb) fb.classList.add('visible'); }
+}
+
+// ── ACCORDION ──
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// ── THESIS ──
+function revealThesis(card, verdict, explanation) {
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+  card.querySelector('.thesis-verdict').className = `thesis-verdict ${verdict}`;
+  card.querySelector('.thesis-explanation').textContent = explanation;
+}
+
+// ── SELF ASSESSMENT ──
+const skills = [
+  "I can identify the two types of empires in 1900 and their key differences",
+  "I can explain the internal weaknesses of at least 2 land-based empires with specific examples",
+  "I can describe what a power vacuum is and name at least 2 ideologies that filled it",
+  "I can compare the Russian and Chinese Revolutions across at least 3 categories",
+  "I can construct a historically defensible thesis for an essay on empire collapse",
+  "I can write a SAQ response identifying cause, empire, and outcome",
+];
+function buildSelfAssess() {
+  const wrap = document.getElementById('selfAssess');
+  skills.forEach((skill, si) => {
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML = `
+      <div class="skill-label">${skill}</div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:0.25rem;">
+        <div class="skill-dots" id="dots-${si}">
+          ${[1,2,3].map(l => `<div class="skill-dot" data-skill="${si}" data-level="${l}" onclick="setDot(${si},${l})"></div>`).join('')}
+        </div>
+        <div class="skill-scale">1 = learning · 3 = confident</div>
+      </div>
+    `;
+    wrap.appendChild(row);
+  });
+}
+function setDot(si, level) {
+  const dots = document.querySelectorAll(`#dots-${si} .skill-dot`);
+  dots.forEach((d, i) => d.classList.toggle('filled', i < level));
+}
+
+// ── PROGRESS ──
+let currentProgress = 0;
+function markDone(btnId, pct) {
+  const btn = document.getElementById(btnId);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.querySelector('.check-icon').textContent = '✓';
+  btn.childNodes[1].textContent = ' Section Complete';
+  currentProgress = Math.max(currentProgress, pct);
+  document.getElementById('progressFill').style.width = currentProgress + '%';
+  document.getElementById('progressPct').textContent = currentProgress + '%';
+}
+
+// ── INIT ──
+buildVocab();
+buildMatching();
+buildSelfAssess();
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'RAsIg-Omf48');
+initAutoSave('7_1');
+buildCompletionSection('7_1', '7.1 Shifting Power After 1900');
+
+// Hook into markDone for persistence
+const _origMarkDone = markDone;
+markDone = function(btnId, pct) {
+  _origMarkDone(btnId, pct);
+  markDoneShared('7_1', btnId, pct);
+};
+</script>
+</body>
+</html>

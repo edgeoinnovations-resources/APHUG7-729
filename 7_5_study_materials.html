@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.5 Tensions After WWI — AP World History Study Materials</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f5f0e8;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --smoke: #6b6355;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+    --dok1: #2d5a27;
+    --dok2: #1a3d6e;
+    --dok3: #6b2d2d;
+    --dok4: #4a2d6b;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 16px; line-height: 1.7; }
+
+  /* HEADER */
+  .site-header { background: linear-gradient(135deg, #1a1408 0%, #2a2016 60%, #1f1a0d 100%); border-bottom: 2px solid var(--gold); padding: 2.5rem 2rem 2rem; text-align: center; }
+  .header-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .header-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--parchment); line-height: 1.2; margin-bottom: 0.75rem; }
+  .header-sub { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.05rem; color: #c8b98a; max-width: 680px; margin: 0 auto 1.2rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .chip { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; padding: 0.3rem 0.75rem; border-radius: 2rem; border: 1px solid; letter-spacing: 0.06em; }
+  .chip-gold { background: rgba(184,134,11,0.15); border-color: var(--gold); color: var(--gold-light); }
+  .chip-smoke { background: rgba(107,99,85,0.2); border-color: var(--smoke); color: #b0a89a; }
+
+  /* PROGRESS BAR */
+  .progress-wrap { position: sticky; top: 0; z-index: 100; background: #1a1408; border-bottom: 1px solid rgba(184,134,11,0.3); padding: 0.6rem 2rem; display: flex; align-items: center; gap: 1rem; }
+  .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold); white-space: nowrap; }
+  .progress-track { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--dok1), var(--gold)); border-radius: 3px; transition: width 0.5s ease; }
+  .progress-pct { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold-light); min-width: 3ch; }
+
+  /* LAYOUT */
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  /* HOW-TO BANNER */
+  .howto-banner { background: rgba(184,134,11,0.08); border: 1px solid rgba(184,134,11,0.35); border-left: 4px solid var(--gold); border-radius: 6px; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+  .howto-banner h3 { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.6rem; }
+  .howto-banner p { font-size: 0.95rem; color: #c8b98a; }
+
+  /* DOK SECTION */
+  .dok-section { margin-bottom: 3rem; }
+  .dok-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(184,134,11,0.2); }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 600; padding: 0.35rem 0.9rem; border-radius: 3px; letter-spacing: 0.08em; white-space: nowrap; }
+  .dok1-badge { background: var(--dok1); color: #c8e8c4; }
+  .dok2-badge { background: var(--dok2); color: #c4d4f0; }
+  .dok3-badge { background: var(--dok3); color: #f0c4c4; }
+  .dok4-badge { background: var(--dok4); color: #dcc4f0; }
+  .dok-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--parchment); }
+  .dok-theme { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--smoke); font-style: italic; }
+
+  /* NLM TIP */
+  .nlm-tip { background: rgba(26,61,110,0.25); border: 1px solid rgba(100,140,220,0.35); border-left: 4px solid #4a7fd4; border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+  .nlm-tip-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #8ab4f0; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .nlm-tip p { font-size: 0.9rem; color: #b0c8f0; }
+
+  /* CARDS */
+  .card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.18); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.25rem; }
+  .card h4 { font-family: 'Playfair Display', serif; color: var(--gold-light); margin-bottom: 0.75rem; font-size: 1rem; }
+
+  /* QUOTE BLOCK */
+  .quote-block { border-left: 3px solid var(--gold); padding: 1rem 1.5rem; margin: 1.25rem 0; background: rgba(184,134,11,0.06); border-radius: 0 6px 6px 0; }
+  .quote-block blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--parchment); line-height: 1.6; }
+  .quote-block cite { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); margin-top: 0.5rem; }
+
+  /* VOCAB GRID */
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .vocab-card { height: 140px; perspective: 800px; cursor: pointer; }
+  .vocab-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.45s ease; }
+  .vocab-card.flipped .vocab-inner { transform: rotateY(180deg); }
+  .vocab-front, .vocab-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 7px; padding: 1rem; display: flex; flex-direction: column; justify-content: center; }
+  .vocab-front { background: rgba(45,90,39,0.18); border: 1px solid rgba(45,90,39,0.5); }
+  .vocab-back { background: rgba(45,90,39,0.35); border: 1px solid rgba(45,90,39,0.7); transform: rotateY(180deg); }
+  .vocab-term { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 600; color: #c8e8c4; margin-bottom: 0.3rem; }
+  .vocab-hint { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 0.78rem; color: #8ab88a; }
+  .vocab-def { font-family: 'Source Serif 4', serif; font-size: 0.78rem; color: #c8e8c4; line-height: 1.4; }
+  .vocab-flip-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--smoke); text-align: center; margin-bottom: 0.75rem; }
+
+  /* MCQ */
+  .mcq-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .mcq-item:last-of-type { border-bottom: none; }
+  .mcq-q { font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--parchment); }
+  .mcq-options { display: flex; flex-direction: column; gap: 0.4rem; }
+  .mcq-btn { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 5px; padding: 0.55rem 1rem; text-align: left; color: #c8b98a; cursor: pointer; font-family: 'Source Serif 4', serif; font-size: 0.88rem; transition: background 0.2s; }
+  .mcq-btn:hover:not(:disabled) { background: rgba(184,134,11,0.12); border-color: var(--gold); }
+  .mcq-btn.correct { background: rgba(45,90,39,0.4); border-color: #5ab855; color: #c8e8c4; }
+  .mcq-btn.incorrect { background: rgba(107,45,45,0.4); border-color: #c85050; color: #f0c4c4; }
+  .mcq-feedback { display: none; margin-top: 0.6rem; padding: 0.6rem 0.9rem; background: rgba(45,90,39,0.2); border-left: 3px solid #5ab855; border-radius: 0 4px 4px 0; font-size: 0.85rem; color: #b0d8ac; }
+
+  /* MATCHING */
+  .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1rem; }
+  .match-col { display: flex; flex-direction: column; gap: 0.5rem; }
+  .match-item { padding: 0.6rem 0.9rem; border-radius: 5px; cursor: pointer; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s; line-height: 1.3; }
+  .match-term { background: rgba(26,61,110,0.2); color: #b8ccf0; }
+  .match-def { background: rgba(107,45,45,0.2); color: #f0c4c4; font-style: italic; }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.2); }
+  .match-item.correct { background: rgba(45,90,39,0.4); border-color: #5ab855; color: #c8e8c4; cursor: default; pointer-events: none; }
+  .match-item.incorrect { background: rgba(107,45,45,0.4); border-color: #c85050; }
+  .match-result { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--gold); margin-top: 0.4rem; min-height: 1.2em; }
+  .check-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 0.5rem 1.2rem; background: rgba(184,134,11,0.2); border: 1px solid var(--gold); border-radius: 4px; color: var(--gold-light); cursor: pointer; margin-top: 0.75rem; }
+  .check-btn:hover { background: rgba(184,134,11,0.35); }
+
+  /* TEXTAREA */
+  textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.25); border-radius: 6px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.9rem; padding: 0.85rem 1rem; resize: vertical; min-height: 100px; line-height: 1.6; }
+  textarea:focus { outline: none; border-color: var(--gold); background: rgba(184,134,11,0.06); }
+  .prompt-callout { border-left: 3px solid var(--gold); padding: 0.75rem 1.25rem; background: rgba(184,134,11,0.07); border-radius: 0 6px 6px 0; margin-bottom: 0.75rem; font-size: 0.92rem; color: #c8b98a; }
+
+  /* ACCORDION */
+  .accordion-btn { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 5px; padding: 0.6rem 1rem; color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; margin-top: 0.6rem; transition: background 0.2s; }
+  .accordion-btn:hover { background: rgba(184,134,11,0.1); }
+  .accordion-btn.open { background: rgba(184,134,11,0.12); border-color: var(--gold); }
+  .accordion-arrow { transition: transform 0.25s; display: inline-block; }
+  .accordion-btn.open .accordion-arrow { transform: rotate(90deg); }
+  .accordion-body { display: none; background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.15); border-top: none; border-radius: 0 0 5px 5px; padding: 1rem 1.25rem; font-size: 0.88rem; color: #c8b98a; line-height: 1.65; }
+  .accordion-body.open { display: block; }
+
+  /* COMPARISON TABLE */
+  .comp-table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.87rem; }
+  .comp-table th { background: rgba(184,134,11,0.18); color: var(--gold-light); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; padding: 0.65rem 0.9rem; text-align: left; border: 1px solid rgba(184,134,11,0.25); }
+  .comp-table td { padding: 0.6rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: #c8b98a; vertical-align: top; line-height: 1.4; }
+  .comp-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  /* CAUSAL CHAIN */
+  .causal-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 1.25rem; }
+  .causal-node { background: rgba(107,45,45,0.25); border: 1px solid rgba(200,80,80,0.35); border-radius: 6px; padding: 0.6rem 0.85rem; font-size: 0.82rem; color: #f0c4c4; text-align: center; min-width: 90px; line-height: 1.3; }
+  .causal-blank { background: rgba(107,45,45,0.1); border: 1px dashed rgba(200,80,80,0.6); border-radius: 6px; padding: 0.4rem 0.5rem; min-width: 110px; }
+  .causal-blank input { width: 100%; background: transparent; border: none; color: #f0c4c4; font-family: 'Source Serif 4', serif; font-size: 0.8rem; text-align: center; outline: none; }
+  .causal-arrow { color: var(--gold); font-size: 1.1rem; }
+
+  /* THESIS EVALUATOR */
+  .thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+  .thesis-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; padding: 1rem; cursor: pointer; position: relative; transition: border-color 0.2s; }
+  .thesis-card:hover { border-color: rgba(184,134,11,0.4); }
+  .thesis-card .thesis-text { font-size: 0.87rem; color: #c8b98a; line-height: 1.5; margin-bottom: 0.5rem; font-style: italic; }
+  .thesis-card .thesis-reveal-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--smoke); }
+  .thesis-verdict { display: none; margin-top: 0.6rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; padding: 0.35rem 0.7rem; border-radius: 4px; }
+  .thesis-verdict.pass { background: rgba(45,90,39,0.4); color: #c8e8c4; }
+  .thesis-verdict.fail { background: rgba(107,45,45,0.4); color: #f0c4c4; }
+  .thesis-explanation { display: none; margin-top: 0.4rem; font-size: 0.8rem; color: #c8b98a; line-height: 1.4; }
+  .thesis-card.revealed .thesis-verdict, .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-card.revealed { cursor: default; }
+
+  /* SELF ASSESSMENT */
+  .skill-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .skill-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; padding: 0.7rem 1rem; }
+  .skill-text { font-size: 0.87rem; color: #c8b98a; flex: 1; }
+  .skill-dots { display: flex; gap: 0.4rem; }
+  .dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(184,134,11,0.4); background: transparent; cursor: pointer; transition: all 0.2s; }
+  .dot.filled { background: var(--gold); border-color: var(--gold); }
+
+  /* MARK DONE BUTTON */
+  .mark-done-wrap { display: flex; justify-content: flex-end; margin-top: 1.5rem; }
+  .mark-done-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 0.55rem 1.4rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.35); border-radius: 5px; color: var(--gold); cursor: pointer; transition: all 0.2s; }
+  .mark-done-btn:hover { background: rgba(184,134,11,0.15); }
+  .mark-done-btn.done { background: rgba(45,90,39,0.35); border-color: #5ab855; color: #c8e8c4; cursor: default; }
+
+  /* CCOT GRID */
+  .ccot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .ccot-col h5 { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+
+  /* CONTEXT OPTIONS */
+  .context-option { border-left: 3px solid var(--gold); padding: 0.75rem 1.25rem; background: rgba(184,134,11,0.07); border-radius: 0 6px 6px 0; margin-bottom: 1rem; }
+  .context-option-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+  .context-option p { font-size: 0.9rem; color: #c8b98a; }
+
+  /* TIMELINE */
+  .timeline { display: flex; flex-direction: column; gap: 0; margin-bottom: 1.25rem; position: relative; padding-left: 1.5rem; }
+  .timeline::before { content: ''; position: absolute; left: 0.45rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: rgba(184,134,11,0.3); }
+  .tl-item { display: flex; gap: 1rem; padding-bottom: 1rem; position: relative; }
+  .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid var(--bg); flex-shrink: 0; margin-top: 0.3rem; position: absolute; left: -1.1rem; }
+  .tl-date { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); white-space: nowrap; min-width: 70px; }
+  .tl-text { font-size: 0.87rem; color: #c8b98a; line-height: 1.4; }
+
+  @media (max-width: 600px) {
+    .thesis-grid, .ccot-grid, .match-grid { grid-template-columns: 1fr; }
+    .causal-chain { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="header-title">7.5 — Tensions After WWI</h1>
+  <p class="header-sub"><em>The post-war promise of self-determination was shattered by a mandate system that repackaged empire, guaranteeing the struggle between rulers and the ruled would smolder into the next century.</em></p>
+  <div class="chips">
+    <span class="chip chip-gold">c. 1919–1939</span>
+    <span class="chip chip-smoke">Imperialism &amp; Resistance</span>
+    <span class="chip chip-gold">DOK 1 → 4</span>
+    <span class="chip chip-smoke">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="progress-wrap">
+  <span class="progress-label">PROGRESS</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-pct" id="progressPct">0%</span>
+</div>
+
+<div class="container">
+
+  <!-- HOW-TO BANNER -->
+  <div class="howto-banner">
+    <h3>📽 The Central Argument — Read Before You Begin</h3>
+    <p>The video's driving question is simple: <strong>Who gets to rule?</strong> After WWI, the promise of self-determination was made loudly and broken quietly. Imperial powers used the <strong>mandate system</strong> — colonialism dressed up as international law — to keep controlling millions of people. Japan did the same through <strong>puppet states</strong> like Manchukuo. The colonized world refused to accept this betrayal. From Gandhi's <strong>Satyagraha</strong> in India to labor strikes in West Africa, a global wave of resistance proved that the systems of governance set up after WWI were ultimately a failure. Use these materials to trace that arc: broken promise → masked empire → fierce resistance → unresolved contradiction. That contradiction set the stage for decolonization after WWII.</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- DOK 1 -->
+  <!-- ============================================================ -->
+  <section class="dok-section" id="dok1">
+    <div class="dok-header">
+      <span class="dok-badge dok1-badge">DOK 1</span>
+      <div>
+        <div class="dok-title">Knowledge Acquisition</div>
+        <div class="dok-theme">"Answer correctly" — Recall key facts, terms, and events</div>
+      </div>
+    </div>
+
+    <!-- NLM Tip -->
+    <div class="nlm-tip">
+      <div class="nlm-tip-label">🎬 NotebookLM Video — Watch First</div>
+      <p>Open the <strong>7.5 Tensions After WWI</strong> explainer: <a href="https://youtu.be/dLy4vKo7rDk" target="_blank" style="color:#8ab4f0;">youtu.be/dLy4vKo7rDk</a>. Listen for the <strong>four-part structure</strong>: (1) the promise of self-determination, (2) the mandate system's betrayal, (3) global resistance movements, (4) the unresolved contradiction between empire and self-rule. Pay special attention to how the narrator frames the mandate system as "colonialism with a fancy legalistic makeover."</p>
+    </div>
+    <div id="videoEmbed"></div>
+
+    <!-- Opening Quote -->
+    <div class="quote-block">
+      <blockquote>"The systems of governance set up after World War I — from the mandate system to these puppet states — were ultimately a failure. They didn't solve the fundamental problems of empire and who gets to rule. They just repackaged them."</blockquote>
+      <cite>— APWH 7.5 Video Central Argument</cite>
+    </div>
+
+    <!-- Timeline -->
+    <div class="card">
+      <h4>Key Events Timeline — The Post-WWI World</h4>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1919</div><div class="tl-text">Paris Peace Conference; mandate system created under the League of Nations; Woodrow Wilson champions self-determination for European nations only</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1919</div><div class="tl-text">Amritsar Massacre — British troops open fire on unarmed crowd in India, radicalizing the independence movement</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1920s</div><div class="tl-text">Ottoman lands divided: Britain controls Iraq &amp; Palestine; France controls Syria. Germany's Cameroon split between France and Britain</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1930</div><div class="tl-text">Gandhi leads the Salt March — 240 miles to the sea to defy Britain's salt monopoly; Satyagraha (civil disobedience) goes global</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1931</div><div class="tl-text">Japan invades Manchuria; creates puppet state Manchukuo under the last Chinese emperor; justifies it with the Greater East Asia Co-Prosperity Sphere ideology</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">1930s</div><div class="tl-text">West African workers organize major strikes against French colonial authorities, using labor as political resistance</div></div>
+      </div>
+    </div>
+
+    <!-- Vocabulary Cards -->
+    <div class="card">
+      <h4>Vocabulary — Click Each Card to Flip</h4>
+      <p class="vocab-flip-hint">Click a card to reveal the definition</p>
+      <div class="vocab-grid" id="vocabGrid"></div>
+    </div>
+
+    <!-- MCQ -->
+    <div class="card">
+      <h4>Multiple Choice — 5 Questions</h4>
+      <div id="mcqContainer"></div>
+    </div>
+
+    <!-- Matching -->
+    <div class="card">
+      <h4>Matching Activity — Connect Each Term to Its Description</h4>
+      <div class="match-grid">
+        <div class="match-col" id="matchTerms"></div>
+        <div class="match-col" id="matchDefs"></div>
+      </div>
+      <button class="check-btn" onclick="checkMatches()">Check Answers</button>
+      <div class="match-result" id="matchResult"></div>
+    </div>
+
+    <div class="mark-done-wrap">
+      <button class="mark-done-btn" id="done1" onclick="markDone('done1', 25)">✓ Mark DOK 1 Complete — 25%</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- DOK 2 -->
+  <!-- ============================================================ -->
+  <section class="dok-section" id="dok2">
+    <div class="dok-header">
+      <span class="dok-badge dok2-badge">DOK 2</span>
+      <div>
+        <div class="dok-title">Knowledge Application</div>
+        <div class="dok-theme">"Establish and explain with examples"</div>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-tip-label">🗺 NotebookLM Infographic — Consult Now</div>
+      <p>Pull up the <strong>7.5 infographic</strong> from NotebookLM. Look for the visual that shows the mandate system's geographic reach — how German and Ottoman territories were redistributed. Use it as a reference while completing the Explain Drills and Comparison Table below.</p>
+    </div>
+
+    <!-- Explain Drill 1 -->
+    <div class="card">
+      <h4>Explain Drill 1 — The Mandate System</h4>
+      <div class="prompt-callout">Explain how the mandate system functioned as a continuation of imperialism rather than a step toward self-determination. Use specific territorial examples in your answer.</div>
+      <textarea placeholder="Write your explanation here... (aim for 3–5 sentences with at least one specific example)"></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Answer <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        The mandate system, created at the Paris Peace Conference of 1919 under the League of Nations, was framed as a temporary guardianship to prepare "less advanced" peoples for eventual self-rule. However, in practice it was colonialism with a fancy legalistic makeover. Rather than freeing the old German and Ottoman territories, the League simply handed them to the victorious European powers. Germany's colony of Cameroon was split between France and Britain. The vast Ottoman lands were divided so that Britain controlled Iraq and Palestine while France took Syria. None of these territories had any meaningful input into the arrangement — and the concept of "tutelage" assumed that European governance was inherently superior, the same racist logic that had justified imperial conquest for centuries. The system did not weaken empire; it expanded it, giving European powers new territories under the respectable cover of international law. For the millions of people living in these mandates, the change in name from "colony" to "mandate" changed nothing about who was in charge or who was benefiting.
+      </div>
+    </div>
+
+    <!-- Explain Drill 2 -->
+    <div class="card">
+      <h4>Explain Drill 2 — Gandhi's Satyagraha</h4>
+      <div class="prompt-callout">Explain how Gandhi's Satyagraha was both a political strategy and a profound philosophical challenge to the legitimacy of British rule in India.</div>
+      <textarea placeholder="Write your explanation here... Think about what the Salt March communicated beyond just breaking a law."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Answer <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        Satyagraha — often translated as "truth-force" or "civil disobedience" — was Gandhi's carefully designed strategy for challenging British authority without resorting to violence. Its political logic was brilliant: by peacefully and very publicly breaking laws they considered unjust, Indian participants were making a statement that those laws had no moral authority. The message was direct: we do not recognize your right to govern us. The 1930 Salt March illustrates this perfectly. The British held a monopoly on salt production — it was literally illegal for Indians to collect their own. Gandhi walked 240 miles to the sea and simply picked up a handful of salt from the ground. On the surface it was a minor act of lawbreaking. But it dramatized the absurdity of British economic control in a way that no speech could, and it did so in front of international media. The image of ordinary people being arrested for picking up salt discredited British rule globally. Beyond its tactical genius, Satyagraha was a philosophical challenge: Gandhi was arguing that just governance requires the consent of the governed, and that consent had been permanently withdrawn. The Amritsar Massacre — where British troops had opened fire on an unarmed crowd — had already proven to Indian nationalists that compromise was impossible. Satyagraha mobilized millions of ordinary Indians while keeping the moral high ground.
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="card">
+      <h4>Comparison Table — Techniques of Imperial Control After WWI</h4>
+      <table class="comp-table">
+        <thead>
+          <tr><th>Power</th><th>Territory / Method</th><th>Justifying Ideology</th><th>Reality for the Governed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Britain &amp; France</td><td>League of Nations Mandates (Iraq, Palestine, Syria, Cameroon)</td><td>"Tutelage" — civilizing mission; international law</td><td>Same colonial administration, taxation, and resource extraction as before</td></tr>
+          <tr><td>Britain</td><td>Direct colonial rule in India</td><td>Civilizing mission; legal order</td><td>Monopolies (salt), discriminatory laws, violent suppression (Amritsar)</td></tr>
+          <tr><td>Japan</td><td>Manchukuo — puppet state in Manchuria (1931)</td><td>Greater East Asia Co-Prosperity Sphere; "liberation" from Western imperialism</td><td>Japanese economic exploitation and military occupation; last Chinese emperor installed as figurehead</td></tr>
+          <tr><td>France</td><td>French West Africa</td><td>Mission civilisatrice (civilizing mission)</td><td>Forced labor, discriminatory wages, denial of political rights; workers organized strikes</td></tr>
+          <tr><td>All Imperial Powers</td><td>Global system of colonies and mandates</td><td>Self-determination = for Europeans only</td><td>Broken promises to colonial soldiers who fought in WWI expecting freedom in return</td></tr>
+        </tbody>
+      </table>
+      <div class="prompt-callout">Reflection: What do all of these cases share, despite their different names and justifications? What does this pattern tell us about the nature of empire in the interwar period?</div>
+      <textarea placeholder="Write your reflection here... Consider the gap between rhetoric and reality across all cases."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Reflection <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        Across every case — British mandates, Japanese puppet states, French West Africa — the common thread is the gap between the stated justification and the lived reality for colonized peoples. The names change (mandate, co-prosperity sphere, tutelage) but the structure does not: an outside power controls land, labor, and resources while denying the local population political agency. What this pattern reveals is that interwar imperialism was not a collection of isolated policies but a systemic global order. Even Japan, positioning itself as an alternative to Western domination, reproduced the same logic of racial hierarchy and resource extraction. This uniformity across culturally and geographically distinct empires suggests that imperial expansion after WWI was driven by structural incentives — access to resources, strategic territory, and cheap labor — that no ideology could disguise for long. For colonized peoples who had fought in WWI partly on the promise of greater rights, this pattern was not just hypocritical; it was a politicizing betrayal that radicalized independence movements across Africa, Asia, and the Middle East.
+      </div>
+    </div>
+
+    <!-- Apply Activity -->
+    <div class="card">
+      <h4>Apply Activity — West African Labor Strikes</h4>
+      <div class="prompt-callout">The video describes West African workers organizing large strikes against French colonial authorities. Apply the concept of "resistance as political challenge" — not just an economic one — to explain the significance of these strikes beyond wage disputes.</div>
+      <textarea placeholder="Think about what it means to use labor as a political tool, not just an economic one..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Answer <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        When West African workers went on strike against French colonial authorities, they were doing more than demanding better wages — they were challenging the entire political and economic structure of French rule. Colonial economies were built on the extraction of labor at minimal cost; to withhold that labor was to disrupt the very foundation of the colonial enterprise. The strikes therefore functioned as a direct assertion that colonized workers had power, agency, and the right to refuse participation in a system they had not chosen. Like Gandhi's Salt March, these strikes made an implicit political argument: your authority over us depends on our cooperation, and we are withdrawing it. The fact that workers organized collectively across different communities also demonstrated the emergence of a shared anti-colonial identity — an "us" versus "them" consciousness that would be essential for later independence movements. The connection to 7.9 and beyond is significant: labor movements in Africa during the interwar period were early training grounds for the political leaders who would drive decolonization after World War II, proving that economic resistance and political resistance were never truly separate.
+      </div>
+    </div>
+
+    <div class="mark-done-wrap">
+      <button class="mark-done-btn" id="done2" onclick="markDone('done2', 50)">✓ Mark DOK 2 Complete — 50%</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- DOK 3 -->
+  <!-- ============================================================ -->
+  <section class="dok-section" id="dok3">
+    <div class="dok-header">
+      <span class="dok-badge dok3-badge">DOK 3</span>
+      <div>
+        <div class="dok-title">Knowledge Analysis</div>
+        <div class="dok-theme">"Examine and explain with evidence" — Strategic reasoning, causation, argumentation</div>
+      </div>
+    </div>
+
+    <!-- Causal Chain -->
+    <div class="card">
+      <h4>Causal Chain — From WWI's End to Global Resistance</h4>
+      <p style="font-size:0.85rem;color:var(--smoke);margin-bottom:1rem;">Fill in the two missing nodes, then answer the question below.</p>
+      <div class="causal-chain">
+        <div class="causal-node">WWI ends (1918); colonies sent soldiers expecting freedom</div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-blank"><input type="text" placeholder="Node 2..." id="node2"></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Mandate system redistributes German &amp; Ottoman lands to Britain &amp; France</div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-blank"><input type="text" placeholder="Node 4..." id="node4"></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Radical independence movements organize (INC, West African strikes)</div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Stage set for post-WWII decolonization wave</div>
+      </div>
+      <div class="prompt-callout">Explain one connection in the chain above. Why did that particular step lead to the next?</div>
+      <textarea placeholder="Choose any two connected nodes and explain the causal mechanism between them..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">Reveal Answers &amp; AP Insight <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        <strong>Node 2:</strong> Paris Peace Conference applies self-determination only to European nations; colonized peoples' expectations are ignored.<br><br>
+        <strong>Node 4:</strong> Colonial subjects recognize the betrayal — that "self-determination" was never meant for them — and conclude that peaceful waiting will not lead to independence.<br><br>
+        <strong>AP Insight:</strong> The key causal mechanism here is <em>radicalization through betrayal</em>. The Indian National Congress did not become a mass movement because colonialism was new — it became one because the specific post-WWI promise of self-determination made its denial feel like an active injustice rather than a passive condition. This distinction matters for AP arguments: you're not just explaining that empire continued, but explaining <em>why the interwar period specifically produced organized resistance</em> at a scale that threatened imperial stability. The broken promise of WWI is the X-factor that distinguishes 1919–1939 resistance from earlier colonial resistance movements.
+      </div>
+    </div>
+
+    <!-- SAQ -->
+    <div class="card">
+      <h4>AP-Style Short Answer Question (SAQ)</h4>
+      <div class="prompt-callout" style="margin-bottom:1rem;">
+        Use the following claim to answer parts A, B, and C:<br><br>
+        <em>"The post-WWI international order, rather than resolving the tensions of empire, intensified resistance to colonial rule across Asia and Africa."</em><br><br>
+        <strong>A.</strong> Identify ONE specific example that supports this claim.<br>
+        <strong>B.</strong> Explain ONE way the mandate system functioned as a continuation of imperialism rather than a step toward self-determination.<br>
+        <strong>C.</strong> Explain ONE way resistance movements in the interwar period set the stage for decolonization after World War II.
+      </div>
+      <textarea style="min-height:160px;" placeholder="Label your answers A, B, and C. Use specific evidence in each part."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample SAQ Response <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        <strong>A.</strong> One example that supports this claim is the Indian independence movement's radicalization following the Amritsar Massacre of 1919, where British troops killed hundreds of unarmed Indian civilians. This event destroyed any remaining hope for a gradual, negotiated path to independence and pushed the Indian National Congress and leaders like Gandhi toward organized mass resistance through Satyagraha — civil disobedience — rather than petitioning the colonial government.<br><br>
+        <strong>B.</strong> The mandate system continued imperialism by disguising territorial expansion as international guardianship. Under the League of Nations, Britain and France received control over former German and Ottoman territories — including Iraq, Palestine, Syria, and Cameroon — with the stated justification that these peoples needed "tutelage" before they could govern themselves. In practice, the mandate powers administered these territories exactly as colonies: extracting resources, controlling political institutions, and denying local populations meaningful self-governance. The structure was colonialism with a legalistic makeover.<br><br>
+        <strong>C.</strong> Interwar resistance movements built the organizational infrastructure and ideological frameworks that powered post-WWII decolonization. Gandhi's Salt March and Satyagraha demonstrated that mass civil disobedience could delegitimize colonial authority in the eyes of the international community. West African labor strikes showed that colonial economies were vulnerable when workers organized collectively. These movements created experienced political leaders, established networks of nationalist organizations, and developed arguments for sovereignty that would be made again — with greater force — after WWII weakened European imperial states and the UN's founding documents again invoked self-determination.
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <h4>CCOT Analysis — Imperialism c. 1870–1939</h4>
+      <div class="ccot-grid">
+        <div class="ccot-col">
+          <h5>🔄 What Changed</h5>
+          <textarea placeholder="What changed about the form, justification, or methods of imperialism after WWI?"></textarea>
+        </div>
+        <div class="ccot-col">
+          <h5>➡️ What Continued</h5>
+          <textarea placeholder="What aspects of imperial control remained the same despite new names and international frameworks?"></textarea>
+        </div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample CCOT Response <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        <strong>What Changed:</strong> After WWI, the overt language of conquest was largely replaced by legalistic frameworks like the mandate system, which framed imperial control as temporary guardianship under international supervision. The League of Nations gave a veneer of multilateral legitimacy to what was effectively bilateral territorial expansion. Japan also introduced a new model — the puppet state — that installed local figureheads (like the last Chinese emperor in Manchukuo) while maintaining external control, offering a non-Western competitor to European imperial methods. Additionally, the scale of organized resistance grew dramatically: from scattered uprisings before WWI to coordinated mass movements led by figures like Gandhi and African labor organizers, using modern communications and nationalist ideology.<br><br>
+        <strong>What Continued:</strong> Despite the new vocabulary, the fundamental structure of empire remained unchanged: European (and Japanese) powers extracted resources, controlled political institutions, maintained racial hierarchies, and denied self-governance to colonized peoples. The economic relationship — colonies as sources of raw materials and cheap labor for industrial metropoles — continued unaltered. The justifying ideology of civilizational hierarchy ("tutelage," "co-prosperity") was new branding for old Social Darwinism. And the core enforcement mechanism — violence against resisters, as demonstrated by Amritsar — remained available and used.
+      </div>
+    </div>
+
+    <!-- Thesis Evaluator -->
+    <div class="card">
+      <h4>Thesis Evaluator — Click Each Card to Reveal the Verdict</h4>
+      <p style="font-size:0.83rem;color:var(--smoke);margin-bottom:1rem;">Prompt: <em>"Evaluate the extent to which the post-WWI international order represented a continuation of imperial systems rather than a genuine transformation."</em></p>
+      <div class="thesis-grid" id="thesisGrid"></div>
+    </div>
+
+    <div class="mark-done-wrap">
+      <button class="mark-done-btn" id="done3" onclick="markDone('done3', 75)">✓ Mark DOK 3 Complete — 75%</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- DOK 4 -->
+  <!-- ============================================================ -->
+  <section class="dok-section" id="dok4">
+    <div class="dok-header">
+      <span class="dok-badge dok4-badge">DOK 4</span>
+      <div>
+        <div class="dok-title">Knowledge Augmentation</div>
+        <div class="dok-theme">"Explore and explain with examples and evidence" — Synthesis, contextualization, original argument</div>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-tip-label">🔭 NotebookLM Synthesis Prompt</div>
+      <p>The video closes with this question: <em>"How did this unresolved conflict — the massive clash between empire and self-determination — go on to shape the Cold War, the global fight for independence, and the very map of the world that we live in today?"</em> Keep that question in mind as you work through the synthesis activities below. You're being asked to think across time periods, not just within 7.5.</p>
+    </div>
+
+    <!-- Contextualization Builder -->
+    <div class="card">
+      <h4>Contextualization Builder — Choose One Option (A, B, or C)</h4>
+      <p style="font-size:0.85rem;color:var(--smoke);margin-bottom:1rem;">Write a 3–4 sentence contextualization paragraph that connects the broader historical development to the content of 7.5. Begin before 1919 and connect forward.</p>
+
+      <div class="context-option">
+        <div class="context-option-label">Option A — The "New Imperialism" of the late 19th century</div>
+        <p>Explain how the Scramble for Africa and European imperial expansion (c. 1870–1914) created the structural conditions — economic dependencies, racial hierarchies, suppressed nationalism — that the post-WWI mandate system both inherited and deepened.</p>
+      </div>
+      <div class="context-option">
+        <div class="context-option-label">Option B — Wilson's Fourteen Points and the limits of liberal internationalism</div>
+        <p>Explain how Woodrow Wilson's Fourteen Points (1918) raised genuine expectations of national self-determination globally, and how the gap between Wilson's rhetoric and the Paris Peace Conference's reality created a specific kind of political betrayal that energized anti-colonial movements.</p>
+      </div>
+      <div class="context-option">
+        <div class="context-option-label">Option C — The role of WWI colonial soldiers</div>
+        <p>Explain how the mobilization of over a million colonial soldiers from India, Africa, and Asia during WWI — many fighting with explicit or implicit promises of greater rights — created a specific post-war political dynamic in which the continuation of imperial control was experienced as a personal and collective betrayal.</p>
+      </div>
+
+      <textarea style="min-height:120px;margin-top:1rem;" placeholder="Write your contextualization paragraph here. State the broader development, explain it in 2–3 sentences, then connect it explicitly to post-WWI imperial tensions."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Contextualization (Option C) <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        During World War I, the major European empires — particularly Britain and France — mobilized enormous numbers of soldiers from their colonial territories. India alone contributed approximately 1.3 million troops to the British war effort, while hundreds of thousands more came from West Africa, North Africa, and Southeast Asia. Many of these soldiers fought with an understanding, sometimes explicit and sometimes implied, that their military service would be rewarded with greater political rights or steps toward self-governance. This context makes the post-war settlement directly relevant to understanding why resistance movements intensified after 1919: it was not simply that imperial rule continued, but that it continued after a specific, widely understood promise had been made and then broken. The Indian National Congress's explosive growth after the war, the radicalization produced by the Amritsar Massacre, and the West African strikes of the 1920s–1930s all gain additional force when understood against this backdrop of betrayal. Colonial soldiers who had survived industrial warfare returned home not grateful for the peace but politicized by the injustice of it.
+      </div>
+    </div>
+
+    <!-- Cross-Unit Synthesis -->
+    <div class="card">
+      <h4>Cross-Unit Synthesis — 7.5 → 8.2 (Cold War &amp; Decolonization)</h4>
+      <div class="prompt-callout">The video argues that the unresolved tensions from WWI "set the stage for the enormous wave of decolonization that would sweep across the globe after World War II." Connect the specific mechanisms of resistance developed in 7.5 to the decolonization movements of Unit 8. How did the interwar period's anti-colonial organizing make post-WWII independence possible?</div>
+      <textarea style="min-height:140px;" placeholder="Name specific developments from both 7.5 and Unit 8. Show the causal or thematic link explicitly."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">View Sample Synthesis Response <span class="accordion-arrow">▶</span></button>
+      <div class="accordion-body">
+        The anti-colonial movements of the interwar period (7.5) and the decolonization wave of the post-WWII era (Unit 8) are not two separate stories — the second is the direct continuation of the first, supercharged by WWII's destruction of European imperial prestige. In 7.5, the key development was the construction of organized resistance infrastructure: the Indian National Congress became a mass political party under Gandhi's leadership; West African labor movements developed networks of solidarity across colonial borders; nationalist intellectuals across Asia and Africa built ideological frameworks for sovereignty. These were not just protests — they were political movements training for eventual state-building. By 1947, when Britain granted Indian independence (Unit 8), the INC was not a new institution scrambling for power but a seasoned organization that had been organized and disciplined by decades of Satyagraha. Similarly, the leaders of West African independence movements in the 1950s and 1960s had often begun their political careers in the labor organizations of the 1920s and 1930s. The Cold War context (Unit 8) added urgency — both the US and USSR had rhetorical commitments to self-determination that made defending European empire diplomatically costly — but the organizational and ideological groundwork had been laid in the interwar period. The video's central argument holds: the mandate system's failure to resolve the question of "who gets to rule" guaranteed that the question would be answered by force, from below, after the second global war finished what the first began.
+      </div>
+    </div>
+
+    <!-- Self Assessment -->
+    <div class="card">
+      <h4>Self-Assessment — How confident are you?</h4>
+      <p style="font-size:0.83rem;color:var(--smoke);margin-bottom:1rem;">Click the dots: 1 = still learning · 2 = getting there · 3 = confident</p>
+      <div class="skill-list" id="selfAssess"></div>
+    </div>
+
+    <div class="mark-done-wrap">
+      <button class="mark-done-btn" id="done4" onclick="markDone('done4', 100)">✓ Mark DOK 4 Complete — 100%</button>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<script src="shared.js"></script>
+<script>
+// ================================================================
+// DATA
+// ================================================================
+
+const VOCAB = [
+  { term: "Self-Determination", hint: "Wilson's big idea after WWI", def: "The principle, championed by U.S. President Woodrow Wilson, that nations have the right to govern themselves. Applied after WWI to European peoples but largely denied to colonized peoples in Asia and Africa, creating the central contradiction of the interwar period." },
+  { term: "Mandate System", hint: "Colonialism's legal makeover", def: "A post-WWI system under the League of Nations in which former German and Ottoman territories were placed under British and French administration. Justified as 'tutelage,' it was in practice an expansion of European imperial control disguised as international law." },
+  { term: "Satyagraha", hint: "Gandhi's weapon of choice", def: "Translated as 'truth-force' or 'soul-force,' this was Gandhi's philosophy of nonviolent civil disobedience. By publicly breaking unjust laws, participants denied the moral authority of British rule and mobilized millions of ordinary Indians into political resistance." },
+  { term: "Amritsar Massacre", hint: "The event that ended compromise", def: "The 1919 event in which British troops opened fire on an unarmed crowd at Jallianwala Bagh in India, killing hundreds. It destroyed any remaining faith in gradual reform and radicalized the Indian independence movement, pushing leaders like Gandhi toward mass resistance." },
+  { term: "Manchukuo", hint: "Japan's puppet state in China", def: "The puppet state established by Japan in Manchuria in 1931 after its invasion of the region. Japan installed the last Chinese emperor as a figurehead ruler while exercising actual control, demonstrating that non-Western powers could replicate imperial techniques using different methods." },
+  { term: "Greater East Asia Co-Prosperity Sphere", hint: "Japan's imperial ideology", def: "The ideology used by Japan to justify its imperial expansion in Asia, claiming it was liberating Asian peoples from Western colonialism. In practice, for the people of China, Korea, and Southeast Asia, it meant trading one imperial master for another — Japanese economic exploitation and military rule." },
+  { term: "Indian National Congress (INC)", hint: "The mass movement that organized India", def: "The major political organization that led the Indian independence movement. After WWI and the Amritsar Massacre, the INC exploded into a mass political force under Gandhi's leadership, becoming the primary vehicle for anti-colonial resistance in India." },
+  { term: "Paris Peace Conference", hint: "Where the post-war world was designed", def: "The 1919 conference at which Allied powers (primarily Britain, France, and the United States) designed the post-WWI international order. The 'Big Three' had no intention of dismantling their empires; the conference created the mandate system and applied self-determination selectively to European peoples." },
+  { term: "Salt March", hint: "240 miles, one handful of salt", def: "Gandhi's 1930 act of civil disobedience in which he led a march of 240 miles to the sea to collect salt, defying Britain's salt monopoly. The image of ordinary people being arrested for picking up salt delegitimized British economic control and resonated with the international community." },
+  { term: "Colonial Resistance", hint: "The worldwide pushback against empire", def: "The organized challenges to imperial rule that spread across Africa and Asia in the interwar period. From Gandhi's mass movement in India to labor strikes in French West Africa, colonized peoples used increasingly sophisticated political tactics to challenge the right of empires to govern them." }
+];
+
+const MCQ = [
+  {
+    q: "What was the primary purpose of the mandate system created at the Paris Peace Conference?",
+    opts: ["To grant independence to former German and Ottoman colonies immediately", "To place former enemy territories under League of Nations supervision with Britain and France as administrators", "To create a multilateral peacekeeping force in strategically important regions", "To allow colonized peoples to hold democratic elections and form self-governing states"],
+    correct: 1,
+    feedback: "The mandate system placed former German and Ottoman territories under British and French administration, officially justified as 'tutelage.' In practice it was colonialism with a legalistic makeover — an expansion of European imperial control, not a step toward liberation."
+  },
+  {
+    q: "Which of the following best explains why the Amritsar Massacre (1919) was a turning point for the Indian independence movement?",
+    opts: ["It convinced Gandhi to abandon civil disobedience and pursue armed resistance", "It destroyed any hope for a gradual, negotiated path to independence and radicalized the movement toward mass resistance", "It caused Britain to immediately begin negotiations for Indian self-rule", "It demonstrated that colonial armies were too powerful to challenge through any form of resistance"],
+    correct: 1,
+    feedback: "The Amritsar Massacre, where British troops fired on unarmed civilians, shattered the belief that patient cooperation with British institutions might eventually lead to greater rights. It pushed leaders like Gandhi to mobilize millions through Satyagraha rather than petition."
+  },
+  {
+    q: "Japan's establishment of Manchukuo in 1931 is significant because it demonstrates that:",
+    opts: ["Only Western European nations were capable of building imperial systems", "Imperial expansion was limited to territories with weak central governments", "Non-Western powers could replicate the logic and techniques of empire while using different justifications", "The League of Nations was effective at preventing territorial aggression"],
+    correct: 2,
+    feedback: "Manchukuo shows that Japan — a non-Western power — used the same imperial logic as European states (controlling land and resources, installing compliant figureheads) while framing it as Asian liberation. This complicates any simple narrative that sees empire as purely a Western phenomenon."
+  },
+  {
+    q: "What did Gandhi's Salt March communicate beyond the act of picking up salt?",
+    opts: ["That Indians were willing to use violent confrontation against British authority", "That British laws had no moral authority over Indians and that colonized peoples could withdraw their consent from unjust governance", "That the INC was prepared to accept a compromise arrangement with the British government", "That economic issues were more important than political rights in the independence movement"],
+    correct: 1,
+    feedback: "The Salt March was a philosophical act: by very publicly and peacefully breaking a law they considered unjust, participants were declaring that British rules had no moral legitimacy. Gandhi was demonstrating that just governance requires the consent of the governed — and that consent had been withdrawn."
+  },
+  {
+    q: "According to the video's central argument, what was the most significant consequence of the post-WWI imperial order?",
+    opts: ["It created lasting stability in the Middle East by establishing clear national boundaries", "It successfully modernized colonial economies through systematic investment in infrastructure", "Its failure to resolve the question of self-determination guaranteed that anti-colonial conflicts would intensify and set the stage for post-WWII decolonization", "It demonstrated that the League of Nations could effectively manage international territorial disputes"],
+    correct: 2,
+    feedback: "The video's core argument is that the mandate system and puppet states 'just repackaged' imperial problems rather than solving them, 'guaranteeing that these conflicts would just keep smoldering.' The interwar period's unresolved tensions directly fueled the post-WWII decolonization wave."
+  }
+];
+
+const MATCHING = [
+  { term: "Mandate System", def: "Colonialism disguised as international guardianship under the League of Nations" },
+  { term: "Satyagraha", def: "Nonviolent civil disobedience that denied the moral authority of unjust laws" },
+  { term: "Manchukuo", def: "Japanese puppet state with a Chinese emperor as figurehead ruler" },
+  { term: "Amritsar Massacre", def: "British troops firing on unarmed Indians; ended hope for compromise" },
+  { term: "Salt March", def: "Gandhi's 240-mile walk to collect salt and defy British economic monopoly" }
+];
+
+const THESES = [
+  {
+    text: "The post-WWI international order was characterized by the mandate system, puppet states, and colonial resistance movements.",
+    verdict: "fail",
+    explanation: "FAILS — This is a list of topics, not a thesis. There is no defensible claim and no line of reasoning. It restates the prompt's subject matter without making an argument about it."
+  },
+  {
+    text: "Although the mandate system introduced new legal terminology, the post-WWI order fundamentally continued imperial structures by denying self-determination to colonized peoples, which directly radicalized anti-colonial resistance movements across Asia and Africa and set the stage for post-WWII decolonization.",
+    verdict: "pass",
+    explanation: "EARNS THE POINT — This thesis makes a defensible claim ('fundamentally continued imperial structures'), provides a line of reasoning (the denial of self-determination radicalized resistance), and points toward broader significance (decolonization). It would support a well-organized essay."
+  },
+  {
+    text: "This essay will argue that the post-WWI order was more of a continuation of imperialism than a transformation, and will use evidence from India, Japan, and West Africa to prove this point.",
+    verdict: "fail",
+    explanation: "FAILS — 'This essay will argue' is a classic AP mistake. This statement announces an essay plan rather than making a claim. It also lacks a line of reasoning — naming evidence sources is not the same as constructing a historical argument."
+  },
+  {
+    text: "To a significant extent, the post-WWI international order represented a repackaging of imperialism rather than a genuine transformation: while the mandate system gave colonial control a veneer of legitimacy under the League of Nations, it preserved the core relationships of economic extraction and political domination that defined earlier empires, ensuring that resistance movements would intensify rather than dissolve.",
+    verdict: "pass",
+    explanation: "EARNS THE POINT — Strong AP thesis. Uses 'to a significant extent' to signal a nuanced argument, establishes what changed (the legal veneer) versus what stayed the same (extraction and domination), and provides a causal line of reasoning explaining why resistance intensified. Ready for evidence."
+  }
+];
+
+const SELF_SKILLS = [
+  "I can identify the key features and geographic scope of the mandate system after WWI",
+  "I can explain how the mandate system functioned as a continuation of imperialism rather than a step toward self-determination",
+  "I can describe Gandhi's Satyagraha strategy and explain its political significance beyond lawbreaking",
+  "I can analyze how the Amritsar Massacre radicalized the Indian independence movement",
+  "I can compare Japan's puppet state strategy to European mandates and identify their common imperial logic",
+  "I can construct an AP-style argument about the extent to which the post-WWI order represented imperial continuity"
+];
+
+// ================================================================
+// BUILD FUNCTIONS
+// ================================================================
+
+function buildVocab() {
+  const grid = document.getElementById('vocabGrid');
+  VOCAB.forEach(v => {
+    const card = document.createElement('div');
+    card.className = 'vocab-card';
+    card.innerHTML = `<div class="vocab-inner">
+      <div class="vocab-front">
+        <div class="vocab-term">${v.term}</div>
+        <div class="vocab-hint">${v.hint}</div>
+      </div>
+      <div class="vocab-back">
+        <div class="vocab-def">${v.def}</div>
+      </div>
+    </div>`;
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+    grid.appendChild(card);
+  });
+}
+
+function buildMCQ() {
+  const container = document.getElementById('mcqContainer');
+  MCQ.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'mcq-item';
+    let optHtml = item.opts.map((o, j) =>
+      `<button class="mcq-btn" onclick="handleMCQ(this,${i},${j})">${String.fromCharCode(65+j)}. ${o}</button>`
+    ).join('');
+    div.innerHTML = `<div class="mcq-q"><strong>${i+1}.</strong> ${item.q}</div>
+      <div class="mcq-options">${optHtml}</div>
+      <div class="mcq-feedback" id="fb${i}">${item.feedback}</div>`;
+    container.appendChild(div);
+  });
+}
+
+function handleMCQ(btn, qi, oi) {
+  const item = btn.closest('.mcq-item');
+  if (item.dataset.answered) return;
+  item.dataset.answered = 'true';
+  const btns = item.querySelectorAll('.mcq-btn');
+  btns.forEach(b => b.disabled = true);
+  if (oi === MCQ[qi].correct) {
+    btn.classList.add('correct');
+    document.getElementById('fb'+qi).style.display = 'block';
+  } else {
+    btn.classList.add('incorrect');
+    btns[MCQ[qi].correct].classList.add('correct');
+    document.getElementById('fb'+qi).style.display = 'block';
+  }
+}
+
+function buildMatching() {
+  const shuffled = [...MATCHING].sort(() => Math.random() - 0.5);
+  const termCol = document.getElementById('matchTerms');
+  const defCol = document.getElementById('matchDefs');
+  const defsShuffled = [...MATCHING].sort(() => Math.random() - 0.5);
+  MATCHING.forEach(pair => {
+    const t = document.createElement('div');
+    t.className = 'match-item match-term';
+    t.textContent = pair.term;
+    t.dataset.term = pair.term;
+    t.onclick = () => selectMatch(t, 'term');
+    termCol.appendChild(t);
+  });
+  defsShuffled.forEach(pair => {
+    const d = document.createElement('div');
+    d.className = 'match-item match-def';
+    d.textContent = pair.def;
+    d.dataset.def = pair.term;
+    d.onclick = () => selectMatch(d, 'def');
+    defCol.appendChild(d);
+  });
+}
+
+let selTerm = null, selDef = null;
+function selectMatch(el, type) {
+  if (el.classList.contains('correct')) return;
+  if (type === 'term') {
+    if (selTerm) selTerm.classList.remove('selected');
+    selTerm = el;
+    el.classList.add('selected');
+  } else {
+    if (selDef) selDef.classList.remove('selected');
+    selDef = el;
+    el.classList.add('selected');
+  }
+  if (selTerm && selDef) {
+    if (selTerm.dataset.term === selDef.dataset.def) {
+      selTerm.classList.remove('selected'); selTerm.classList.add('correct');
+      selDef.classList.remove('selected'); selDef.classList.add('correct');
+    } else {
+      selTerm.classList.add('incorrect'); selDef.classList.add('incorrect');
+      const st = selTerm, sd = selDef;
+      setTimeout(() => {
+        st.classList.remove('selected','incorrect');
+        sd.classList.remove('selected','incorrect');
+      }, 700);
+    }
+    selTerm = null; selDef = null;
+  }
+}
+
+function checkMatches() {
+  const correct = document.querySelectorAll('.match-item.correct').length / 2;
+  document.getElementById('matchResult').textContent = `${correct} / ${MATCHING.length} pairs matched correctly.`;
+}
+
+function buildTheses() {
+  const grid = document.getElementById('thesisGrid');
+  THESES.forEach((t, i) => {
+    const card = document.createElement('div');
+    card.className = 'thesis-card';
+    card.innerHTML = `<div class="thesis-text">"${t.text}"</div>
+      <div class="thesis-reveal-hint">Click to reveal verdict</div>
+      <div class="thesis-verdict"></div>
+      <div class="thesis-explanation"></div>`;
+    card.onclick = () => revealThesis(card, t.verdict, t.explanation);
+    grid.appendChild(card);
+  });
+}
+
+function revealThesis(card, verdict, explanation) {
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+  const v = card.querySelector('.thesis-verdict');
+  const e = card.querySelector('.thesis-explanation');
+  v.className = 'thesis-verdict ' + verdict;
+  v.textContent = verdict === 'pass' ? '✓ EARNS THE THESIS POINT' : '✗ DOES NOT EARN THE POINT';
+  e.textContent = explanation;
+}
+
+function buildSelfAssess() {
+  const container = document.getElementById('selfAssess');
+  SELF_SKILLS.forEach((skill, i) => {
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    let dots = [1,2,3].map(level =>
+      `<div class="dot" data-skill="${i}" data-level="${level}" onclick="setDot(${i},${level})"></div>`
+    ).join('');
+    row.innerHTML = `<span class="skill-text">${skill}</span><div class="skill-dots">${dots}</div>`;
+    container.appendChild(row);
+  });
+}
+
+function setDot(skillIndex, level) {
+  const dots = document.querySelectorAll(`.dot[data-skill="${skillIndex}"]`);
+  dots.forEach(d => {
+    d.classList.toggle('filled', parseInt(d.dataset.level) <= level);
+  });
+}
+
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function markDone(btnId, pct) {
+  const btn = document.getElementById(btnId);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.textContent = '✓ Complete!';
+  const fill = document.getElementById('progressFill');
+  const label = document.getElementById('progressPct');
+  const current = parseInt(fill.style.width) || 0;
+  const next = Math.max(current, pct);
+  fill.style.width = next + '%';
+  label.textContent = next + '%';
+}
+
+// ================================================================
+// INIT
+// ================================================================
+buildVocab();
+buildMCQ();
+buildMatching();
+buildTheses();
+buildSelfAssess();
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'dLy4vKo7rDk');
+initAutoSave('7_5');
+buildCompletionSection('7_5', '7.5 Tensions After WWI');
+
+const _origMarkDone = markDone;
+markDone = function(btnId, pct) {
+  _origMarkDone(btnId, pct);
+  markDoneShared('7_5', btnId, pct);
+};
+</script>
+</body>
+</html>

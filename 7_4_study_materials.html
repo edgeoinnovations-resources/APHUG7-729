@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7.4 Study Materials — Economy in the Interwar Period</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1108;
+    --parchment: #f5f0e8;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --steel: #3a4a5c;
+    --smoke: #6b6355;
+    --red: #8b1a1a;
+    --bg: #2a2016;
+    --bg-card: #32291a;
+    --dok1: #2d5a27;
+    --dok2: #1a3d6e;
+    --dok3: #6b2d2d;
+    --dok4: #4a2d6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--bg); color: var(--parchment); min-height: 100vh; font-size: 16px; line-height: 1.7; }
+
+  .page-header { background: linear-gradient(135deg, #1a1208 0%, #2a1e0e 50%, #1e160a 100%); border-bottom: 2px solid var(--gold); padding: 2.5rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  .page-header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,134,11,0.03) 40px, rgba(184,134,11,0.03) 41px); }
+  .header-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .header-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--parchment); line-height: 1.2; margin-bottom: 0.5rem; }
+  .header-sub { color: #b8a88a; font-size: 0.95rem; font-style: italic; max-width: 640px; margin: 0 auto 1.25rem; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .chip { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 0.25rem 0.75rem; border: 1px solid var(--gold); border-radius: 100px; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .how-to { background: rgba(184,134,11,0.08); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; margin: 1.5rem auto; max-width: 860px; padding: 1rem 1.5rem; }
+  .how-to-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .how-to p { font-size: 0.9rem; color: #c8b898; }
+  .main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .dok-section { margin-bottom: 2.5rem; }
+  .dok-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(184,134,11,0.25); }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+  .dok-badge.dok1 { background: var(--dok1); color: #c8e8c4; }
+  .dok-badge.dok2 { background: var(--dok2); color: #c4d4f0; }
+  .dok-badge.dok3 { background: var(--dok3); color: #f0c4c4; }
+  .dok-badge.dok4 { background: var(--dok4); color: #dcc4f0; }
+  .dok-header-text h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--parchment); line-height: 1.2; }
+  .dok-header-text p { font-size: 0.8rem; color: var(--smoke); margin-top: 0.1rem; }
+
+  .card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .card-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .card p, .card li { font-size: 0.92rem; color: #c8b898; }
+  .card ul { padding-left: 1.25rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.75rem; }
+  .vocab-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.25); border-radius: 8px; min-height: 90px; padding: 1rem; cursor: pointer; transition: border-color 0.2s, transform 0.15s; }
+  .vocab-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .vocab-card.flipped { border-color: var(--gold); background: #3a2f1a; }
+  .vocab-card.flipped .vocab-front { display: none; }
+  .vocab-card:not(.flipped) .vocab-back { display: none; }
+  .vocab-term { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.25rem; }
+  .vocab-hint { font-size: 0.75rem; color: var(--smoke); font-style: italic; }
+  .vocab-def { font-size: 0.82rem; color: #c8b898; line-height: 1.5; }
+  .flip-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; display: block; }
+
+  .mcq-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; }
+  .mcq-q { font-size: 0.95rem; color: var(--parchment); margin-bottom: 0.75rem; }
+  .mcq-choices { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.5rem; }
+  .mcq-choice { background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.15); border-radius: 5px; padding: 0.55rem 0.9rem; font-size: 0.85rem; color: #c8b898; cursor: pointer; transition: all 0.15s; text-align: left; }
+  .mcq-choice:hover:not(:disabled) { border-color: var(--gold); color: var(--parchment); }
+  .mcq-choice.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; }
+  .mcq-choice.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.12); color: #e0a0a0; }
+  .mcq-choice:disabled { cursor: default; }
+  .mcq-feedback { display: none; font-size: 0.82rem; color: #b8a888; padding: 0.6rem 0.9rem; background: rgba(255,255,255,0.03); border-left: 2px solid var(--gold); border-radius: 0 4px 4px 0; margin-top: 0.25rem; line-height: 1.55; }
+  .mcq-feedback.visible { display: block; }
+
+  .match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+  @media (max-width: 560px) { .match-grid { grid-template-columns: 1fr; } }
+  .match-col-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--smoke); margin-bottom: 0.4rem; }
+  .match-item { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; padding: 0.6rem 0.9rem; font-size: 0.85rem; color: #c8b898; cursor: pointer; transition: all 0.15s; user-select: none; margin-bottom: 0.4rem; }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold); background: rgba(184,134,11,0.15); color: var(--parchment); }
+  .match-item.correct { border-color: #4a9e3f; background: rgba(74,158,63,0.15); color: #a8e0a0; pointer-events: none; }
+  .match-item.incorrect { border-color: #9e3f3f; background: rgba(158,63,63,0.15); color: #e0a0a0; }
+  .match-check-btn { margin-top: 0.5rem; padding: 0.5rem 1.25rem; background: transparent; border: 1px solid var(--gold); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+  .match-check-btn:hover { background: rgba(184,134,11,0.15); }
+
+  .sa-prompt { font-size: 0.9rem; color: #c8b898; margin-bottom: 0.75rem; padding: 0.75rem 1rem; background: rgba(184,134,11,0.06); border-left: 2px solid var(--gold); border-radius: 0 6px 6px 0; }
+  .sa-textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.88rem; line-height: 1.6; padding: 0.75rem 1rem; resize: vertical; min-height: 90px; transition: border-color 0.2s; }
+  .sa-textarea:focus { outline: none; border-color: var(--gold); }
+  .sa-textarea::placeholder { color: var(--smoke); }
+
+  .accordion-btn { width: 100%; text-align: left; background: rgba(184,134,11,0.07); border: 1px solid rgba(184,134,11,0.2); border-radius: 6px; color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.55rem 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; transition: all 0.15s; }
+  .accordion-btn:hover { background: rgba(184,134,11,0.13); }
+  .accordion-arrow { transition: transform 0.2s; font-size: 0.8rem; }
+  .accordion-btn.open .accordion-arrow { transform: rotate(90deg); }
+  .accordion-body { display: none; padding: 0.9rem 1rem; background: rgba(184,134,11,0.04); border: 1px solid rgba(184,134,11,0.15); border-top: none; border-radius: 0 0 6px 6px; font-size: 0.85rem; color: #b8a888; line-height: 1.6; }
+  .accordion-body.open { display: block; }
+  .accordion-body strong { color: var(--parchment); }
+
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin-bottom: 0.75rem; }
+  .compare-table th { background: rgba(184,134,11,0.15); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(184,134,11,0.3); }
+  .compare-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c8b898; vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .compare-table td:first-child { color: var(--parchment); font-weight: 600; }
+
+  .thesis-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .thesis-cards { grid-template-columns: 1fr; } }
+  .thesis-card { background: var(--bg-card); border: 1px solid rgba(184,134,11,0.2); border-radius: 8px; padding: 1rem; cursor: pointer; transition: all 0.15s; }
+  .thesis-card:hover { border-color: var(--gold); }
+  .thesis-text { font-style: italic; font-size: 0.85rem; color: #c8b898; margin-bottom: 0.5rem; line-height: 1.55; }
+  .thesis-verdict { display: none; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+  .thesis-verdict.pass { background: rgba(74,158,63,0.2); color: #a8e0a0; }
+  .thesis-verdict.fail { background: rgba(158,63,63,0.2); color: #e0a0a0; }
+  .thesis-explanation { display: none; font-size: 0.8rem; color: #b8a888; line-height: 1.5; margin-top: 0.4rem; }
+  .thesis-card.revealed .thesis-verdict, .thesis-card.revealed .thesis-explanation { display: block; }
+  .thesis-click-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  .causal-chain { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
+  .causal-node { background: rgba(184,134,11,0.1); border: 1px solid rgba(184,134,11,0.3); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #c8b898; text-align: center; flex: 1; min-width: 90px; }
+  .causal-node.blank { background: rgba(255,255,255,0.04); border-style: dashed; }
+  .causal-input { width: 100%; background: transparent; border: none; color: var(--parchment); font-family: 'Source Serif 4', serif; font-size: 0.78rem; text-align: center; outline: none; }
+  .causal-input::placeholder { color: var(--smoke); font-size: 0.72rem; }
+  .causal-arrow { color: var(--gold); font-size: 1rem; flex-shrink: 0; }
+
+  .skill-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(184,134,11,0.3); cursor: pointer; transition: all 0.15s; display: inline-block; }
+  .skill-dot.filled { background: var(--gold); border-color: var(--gold-light); }
+  .skill-row { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem; }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label { font-size: 0.85rem; color: #c8b898; flex: 1; }
+  .skill-scale { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--smoke); text-align: right; min-width: 80px; }
+
+  .progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: rgba(26,16,6,0.95); backdrop-filter: blur(8px); padding: 0.5rem 1rem; border-bottom: 1px solid rgba(184,134,11,0.15); }
+  .progress-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+  .progress-label { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--smoke); text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+  .progress-track { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.4s ease; width: 0%; }
+  .progress-pct { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--gold); min-width: 2.5rem; text-align: right; }
+  .section-complete-btn { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 1.1rem; background: transparent; border: 1px solid rgba(184,134,11,0.3); border-radius: 4px; color: var(--smoke); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; margin-top: 1rem; }
+  .section-complete-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .section-complete-btn.done { border-color: #4a9e3f; color: #a8e0a0; background: rgba(74,158,63,0.1); }
+
+  .nlm-tip { display: flex; gap: 0.75rem; align-items: flex-start; background: rgba(26,61,110,0.2); border: 1px solid rgba(100,150,220,0.3); border-radius: 8px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; }
+  .nlm-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .nlm-tip p { font-size: 0.83rem; color: #a0b8d8; line-height: 1.55; }
+  .nlm-tip strong { color: #c8d8f0; }
+  .divider { border: none; border-top: 1px solid rgba(184,134,11,0.15); margin: 2rem 0; }
+
+  /* SPECTRUM DIAGRAM */
+  .spectrum-wrap { margin-bottom: 1rem; }
+  .spectrum-bar { height: 10px; border-radius: 5px; background: linear-gradient(to right, #1a3d6e, #4a2d6b, #6b2d2d); margin: 0.5rem 0 0.3rem; }
+  .spectrum-labels { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--smoke); }
+  .spectrum-nodes { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 0.5rem; margin-top: 0.75rem; }
+  .snode { border-radius: 7px; padding: 0.7rem 0.8rem; border: 1px solid; text-align: center; }
+  .snode.keynesian { border-color: rgba(26,61,110,0.6); background: rgba(26,61,110,0.1); }
+  .snode.newdeal    { border-color: rgba(26,61,110,0.5); background: rgba(26,61,110,0.08); }
+  .snode.fascist    { border-color: rgba(107,45,45,0.5); background: rgba(107,45,45,0.08); }
+  .snode.enational  { border-color: rgba(107,45,45,0.4); background: rgba(107,45,45,0.06); }
+  .snode.soviet     { border-color: rgba(74,45,107,0.6); background: rgba(74,45,107,0.1); }
+  .snode-label { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+  .snode.keynesian .snode-label, .snode.newdeal .snode-label { color: #90b0e0; }
+  .snode.fascist .snode-label, .snode.enational .snode-label { color: #e09090; }
+  .snode.soviet .snode-label { color: #c090e0; }
+  .snode p { font-size: 0.75rem; color: #b8a888; line-height: 1.4; }
+
+  /* DOMINO CHAIN */
+  .domino-row { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.75rem; }
+  .domino { background: rgba(139,26,26,0.12); border: 1px solid rgba(139,26,26,0.35); border-radius: 6px; padding: 0.5rem 0.7rem; font-size: 0.82rem; color: #e8c8c8; text-align: center; flex: 1; min-width: 80px; }
+  .domino-arrow { color: var(--red); font-size: 1rem; flex-shrink: 0; }
+
+  /* QUOTE */
+  .quote-block { border-left: 3px solid var(--gold); padding: 0.8rem 1.2rem; background: rgba(184,134,11,0.06); border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+  .quote-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: #e8d8b8; line-height: 1.6; margin-bottom: 0.4rem; }
+  .quote-attr { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--smoke); letter-spacing: 0.1em; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  @media (max-width: 560px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="progress-bar-wrap">
+  <div class="progress-inner">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="header-eyebrow">AP World History · Unit 7 · Study Materials</div>
+  <h1 class="header-title">7.4 Economy in the Interwar Period</h1>
+  <p class="header-sub">How the Great Depression shattered laissez-faire economics and forced every government on earth to answer one permanent question: what is the state's proper role in the economy?</p>
+  <div class="chips">
+    <span class="chip">c. 1919–1939</span>
+    <span class="chip">Great Depression</span>
+    <span class="chip">Governance &amp; Economy</span>
+    <span class="chip">DOK 1 → DOK 4</span>
+    <span class="chip">SAQ · LEQ · DBQ · MCQ</span>
+  </div>
+</div>
+
+<div class="main" style="padding-top:1.25rem; padding-bottom:0;">
+  <div class="how-to">
+    <div class="how-to-title">📋 How to Use These Materials</div>
+    <p>Work through each section <strong>in order</strong>. Watch the NotebookLM video first. The central argument: the Great Depression didn't just cause economic suffering — it <strong>permanently destroyed laissez-faire economics</strong> and forced every major government to radically expand its role in economic life, each in a very different way.</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ════ DOK 1 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok1">DOK 1 · Knowledge Acquisition</div>
+      <div class="dok-header-text">
+        <h2>Watch, Recall &amp; Define</h2>
+        <p>Answer correctly — identify, name, and locate key facts from the video and infographic</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🎬</div>
+      <p><strong>Before you begin:</strong> Watch the 7.4 video. As you watch, track the video's "spectrum of responses" — from fixing capitalism (New Deal) to controlling it (fascism) to abolishing it entirely (Soviet command economy). Ask yourself: what did all these responses have in common?</p>
+    </div>
+    <div id="videoEmbed"></div>
+
+    <!-- FDR Quote Anchor -->
+    <div class="card">
+      <div class="card-label">Anchor Text · The Video's Opening Frame</div>
+      <div class="quote-block">
+        <div class="quote-text">"We had to struggle with the old enemies of peace — business and financial monopoly, speculation, reckless banking, class antagonism, sectionalism, war profiteering… They are unanimous in their hate for me — and I welcome their hatred."</div>
+        <div class="quote-attr">— Franklin D. Roosevelt, 1936 · The video uses this to show that FDR framed the Depression as a moral battle, not just an economic one</div>
+      </div>
+      <p style="font-size:0.85rem; color:#b8a888; line-height:1.6;">This framing mattered: FDR's language signaled that the era of the government standing aside while the market crashed was over. The state would now <em>fight</em>. Every government in the world reached the same conclusion — just with radically different visions of what "fighting" meant.</p>
+    </div>
+
+    <!-- Domino Sequence -->
+    <div class="card">
+      <div class="card-label">Reference · The Domino Chain That Created the Crisis</div>
+      <div class="domino-row">
+        <div class="domino">WWI Destroys<br>European Economies</div>
+        <div class="domino-arrow">→</div>
+        <div class="domino">Germany's<br>Hyperinflation</div>
+        <div class="domino-arrow">→</div>
+        <div class="domino">Global Farm<br>Overproduction /<br>Price Collapse</div>
+        <div class="domino-arrow">→</div>
+        <div class="domino">1929 US Stock<br>Market Crash</div>
+        <div class="domino-arrow">→</div>
+        <div class="domino">Great Depression<br>−30% Global<br>Output by 1932</div>
+      </div>
+      <p style="font-size:0.82rem; color:#b8a888;">The video frames the Great Depression not as a sudden accident but as the culmination of a chain of economic shocks — each one making the next more likely. By 1932, nearly one-third of all global economic activity had simply vanished.</p>
+    </div>
+
+    <!-- Spectrum of Responses -->
+    <div class="card">
+      <div class="card-label">Reference · Spectrum of Government Responses to the Depression</div>
+      <div class="spectrum-wrap">
+        <div class="spectrum-bar"></div>
+        <div class="spectrum-labels">
+          <span>← Fix capitalism</span>
+          <span>Control capitalism →</span>
+          <span>Abolish capitalism →</span>
+        </div>
+        <div class="spectrum-nodes">
+          <div class="snode keynesian">
+            <div class="snode-label">Keynesianism</div>
+            <p>Govt spends to restart demand; fixes the market, doesn't replace it</p>
+          </div>
+          <div class="snode newdeal">
+            <div class="snode-label">New Deal (USA)</div>
+            <p>Relief, recovery, reform — safety nets, public works, bank regulations</p>
+          </div>
+          <div class="snode fascist">
+            <div class="snode-label">Fascist Corporatism (Italy / Brazil)</div>
+            <p>State directs businesses and unions toward nationalist goals</p>
+          </div>
+          <div class="snode enational">
+            <div class="snode-label">Economic Nationalism (Mexico)</div>
+            <p>State seizes foreign-owned industries; builds national economic strength</p>
+          </div>
+          <div class="snode soviet">
+            <div class="snode-label">Soviet Command Economy</div>
+            <p>Abolish market entirely; 5-year plans, collectivization, state owns everything</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vocab -->
+    <div class="card">
+      <div class="card-label">Activity 1A · Vocabulary · Click each card to reveal the definition</div>
+      <div class="vocab-grid" id="vocabGrid"></div>
+    </div>
+
+    <!-- MCQs -->
+    <div class="card">
+      <div class="card-label">Activity 1B · Fact Recall · Choose the best answer</div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">1. What was "laissez-faire" economics, and what did the Great Depression do to it?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. A system of heavy government regulation that was replaced by free markets after the Depression</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. The belief that governments should keep their hands off the economy and let free markets self-correct — an idea the Great Depression "blew to pieces" by showing markets could completely implode</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. A French trade policy that restricted imports — abandoned when the Depression required global cooperation</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Government ownership of key industries — expanded during the Depression to stimulate production</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. "Laissez-faire" (French: "let it be") was the dominant economic philosophy before the Depression — the idea that free markets, left alone, would always find equilibrium. The Depression's 30% collapse of global output in three years made that philosophy untenable. The question shifted from <em>whether</em> governments should intervene to <em>how</em>.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">2. What were the three goals of FDR's New Deal?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Nationalization, militarization, and industrialization</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. Isolation, protectionism, and austerity</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. Relief (direct help to the poor), recovery (public works to create jobs), and reform (new banking rules and social safety nets to prevent future crises)</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Deregulation, privatization, and deficit reduction</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video summarizes the New Deal's three goals clearly: Relief — immediate help for those suffering; Recovery — government spending on public works to restart economic activity; Reform — structural changes to banks and new safety nets (like Social Security) so the next crisis wouldn't be as catastrophic. This was Keynesian theory in practice.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">3. What made Germany's hyperinflation crisis a symbol of "total systemic failure"?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. Germany's factories shut down, creating mass unemployment that spread to neighboring countries</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">B. Crushed by war reparations, Germany printed so much money its currency became worthless — people literally used banknotes as wallpaper, wiping out an entire nation's savings overnight</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">C. The German government defaulted on its war debts, triggering an international banking crisis</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. Allied powers seized German gold reserves, leaving the country unable to pay for basic imports</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. The video uses this vivid image — currency so worthless it was used as wallpaper — to illustrate what total monetary collapse looks like. Germany's hyperinflation was caused by the crushing WWI reparations demanded by the Treaty of Versailles; unable to pay, Germany printed money, devaluing it into worthlessness. This wiped out the savings of an entire middle class, creating the conditions of desperation that would later fuel extremism.</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">4. What was Stalin's collectivization policy, and what was its human cost?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. A voluntary cooperative farming program that increased Soviet agricultural output peacefully</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. A policy of purchasing land from wealthy landowners to redistribute it to poor peasants</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. The forced seizure of all private farmland to create state-run collective farms — which led directly to man-made famines that killed millions, especially in Ukraine</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. A program of agricultural mechanization that displaced rural workers into Soviet cities</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. Collectivization was central to Stalin's Five-Year Plans: seize all private farmland, force peasants onto massive state farms, control the food supply, sell grain abroad to fund industrialization. Peasants who resisted were killed or sent to gulags. The resulting disruption of food production caused deliberate famines — the Holodomor in Ukraine killed millions. The video calls it "industrialization through pure terror."</div>
+      </div>
+
+      <div class="mcq-item">
+        <div class="mcq-q">5. According to the video, what was the ONE thing all responses to the Depression had in common?</div>
+        <div class="mcq-choices">
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">A. All governments eventually adopted democratic elections to legitimize their economic policies</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">B. All governments initially chose austerity before turning to stimulus spending</button>
+          <button class="mcq-choice" data-correct="true" onclick="handleMCQ(this)">C. All governments dramatically expanded the state's role in the economy — whether through Keynesian reform, fascist control, nationalist seizure, or Soviet command planning</button>
+          <button class="mcq-choice" data-correct="false" onclick="handleMCQ(this)">D. All governments suspended international trade until domestic economies recovered</button>
+        </div>
+        <div class="mcq-feedback">✓ Correct. This is the video's big takeaway — the "one massive world-changing outcome" that cuts across all responses. USA, fascist Italy, Mexico, Brazil, Soviet Union: despite totally different ideologies, they all ended up dramatically expanding government's economic role. Before the Depression, government responsibility for the economy was a radical idea. After it, the idea became a permanent global assumption.</div>
+      </div>
+    </div>
+
+    <!-- Matching -->
+    <div class="card">
+      <div class="card-label">Activity 1C · Matching · Click a term, then click its definition</div>
+      <div class="match-grid">
+        <div><div class="match-col-label">Terms</div><div id="matchTerms"></div></div>
+        <div><div class="match-col-label">Definitions</div><div id="matchDefs"></div></div>
+      </div>
+      <div id="matchResult" style="font-size:0.82rem; margin-top:0.5rem; display:none;"></div>
+      <button class="match-check-btn" onclick="checkMatches()">Check Answers</button>
+    </div>
+
+    <button class="section-complete-btn" id="dok1Btn" onclick="markDone('dok1Btn',25)">
+      <span class="check-icon">○</span> Mark DOK 1 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 2 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok2">DOK 2 · Knowledge Application</div>
+      <div class="dok-header-text">
+        <h2>Explain &amp; Apply</h2>
+        <p>Establish and explain with examples — apply concepts to demonstrate understanding</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🗺️</div>
+      <p><strong>Use the infographic now.</strong> The infographic likely shows the spectrum of economic responses — from New Deal to Soviet command economy. Keep it visible as you work through the explain drills and comparison table.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 2A · Explain Drill · Keynesian Economics</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Explain Keynesian economics and why it was considered a "complete game changer" compared to laissez-faire thinking. Use the New Deal as a specific example of Keynesian theory in practice.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Before Keynes, the dominant idea was... Keynes argued instead that... The New Deal put this into practice by..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> Before Keynes, the dominant economic logic — laissez-faire — held that governments should stay out of markets and wait for them to self-correct. When the Depression hit and markets didn't correct (they collapsed), this advice looked catastrophically wrong. John Maynard Keynes offered a revolutionary alternative: in a crisis, he argued, the government must become the "spender of last resort." When private businesses stop investing and consumers stop spending — creating a downward spiral — only the government has the capacity to inject enough money into the economy to stop the freefall, even if it has to borrow to do it. This was the exact opposite of laissez-faire. The New Deal put this theory directly into practice: massive public works programs (building roads, dams, schools) created government-funded jobs; direct relief programs put money in people's hands to spend; and banking reforms rebuilt public trust in financial institutions. The government wasn't replacing the market — it was rescuing it.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 2B · Explain Drill · Fascist Corporatism vs. Soviet Command Economy</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> Both fascist Italy and the Soviet Union dramatically expanded state control of the economy during the interwar period. Explain how their approaches were <em>similar</em> in degree but <em>different</em> in method and purpose.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="Both the fascist and Soviet systems expanded state control by... However, they differed in that fascism... while the Soviet Union..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> Both systems represented the most extreme end of the spectrum of state economic control — both essentially abolished meaningful economic freedom for individuals. But their mechanisms and ideological justifications differed sharply. Fascist Italy used "corporatism": the state didn't seize ownership of businesses, but it took control of them by directing what industries, unions, and businesses were allowed to do, subordinating all economic activity to the goals of the nationalist state. Private property still technically existed, but the state told it what to do. The Soviet command economy went further: it abolished private ownership entirely. Stalin's Five-Year Plans placed every factory, farm, and shop under direct state control — there was no market to direct because there was no market. The key difference in purpose: fascism used economic control to serve aggressive nationalism (making Italy great, building military power); Soviet command economics used it to serve communist ideology (eliminating class distinctions through state ownership of all means of production). Both paths led to horrifying human costs — but different kinds.
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="card">
+      <div class="card-label">Activity 2C · Comparison Table · Three Paths Through the Depression</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Study the table, then answer the reflection question below.</p>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>🇺🇸 New Deal (USA)</th>
+              <th>⚫ Fascism (Italy / Brazil)</th>
+              <th>☭ Soviet Command Economy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core Philosophy</td>
+              <td>Fix capitalism — government intervenes to save the market system</td>
+              <td>Control capitalism — state directs private economy toward nationalist goals</td>
+              <td>Abolish capitalism — state owns and controls all economic activity</td>
+            </tr>
+            <tr>
+              <td>Key Theorist / Leader</td>
+              <td>John Maynard Keynes (theory); FDR (practice)</td>
+              <td>Mussolini (Italy); Getúlio Vargas — Estado Novo (Brazil)</td>
+              <td>Lenin (NEP); Stalin (Five-Year Plans)</td>
+            </tr>
+            <tr>
+              <td>Role of Private Property</td>
+              <td>Preserved — but regulated and reformed</td>
+              <td>Technically preserved — but state-directed</td>
+              <td>Abolished — state owns all property</td>
+            </tr>
+            <tr>
+              <td>Key Policy / Program</td>
+              <td>New Deal: public works, relief, Social Security, bank regulation</td>
+              <td>Corporatism: government controls unions and industries; economic nationalism (Mexico: oil seizure)</td>
+              <td>Five-Year Plans; collectivization of all farmland</td>
+            </tr>
+            <tr>
+              <td>Human Cost</td>
+              <td>Gradual recovery; democratic rights preserved; some inequality persisted</td>
+              <td>Loss of political freedom; suppression of labor rights; preparation for aggressive war</td>
+              <td>Millions killed by man-made famine (Holodomor); gulags for resisters; industrialization through terror</td>
+            </tr>
+            <tr>
+              <td>Long-term Legacy</td>
+              <td>Permanent expansion of welfare state; Keynesian economics becomes mainstream globally</td>
+              <td>Led to WWII; post-war discrediting of fascism as ideology</td>
+              <td>Rapid Soviet industrialization; Cold War rival to Western capitalism</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sa-prompt" style="margin-top:0.75rem;">
+        <strong>Reflection question:</strong> Despite their enormous differences, what did all three of these systems share? Write 2–3 sentences — this is the video's key insight.
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="Despite their different ideologies, all three systems..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Response
+      </button>
+      <div class="accordion-body">
+        Despite radical ideological differences, all three systems dramatically and permanently expanded the government's role in managing economic life. Before the Depression, the idea that a government was responsible for the health of the economy was considered a radical fringe position — the mainstream view was that markets should be left alone. After the Depression, every major government — democratic, fascist, or communist — accepted as a permanent truth that the state must actively manage economic outcomes. The old world of laissez-faire was gone for good, regardless of whether your government was saving capitalism, redirecting it, or abolishing it.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 2D · Apply · Economic Nationalism Beyond Europe</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> The video notes that the Depression's economic responses weren't just European — Mexico nationalized its oil industry and Brazil's Vargas created the Estado Novo. Explain why the Depression created conditions where even developing nations expanded state economic control, and what they hoped to gain.
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="The Depression affected developing nations by... In response, countries like Mexico and Brazil chose to... Their goal was to..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Answer
+      </button>
+      <div class="accordion-body">
+        <strong>Strong answer includes:</strong> The Depression collapsed commodity prices globally, devastating economies like Mexico and Brazil that depended heavily on exporting raw materials (oil, coffee, rubber) to wealthy industrial nations. When prices crashed, government revenues collapsed and unemployment soared. At the same time, the Depression exposed how vulnerable these economies were to decisions made in New York, London, or Paris — external shocks they had no power to control. Economic nationalism was a direct response to this vulnerability: by seizing control of key industries (Mexico's nationalization of U.S.-owned oil companies in 1938) or centralizing economic power (Vargas's Estado Novo), governments hoped to insulate their countries from foreign economic domination and capture the profits that had been flowing to foreign investors. The goal was not just economic recovery but economic sovereignty — the right to control your own resources and set your own development agenda rather than serving as a raw materials supplier for wealthier nations.
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok2Btn" onclick="markDone('dok2Btn',50)">
+      <span class="check-icon">○</span> Mark DOK 2 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 3 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok3">DOK 3 · Knowledge Analysis</div>
+      <div class="dok-header-text">
+        <h2>Argue &amp; Analyze</h2>
+        <p>Examine and explain with evidence — construct arguments, evaluate theses, build causal chains</p>
+      </div>
+    </div>
+
+    <!-- Causal Chain -->
+    <div class="card">
+      <div class="card-label">Activity 3A · Causal Chain · Fill in the blanks</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Two nodes are blank. Fill them in, then write 2 sentences explaining the critical link between the Depression and the rise of extremism.</p>
+      <div class="causal-chain">
+        <div class="causal-node">WWI Economic<br>Devastation<br><small style="color:var(--smoke);">reparations, debt</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What German crisis showed the system failing?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">1929 US Stock<br>Market Crash<br><small style="color:var(--smoke);">global domino</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Great Depression<br><small style="color:var(--smoke);">−30% global output</small></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node blank"><input class="causal-input" placeholder="What did desperate populations look for?" /></div>
+        <div class="causal-arrow">→</div>
+        <div class="causal-node">Rise of Radical<br>Ideologies<br><small style="color:var(--smoke);">fascism, communism</small></div>
+      </div>
+      <textarea class="sa-textarea" rows="3" placeholder="The link between the Depression and the rise of extremism is... Specifically, when people could not feed their families..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> Reveal Answers + Key Insight
+      </button>
+      <div class="accordion-body">
+        <strong>Blank 1:</strong> German Hyperinflation (currency became so worthless it was used as wallpaper — an entire nation's savings wiped out, symbolizing total systemic failure)<br>
+        <strong>Blank 2:</strong> Governance Vacuum / Strongman Leaders (desperate populations lost faith in democratic governments that seemed powerless to fix things — creating an opening for extremists promising strong action, national greatness, and someone to blame)<br><br>
+        <strong>Key insight:</strong> The Depression wasn't just an economic crisis — it was a <em>crisis of legitimacy</em> for democratic governments. When leaders seemed helpless while people starved, democracy itself looked like a failed system. This is the direct connection the video draws between 7.4 (the Depression) and 7.6 (the causes of WWII) — economic desperation created the political opening that Hitler and Mussolini walked through.
+      </div>
+    </div>
+
+    <!-- SAQ -->
+    <div class="card">
+      <div class="card-label">Activity 3B · SAQ Practice · AP-Style Short Answer</div>
+      <div class="sa-prompt">
+        <strong>AP Prompt:</strong> "Explain how the Great Depression contributed to the expansion of state power in ONE country during the interwar period."<br><br>
+        <em>Choose ONE country. Write 2–3 sentences: identify the Depression's impact, explain the government's specific response, and connect it to the expansion of state power.</em>
+      </div>
+      <textarea class="sa-textarea" rows="5" placeholder="In [country], the Great Depression caused... The government responded by... This represented an expansion of state power because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample SAQ Response (Soviet Union)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Response — Soviet Union:</strong><br><br>
+        In the Soviet Union, the interwar economic crisis accelerated Stalin's already-radical agenda to abolish market economics entirely and replace it with a state-directed command economy through the Five-Year Plans. Stalin used the global Depression as evidence that capitalism was self-destructing, justifying the forced collectivization of all private farmland — an act that transferred ownership of the most basic means of production (land) from individuals to the state. While the resulting man-made famines killed millions, especially in Ukraine, the Soviet Union did industrialize at breakneck speed, which Stalin presented as proof of communism's superiority — an expansion of state power so complete that not a single factory, farm, or business remained outside government control.<br><br>
+        <strong>AP note:</strong> This response names the country, explains the Depression's role as context, identifies a specific policy (collectivization/Five-Year Plans), and connects it explicitly to the expansion of state power. All four elements are necessary. Notice it doesn't just say "the government grew" — it shows <em>how</em> and <em>why</em>.
+      </div>
+    </div>
+
+    <!-- CCOT -->
+    <div class="card">
+      <div class="card-label">Activity 3C · CCOT Analysis · The Government's Role in the Economy</div>
+      <div class="sa-prompt">
+        <strong>Prompt:</strong> What <em>changed</em> and what <em>continued</em> in the relationship between governments and economies from the pre-Depression era (c. 1870–1929) to the post-Depression interwar period (c. 1929–1939)? Give one specific example of each.
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="match-col-label">What CHANGED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Something fundamentally new about how governments related to economies after 1929..."></textarea>
+        </div>
+        <div>
+          <div class="match-col-label">What CONTINUED</div>
+          <textarea class="sa-textarea" rows="4" placeholder="Something that remained the same about capitalism or economic competition..."></textarea>
+        </div>
+      </div>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample CCOT Response
+      </button>
+      <div class="accordion-body">
+        <strong>CHANGE:</strong> The most fundamental change was the permanent end of laissez-faire as the governing economic philosophy of major states. Before 1929, the mainstream position — across most democratic, liberal governments — was that markets were self-correcting and government intervention was counterproductive. After the Depression proved markets could collapse catastrophically without correction, every major government accepted state economic responsibility as necessary. The New Deal's creation of Social Security, the FDIC, and unemployment insurance in the U.S. institutionalized a level of government involvement that would have been considered radical socialism a generation earlier.<br><br>
+        <strong>CONTINUITY:</strong> Despite the radical expansion of state power, the fundamental <em>competition among great powers</em> for economic dominance and resource control continued unchanged. Whether through Keynesian reform, fascist corporatism, or Soviet command planning, states were still competing to maximize their relative power and industrial capacity. Economic nationalism (Germany's rearmament, Japan's resource expansion, the U.S. tariffs) reflected the same logic of competitive great-power rivalry that had driven imperialism — just expressed through economic rather than colonial means.
+      </div>
+    </div>
+
+    <!-- Thesis Evaluator -->
+    <div class="card">
+      <div class="card-label">Activity 3D · Thesis Evaluator · Click each thesis to reveal the verdict</div>
+      <div class="sa-prompt" style="margin-bottom:0.75rem;">
+        <strong>Essay Prompt:</strong> "Evaluate the extent to which the Great Depression caused governments to expand their role in economic life during the interwar period."
+      </div>
+      <div class="thesis-cards">
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is a restatement. \'The Great Depression caused governments to expand their economic role\' just paraphrases the prompt. There is no \'to what extent\' argument, no analytical categories, and no line of reasoning the essay could develop. A reader cannot tell what this essay will actually argue.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"The Great Depression caused governments around the world to greatly expand their role in the economy, as seen in examples like the New Deal, fascist Italy, and the Soviet Union."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'fail','This is historically accurate but still doesn\'t earn the point. Acknowledging that governments responded differently is a factual observation, not an argument. It doesn\'t address \'to what extent\' state power expanded or establish a line of reasoning about WHY different paths were taken. It\'s a topic sentence, not a thesis.')">
+          <div class="thesis-verdict fail">✗ Does NOT earn the point</div>
+          <div class="thesis-text">"Different governments responded to the Great Depression in different ways — the United States chose the New Deal, while fascist and communist countries took more extreme approaches to state control."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point. It makes a clear \'to what extent\' argument (expansion was universal but varied in degree and ideology) and establishes a line of reasoning with two categories: the Depression created the conditions, but existing political ideology determined how far each government went. This framework creates a comparative essay structure.')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"While the Great Depression universally expanded governments' economic roles, the degree of that expansion was determined less by the crisis itself than by the existing political ideology of each state — with democracies reforming capitalism, fascists redirecting it, and the Soviet Union abolishing it entirely."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+        <div class="thesis-card" onclick="revealThesis(this,'pass','This earns the thesis point with a sophisticated governance-focused argument. It connects the expansion of state economic power to a deeper cause — the Depression destroyed public faith in both laissez-faire economics AND in democratic governance simultaneously, creating the political opening for the most extreme expansions of state power. This analytical framework links 7.4 directly to 7.6 (rise of totalitarianism).')">
+          <div class="thesis-verdict pass">✓ Earns the point</div>
+          <div class="thesis-text">"The Great Depression expanded state economic power not just by creating a practical need for intervention, but by destroying the ideological legitimacy of laissez-faire economics and democratic governance simultaneously — making populations desperate enough to accept levels of state control that would have been unthinkable a decade earlier."</div>
+          <div class="thesis-explanation"></div>
+          <span class="thesis-click-hint">Click to evaluate →</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="section-complete-btn" id="dok3Btn" onclick="markDone('dok3Btn',75)">
+      <span class="check-icon">○</span> Mark DOK 3 Complete
+    </button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ════ DOK 4 ════ -->
+  <div class="dok-section">
+    <div class="dok-header">
+      <div class="dok-badge dok4">DOK 4 · Knowledge Augmentation</div>
+      <div class="dok-header-text">
+        <h2>Synthesize &amp; Transfer</h2>
+        <p>Explore and explain with examples and evidence — connect across time periods and construct original arguments</p>
+      </div>
+    </div>
+
+    <div class="nlm-tip">
+      <div class="nlm-icon">🔗</div>
+      <p><strong>The video's closing question:</strong> <em>"What is the government's proper role in the economy? That's a question we are still debating every single day."</em> DOK 4 asks you to carry this question forward — into later history and into your own era.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 4A · Contextualization Builder · AP Essay Skill</div>
+      <p style="font-size:0.85rem; color:#b8a888; margin-bottom:0.75rem;">Choose one option and write a 3–4 sentence contextualization paragraph connecting a broader historical development to the interwar economic crisis.</p>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.75rem;">
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option A:</strong> How did the Industrial Revolution create the globally interconnected economic system that made the 1929 crash in the United States into a worldwide depression rather than a local crisis?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option B:</strong> How did the Treaty of Versailles (1919) create the specific economic conditions — German reparations, instability — that made the interwar period so economically fragile?
+        </div>
+        <div style="padding:0.6rem 0.9rem; background:rgba(184,134,11,0.06); border-left:2px solid var(--gold); border-radius:0 5px 5px 0; font-size:0.85rem; color:#c8b898;">
+          <strong style="color:var(--parchment);">Option C:</strong> How did the rise of socialist and communist ideology in the late 19th century (Marx, Engels) create the intellectual framework that made the Soviet command economy seem like a viable — even appealing — alternative to capitalism during the Depression?
+        </div>
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="In the decades before the Depression, [your chosen context] created conditions that shaped how nations responded to the crisis by..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Contextualization (Option B)
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Contextualization — Treaty of Versailles:</strong><br><br>
+        The economic chaos of the interwar period cannot be understood without first examining the deliberate economic punishment embedded in the 1919 Treaty of Versailles. The treaty imposed crushing war reparations on Germany — eventually totaling 132 billion gold marks — along with the seizure of German industrial territories, the loss of merchant shipping, and mandatory transfers of livestock and raw materials. These terms weren't just punitive; they were structurally destabilizing. Germany was forced to pay debts far beyond its capacity to generate revenues, leading directly to hyperinflation in the early 1920s when the Weimar government printed money to cover obligations. The reparations system also created dangerous interdependencies: Germany borrowed American money (the Dawes Plan) to pay reparations to France and Britain, who used those payments to repay WWI debts to the United States. This circular system meant that when the 1929 American crash dried up credit, the entire chain collapsed simultaneously — making the global depression far more severe than it would otherwise have been.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 4B · Cross-Unit Synthesis · Connecting Forward</div>
+      <div class="sa-prompt">
+        <strong>Synthesis Prompt:</strong> The video argues that the Depression created a "governance vacuum" — desperate populations lost faith in democratic governments, opening the door for extremists. In 3–5 sentences, connect this argument from 7.4 to a specific development in <em>7.5 or 7.6</em> (Tensions After WWI / Causes of WWII). Be explicit about the connection.
+      </div>
+      <textarea class="sa-textarea" rows="6" placeholder="The governance vacuum created by the Depression helps explain [development in 7.5/7.6] because..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        <span class="accordion-arrow">›</span> View Sample Synthesis Response
+      </button>
+      <div class="accordion-body">
+        <strong>Sample Synthesis — Connecting 7.4 to 7.6 (Hitler's Rise):</strong><br><br>
+        The governance vacuum the video identifies in 7.4 is the direct mechanism through which the Depression caused WWII. Hitler did not seize power in a coup — he was appointed chancellor <em>legally</em>, as the leader of the largest party in a democratic parliament. That democratic parliament had lost its legitimacy because the Weimar Republic, Germany's post-WWI democratic government, was seen as responsible for both the humiliation of Versailles and the economic devastation of the Depression. German hyperinflation had already destroyed the savings of the middle class in the early 1920s; the 1929 crash then wiped out millions of jobs. When democratic leaders appeared powerless — or worse, complicit with the banks and foreign powers who had imposed these conditions — the political space opened for a party that promised national greatness, economic restoration, and most crucially, someone to blame. The Nazi Party's electoral surge in 1930–1932 was almost perfectly correlated with unemployment figures: as jobs disappeared, Nazi votes multiplied. The Depression didn't just damage the economy — it destroyed the political legitimacy of the system that was supposed to protect people from exactly this kind of catastrophe.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Activity 4C · Self-Assessment · Rate your confidence (click the dots)</div>
+      <div id="selfAssess"></div>
+    </div>
+
+    <button class="section-complete-btn" id="dok4Btn" onclick="markDone('dok4Btn',100)">
+      <span class="check-icon">○</span> Mark DOK 4 Complete — Unit 7.4 Done!
+    </button>
+  </div>
+
+</div>
+
+<script src="shared.js"></script>
+<script>
+// ── VOCAB ──
+const vocab = [
+  { term: "Laissez-faire",      hint: "\"Let it be\"…",        def: "The pre-Depression economic philosophy that governments should not interfere in markets — the belief that free markets are self-correcting. The Great Depression destroyed this idea by showing markets could completely implode without correction." },
+  { term: "Great Depression",   hint: "−30% global output…",   def: "The global economic catastrophe triggered by the 1929 US stock market crash — by 1932, nearly one-third of all global economic activity had vanished. Forced every major government to radically rethink the state's role in the economy." },
+  { term: "Keynesian Economics",hint: "Spend to save…",         def: "John Maynard Keynes's theory that governments must act as \"spenders of last resort\" during economic downturns — injecting money into the economy through spending even if it requires borrowing — to break the cycle of collapse." },
+  { term: "New Deal",           hint: "Relief, recovery, reform…", def: "FDR's massive U.S. government program: relief (direct help for unemployed), recovery (public works to create jobs), reform (banking regulations and social safety nets like Social Security). Keynesianism in practice." },
+  { term: "Hyperinflation",     hint: "Currency as wallpaper…",  def: "Germany's post-WWI crisis where printing money to pay reparations made currency so worthless it was used as wallpaper. Wiped out the savings of the entire middle class — a symbol of total economic system failure." },
+  { term: "Corporatism",        hint: "Fascist economic control…", def: "The Italian fascist economic model: the state takes control of businesses and unions, directing them to serve nationalist goals. Private property technically exists but the state commands it." },
+  { term: "Five-Year Plans",    hint: "Stalin's forced industrialization…", def: "Stalin's top-down plans to rapidly industrialize the Soviet Union — setting production quotas for every industry, abolishing private property, and collectivizing agriculture. Achieved rapid growth through terror." },
+  { term: "Collectivization",   hint: "Forced state farms…",    def: "Stalin's policy of seizing all private farmland and forcing peasants onto state-run collective farms. Led directly to man-made famines (Holodomor) that killed millions, especially in Ukraine." },
+  { term: "Estado Novo",        hint: "Brazil's \"new state\"…", def: "Getúlio Vargas's authoritarian government in Brazil, modeled on European fascism — centralizing economic power under intense nationalism to resist foreign economic domination during the Depression." },
+  { term: "Governance Vacuum",  hint: "When democracy seems to fail…", def: "The political opening created when desperate populations lose faith in democratic governments that appear powerless to fix economic collapse — making them receptive to extremist parties promising strong action, national greatness, and scapegoats." },
+];
+
+function buildVocab() {
+  const g = document.getElementById('vocabGrid');
+  vocab.forEach(v => {
+    const c = document.createElement('div');
+    c.className = 'vocab-card';
+    c.innerHTML = `<div class="vocab-front"><div class="vocab-term">${v.term}</div><div class="vocab-hint">${v.hint}</div><span class="flip-hint">↕ tap to reveal</span></div><div class="vocab-back"><div class="vocab-def">${v.def}</div><span class="flip-hint" style="color:var(--smoke);">↕ flip back</span></div>`;
+    c.addEventListener('click', () => c.classList.toggle('flipped'));
+    g.appendChild(c);
+  });
+}
+
+// ── MATCHING ──
+const matchPairs = [
+  { term: "Laissez-faire",       def: "\"Let it be\" — government keeps hands off the market" },
+  { term: "Keynesian Economics", def: "Government spends to restart demand during economic collapse" },
+  { term: "Collectivization",    def: "Forced state seizure of private farmland — millions died in resulting famines" },
+  { term: "Corporatism",         def: "State directs private businesses and unions toward nationalist goals" },
+  { term: "Governance Vacuum",   def: "Opening for extremists when people lose faith in democratic governments" },
+];
+let selTerm = null, selDef = null;
+
+function buildMatching() {
+  const tD = document.getElementById('matchTerms'), dD = document.getElementById('matchDefs');
+  const sh = [...matchPairs].sort(() => Math.random() - 0.5);
+  matchPairs.forEach(p => {
+    const t = document.createElement('div');
+    t.className = 'match-item'; t.textContent = p.term; t.dataset.term = p.term;
+    t.addEventListener('click', () => selectMatch(t, 'term')); tD.appendChild(t);
+  });
+  sh.forEach(p => {
+    const d = document.createElement('div');
+    d.className = 'match-item'; d.textContent = p.def; d.dataset.def = p.term;
+    d.addEventListener('click', () => selectMatch(d, 'def')); dD.appendChild(d);
+  });
+}
+
+function selectMatch(el, type) {
+  if (el.classList.contains('correct')) return;
+  if (type === 'term') {
+    document.querySelectorAll('#matchTerms .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected'); selTerm = el.classList.contains('selected') ? el : null;
+  } else {
+    document.querySelectorAll('#matchDefs .match-item.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.toggle('selected'); selDef = el.classList.contains('selected') ? el : null;
+  }
+  if (selTerm && selDef) {
+    if (selTerm.dataset.term === selDef.dataset.def) {
+      [selTerm, selDef].forEach(e => { e.classList.remove('selected'); e.classList.add('correct'); });
+    } else {
+      [selTerm, selDef].forEach(e => e.classList.add('incorrect'));
+      const st = selTerm, sd = selDef;
+      setTimeout(() => { st.classList.remove('selected','incorrect'); sd.classList.remove('selected','incorrect'); }, 700);
+    }
+    selTerm = null; selDef = null;
+  }
+}
+
+function checkMatches() {
+  const correct = document.querySelectorAll('.match-item.correct').length / 2;
+  const res = document.getElementById('matchResult');
+  res.style.display = 'block';
+  res.style.color = correct === matchPairs.length ? '#a8e0a0' : '#e0c0a0';
+  res.textContent = correct === matchPairs.length ? `✓ All ${matchPairs.length} matched correctly!` : `${correct} of ${matchPairs.length} matched. Keep going!`;
+}
+
+function handleMCQ(btn) {
+  const c = btn.closest('.mcq-item');
+  if (c.querySelector('.correct,.incorrect')) return;
+  const ok = btn.dataset.correct === 'true';
+  btn.classList.add(ok ? 'correct' : 'incorrect');
+  c.querySelectorAll('.mcq-choice').forEach(b => { b.disabled = true; if (b !== btn && b.dataset.correct === 'true') b.classList.add('correct'); });
+  if (ok) { const fb = c.querySelector('.mcq-feedback'); if (fb) fb.classList.add('visible'); }
+}
+
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+function revealThesis(card, verdict, explanation) {
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
+  card.querySelector('.thesis-verdict').className = `thesis-verdict ${verdict}`;
+  card.querySelector('.thesis-explanation').textContent = explanation;
+}
+
+const skills = [
+  "I can define laissez-faire and explain why the Depression destroyed it",
+  "I can explain Keynesian economics and describe how the New Deal applied it",
+  "I can compare three government responses (USA, fascism, USSR) across at least three categories",
+  "I can explain how the Depression created a governance vacuum that opened the door to extremism",
+  "I can construct a thesis that evaluates the extent of government economic expansion with a line of reasoning",
+  "I can write a SAQ response connecting the Depression to state expansion in a specific country with evidence",
+];
+
+function buildSelfAssess() {
+  const wrap = document.getElementById('selfAssess');
+  skills.forEach((skill, si) => {
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML = `<div class="skill-label">${skill}</div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.25rem;"><div style="display:flex;gap:0.3rem;">${[1,2,3].map(l=>`<div class="skill-dot" onclick="setDot(${si},${l})" data-skill="${si}" data-level="${l}"></div>`).join('')}</div><div class="skill-scale">1 = learning · 3 = confident</div></div>`;
+    wrap.appendChild(row);
+  });
+}
+
+function setDot(si, level) {
+  document.querySelectorAll(`[data-skill="${si}"].skill-dot`).forEach((d,i) => d.classList.toggle('filled', i < level));
+}
+
+let currentProgress = 0;
+function markDone(btnId, pct) {
+  const btn = document.getElementById(btnId);
+  if (btn.classList.contains('done')) return;
+  btn.classList.add('done');
+  btn.querySelector('.check-icon').textContent = '✓';
+  btn.childNodes[1].textContent = ' Section Complete';
+  currentProgress = Math.max(currentProgress, pct);
+  document.getElementById('progressFill').style.width = currentProgress + '%';
+  document.getElementById('progressPct').textContent = currentProgress + '%';
+}
+
+buildVocab(); buildMatching(); buildSelfAssess();
+
+// ── SHARED INTEGRATION ──
+buildStudentNameBar();
+embedVideo('videoEmbed', 'zvT4JWFW8Qw');
+initAutoSave('7_4');
+buildCompletionSection('7_4', '7.4 Economy in the Interwar Period');
+
+const _origMarkDone = markDone;
+markDone = function(btnId, pct) {
+  _origMarkDone(btnId, pct);
+  markDoneShared('7_4', btnId, pct);
+};
+</script>
+</body>
+</html>
