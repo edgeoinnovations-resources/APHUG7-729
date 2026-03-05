@@ -60,11 +60,11 @@ body{background:var(--bg);color:var(--parchment);font-family:'Source Serif 4',se
 .tl-dot{width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--bg);flex-shrink:0;margin-top:.3rem;position:absolute;left:-1.1rem}
 .tl-date{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--gold);white-space:nowrap;min-width:60px}
 .tl-text{font-size:.87rem;color:#c8b98a;line-height:1.4}
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem}
-.vocab-card{height:145px;perspective:800px;cursor:pointer}
-.vocab-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s ease}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;align-items:start}
+.vocab-card{perspective:800px;cursor:pointer}
+.vocab-inner{display:grid;transform-style:preserve-3d;transition:transform .45s ease}
 .vocab-card.flipped .vocab-inner{transform:rotateY(180deg)}
-.vocab-front,.vocab-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px;padding:1rem;display:flex;flex-direction:column;justify-content:center}
+.vocab-front,.vocab-back{grid-area:1/1;backface-visibility:hidden;border-radius:7px;padding:1rem;display:flex;flex-direction:column;justify-content:center;min-height:120px}
 .vocab-front{background:rgba(45,90,39,.18);border:1px solid rgba(45,90,39,.5)}
 .vocab-back{background:rgba(45,90,39,.35);border:1px solid rgba(45,90,39,.7);transform:rotateY(180deg)}
 .vocab-term{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:#c8e8c4;margin-bottom:.3rem}
