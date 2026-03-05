@@ -1216,10 +1216,11 @@ function pickMCQ(btn, correct, msg) {
 
 // ── Accordion toggle ───────────────────────────
 function toggleAcc(btn) {
-  const body = btn.nextElementSibling;
+  const wrapper = btn.closest('.btn-row') || btn.parentElement;
+  const body = wrapper.nextElementSibling;
+  if (!body || !body.classList.contains('acc-body')) return;
   const open = body.classList.toggle('show');
   btn.classList.toggle('open', open);
-  btn.querySelector('.arrow').textContent = open ? '›' : '›';
 }
 
 // ── Thesis evaluator ───────────────────────────
